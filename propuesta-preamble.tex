@@ -1,0 +1,61 @@
+\parindent=0pt
+\parskip=5pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Information about using colors in LaTeX %%%%%%%%%%%%%%%%
+%%%% https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[svgnames, dvipsnames, table]{xcolor}
+%\usepackage[colorlinks = true, allcolors = Cerulean, pagebackref=true, colorlinks,]{hyperref}
+%\renewcommand\backrefxxx[3]{%
+ % \hyperlink{page.#1}{$\uparrow$#1}%
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{placeins}
+\usepackage[left=3cm,right=3cm,top=1cm,bottom=3cm]{geometry} 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+\usepackage[colorlinks = true, allcolors = Cerulean]{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{sectsty}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{tablefootnote}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+\addbibresource{Biblio.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Definición de colores UCR %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{Celeste-UCR}{RGB}{0, 192, 243}
+\definecolor{Azul-UCR}{RGB}{0, 93, 164}
+\definecolor{Verde-UCR}{RGB}{109, 192, 103}
+\definecolor{Amarillo-UCR}{RGB}{255, 224, 106}
+
+\sectionfont{\color{Azul-UCR}}
+\subsectionfont{\fontsize{13.3}{13}\selectfont \color{Azul-UCR}}
+\subsubsectionfont{\fontsize{13.3}{13}\selectfont \color{Azul-UCR}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\fr}[1]{\mathfrak{#1}}
+\newcommand{\legendre}[2]{\left( \dfrac{#1}{#2} \right)}
+\newcommand{\mcd}{\operatorname{mcd}}
+
+\input{definitions}
+
+\title{Propuestas de malla curricular y programas de cursos\\\large Bachillerato y Licenciatura en Matemática --- EMat, UCR}
+\author{Comisión de Malla Curricular EMat}
+\date{\today}

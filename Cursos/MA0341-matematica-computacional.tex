@@ -1,0 +1,17 @@
+% !TeX program = pdflatex
+% Compilar desde la carpeta Propuesta: pdflatex Cursos/MA0341-matematica-computacional.tex
+% Luego: biber MA0341-matematica-computacional y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+%\title{Programa de curso --- MA-03XX Introducción al pensamiento algorítmico}
+%\author{Comisión de Malla Curricular EMat}
+%\date{\today}
+
+\begin{document}
+%\maketitle
+\input{MA0341-matematica-computacional-cuerpo.tex}
+\end{document}

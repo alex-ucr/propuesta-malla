@@ -1,0 +1,17 @@
+% !TeX program = pdflatex
+% Compilar desde la carpeta Propuesta: pdflatex Cursos/MA0152-matematica-exploratoria.tex
+% Luego: biber MA0152-matematica-exploratoria y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+%\title{Programa de curso --- MA-01XX Matemática exploratoria}
+%\author{Comisión de Malla Curricular EMat}
+%\date{\today}
+
+\begin{document}
+%\maketitle
+\input{MA0152-matematica-exploratoria-cuerpo.tex}
+\end{document}

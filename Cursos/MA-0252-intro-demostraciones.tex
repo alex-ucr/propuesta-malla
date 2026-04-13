@@ -1,0 +1,17 @@
+% !TeX program = pdflatex
+% Compilar desde la carpeta Propuesta: pdflatex Cursos/MA-0252-intro-demostraciones.tex
+% Luego: biber MA-0252-intro-demostraciones y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+%\title{Programa de curso --- MA-02XX Introducción a las demostraciones}
+%\author{Comisión de Malla Curricular EMat}
+%\date{\today}
+
+\begin{document}
+%\maketitle
+\input{MA-0252-intro-demostraciones-cuerpo.tex}
+\end{document}
