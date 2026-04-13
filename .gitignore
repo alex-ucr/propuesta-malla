@@ -1,0 +1,13 @@
+# Archivos a ignorar
+*.mat
+*.asv
+*.bbl
+*.blg
+*.aux
+*.pdf
+*.zip
+*.synctex
+*.out
+*.toc
+*.log
+*.gz
