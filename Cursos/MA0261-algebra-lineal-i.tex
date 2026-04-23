@@ -1,0 +1,17 @@
+% !TeX program = pdflatex
+% Compilar desde la carpeta Propuesta: pdflatex Cursos/MA-0261-algebra-lineal-i-individual.tex
+% Luego: biber MA-0261-algebra-lineal-i-individual y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+%\title{Programa de curso --- MA-0261 Álgebra lineal I}
+%\author{Comisión de Malla Curricular EMat}
+%\date{\today}
+
+\begin{document}
+%\maketitle
+\input{MA0261-algebra-lineal-i-cuerpo.tex}
+\end{document}

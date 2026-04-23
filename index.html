@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Propuesta curricular — núcleo</title>
+  <style>
+    :root {
+      --page-bg: #121218;
+      --hotspot-hover: rgba(0, 192, 243, 0.18);
+      --hotspot-focus: rgba(0, 93, 164, 0.35);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--page-bg);
+      color: #e8e8ec;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 0.75rem 1rem;
+      background: rgba(0, 0, 0, 0.35);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    header p {
+      margin: 0.35rem 0 0;
+      font-size: 0.8rem;
+      opacity: 0.75;
+    }
+    .diagram-wrap {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: min(100vw, 1600px);
+      margin: 0 auto;
+      line-height: 0;
+    }
+    .diagram-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+    /* Áreas clicables: left, top, width, height en % del ancho/alto de la imagen */
+    .hotspot {
+      position: absolute;
+      display: block;
+      text-indent: -9999px;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.15s ease, box-shadow 0.15s ease;
+    }
+    .hotspot:hover {
+      background: var(--hotspot-hover);
+      box-shadow: inset 0 0 0 2px rgba(0, 192, 243, 0.45);
+    }
+    .hotspot:focus {
+      outline: none;
+      background: var(--hotspot-focus);
+      box-shadow: inset 0 0 0 3px rgba(0, 192, 243, 0.8);
+    }
+    .fallback {
+      max-width: 40rem;
+      margin: 1rem auto;
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+    .fallback ul {
+      padding-left: 1.2rem;
+    }
+    .fallback a {
+      color: #5ccfff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Propuesta de malla — mapa interactivo</h1>
+    <p>
+      Coloque <code>propuesta_core.png</code> junto a este archivo y los PDF por curso. Ajuste los porcentajes en cada <code>.hotspot</code> si las cajas no
+      coinciden con el dibujo.
+    </p>
+  </header>
+
+  <div class="diagram-wrap" id="diagram">
+    <img
+      id="coreImg"
+      src="propuesta_core.png"
+      alt="Diagrama del núcleo curricular"
+      width="1600"
+      height="900"
+    />
+    <!--
+      Coordenadas: porcentajes respecto al cuadro de la imagen (igual que CSS left/top/width/height).
+      Edite left, top, width, height hasta alinear con cada caja del PNG.
+    -->
+    <a
+      class="hotspot"
+      href="MA0152-matematica-exploratoria.pdf"
+      title="MA-01XX Matemática exploratoria"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 4%; top: 18%; width: 20%; height: 10%;"
+      >MA-01XX Matemática exploratoria</a
+    >
+    <a
+      class="hotspot"
+      href="MA0151-fundamentos.pdf"
+      title="MA-01XX Matemática para el cálculo"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 27%; top: 18%; width: 20%; height: 10%;"
+      >MA-01XX Matemática para el cálculo</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0251-calculo-una-variable.pdf"
+      title="MA-01XX Introducción al cálculo en una variable"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 50%; top: 18%; width: 22%; height: 10%;"
+      >MA-01XX Introducción al cálculo en una variable</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0351-calculo-varias-variables.pdf"
+      title="MA-02XX Cálculo en varias variables"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 73%; top: 18%; width: 23%; height: 10%;"
+      >MA-02XX Cálculo en varias variables</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0261-algebra-lineal-i.pdf"
+      title="MA-0261 Álgebra lineal I"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 4%; top: 36%; width: 20%; height: 10%;"
+      >MA-0261 Álgebra lineal I</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0361-algebra-lineal-ii.pdf"
+      title="MA-0361 Álgebra lineal II"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 27%; top: 36%; width: 20%; height: 10%;"
+      >MA-0361 Álgebra lineal II</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0252-intro-demostraciones.pdf"
+      title="MA-02XX Introducción a las demostraciones"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 50%; top: 36%; width: 22%; height: 10%;"
+      >MA-02XX Introducción a las demostraciones</a
+    >
+    <a
+      class="hotspot"
+      href="MA0341-matematica-computacional.pdf"
+      title="MA-03XX / CA03xx Introducción al pensamiento algorítmico"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 73%; top: 36%; width: 23%; height: 10%;"
+      >CA03xx Pensamiento algorítmico I</a
+    >
+    <a
+      class="hotspot"
+      href="CA06xx_algoritmico_02.pdf"
+      title="MA-06XX / CA06xx Computación científica"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 4%; top: 54%; width: 20%; height: 10%;"
+      >CA06xx Computación científica</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0702-analisis-complejo.pdf"
+      title="MA-0702 Análisis complejo"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 27%; top: 54%; width: 20%; height: 10%;"
+      >MA-0702 Análisis complejo</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0625-analisis-real-i.pdf"
+      title="MA-0625 Análisis real I"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 50%; top: 54%; width: 22%; height: 10%;"
+      >MA-0625 Análisis real I</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0725-analisis-real-ii.pdf"
+      title="MA-0725 Análisis real II"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 73%; top: 54%; width: 23%; height: 10%;"
+      >MA-0725 Análisis real II</a
+    >
+    <a
+      class="hotspot"
+      href="MA-0615-ecuaciones-diferenciales.pdf"
+      title="MA-0615 Ecuaciones diferenciales"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="left: 38%; top: 72%; width: 24%; height: 10%;"
+      >MA-0615 Ecuaciones diferenciales</a
+    >
+  </div>
+
+  <div class="fallback" id="imgNote" hidden>
+    <p>
+      No se pudo cargar <strong>propuesta_core.png</strong>. Enlaces directos a los PDF (cuando existan):
+    </p>
+    <p>
+      Primer año
+    </p>
+
+    <ul>
+      <li><a href="MA0151-fundamentos.pdf">MA-0151 Matemática para el cálculo</a></li>
+      <li><a href="MA0152-matematica-exploratoria.pdf">MA-0152 Matemática exploratoria</a></li>
+      <li><a href="MA0251-calculo-una-variable.pdf">MA-0251 Introducción al cálculo en una variable</a></li>
+      <li><a href="MA0252-intro-demostraciones.pdf">MA-0252 Introducción a las demostraciones</a></li>
+
+    </ul>
+    <p>
+      Segundo año
+    </p>
+    <ul>
+      <li><a href="MA0351-calculo-varias-variables.pdf">MA-0351 Cálculo en varias variables</a></li>
+      <li><a href="MA0261-algebra-lineal-i.pdf">MA-0261 Álgebra lineal I</a></li>
+      <li><a href="MA0361-algebra-lineal-ii.pdf">MA-0361 Álgebra lineal II</a></li>
+      <li><a href="MA0341-matematica-computacional-i.pdf">MA0341 Mátemática computacional I</a></li>
+      <li><a href="MA0441-matematica-computacional-ii.pdf">MA0441 Mátemática computacional II</a></li>
+    </ul>
+    <p>
+      Tercer año
+    </p>
+    <ul>
+      <li><a href="MA-0702-analisis-complejo.pdf">MA-0702 Análisis complejo</a></li>
+      <li><a href="MA-0625-analisis-real-i.pdf">MA-0625 Análisis real I</a></li>
+      <li><a href="MA-0725-analisis-real-ii.pdf">MA-0725 Análisis real II</a></li>
+      <li><a href="MA-0615-ecuaciones-diferenciales.pdf">MA-0615 Ecuaciones diferenciales</a></li>
+    </ul>
+  </div>
+
+
+
+  <script>
+    (function () {
+      var img = document.getElementById("coreImg");
+      var note = document.getElementById("imgNote");
+      var wrap = document.getElementById("diagram");
+      img.addEventListener("error", function () {
+        wrap.style.display = "none";
+        note.hidden = false;
+      });
+    })();
+  </script>
+</body>
+</html>

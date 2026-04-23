@@ -1,0 +1,13 @@
+% !TeX program = pdflatex
+% Compilar desde la raíz del proyecto: latexmk Cursos/MA0441-matematica-computacional-ii.tex
+% Luego: biber MA0441-matematica-computacional-ii y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+\begin{document}
+%\maketitle
+\input{MA0441-matematica-computacional-ii-cuerpo.tex}
+\end{document}

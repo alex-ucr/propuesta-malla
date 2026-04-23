@@ -1,0 +1,13 @@
+% !TeX program = pdflatex
+% Compilar desde la raíz del proyecto: latexmk Cursos/MAxxxx-teoria-numeros.tex
+% Luego: biber MAxxxx-teoria-numeros y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+\begin{document}
+%\maketitle
+\input{MAxxxx-teoria-numeros-cuerpo.tex}
+\end{document}
