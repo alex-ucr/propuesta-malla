@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Propuesta de malla curricular</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #fff;
+      --text: #1a1d21;
+      --muted: #5c6370;
+      --border: #d8dee6;
+      --accent: #1e4d7b;
+      --accent-soft: #e8f0f8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .page {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.55rem;
+      font-weight: 650;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    header .subtitle {
+      margin: 0.2rem 0;
+      font-size: 1.05rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .cycle {
+      margin-bottom: 1.75rem;
+    }
+    .cycle h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.65rem;
+      color: var(--accent);
+      font-weight: 650;
+    }
+    details.course {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+    }
+    details.course summary {
+      list-style: none;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      background: var(--accent-soft);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    details.course summary::-webkit-details-marker { display: none; }
+    details.course summary::before {
+      content: "▶";
+      font-size: 0.65rem;
+      opacity: 0.6;
+      transition: transform 0.15s ease;
+    }
+    details.course[open] summary::before {
+      transform: rotate(90deg);
+    }
+    details.course summary:hover {
+      filter: brightness(0.98);
+    }
+    .contenidos {
+      margin: 0;
+      padding: 1rem 1.1rem 1.1rem;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      word-break: break-word;
+      background: #fafbfc;
+      border-top: 1px solid var(--border);
+      max-height: min(70vh, 36rem);
+      overflow: auto;
+    }
+    .contenidos .contenidos-bloque ol { margin: 0.4rem 0 0.4rem 1.25rem; }
+    .contenidos .contenidos-bloque ol ol { list-style: lower-alpha; }
+    .contenidos .contenidos-bloque ul { margin: 0.35rem 0 0.35rem 1.1rem; }
+    .contenidos .math { font-family: "Cambria Math", "STIX Two Math", serif; }
+    .contenidos .cite { color: #555; }
+    .contenidos.missing {
+      color: #a63;
+      font-style: italic;
+    }
+    .load-error {
+      background: #fff3e0;
+      border: 1px solid #e0a040;
+      color: #5d3a0a;
+      padding: 1rem 1.1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    .load-error code { font-size: 0.88em; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Propuesta de malla curricular</h1>
+      <p class="subtitle">Carrera de matemática</p>
+      <p class="subtitle">Énfasis en matemática pura</p>
+    </header>
+    <div id="err" class="load-error" hidden>
+      No se pudieron cargar <code>pura.json</code> o <code>contenidos_por_curso.json</code>
+      (los navegadores suelen bloquear <code>file://</code>).
+      En esta carpeta ejecute, por ejemplo:
+      <br /><code>python -m http.server 8080</code>
+      y abra <code>http://localhost:8080/malla-pura.html</code>
+    </div>
+    <main id="malla" aria-live="polite"></main>
+  </div>
+  <script>
+    (function () {
+      const main = document.getElementById("malla");
+      const errBox = document.getElementById("err");
+
+      function build(pura, contenidos) {
+        const order = [
+          "I Ciclo", "II Ciclo", "III Ciclo", "IV Ciclo",
+          "V Ciclo", "VI Ciclo", "VII Ciclo", "Optativas"
+        ];
+        const frag = document.createDocumentFragment();
+        for (const label of order) {
+          if (!Object.prototype.hasOwnProperty.call(pura, label)) continue;
+          const courses = pura[label];
+          if (!Array.isArray(courses) || !courses.length) continue;
+          const section = document.createElement("section");
+          section.className = "cycle";
+          const h2 = document.createElement("h2");
+          h2.textContent = label;
+          section.appendChild(h2);
+          for (const title of courses) {
+            const det = document.createElement("details");
+            det.className = "course";
+            const sum = document.createElement("summary");
+            sum.textContent = title;
+            det.appendChild(sum);
+            const block = document.createElement("div");
+            block.className = "contenidos";
+            const html = contenidos[title];
+            if (html == null || html === "") {
+              block.classList.add("missing");
+              block.textContent =
+                "(No hay texto de contenidos en contenidos_por_curso.json para este curso.)";
+            } else {
+              block.innerHTML = html;
+            }
+            det.appendChild(block);
+            section.appendChild(det);
+          }
+          frag.appendChild(section);
+        }
+        main.appendChild(frag);
+      }
+
+      Promise.all([
+        fetch("pura.json").then((r) => {
+          if (!r.ok) throw new Error("pura.json");
+          return r.json();
+        }),
+        fetch("contenidos_por_curso.json").then((r) => {
+          if (!r.ok) throw new Error("contenidos_por_curso.json");
+          return r.json();
+        }),
+      ])
+        .then(([pura, contenidos]) => {
+          build(pura, contenidos);
+        })
+        .catch(() => {
+          errBox.hidden = false;
+        });
+    })();
+  </script>
+</body>
+</html>

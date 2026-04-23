@@ -12,3 +12,5 @@
 *.log
 *.gz
 *.fls
+*.latexmk
+*.bcf
