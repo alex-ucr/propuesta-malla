@@ -1,8 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% MA-03XX Introducción al Pensamiento Algorítmico %%%%%%%
+%%%%%%%%%%%%% MA-0341 Matemática Computacional I %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{MA-03XX Introducción al Pensamiento Algorítmico}
-\addcontentsline{toc}{subsection}{MA-03XX Introducción al Pensamiento Algorítmico}
+\newpage
+\subsection*{MA-0341 Matemática Computacional I}
+\addcontentsline{toc}{subsection}{MA-0341 Matemática Computacional I}
 
 \begin{refsection}
 \begin{table}[H]
@@ -10,15 +11,13 @@
 \begin{tabular}{|ll|}
 \hline
 %\multicolumn{2}{|c|}{\textbf{Nivel de virtualidad del curso:} Virtual}\\ \hline
-\textbf{Año:} II  & \textbf{Requisitos:} Calc2 + AlgLin \\ 
+\textbf{Año:} II  & \textbf{Requisitos:} Cálculo, Algebra Lineal y Demostraciones \\ 
 \textbf{Ciclo:} III  & \textbf{Correquisitos:} Ninguno \\ 
 \textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana: 4}   \\ 
 \textbf{Créditos:} 3 & \textbf{Horas de trabajo independiente por semana: 5}  \\ \hline
 \end{tabular}
 }
 \end{table}
-
-
 
 \subsubsection*{Descripción del curso}
 % A quiénes va dirigido?
@@ -31,15 +30,28 @@
 
 Este curso va dirigido a estudiantes de tercer ciclo de la carrera Bachillerato en Matemática, y se orienta a desarrollar habilidades algorítmicas con base en conocimientos adquiridos en cursos anteriores. En el curso se introducirán bases de programación funcional en un lenguaje de alto nivel, lo cual permitirá adquirir destrezas para implementar algoritmos, y así resolver, revisar y explorar diferentes temas de interés.
 
-Específicamente, se retomarán contenidos de los cursos *Intro a demostraciones, cálculo y álgebra lineal*, con el fin de aplicar algoritmos básicos en la resolución de problemas, analizar su desempeño y comparar resultados teóricos con sus aproximaciones. 
+Específicamente, se retomarán contenidos de los cursos MA-0252 Introducción a las Demostraciones, MA-0251 Introducción al cálculo en una variable y MA-0261 Álgebra Lineal I, con el fin de aplicar algoritmos básicos en la resolución de problemas, analizar su desempeño y comparar resultados teóricos con sus aproximaciones. 
 De manera transversal, se propiciará el desarrollo habilidades investigativas, mediante la exploración y generación de conjeturas en diversas áreas de la matemática.
 
-Este curso es requisito para el curso *MA06xx Computación Científica*, en donde se continuará con el estudio y análisis matemático de algoritmos. A modo de ejemplo, en ese curso se resolverán ecuaciones diferenciales y se aplicarán resultados del álgebra lineal numérica en diferentes problemas de interés.
+Este curso es requisito para el curso MA-0541 Matemática Computacional II, en donde se continuará con el estudio y análisis matemático de algoritmos. A modo de ejemplo, en ese curso se resolverán ecuaciones diferenciales y se aplicarán resultados del álgebra lineal numérica en diferentes problemas de interés.
+
+%Propósito: 
+%- Introducir bases de programación en un lenguaje apropiado (Python, Julia, SageMath)
+%- Implementar algoritmos básicos para la resolución de problemas matemáticos, mediante la ejecución de programas en lenguajes de programación apropiados (especificar).
+%- Orientado a resolver problemas matemáticos %projecteuler
+%- No centrarse en demostraciones matemáticas
+%- Utilizar programación para desarrollar habilidades de encontrar patrones (o contraejemplos?), conjeturas, experimentación
+%- Mostrar limitaciones, errores numéricos e interpretación, estabilidad
+%- Visualización geométrica
+%- en otros cursos, usar software como Mathematica (ej lineal, cosas que "no se pueden" hacer a mano
 
 \subsubsection*{Objetivos}
 
 \textbf{General:} 
-Implementar el pensamiento algorítmico en la resolución de problemas matemáticos, mediante la ejecución de programas en lenguajes de programación de alto nivel. 
+%Aplicar programas
+%Implementar algoritmos 
+%Resolver problemas matemáticos mediante la ejecución de programas en lenguajes de programación apropiados.
+Implementar el pensamiento algorítmico en la resolución de problemas matemáticos, mediante la ejecución de programas en lenguajes de programación de alto nivel. %apropiados tales como Python, Julia, SageMath. (poner en metodología, sintaxis transferible)
 
 \textbf{Específicos:}
 Al finalizar el curso, cada estudiante debe ser capaz de:
@@ -48,13 +60,28 @@ Al finalizar el curso, cada estudiante debe ser capaz de:
 \item Comparar el desempeño de diferentes algoritmos por medio de la experimentación computacional.
 \item Utilizar software para visualizar gráficas de funciones, curvas y superficies.
 \item Aplicar el razonamiento inductivo para establecer conjeturas o conclusiones a partir de patrones observados en instancias específicas, generadas por medio de programas computacionales.
+%\item Identificar algoritmos apropiados para la resolución específica de problemas.
+%\item Plantear*
+% leer paper para ver si sale algo relacionado con el pemsamiento algorítmico**
+ 
+%\item Definir de manera intuitiva los conceptos de funciones, límites, derivadas e integrales.
+%\item Calcular límites, derivadas e integrales de funciones de una variable real.
+%\item Interpretar gráficamente los conceptos de funciones, límites, derivadas e integrales.
+%\item Relacionar los conceptos de derivada e integral como procesos inversos.
+%\item Aplicar los conceptos de funciones, límites, derivadas e integrales para la resolución de problemas concretos.
+%\item Demostrar existencia de límites de funciones concretas mediante la definición con $\varepsilon$ y $\delta$.
 \end{enumerate}
 
 \subsubsection*{Contenidos}
 
 \begin{enumerate}
 \item \textbf{Introducción a lenguajes de programación (2.5 semanas):}
+% metodología: versión en línea
+%\cite{langtangen_primer_2016} en \url{https://hplgit.github.io/primer.html/doc/pub/half/book.pdf}
+%Otro: \url{https://www.greenteapress.com/thinkpython/thinkpython.pdf}
+
 \textbf{Opciones de bibliografía:} \cite{Ste16}, \cite{CCC22}, \cite{langtangen_primer_2016}, \cite{BRR15}.
+
 
 \begin{enumerate} 
     \item Cálculo de fórmulas
@@ -87,7 +114,7 @@ Al finalizar el curso, cada estudiante debe ser capaz de:
     \item Graficación de funciones, curvas definidas implícitamente, secciones cónicas, gráficas en coordenadas polares, gráficas de funciones parametrizadas. 
     \item Graficación de superficies en $\mathbb{R}^3$, superficies cuadráticas, graficación de múltiples superficies y sus intersecciones usando opacidad.
     \item Depuración de gráficas. %(que se vean bonitas).
-    \item Aplicaciones interactivas (en \texttt{SageMath} o Geogebra).
+    \item Aplicaciones interactivas (por ejemplo en \texttt{SageMath} o \texttt{Geogebra}).
 \end{enumerate}
 
 \item \textbf{Algoritmos básicos en teoría de números (3 semanas):}
@@ -102,6 +129,7 @@ Al finalizar el curso, cada estudiante debe ser capaz de:
     \item Exponenciación en los enteros, el Algoritmo de Exponenciación Rápida y el Problema del Logaritmo Discreto en $(\mathbb{Z}/p\mathbb{Z})^{\times}$.
     \item Algoritmos de factorización y tests de primalidad.
 \end{enumerate}
+% funciones en N que varían mucho
 
 \item \textbf{Algoritmos básicos en cálculo diferencial e integral (3 semanas):}
 \begin{enumerate} 
@@ -119,22 +147,28 @@ Al finalizar el curso, cada estudiante debe ser capaz de:
     \item Descomposición en valores singulares y aplicaciones. Compresión de imágenes. 
 \end{enumerate}
 
+
+
 \end{enumerate}
 
 \subsubsection*{Metodología}
+% lenguaje -> especificar
+% laboratorio, guías?, orientado a resolución de problemas, 
+
 
 \noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
 \begin{enumerate}
     \item La presentación de los contenidos debe priorizar la intuición y el desarrollo de habilidades algorítmicas por encima del formalismo. Por ejemplo, se deben evitar las demostraciones de cálculos relacionados con complejidad de algoritmos, el cual debe ser introductorio e informativo. Es posible dar una descripción heurística de diferentes algoritmos y su complejidad, sin requerir un tratamiento formal.
     \item Se debe dar énfasis a la implementación de algoritmos sencillos, el uso de librerías existentes en el lenguaje de programación y la lectura de documentación de funciones.
     \item Las demostraciones que se deben realizar en este curso son las que contribuyen al desarrollo de la intuición y las habilidades algorítmicas en la persona estudiante, tales como la convergencia del método de bisección, o un ejemplo particular de cómo obtener la factorización LU.
-    \item Se debe utilizar software libre y recursos computacionales en la nube.
+    \item Se debe utilizar software libre y recursos computacionales en la nube.% para simplificar instalación, actualización, recursos disponibles, ...
     \item Se debe asignar guías de trabajo centradas en la resolución de problemas y utilizar estrategias  que promuevan el trabajo constante de parte de las personas estudiantes a lo largo del ciclo lectivo. Por ejemplo, esto se puede hacer por medio de presentaciones de tareas, exposiciones de ejercicios y discusiones grupales de las guías de trabajo.
 \end{enumerate}
 
 \textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
 \begin{enumerate}
     \item Aprovechar momentos adecuados del curso para motivar el estudio por medio de reseñas acerca del desarrollo histórico  y su importancia en aplicaciones dentro y fuera de la matemática.
+%    \item En la evaluación, se sugiere utilizar estrategias que promuevan el trabajo constante de parte de las personas estudiantes a lo largo del ciclo lectivo. Por ejemplo, esto se puede hacer por medio de presentaciones de tareas y exposiciones de ejercicios.
     \item Ejemplificar diferentes desempeños de algoritmos (búsqueda, ordenamientos, por ejemplo).
     \item Para fomentar la iniciación de las personas estudiantes en el desarrollo de sus habilidades investigativas, se sugiere la implementación de pequeños proyectos de programación y la búsqueda de conjeturas con base en evidencia computacional.% Por ejemplo, ... imágenes,
     \item Se recomienda que las clases sean en un laboratorio de computación, para que el estudiantado pueda realizar guías de trabajo durante clases.
@@ -143,10 +177,12 @@ Al finalizar el curso, cada estudiante debe ser capaz de:
 
 %\subsubsection*{Bibliografía}
 
+%[Tener unos 3 o 4 libros recomendados con párrafos que expliquen cómo se podrían usar en el curso y tener aparte una bibliografía adicional de referencias o incluso tener la bibliografía dividida en categorías]
+
 \nocite{CLR--IntroToAlgorithms} \nocite{GKP--ConcreteMathematics} \nocite{langtangen_primer_2016}
 \nocite{CCC22}
 \nocite{Fer17}
 \nocite{BRR15}
 
-\printbibliography[heading=subbibliography,section=\the\value{refsection}]
+\printbibliography[heading=subbibliography]
 \end{refsection}

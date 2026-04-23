@@ -1,0 +1,178 @@
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% MA-0541 Matemática Computacional II %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{MA-0541 Matemática Computacional II}
+\addcontentsline{toc}{subsection}{MA-0541 Matemática Computacional II}
+
+\begin{refsection}
+\begin{table}[H]
+\centering{
+\begin{tabular}{|ll|}
+\hline
+%\multicolumn{2}{|c|}{\textbf{Nivel de virtualidad del curso:} Virtual}\\ \hline
+\textbf{Año:} III  & \textbf{Requisitos:} Algorítmico+ODEs? \\ 
+\textbf{Ciclo:} VI  & \textbf{Correquisitos:} Ninguno \\ 
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana: 5}   \\ 
+\textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana: 7}  \\ \hline
+\end{tabular}
+}
+\end{table}
+
+% teórico
+% optimización, análisis de datos
+% pruebas de estabilidad no
+% sugerencias metodológicas, cuáles pruebas sí y no
+% pruebas constructivas
+
+
+\subsubsection*{Descripción del curso}
+% A quiénes va dirigido?
+% De qué trata el curso
+% Introduce el tema del curso en forma general
+% Ubicación en malla curricular
+% Relación con otros cursos
+% Relevancia del conocimiento del curso para el proyecto educativo
+% Qué aprendizaje va a desarrollar el estudiantado
+
+Este curso está dirigido a estudiantes de las carreras de Bachillerato en Matemática y Ciencias Actuariales que han completado los cursos de cálculo y álgebra lineal, por lo que se ubica en el segundo ciclo del tercer año. Este curso busca que cada estudiante aprenda a resolver problemas matemáticos utilizando la teoría y herramientas del análisis numérico, con base en los conocimientos y destrezas desarrolladas en el curso MA-0341 Matemática Computacional I. En el curso se propiciará el desarrollo de habilidades investigativas, mediante la búsqueda bibliográfica, lectura e implementación de métodos numéricos aplicados a problemas específicos.
+
+El curso incluye tanto temas formales del análisis numérico y demostraciones relevantes, así como la resolución de problemas de forma computacional, para lo cual se requieren herramientas básicas de programación. Específicamente, se trabajarán en temas relacionados con el cálculo (interpolación, integración, derivación), álgebra lineal (factorizaciones, resolución numérica de sistemas lineales de ecuaciones y aplicaciones) y ecuaciones diferenciales ordinarias. Este curso es base para próximos cursos optativos de análisis numérico a nivel de bachillerato y maestría, relacionados con ecuaciones diferenciales parciales, análisis de datos y optimización, entre otros.
+
+\subsubsection*{Objetivos}
+
+\textbf{General:} 
+Aplicar la teoría de análisis numérico y sus herramientas básicas en la resolución de problemas y modelos matemáticos, mediante el estudio teórico de algoritmos y la implementación de algoritmos en un lenguaje de alto nivel. 
+
+\textbf{Específicos:}
+Al finalizar el curso, cada estudiante debe ser capaz de:
+\begin{enumerate}
+	\item  Identificar efectos del error en distintos cálculos numéricos.
+	\item Aplicar conceptos de la teoría clásica del análisis numérico para la resolución de problemas relacionados con interpolación, integración y resolución numérica de ecuaciones.
+	\item Implementar algoritmos para la resolución numérica de diferentes problemas matemáticos que involucren álgebra lineal y ecuaciones diferenciales.
+	\item Analizar propiedades teóricas de algoritmos, tales como existencia, unicidad, estabilidad, convergencia y cotas del error.
+\end{enumerate}
+
+\subsubsection*{Contenidos}
+\begin{enumerate}
+\item \textbf{Error numérico (1 semana):}
+
+\textbf{Opciones de bibliografía:} \cite{Overton}.
+
+\begin{enumerate}
+	\item Representación de números en aritmética de punto flotante.
+	\item Errores por redondeo.
+	\item Ejemplos de precisión y estabilidad.
+\end{enumerate}
+
+\item \textbf{Aproximación de funciones (2 semana):}
+
+\textbf{Opciones de bibliografía:} \cite{Suli2003,Trefethen2}.
+
+\begin{enumerate}
+	\item Interpolación (Lagrange, Hermite, a trozos). 
+	\item Aproximación de derivadas.
+	\item Polinomios de Chebyshev.
+	\item Coordenadas baricéntricas.
+\end{enumerate}
+	
+	
+\item \textbf{Ecuaciones no lineales (2 semana):}
+
+\textbf{Opciones de bibliografía:} \cite{Suli2003}.
+	
+\begin{enumerate}
+%	\item Método de bisección.
+    \item Repaso de Newton, Bisección, secante. Consideraciones numéricas.
+	\item Método de aproximaciones sucesivas.
+%	\item Método de Newton.
+%	\item Método de la secante.
+\end{enumerate}
+
+\item \textbf{Integración (1.5 semana):}
+
+\textbf{Opciones de bibliografía:} \cite{Suli2003}.
+
+\begin{enumerate}
+%	\item Fórmulas de Newton-Cotes (Simpson, Trapecio).   
+	\item Polinomios ortogonales.
+	\item Cuadratura de Gauss.
+	\item Integración de Monte Carlo.
+\end{enumerate}
+	
+\item \textbf{Álgebra lineal numérica (4 semanas):}
+
+\textbf{Opciones de bibliografía:} \cite{trefethen97}.
+
+\begin{enumerate}
+	\item Algoritmos de diferentes factorizaciones (LU, QR, Cholesky, valores singulares).
+	\item Resolución numérica de sistemas de ecuaciones lineales.
+	\item Métodos iterativos para la resolución de sistemas de ecuaciones (Jacobi, Gauss-Seidel, gradiente con búsqueda de línea).
+	\item Valores y vectores propios (Jacobi, Sturm, iteración de potencias).
+	\item Problema de mínimos cuadrados. Mejor aproximación en la 2-norma.
+	\item Sistemas de ecuaciones no lineales (Newton en varias variables).
+	\item Aplicaciones de valores singulares.
+	\item Introducción a tópicos en análisis de datos.
+\end{enumerate}
+	
+\item \textbf{Ecuaciones diferenciales ordinarias (3 semanas):}
+
+\textbf{Opciones de bibliografía:} \cite{Quarteroni,Suli2003}.
+
+\begin{enumerate}
+	\item Método de Euler y del trapecio.
+	\item Métodos de Runge-Kutta.
+	\item Sistemas de ecuaciones diferenciales.
+	\item Método de diferencias finitas.
+%	\item Método de elemento finito 1D.
+\end{enumerate}
+
+\item \textbf{Introducción a ecuaciones diferenciales estocásticas (1 semana):}  % computacional, pura??
+
+\textbf{Opciones de bibliografía:} \cite{Zhang}.	
+	
+\begin{enumerate}
+    \item Cadenas de Markov con tiempo discreto.
+	\item Método de Euler–Maruyama.
+	\item Método de Milstein.
+	\item Métodos de Runge-Kutta.
+    %\item Sistemas de ecuaciones (con dependencia).
+\end{enumerate}
+	
+\end{enumerate}
+
+
+\subsubsection*{Metodología}
+%Nivel de virtualidad: medio virtual. \\
+
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item Se debe hacer énfasis en la parte de programación de los diferentes algoritmos y el uso de librerías y funciones existentes, en algún lenguaje de alto nivel, utilizando software libre y recursos computacionales en la nube.
+%    \item La presentación de los contenidos debe priorizar la intuición y el desarrollo de habilidades algorítmicas por encima del formalismo. Por ejemplo, se deben evitar las demostraciones de cálculos relacionados con complejidad de algoritmos, el cual debe ser introductorio e informativo. Es posible dar una descripción heurística de diferentes algoritmos y su complejidad, sin requerir un tratamiento formal.
+    \item Las demostraciones que se deben realizar en este curso son las que contribuyen al desarrollo de la intuición y las habilidades algorítmicas en la persona estudiante (evitando pruebas no constructivas, por ejemplo).
+    \item Se deben asignar guías de trabajo centradas en la resolución de problemas. Se proponen clases magistrales, sesiones de ejercicios, tareas, sesiones de programación, y exposición de ejercicios.
+\end{enumerate}
+
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
+\begin{enumerate}
+    \item Aprovechar momentos adecuados del curso para motivar el estudio por medio de reseñas acerca del desarrollo histórico  y su importancia en aplicaciones dentro y fuera de la matemática.
+%    \item En la evaluación, se sugiere utilizar estrategias que promuevan el trabajo constante de parte de las personas estudiantes a lo largo del ciclo lectivo. Por ejemplo, esto se puede hacer por medio de presentaciones de tareas y exposiciones de ejercicios.
+    \item Ejemplificar diferentes desempeños de algoritmos (factorizaciones, métodos iterativos, etc).
+    \item Para fomentar el desarrollo de habilidades investigativas, se sugiere la implementación de pequeños proyectos de investigación, que involucren revisión bibliográfica e implementación de algoritmos.
+    \item Se recomienda que las clases sean en un laboratorio de computación, para que el estudiantado pueda realizar guías de trabajo durante clases.
+\end{enumerate}
+
+%\subsubsection*{Bibliografía}
+
+%[Tener unos 3 o 4 libros recomendados con párrafos que expliquen cómo se podrían usar en el curso y tener aparte una bibliografía adicional de referencias o incluso tener la bibliografía dividida en categorías]
+
+%\nocite{CLR--IntroToAlgorithms} 
+
+\printbibliography[heading=subbibliography]
+\nocite{Suli2003}
+\nocite{Zhang}
+\nocite{Overton}
+\nocite{TrefethenIEEE}
+
+\end{refsection}

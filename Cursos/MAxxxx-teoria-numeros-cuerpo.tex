@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% MA-02XX Algebra Lineal I %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection*{MA-0461 Teoría de Números}
+\addcontentsline{toc}{subsection}{MA-04XX Teoría de Números}
+
+\begin{refsection}
+\begin{table}[H]
+\centering{
+\begin{tabular}{|ll|}
+\hline
+%\multicolumn{2}{|c|}{\textbf{Nivel de virtualidad del curso:} Virtual}\\ \hline
+\textbf{Año:} II  & \textbf{Requisitos:} MA-0252 Pruebas, MA-0341 Algoritmico \\ 
+\textbf{Ciclo:} IV  & \textbf{Correquisitos:} Ninguno \\ 
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:}   \\ 
+\textbf{Créditos:} 3 & \textbf{Horas de trabajo independiente por semana:}  \\ \hline
+\end{tabular}
+}
+\end{table}
+
+
+
+\subsubsection*{Descripción del curso}
+
+La Teoría de Números es junto con la geometría, una de las dos ramas más antiguas de la matemática. Hoy en día es además una de las ramas más activas en investigación y llegó a ser denominada por el gran Karl Friedrich Gauss, como la \textit{reina de las matemáticas}, por la gran belleza y profundidad de sus resultados.
+
+Este curso de Teoría de Números elemental está diseñado para estudiantes de segundo año de la carrera de matemática. El curso cubrirá una variedad de temas importantes en la teoría de números, comenzando con los conceptos básicos de divisibilidad, números primos y congruencias.
+
+El curso también abordará las funciones aritméticas básicas, así como el teorema de existencia de raíces primitivas módulo $n$. También, uno de los temas centrales, será el estudio de las congruencias cuadráticas y la famosa Ley de Reciprocidad Cuadrática de Gauss. El curso finaliza con un amplio estudio de la aritmética de los enteros en cuerpos de números cuadráticos y algunas de sus aplicaciones. También, se tratarán algunas ecuaciones diofánticas clásicas y su solución utilizando diversas técnicas de la teoría de números, como divisibilidad, congruencias y la factorización única en anillos de enteros en ciertos cuerpos de números cuadráticos.
+
+Adicionalmente, este curso sirve de puente para la transición a la secuencia de cursos de álgebra abstracta del tercer año de la carrera, pues gran parte de los temas estudiados serán utilizados como ejemplos de las distintas estructuras algebraicas como anillos, módulos, grupos y cuerpos, así como la base para la generalización de conceptos de teoría de números a nociones más generales en el álgebra abstracta.
+
+\subsubsection*{Objetivos}
+
+\textbf{General:} Aplicar los conceptos básicos de la teoría de números elemental para la resolución de problemas. \\
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Aplicar conceptos básicos de teoría de números como divisibilidad, números primos, congruencias, funciones aritméticas y enteros cuadráticos para la resolución de problemas.
+\item Demostrar los teoremas básicos relacionados con divisibilidad, números primos y aritmética modular, como por ejemplo el algoritmo de la división, la identidad de Bézout, la infinitud de los números primos, el Pequeño Teorema de Fermat y el Teorema de Euler.
+\item Resolver congruencias lineales y sistemas de congruencias lineales mediante la identidad de Bézout y el Teorema Chino de los Residuos.
+\item Conocer los teoremas básicos sobre distribución de los números primos y algunas de las conjeturas famosas sobre estos.
+\item Conocer los resultados básicos sobre existencia de raíces primitivas módulo $n$ para aplicarlos en la resolución de problemas.
+\item Aplicar la Ley de Reciprocidad Cuadrática para calcular el símbolo de Legendre y para determinar los primos para los cuáles un entero dado es un residuo cuadrático.
+\item Contrastar las similitudes y diferencias aritméticas entre los enteros racionales $\Z$ y los enteros en cuerpos de números cuadráticos.
+\item Aplicar los enteros en cuerpos de números cuadráticos y sus propiedades para la resolución de problemas.
+\item Utilizar la factorización única en anillos de enteros de cuerpos cuadráticos para resolver problemas de factorización en tales anillos y ecuaciones diofánticas.
+\item Comunicar ideas matemáticas de manera clara y efectiva en forma oral y escrita.
+\item Ejecutar comandos de \texttt{SageMath} para calcular con los objetos básicos de la Teoría de Números.
+\item Programar algoritmos y rutinas básicas en \texttt{Python} para resolver problemas computacionales de la Teoría de Números estudiada en el curso.
+\end{enumerate}
+
+\subsubsection*{Contenidos}
+
+\begin{enumerate}
+\item \textbf{Divisibilidad en los enteros (2 semanas):} 
+\begin{enumerate}
+    \item Propiedades básicas de divisibilidad y el algoritmo de la división.
+    \item Máximo común divisor y mínimo común múltiplo, el algoritmo euclideano, la identidad de Bézout.
+    \item Ecuaciones diofánticas lineales en dos variables.
+\end{enumerate}
+
+\item \textbf{Números primos (2 semanas):} 
+\begin{enumerate}
+    \item Propiedades básicas: infinitud de los números primos (prueba clásica de Euclides y divergencia de la serie de recíprocos de los números primos), el lema de euclides, la criba de eratóstenes.
+    \item El Teorema de Factorización Única en los enteros.
+    \item Teoremas básicos sobre distribución de los números primos: El Teorema de los Números Primos, las desigualdades de Chebyshev para la función $\pi(x)$, desigualdes para el $n$-ésimo número primo $p_n$, el Teorema de Dirichlet sobre primos en progresiones aritméticas.
+    \item Conjeturas famosas y resultados recientes sobre números primos.
+\end{enumerate}
+
+\item \textbf{Congruencias (3 semanas):} 
+\begin{enumerate}
+    \item Propiedades básicas de las congruencias: propiedades de relación de equivalencia, propiedades de cancelación con congruencias, inversos multiplicativos módulo $n$.
+    \item Tripletas pitagóricas. El método del descenso infinito y el Ultimo Teorema de Fermat para $n = 4$.
+    \item La congruencia lineal $ax \equiv b \pmod{n}$.
+    \item Sistemas reducidos y completos de residuos módulo $n$. Definición de la función $\varphi$ de Euler.
+    \item Los Teoremas de Fermat, Euler y de Wilson.
+    \item Sistemas de congruencias lineales y el Teorema Chino de los Residuos.
+\end{enumerate}
+
+\item \textbf{Funciones aritméticas (1 semana):} 
+\begin{enumerate}
+    \item Las funciones aritméticas básicas $\varphi(n)$ de Euler, $\mu(n)$ de Möbius, la función $d(n)$ que cuenta el número de divisores y $\sigma(n)$ de suma de los divisores. Propiedades básicas de multiplicatividad y fórmulas en términos de la factorización prima.
+    \item Funciones multiplicativas, multiplicación de Dirichlet y la fórmula de inversión de Möbius.
+\end{enumerate}
+
+\item \textbf{Raíces primitivas (1 semana):} 
+\begin{enumerate}
+    \item El orden multiplicativo $\operatorname{ord}_n(a)$ de un entero $a$ módulo $n$. Propiedades básicas del orden.
+    \item Definición de raíz primitiva módulo $n$.
+    \item Teorema de existencia de raíces primitivas módulo $n$ y su demostración en el caso primo.
+    \item La conjetura de Artin sobre raíces primitivas.
+\end{enumerate}
+
+\item \textbf{Congruencias cuadráticas y la Ley de Reciprocidad cuadrática (2 semanas):} 
+\begin{enumerate}
+    \item La congruencia cuadrática general $ax^2 + bx + c \equiv 0 \pmod{m}$ y su reducción a la congruencia $X^2 \equiv A \pmod{m}$ completando cuadrados. Uso del Teorema Chino del Residuo para reducir la congruencia $X^2 \equiv A \pmod{m}$ al sistema de congruencias $X^2 \equiv A \pmod{p_i^{e_i}}$ para $i = 1, \dots, r$, con $m = p_1^{e_1} \cdots p_r^{e_r}$.
+    \item Definición de residuos y no-residuos cuadráticos módulo $m$, ejemplos.
+    \item Residuos cuadráticos módulo un primo $p$, cantidad de residuos y no-residuos cuadráticos módulo $p$, residuos cuadráticos y raíces primitivas.
+    \item El símbolo de Legendre. Propiedades básicas, el Criterio de Euler.
+    \item Determinación de los símbolos $\left( \frac{-1}{p} \right)$ y $\left( \frac{2}{p} \right)$.
+    \item La Ley de Reciprocidad Cuadrática. Demostración de la ley.
+    \item Ejemplos de utilización de la Ley de Reciprocidad en la solución de problemas.
+\end{enumerate}
+
+
+\item \textbf{Enteros en cuerpos de números cuadráticos (4 semanas):} 
+\begin{enumerate}
+    \item Definición de un cuerpo cuadrático $\mathbb{Q}(\sqrt{d}) = \{ a + b\sqrt{d} \mid a, b \in \mathbb{Q} \}$. Propiedades de cuerpo, conjugado y norma.
+    \item Polinomio minimal de un número $\alpha \in \mathbb{Q}(\sqrt{d})$. Enteros cuadráticos en $\Q(\sqrt{d})$.
+    \item Caracterización de los enteros cuadráticos en $\Q(\sqrt{d})$ según el valor de $d \pmod{4}$. 
+    \item Propiedades de anillo del conjunto de los enteros cuadráticos.
+    \item Divisibilidad en los enteros de $\Q(\sqrt{d})$, unidades, elementos irreducibles y primos, asociados, caracterización de unidades en términos de la norma, determinación de las unidades en $\Q(\sqrt{d})$ cuando $d < 0$.
+    \item Factorización de enteros cuadráticos como producto de primos. Definición de dominio de factorización única en el caso de los enteros en $\Q(\sqrt{d})$. El enunciado del Teorema de Heegner-Stark.
+    \item Los enteros Gaussianos $\Z[i]$. División euclideana, el Lema de Euclides y factorización única en $\Z[i]$. Determinación de los primos en $\Z[i]$ y la demostración del Teorema de Fermat sobre primos $p$ de la forma $p = x^2 + y^2$.
+    \item Solución de las ecuaciones diofánticas $x^2 + y^2 = z^2$ y $y^2 = x^3 - 2$ usando factorización única en $\Z[i]$ y en $\Z[\sqrt{-2}]$.
+\end{enumerate}
+
+\end{enumerate}
+
+\subsubsection*{Metodología}
+
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item En este curso se aplican las bases de lógica y las estrategias de demostración vistas en el curso MA-0252 Introducción a las Demostraciones.
+   \item Utilizar el recurso tecnológico para reforzar distintos conceptos estudiados en el curso por medio de la visualización, cálculo y experimentación. En particular, es fundamental utilizar la programación en \texttt{SageMath} para realizar distintos cálculos y experimentos con los objetos de la Teoría de Números. Además, para esto se recomienda usar ejercicios de programación y exploración computacional como los que incluyen libros como el de Benjamin Hutz \cite{Hut18}.
+\end{enumerate}
+
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
+\begin{enumerate}
+    \item Aprovechar momentos adecuados del curso para motivar el estudio por medio de reseñas acerca del desarrollo histórico de la Teoría de Números y su importancia en aplicaciones. Por ejemplo se podrían asignar proyectos sobre aplicaciones a la criptografía, para lo cual se podría recomendar un libro como el de Jeffrey Hoffstein, Jill Pipher y Joseph Silverman \cite{HPS14}.
+    \item En la evaluación, se sugiere utilizar estrategias que promuevan el trabajo constante de parte de las personas estudiantes a lo largo del ciclo lectivo. Por ejemplo, esto se puede hacer por medio de tareas o quizzes.
+    \item Se recomienda incorporar durante el proceso de aprendizaje, ejercicios como los que aparecen en las subsecciones denominadas \textit{Exploration exercises} en el libro de Benjamin Hutz \cite{Hut18}.
+    \item Dado que hoy en día la mayoría del trabajo en matemática, tanto a nivel académico como profesional, es de naturaleza colaborativa, se sugiere a la persona docente implementar estrategias que promuevan el trabajo en equipo.
+\end{enumerate}
+
+
+
+\nocite{And94}
+\nocite{Apo76}
+\nocite{Hut18}
+\nocite{LZ19}
+\nocite{Fla18}
+\nocite{Ore88}
+\nocite{Bak12}
+\nocite{Dav08}
+\nocite{Sta78}
+\nocite{Sti03}
+\nocite{LeV90}
+\nocite{LeV02}
+\nocite{NZM91}
+\nocite{Pen23}
+
+
+
+
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
