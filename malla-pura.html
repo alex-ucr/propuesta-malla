@@ -46,6 +46,44 @@
       color: var(--muted);
       font-weight: 500;
     }
+    header .malla-fig {
+      margin: 1.1rem 0 0;
+    }
+    header .malla-fig-inner {
+      position: relative;
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      line-height: 0;
+    }
+    header .malla-fig img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    /* Áreas clicable: % respecto a la imagen; ajuste left/top/width/height a cada recuadro (MA0151, MA0251, …) */
+    header .malla-hotspot {
+      position: absolute;
+      display: block;
+      text-indent: -9999px;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.15s ease, box-shadow 0.15s ease;
+    }
+    header .malla-hotspot:hover {
+      background: rgba(30, 77, 123, 0.12);
+      box-shadow: inset 0 0 0 2px rgba(30, 77, 123, 0.35);
+    }
+    header .malla-hotspot:focus {
+      outline: none;
+    }
+    header .malla-hotspot:focus-visible {
+      background: rgba(30, 77, 123, 0.16);
+      box-shadow: inset 0 0 0 3px rgba(30, 77, 123, 0.45);
+    }
     .cycle {
       margin-bottom: 1.75rem;
     }
@@ -103,7 +141,19 @@
     .contenidos .contenidos-bloque ul { margin: 0.35rem 0 0.35rem 1.1rem; }
     .contenidos .math { font-family: "Cambria Math", "STIX Two Math", serif; }
     .contenidos .cite { color: #555; }
-    .contenidos.missing {
+    .contenidos .pdf-link {
+      margin: 0 0 0.9rem;
+      font-size: 0.9rem;
+    }
+    .contenidos .pdf-link a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contenidos .pdf-link a:hover {
+      text-decoration: underline;
+    }
+    .contenidos .falta-contenidos {
       color: #a63;
       font-style: italic;
     }
@@ -124,6 +174,18 @@
       <h1>Propuesta de malla curricular</h1>
       <p class="subtitle">Carrera de matemática</p>
       <p class="subtitle">Énfasis en matemática pura</p>
+      <figure class="malla-fig">
+        <div class="malla-fig-inner" id="malla-fig-wrap">
+          <img
+            src="propuesta_pura.png"
+            alt="Diagrama de la propuesta de malla curricular (énfasis en matemática pura)"
+          />
+          <!--
+            Clic: abre el colapsable. Las zonas se generan con crearHotspotsSobreMalla (script).
+            Ajuste HOTSPOT_POR_TITULO en malla-pura.html para alinear con cada caja de la imagen.
+          -->
+        </div>
+      </figure>
     </header>
     <div id="err" class="load-error" hidden>
       No se pudieron cargar <code>pura.json</code> o <code>contenidos_por_curso.json</code>
@@ -139,13 +201,157 @@
       const main = document.getElementById("malla");
       const errBox = document.getElementById("err");
 
+      /** Mismo directorio que esta página: PDF generados con latexmk a partir de Cursos/ */
+      const PDF_POR_TITULO = {
+        "MA-01XX Fundamentos de álgebra, trigonometría y geometría analítica":
+          "MA0151-fundamentos.pdf",
+        "MA-01XX Matemática Exploratoria": "MA0152-matematica-exploratoria.pdf",
+        "MA-02XX Introducción al Cálculo en una variable":
+          "MA0251-calculo-una-variable.pdf",
+        "MA-02XX Introducción a las Demostraciones":
+          "MA0252-intro-demostraciones.pdf",
+        "MA-0261 Algebra Lineal I": "MA0261-algebra-lineal-i.pdf",
+        "MA-0341 Matemática Computacional I": "MA0341-matematica-computacional-i.pdf",
+        "MA-0351 Introducción al Cálculo en varias variables":
+          "MA0351-calculo-varias-variables.pdf",
+        "MA-0361 Algebra Lineal II": "MA0361-algebra-lineal-ii.pdf",
+        "MA-0541 Matemática Computacional II":
+          "MA0441-matematica-computacional-ii.pdf",
+        "MA-04XX Principios de análisis en una variable":
+          "MAxxxx-principios-analisis-i.pdf",
+        "MA-0461 Teoría de Números": "MAxxxx-teoria-numeros.pdf",
+        "MA-0472 Introducción a la Geometría Diferencial": "MAxxxx-geometria.pdf",
+        "MA-05XX Algebra Abstracta I": "MAxxxx-algebra-abstracta-i.pdf",
+        "MA-04XX Principios de análisis en varias variables":
+          "MAxxxx-principios-analisis-ii.pdf",
+        "MA-0615 Ecuaciones Diferenciales": "MA-0615-ecuaciones-diferenciales.pdf",
+        "MA-0625 Análisis Real I": "MA-0625-analisis-real-i.pdf",
+        "MA-06XX Algebra Abstracta II": "MAxxxx-algebra-abstracta-ii.pdf",
+        "MA-0702 Análisis Complejo": "MA-0702-analisis-complejo.pdf",
+        "MA-0635 Introducción a la Topología": "MAxxxx-topologia.pdf",
+        "MA-0725 Análisis Real II": "MA-0725-analisis-real-ii.pdf",
+      };
+
+      const ORDEN_CICLOS = [
+        "I Ciclo", "II Ciclo", "III Ciclo", "IV Ciclo",
+        "V Ciclo", "VI Ciclo", "VII Ciclo", "Optativas"
+      ];
+
+      /** Un id por título (debe coincidir con cadenas de pura.json) — anclas #curso-... */
+      const ID_POR_TITULO = {
+        "MA-01XX Fundamentos de álgebra, trigonometría y geometría analítica":
+          "curso-fundamentos-algebra",
+        "MA-01XX Matemática Exploratoria": "curso-matematica-exploratoria",
+        "MA-02XX Introducción al Cálculo en una variable":
+          "curso-calculo-una-variable",
+        "MA-02XX Introducción a las Demostraciones": "curso-intro-demostraciones",
+        "MA-0261 Algebra Lineal I": "curso-algebra-lineal-i",
+        "MA-0341 Matemática Computacional I": "curso-mat-computacional-i",
+        "MA-0351 Introducción al Cálculo en varias variables":
+          "curso-calculo-varias-variables",
+        "MA-0361 Algebra Lineal II": "curso-algebra-lineal-ii",
+        "MA-0541 Matemática Computacional II": "curso-mat-computacional-ii",
+        "MA-04XX Principios de análisis en una variable":
+          "curso-principios-analisis-una-variable",
+        "MA-0461 Teoría de Números": "curso-teoria-numeros",
+        "MA-0472 Introducción a la Geometría Diferencial":
+          "curso-geometria-diferencial",
+        "MA-05XX Algebra Abstracta I": "curso-algebra-abstracta-i",
+        "MA-04XX Principios de análisis en varias variables":
+          "curso-principios-analisis-varias-variables",
+        "MA-0615 Ecuaciones Diferenciales": "curso-ecuaciones-diferenciales",
+        "MA-0625 Análisis Real I": "curso-analisis-real-i",
+        "MA-06XX Algebra Abstracta II": "curso-algebra-abstracta-ii",
+        "MA-0702 Análisis Complejo": "curso-analisis-complejo",
+        "MA-0635 Introducción a la Topología": "curso-topologia",
+        "MA-0725 Análisis Real II": "curso-analisis-real-ii",
+      };
+
+      /**
+       * % respecto a la imagen: left, top, w, h. Reajuste caja por caja en propuesta_pura.png.
+       * (Fundamentos y Cálculo I en una variable conservan posiciones que ya afinó.)
+       */
+      const HOTSPOT_POR_TITULO = {
+        "MA-01XX Fundamentos de álgebra, trigonometría y geometría analítica": {
+          left: 49, top: 11.5, w: 14.5, h: 8,
+        },
+        "MA-01XX Matemática Exploratoria": { left: 32, top: 11.5, w: 14.5, h: 8 },
+        "MA-02XX Introducción al Cálculo en una variable": {
+          left: 49, top: 22.5, w: 14.5, h: 8,
+        },
+        "MA-02XX Introducción a las Demostraciones": {
+          left: 32, top: 22.5, w: 14.5, h: 8,
+        },
+        "MA-0261 Algebra Lineal I": { left: 66.5, top: 34, w: 14.5, h: 8 },
+        "MA-0341 Matemática Computacional I": { left: 32, top: 34, w: 14.5, h: 8 },
+        "MA-0351 Introducción al Cálculo en varias variables": {
+          left: 49, top: 34, w: 14.5, h: 8,
+        },
+        "MA-0361 Algebra Lineal II": { left: 66.5, top: 45, w: 14.5, h: 8 },
+        "MA-0541 Matemática Computacional II": { left: 32, top: 68.5, w: 14.5, h: 8 },
+        "MA-04XX Principios de análisis en una variable": {
+          left: 49, top: 45, w: 14.5, h: 8,
+        },
+        "MA-0461 Teoría de Números": { left: 32, top: 45, w: 14.5, h: 8 },
+        "MA-0472 Introducción a la Geometría Diferencial": { left: 85, top: 45, w: 14.5, h: 8 },
+        "MA-05XX Algebra Abstracta I": { left: 66.5, top: 57, w: 14.5, h: 8 },
+        "MA-04XX Principios de análisis en varias variables": {
+          left: 49, top: 57, w: 14.5, h: 8,
+        },
+        "MA-0615 Ecuaciones Diferenciales": { left: 32, top: 57, w: 14.5, h: 8 },
+        "MA-0625 Análisis Real I": { left: 66.5, top: 82, w: 14.5, h: 8 },
+        "MA-06XX Algebra Abstracta II": { left: 66.5, top: 68.5, w: 14.5, h: 8 },
+        "MA-0702 Análisis Complejo": { left: 49, top: 82, w: 14.5, h: 8 },
+        "MA-0635 Introducción a la Topología": { left: 49, top: 68.5, w: 14.5, h: 8 },
+        "MA-0725 Análisis Real II": { left: 32, top: 82, w: 14.5, h: 8 },
+      };
+
+      function aplanarCursos(pura) {
+        const out = [];
+        for (const c of ORDEN_CICLOS) {
+          if (!pura[c] || !Array.isArray(pura[c])) continue;
+          for (const t of pura[c]) out.push(t);
+        }
+        return out;
+      }
+
+      function crearHotspotsSobreMalla(pura) {
+        const wrap = document.getElementById("malla-fig-wrap");
+        if (!wrap) return;
+        for (const a of wrap.querySelectorAll("a.malla-hotspot")) {
+          a.remove();
+        }
+        for (const title of aplanarCursos(pura)) {
+          const id = ID_POR_TITULO[title];
+          const g = HOTSPOT_POR_TITULO[title];
+          if (!id || !g) continue;
+          const el = document.createElement("a");
+          el.className = "malla-hotspot";
+          el.href = "#" + id;
+          el.setAttribute("data-open-curso", id);
+          el.title = "Ir a: " + title;
+          el.setAttribute("aria-label", "Abrir en la lista: " + title);
+          el.textContent = "Enlace: " + title;
+          el.style.left = g.left + "%";
+          el.style.top = g.top + "%";
+          el.style.width = g.w + "%";
+          el.style.height = g.h + "%";
+          wrap.appendChild(el);
+        }
+      }
+
+      function openCajaCursoById(detailId) {
+        const det = document.getElementById(detailId);
+        if (!det) return;
+        det.open = true;
+        det.scrollIntoView({ behavior: "smooth", block: "center" });
+        const s = det.querySelector("summary");
+        if (s) s.focus({ preventScroll: true });
+      }
+
       function build(pura, contenidos) {
-        const order = [
-          "I Ciclo", "II Ciclo", "III Ciclo", "IV Ciclo",
-          "V Ciclo", "VI Ciclo", "VII Ciclo", "Optativas"
-        ];
         const frag = document.createDocumentFragment();
-        for (const label of order) {
+        for (const label of ORDEN_CICLOS) {
           if (!Object.prototype.hasOwnProperty.call(pura, label)) continue;
           const courses = pura[label];
           if (!Array.isArray(courses) || !courses.length) continue;
@@ -157,18 +363,39 @@
           for (const title of courses) {
             const det = document.createElement("details");
             det.className = "course";
+            const cajaId = ID_POR_TITULO[title];
+            if (cajaId) det.id = cajaId;
             const sum = document.createElement("summary");
             sum.textContent = title;
             det.appendChild(sum);
             const block = document.createElement("div");
             block.className = "contenidos";
+            const pdfName = PDF_POR_TITULO[title];
+            if (pdfName) {
+              const wrap = document.createElement("p");
+              wrap.className = "pdf-link";
+              const a = document.createElement("a");
+              a.href = pdfName;
+              a.textContent = "Contenidos (PDF)";
+              a.target = "_blank";
+              a.rel = "noopener noreferrer";
+              wrap.appendChild(a);
+              block.appendChild(wrap);
+            }
             const html = contenidos[title];
             if (html == null || html === "") {
-              block.classList.add("missing");
-              block.textContent =
-                "(No hay texto de contenidos en contenidos_por_curso.json para este curso.)";
+              const p = document.createElement("p");
+              p.className = "falta-contenidos";
+              p.appendChild(
+                document.createTextNode(
+                  "(No hay texto de contenidos en contenidos_por_curso.json para este curso.)"
+                )
+              );
+              block.appendChild(p);
             } else {
-              block.innerHTML = html;
+              const inner = document.createElement("div");
+              inner.innerHTML = html;
+              block.appendChild(inner);
             }
             det.appendChild(block);
             section.appendChild(det);
@@ -190,6 +417,21 @@
       ])
         .then(([pura, contenidos]) => {
           build(pura, contenidos);
+          crearHotspotsSobreMalla(pura);
+          document.querySelectorAll("a.malla-hotspot[data-open-curso]").forEach(
+            function (a) {
+              a.addEventListener("click", function (e) {
+                e.preventDefault();
+                const id = a.getAttribute("data-open-curso");
+                if (id) openCajaCursoById(id);
+              });
+            }
+          );
+          if (location.hash) {
+            const id = location.hash.slice(1);
+            const el = document.getElementById(id);
+            if (el && el.tagName === "DETAILS") openCajaCursoById(id);
+          }
         })
         .catch(() => {
           errBox.hidden = false;
