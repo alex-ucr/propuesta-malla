@@ -4,7 +4,6 @@
 *.bbl
 *.blg
 *.aux
-*.pdf
 *.zip
 *.synctex
 *.out
@@ -13,4 +12,8 @@
 *.gz
 *.fls
 *.latexmk
+*.bcf
+*.fdb_latexmk
+*.xml
+*.bcf-SAVE-ERROR
 *.bcf
