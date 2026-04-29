@@ -14,19 +14,23 @@
   ],
   "IV Ciclo": [
     "MA-0361 Algebra Lineal II",
-    "MA-0541 Matemática Computacional II",
-    "MA-04XX Principios de análisis en una variable"
+    "MA-04XX Principios de análisis en una variable",
+    "CA-0721 Probabilidad",
+    "CA-0204 Herramientas de ciencia de datos I"
   ],
   "V Ciclo": [
-    "MA-04XX Principios de análisis en varias variables"
+    "MA-04XX Principios de análisis en varias variables",
+    "MA-0615 Ecuaciones Diferenciales",
+    "CA-0303 Estadística actuarial I"
   ],
   "VI Ciclo": [
-    "MA-0615 Ecuaciones Diferenciales",
+    "MA-0541 Matemática Computacional II",
     "MA-0625 Análisis Real I"
   ],
   "VII Ciclo": [
     "MA-0702 Análisis Complejo",
-    "MA-0635 Introducción a la Topología"
+    "MA-0635 Introducción a la Topología",
+    "CA-0411 Análisis de Datos I"
   ],
   "Optativas": [
     "MA-0725 Análisis Real II"

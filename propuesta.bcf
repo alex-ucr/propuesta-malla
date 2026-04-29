@@ -2365,7 +2365,19 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="2">
-    <bcf:citekey order="1" intorder="1">axler2011algebra</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">Pol14</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Gri18</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Gri18</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">MS17</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">RT94</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Pol14</bcf:citekey>
+    <bcf:citekey order="7" intorder="1" nocite="1">Eng93</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">Gri18</bcf:citekey>
+    <bcf:citekey order="9" intorder="3">MS17</bcf:citekey>
+    <bcf:citekey order="10" intorder="4">Pol14</bcf:citekey>
+    <bcf:citekey order="11" intorder="5">RT94</bcf:citekey>
+    <bcf:citekey order="12" intorder="6" nocite="1">Sti22</bcf:citekey>
+    <bcf:citekey order="13" intorder="7" nocite="1">Tal13</bcf:citekey>
   </bcf:section>
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
@@ -2375,6 +2387,12 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="3">
+    <bcf:citekey order="1" intorder="1">SRW17</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">SRW17</bcf:citekey>
+    <bcf:citekey order="3" intorder="1" nocite="1">Apo84</bcf:citekey>
+    <bcf:citekey order="4" intorder="2" nocite="1">Apo85</bcf:citekey>
+    <bcf:citekey order="5" intorder="3">SRW17</bcf:citekey>
+    <bcf:citekey order="6" intorder="4" nocite="1">Ste18</bcf:citekey>
   </bcf:section>
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
@@ -2384,6 +2402,20 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="4">
+    <bcf:citekey order="1" intorder="1" nocite="1">And94</bcf:citekey>
+    <bcf:citekey order="2" intorder="2" nocite="1">Blo11</bcf:citekey>
+    <bcf:citekey order="3" intorder="3" nocite="1">CD</bcf:citekey>
+    <bcf:citekey order="4" intorder="4" nocite="1">Dud78</bcf:citekey>
+    <bcf:citekey order="5" intorder="5" nocite="1">UG11</bcf:citekey>
+    <bcf:citekey order="6" intorder="6" nocite="1">Lak16</bcf:citekey>
+    <bcf:citekey order="7" intorder="7" nocite="1">Mur18</bcf:citekey>
+    <bcf:citekey order="8" intorder="8" nocite="1">Nic19</bcf:citekey>
+    <bcf:citekey order="9" intorder="9" nocite="1">Piz02</bcf:citekey>
+    <bcf:citekey order="10" intorder="10" nocite="1">Sol13</bcf:citekey>
+    <bcf:citekey order="11" intorder="11" nocite="1">Ste09</bcf:citekey>
+    <bcf:citekey order="12" intorder="12" nocite="1">Vel19</bcf:citekey>
+    <bcf:citekey order="13" intorder="13" nocite="1">Zal14</bcf:citekey>
+    <bcf:citekey order="14" intorder="14" nocite="1">Zal18</bcf:citekey>
   </bcf:section>
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
@@ -2393,8 +2425,16 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="5">
-    <bcf:citekey order="1" intorder="1">StewartCalculus</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">liebeck2016pure</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">Ste18</bcf:citekey>
+    <bcf:citekey order="2" intorder="1" nocite="1">Abb15</bcf:citekey>
+    <bcf:citekey order="3" intorder="2" nocite="1">Apo84</bcf:citekey>
+    <bcf:citekey order="4" intorder="3" nocite="1">Apo85</bcf:citekey>
+    <bcf:citekey order="5" intorder="4" nocite="1">BS11</bcf:citekey>
+    <bcf:citekey order="6" intorder="5" nocite="1">Apo76</bcf:citekey>
+    <bcf:citekey order="7" intorder="6">SRW17</bcf:citekey>
+    <bcf:citekey order="8" intorder="7">Ste18</bcf:citekey>
+    <bcf:citekey order="9" intorder="8" nocite="1">Spi08</bcf:citekey>
+    <bcf:citekey order="10" intorder="9" nocite="1">Ros13</bcf:citekey>
   </bcf:section>
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
@@ -2424,6 +2464,24 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="7">
+    <bcf:citekey order="1" intorder="1">Ste18</bcf:citekey>
+    <bcf:citekey order="2" intorder="1" nocite="1">Abb15</bcf:citekey>
+    <bcf:citekey order="3" intorder="2" nocite="1">Apo84</bcf:citekey>
+    <bcf:citekey order="4" intorder="3" nocite="1">Apo85</bcf:citekey>
+    <bcf:citekey order="5" intorder="4" nocite="1">BS11</bcf:citekey>
+    <bcf:citekey order="6" intorder="5" nocite="1">Apo76</bcf:citekey>
+    <bcf:citekey order="7" intorder="6">Ste18</bcf:citekey>
+    <bcf:citekey order="8" intorder="7" nocite="1">Spi08</bcf:citekey>
+    <bcf:citekey order="9" intorder="8" nocite="1">Ros13</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 8 -->
+  <bcf:bibdata section="8">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="8">
     <bcf:citekey order="1" intorder="1" nocite="1">Apo85</bcf:citekey>
     <bcf:citekey order="2" intorder="2" nocite="1">HK71</bcf:citekey>
     <bcf:citekey order="3" intorder="3" nocite="1">Axl15</bcf:citekey>
@@ -2435,40 +2493,34 @@
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
   </bcf:section>
-  <!-- SECTION 8 -->
-  <bcf:bibdata section="8">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
-  </bcf:bibdata>
-  <bcf:section number="8">
-    <bcf:citekey order="1" intorder="1">axler2011algebra</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">lang1988basic</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">axler2011algebra</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">alcock2017mathematics</bcf:citekey>
-  </bcf:section>
-  <!-- SECTION 0 (cont.) -->
-  <bcf:section number="0">
-  </bcf:section>
   <!-- SECTION 9 -->
   <bcf:bibdata section="9">
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="9">
-    <bcf:citekey order="1" intorder="1">Con78</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Nee23</bcf:citekey>
-    <bcf:citekey order="3" intorder="1" nocite="1">AF03</bcf:citekey>
-    <bcf:citekey order="4" intorder="2" nocite="1">AF21</bcf:citekey>
-    <bcf:citekey order="5" intorder="3" nocite="1">Ahl21</bcf:citekey>
-    <bcf:citekey order="6" intorder="4" nocite="1">Apo76</bcf:citekey>
-    <bcf:citekey order="7" intorder="5" nocite="1">BN10</bcf:citekey>
-    <bcf:citekey order="8" intorder="6" nocite="1">Boa10</bcf:citekey>
-    <bcf:citekey order="9" intorder="7">Con78</bcf:citekey>
-    <bcf:citekey order="10" intorder="8" nocite="1">Con95</bcf:citekey>
-    <bcf:citekey order="11" intorder="9" nocite="1">GK06</bcf:citekey>
-    <bcf:citekey order="12" intorder="10" nocite="1">Lan99</bcf:citekey>
-    <bcf:citekey order="13" intorder="11" nocite="1">Kra08</bcf:citekey>
-    <bcf:citekey order="14" intorder="12">Nee23</bcf:citekey>
-    <bcf:citekey order="15" intorder="13" nocite="1">Pri03</bcf:citekey>
-    <bcf:citekey order="16" intorder="14" nocite="1">SS03</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">Ste16</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">CCC22</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">langtangen_primer_2016</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">BRR15</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Knu97</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">CLR--IntroToAlgorithms</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Ueh19</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Fer17</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">GKP--ConcreteMathematics</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Mez15</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Hut18</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">BuhlerWagon2008</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">BRR15</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">langtangen_primer_2016</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">langtangen_primer_2016</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">langtangen_primer_2016</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">trefethen97</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">CLR--IntroToAlgorithms</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">GKP--ConcreteMathematics</bcf:citekey>
+    <bcf:citekey order="20" intorder="3">langtangen_primer_2016</bcf:citekey>
+    <bcf:citekey order="21" intorder="4">CCC22</bcf:citekey>
+    <bcf:citekey order="22" intorder="5">Fer17</bcf:citekey>
+    <bcf:citekey order="23" intorder="6">BRR15</bcf:citekey>
   </bcf:section>
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
@@ -2478,6 +2530,171 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="10">
+    <bcf:citekey order="1" intorder="1">Overton</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Suli2003</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">Trefethen2</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Suli2003</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Suli2003</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">trefethen97</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Quarteroni</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">Suli2003</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Zhang</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Suli2003</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">Zhang</bcf:citekey>
+    <bcf:citekey order="10" intorder="3">Overton</bcf:citekey>
+    <bcf:citekey order="11" intorder="4" nocite="1">TrefethenIEEE</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 11 -->
+  <bcf:bibdata section="11">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="11">
+    <bcf:citekey order="1" intorder="1">Abb15</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Abb15</bcf:citekey>
+    <bcf:citekey order="3" intorder="2" nocite="1">Apo84</bcf:citekey>
+    <bcf:citekey order="4" intorder="3" nocite="1">Apo85</bcf:citekey>
+    <bcf:citekey order="5" intorder="4" nocite="1">Bar76</bcf:citekey>
+    <bcf:citekey order="6" intorder="5" nocite="1">BS11</bcf:citekey>
+    <bcf:citekey order="7" intorder="6" nocite="1">Apo76</bcf:citekey>
+    <bcf:citekey order="8" intorder="7" nocite="1">Spi08</bcf:citekey>
+    <bcf:citekey order="9" intorder="8" nocite="1">Ros13</bcf:citekey>
+    <bcf:citekey order="10" intorder="9" nocite="1">TBB08</bcf:citekey>
+    <bcf:citekey order="11" intorder="10" nocite="1">Rud76</bcf:citekey>
+    <bcf:citekey order="12" intorder="11" nocite="1">Piz06</bcf:citekey>
+    <bcf:citekey order="13" intorder="12" nocite="1">How01</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 12 -->
+  <bcf:bibdata section="12">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="12">
+    <bcf:citekey order="1" intorder="1" nocite="1">Cod89</bcf:citekey>
+    <bcf:citekey order="2" intorder="2" nocite="1">Cod55</bcf:citekey>
+    <bcf:citekey order="3" intorder="3" nocite="1">Bra93</bcf:citekey>
+    <bcf:citekey order="4" intorder="4" nocite="1">VE21</bcf:citekey>
+    <bcf:citekey order="5" intorder="5" nocite="1">Mag23</bcf:citekey>
+    <bcf:citekey order="6" intorder="6" nocite="1">Per01</bcf:citekey>
+    <bcf:citekey order="7" intorder="7" nocite="1">Tes01</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 13 -->
+  <bcf:bibdata section="13">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="13">
+    <bcf:citekey order="1" intorder="1">Hut18</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">HPS14</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Hut18</bcf:citekey>
+    <bcf:citekey order="4" intorder="1" nocite="1">And94</bcf:citekey>
+    <bcf:citekey order="5" intorder="2" nocite="1">Apo76</bcf:citekey>
+    <bcf:citekey order="6" intorder="3">Hut18</bcf:citekey>
+    <bcf:citekey order="7" intorder="4" nocite="1">LZ19</bcf:citekey>
+    <bcf:citekey order="8" intorder="5" nocite="1">Fla18</bcf:citekey>
+    <bcf:citekey order="9" intorder="6" nocite="1">Ore88</bcf:citekey>
+    <bcf:citekey order="10" intorder="7" nocite="1">Bak12</bcf:citekey>
+    <bcf:citekey order="11" intorder="8" nocite="1">Dav08</bcf:citekey>
+    <bcf:citekey order="12" intorder="9" nocite="1">Sta78</bcf:citekey>
+    <bcf:citekey order="13" intorder="10" nocite="1">Sti03</bcf:citekey>
+    <bcf:citekey order="14" intorder="11" nocite="1">LeV90</bcf:citekey>
+    <bcf:citekey order="15" intorder="12" nocite="1">LeV02</bcf:citekey>
+    <bcf:citekey order="16" intorder="13" nocite="1">NZM91</bcf:citekey>
+    <bcf:citekey order="17" intorder="14" nocite="1">Pen23</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 14 -->
+  <bcf:bibdata section="14">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="14">
+    <bcf:citekey order="1" intorder="1">Abb15</bcf:citekey>
+    <bcf:citekey order="2" intorder="1" nocite="1">doC16</bcf:citekey>
+    <bcf:citekey order="3" intorder="2" nocite="1">Kuh15</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 15 -->
+  <bcf:bibdata section="15">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="15">
+    <bcf:citekey order="1" intorder="1">Alu21</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Hun80</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Hun80</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Alu21</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Hun80</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Alu21</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Hun80</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Lee18</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Sar08</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Gou12</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Alu09</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Rot15</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Rot17</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Lan02</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">IR90</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">HPS14</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Ste09</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Mez16</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Ste13</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Sti10</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Kle07</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Alu09</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">Alu21</bcf:citekey>
+    <bcf:citekey order="24" intorder="3">Lan02</bcf:citekey>
+    <bcf:citekey order="25" intorder="4" nocite="1">Lan05</bcf:citekey>
+    <bcf:citekey order="26" intorder="5">Lee18</bcf:citekey>
+    <bcf:citekey order="27" intorder="6">Hun80</bcf:citekey>
+    <bcf:citekey order="28" intorder="7" nocite="1">Hun13</bcf:citekey>
+    <bcf:citekey order="29" intorder="8" nocite="1">AF15</bcf:citekey>
+    <bcf:citekey order="30" intorder="9">Sti10</bcf:citekey>
+    <bcf:citekey order="31" intorder="10">Kle07</bcf:citekey>
+    <bcf:citekey order="32" intorder="11">IR90</bcf:citekey>
+    <bcf:citekey order="33" intorder="12">Gou12</bcf:citekey>
+    <bcf:citekey order="34" intorder="13" nocite="1">Kna16a</bcf:citekey>
+    <bcf:citekey order="35" intorder="14" nocite="1">Kna16b</bcf:citekey>
+    <bcf:citekey order="36" intorder="15" nocite="1">CE20</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 16 -->
+  <bcf:bibdata section="16">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="16">
+    <bcf:citekey order="1" intorder="1">Ste18</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Alu09</bcf:citekey>
+    <bcf:citekey order="3" intorder="2">Alu21</bcf:citekey>
+    <bcf:citekey order="4" intorder="3" nocite="1">CE20</bcf:citekey>
+    <bcf:citekey order="5" intorder="4" nocite="1">Mor96</bcf:citekey>
+    <bcf:citekey order="6" intorder="5" nocite="1">New12</bcf:citekey>
+    <bcf:citekey order="7" intorder="6" nocite="1">Edw84</bcf:citekey>
+    <bcf:citekey order="8" intorder="7">Sti10</bcf:citekey>
+    <bcf:citekey order="9" intorder="8">Kle07</bcf:citekey>
+    <bcf:citekey order="10" intorder="9" nocite="1">Kna16a</bcf:citekey>
+    <bcf:citekey order="11" intorder="10" nocite="1">Kna16b</bcf:citekey>
+    <bcf:citekey order="12" intorder="11">Lan02</bcf:citekey>
+    <bcf:citekey order="13" intorder="12" nocite="1">Lan05</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 17 -->
+  <bcf:bibdata section="17">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="17">
     <bcf:citekey order="1" intorder="1">Fol16</bcf:citekey>
     <bcf:citekey order="2" intorder="1">Bre08</bcf:citekey>
     <bcf:citekey order="3" intorder="1" nocite="1">Apo76</bcf:citekey>
@@ -2494,11 +2711,35 @@
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
   </bcf:section>
-  <!-- SECTION 11 -->
-  <bcf:bibdata section="11">
+  <!-- SECTION 18 -->
+  <bcf:bibdata section="18">
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
-  <bcf:section number="11">
+  <bcf:section number="18">
+    <bcf:citekey order="1" intorder="1">Bar76</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Abb15</bcf:citekey>
+    <bcf:citekey order="3" intorder="2" nocite="1">Apo84</bcf:citekey>
+    <bcf:citekey order="4" intorder="3" nocite="1">Apo85</bcf:citekey>
+    <bcf:citekey order="5" intorder="4">Bar76</bcf:citekey>
+    <bcf:citekey order="6" intorder="5" nocite="1">BS11</bcf:citekey>
+    <bcf:citekey order="7" intorder="6" nocite="1">Apo76</bcf:citekey>
+    <bcf:citekey order="8" intorder="7" nocite="1">Ros13</bcf:citekey>
+    <bcf:citekey order="9" intorder="8" nocite="1">TBB08</bcf:citekey>
+    <bcf:citekey order="10" intorder="9" nocite="1">Rud76</bcf:citekey>
+    <bcf:citekey order="11" intorder="10" nocite="1">Piz06</bcf:citekey>
+    <bcf:citekey order="12" intorder="11" nocite="1">Buc03</bcf:citekey>
+    <bcf:citekey order="13" intorder="12" nocite="1">Fit09</bcf:citekey>
+    <bcf:citekey order="14" intorder="13" nocite="1">Spi65</bcf:citekey>
+    <bcf:citekey order="15" intorder="14" nocite="1">MT03</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 19 -->
+  <bcf:bibdata section="19">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="19">
     <bcf:citekey order="1" intorder="1">Fol16</bcf:citekey>
     <bcf:citekey order="2" intorder="1">Bre08</bcf:citekey>
     <bcf:citekey order="3" intorder="1" nocite="1">Lie01</bcf:citekey>
@@ -2519,18 +2760,39 @@
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
   </bcf:section>
-  <!-- SECTION 12 -->
-  <bcf:bibdata section="12">
+  <!-- SECTION 20 -->
+  <bcf:bibdata section="20">
     <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
   </bcf:bibdata>
-  <bcf:section number="12">
-    <bcf:citekey order="1" intorder="1" nocite="1">Cod89</bcf:citekey>
-    <bcf:citekey order="2" intorder="2" nocite="1">Cod55</bcf:citekey>
-    <bcf:citekey order="3" intorder="3" nocite="1">Bra93</bcf:citekey>
-    <bcf:citekey order="4" intorder="4" nocite="1">VE21</bcf:citekey>
-    <bcf:citekey order="5" intorder="5" nocite="1">Mag23</bcf:citekey>
-    <bcf:citekey order="6" intorder="6" nocite="1">Per01</bcf:citekey>
-    <bcf:citekey order="7" intorder="7" nocite="1">Tes01</bcf:citekey>
+  <bcf:section number="20">
+    <bcf:citekey order="1" intorder="1">Con78</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Nee23</bcf:citekey>
+    <bcf:citekey order="3" intorder="1" nocite="1">AF03</bcf:citekey>
+    <bcf:citekey order="4" intorder="2" nocite="1">AF21</bcf:citekey>
+    <bcf:citekey order="5" intorder="3" nocite="1">Ahl21</bcf:citekey>
+    <bcf:citekey order="6" intorder="4" nocite="1">Apo76</bcf:citekey>
+    <bcf:citekey order="7" intorder="5" nocite="1">BN10</bcf:citekey>
+    <bcf:citekey order="8" intorder="6" nocite="1">Boa10</bcf:citekey>
+    <bcf:citekey order="9" intorder="7">Con78</bcf:citekey>
+    <bcf:citekey order="10" intorder="8" nocite="1">Con95</bcf:citekey>
+    <bcf:citekey order="11" intorder="9" nocite="1">GK06</bcf:citekey>
+    <bcf:citekey order="12" intorder="10" nocite="1">Lan99</bcf:citekey>
+    <bcf:citekey order="13" intorder="11" nocite="1">Kra08</bcf:citekey>
+    <bcf:citekey order="14" intorder="12">Nee23</bcf:citekey>
+    <bcf:citekey order="15" intorder="13" nocite="1">Pri03</bcf:citekey>
+    <bcf:citekey order="16" intorder="14" nocite="1">SS03</bcf:citekey>
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 21 -->
+  <bcf:bibdata section="21">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Biblio.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="21">
+    <bcf:citekey order="1" intorder="1" nocite="1">Apo76</bcf:citekey>
+    <bcf:citekey order="2" intorder="2" nocite="1">Mun00</bcf:citekey>
+    <bcf:citekey order="3" intorder="3" nocite="1">GG99</bcf:citekey>
   </bcf:section>
   <!-- SECTION 0 (cont.) -->
   <bcf:section number="0">
@@ -2668,6 +2930,87 @@
                 labelalphanametemplatename="global">
   </bcf:datalist>
   <bcf:datalist section="12"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="13"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="14"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="15"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="16"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="17"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="18"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="19"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="20"
+                name="anyt/global//global/global"
+                type="entry"
+                sortingtemplatename="anyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+  <bcf:datalist section="21"
                 name="anyt/global//global/global"
                 type="entry"
                 sortingtemplatename="anyt"

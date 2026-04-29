@@ -212,15 +212,19 @@ def _inline_latex_to_html(s: str) -> str:
 
 def _plain_latex_to_html(s: str) -> str:
     s = _apply_tex_accents(s)
+    s = re.sub(r"\\LaTeX\{\}", "LaTeX", s)
+    s = re.sub(r"\\LaTeX\b", "LaTeX", s)
     out: list[str] = []
     i, n = 0, len(s)
     while i < n:
         b = s.find(r"\textbf{", i)
+        e0 = s.find(r"\emph{", i)
+        it0 = s.find(r"\textit{", i)
         t0 = s.find(r"\texttt{", i)
         u0 = s.find(r"\url{", i)
         c0 = s.find(r"\cite", i)
         opts: list[tuple[int, str]] = []
-        for pos, k in (b, "b"), (c0, "c"), (t0, "t"), (u0, "u"):
+        for pos, k in (b, "b"), (c0, "c"), (e0, "e"), (it0, "i"), (t0, "t"), (u0, "u"):
             if pos >= 0:
                 opts.append((pos, k))
         if not opts:
@@ -255,6 +259,8 @@ def _plain_latex_to_html(s: str) -> str:
         body, nxt = g
         if kind == "b":
             out.append(f"<strong>{_inline_latex_to_html(body)}</strong>")
+        elif kind in ("e", "i"):
+            out.append(f"<em>{_inline_latex_to_html(body)}</em>")
         elif kind == "t":
             out.append(f"<code>{escape(body)}</code>")
         else:
