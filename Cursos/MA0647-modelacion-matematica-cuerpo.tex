@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% MA-0647 Modelación Matemática %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection*{MA-0647 Modelación Matemática}
+\addcontentsline{toc}{subsection}{MA-0647 Modelación Matemática}
+
+\hypertarget{MA0647}{}
+\begin{refsection}
+\begin{table}[H]
+\centering{
+\begin{tabular}{|ll|}
+\hline
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0615 Ecuaciones Diferenciales, MA-0541 Matemática Computacional II \\ 
+\textbf{Ciclo:} VII  & \textbf{Correquisitos:} Ninguno \\ 
+\textbf{Tipo de curso:} Teórico-práctico & \textbf{Horas presenciales por semana:} 4 \\ 
+\textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana:} 6 \\ \hline
+\end{tabular}
+}
+\end{table}
+
+\subsubsection*{Descripción del curso}
+
+Este curso se ubica en el séptimo ciclo del plan de estudios de la carrera Bachillerato en Matemática con énfasis en Matemática Aplicada. Está dirigido a personas estudiantes que ya cuentan con formación en ecuaciones diferenciales, álgebra lineal, probabilidad y computación científica, y que desean integrar esos conocimientos en un enfoque sistemático de \emph{modelación matemática}.
+
+La modelación matemática no se concibe aquí como un catálogo de técnicas aisladas ni como entrenamiento para el uso de una herramienta específica. El eje del curso es un \textbf{problema real}: traducirlo a un modelo matemático tratable, analizarlo con el nivel de sofisticación adecuado, interpretar las predicciones en su contexto original y someter el modelo a validación con datos o experimentos cuando ello sea posible. Se enfatiza la modelación \textbf{continua} mediante ecuaciones diferenciales ordinarias y sistemas dinámicos, complementada con modelos discretos, simulación numérica y nociones elementales de validación estadística.
+
+El curso retoma y aplica contenidos de MA-0615 Ecuaciones Diferenciales (cualitativo, equilibrios, estabilidad), MA-0541 Matemática Computacional II (simulación y métodos numéricos) y, de manera transversal, herramientas de probabilidad y estadística para la comparación modelo--dato. La segunda mitad del curso deja margen deliberado para que la persona docente incorpore \emph{sazones} temáticos acordes con su experiencia (epidemiología, ecología, dinámicas sociales, redes, modelos estocásticos introductorios, ecuaciones en derivadas parciales prototipo, entre otros), siempre articulados con el ciclo de modelación y un proyecto final integrador.
+
+\subsubsection*{Objetivos}
+
+\textbf{General:} Formular, analizar, simular e interpretar modelos matemáticos determinísticos---principalmente basados en ecuaciones diferenciales y sistemas dinámicos---a partir de problemas de ciencias, ingeniería o contextos interdisciplinarios, evaluando la validez del modelo y comunicando resultados con claridad.
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Describir las etapas del ciclo de modelación: comprensión del problema, supuestos, formulación matemática, análisis, interpretación y validación.
+\item Traducir situaciones reales a ecuaciones diferenciales o sistemas dinámicos, justificando variables, parámetros, unidades y simplificaciones.
+\item Analizar cualitativamente modelos autónomos: existencia y significado de soluciones, puntos de equilibrio, linealización y estabilidad local, con apoyo en simulación cuando proceda.
+\item Implementar y comparar métodos numéricos básicos para la simulación de modelos continuos y discretos, e interpretar discrepancias entre modelo, solución exacta (cuando exista) y datos.
+\item Construir y analizar modelos discretos (ecuaciones en diferencias, mapas iterados) como alternativa o complemento de modelos continuos.
+\item Validar modelos mediante comparación con datos, estimación elemental de parámetros y evaluación de residuos o error, usando herramientas probabilísticas básicas.
+\item Leer críticamente descripciones de modelos en artículos o informes técnicos y comunicar por escrito y de forma oral un proyecto de modelación completo.
+\end{enumerate}
+
+\subsubsection*{Contenidos}
+
+\begin{enumerate}
+
+\item \textbf{El ciclo de modelación matemática (2 semanas):}
+\begin{enumerate}
+    \item ¿Qué es un modelo? Tipos de modelos (determinísticos, estocásticos, discretos, continuos) y tipos de soluciones.
+    \item Supuestos, delimitación del alcance y adimensionalización; escalamiento y orden de magnitud.
+    \item Formulación: de la ley verbal o del fenómeno a las ecuaciones; identificación de datos necesarios.
+    \item Interpretación de resultados matemáticos en el lenguaje del problema original.
+    \item Validación y limitaciones del modelo; sensibilidad a parámetros.
+    \item Lectura guiada de modelos en la literatura (artículos divulgativos o técnicos de acceso moderado).
+\end{enumerate}
+
+\item \textbf{Modelación continua con ecuaciones diferenciales y sistemas dinámicos (5 semanas):}
+\begin{enumerate}
+    \item Principios de balance y conservación; construcción de EDO y sistemas autónomos en contextos físicos y biológicos.
+    \item Repaso operativo de sistemas lineales y retratos de fase en dimensión baja; uso de álgebra lineal en la linealización.
+    \item Puntos de equilibrio, estabilidad local, nociones de bien planteado (existencia, unicidad, dependencia de condiciones iniciales) a nivel interpretativo.
+    \item Bifurcaciones elementales y cambios cualitativos en la dinámica (ejemplos motivadores).
+    \item Casos integradores: oscilaciones y péndulo (incluyendo registro experimental sencillo, p.\ ej.\ con sensores de un dispositivo móvil); modelos de reacción--difusión o competencia en versión reducida.
+    \item Modelos clásicos en epidemiología (SIR y variantes) y otros ejemplos de dinámica poblacional o social.
+\end{enumerate}
+
+\item \textbf{Modelación discreta y simulación computacional (3 semanas):}
+\begin{enumerate}
+    \item Ecuaciones en diferencias y mapas iterados; relación con modelos continuos (Euler, discretización).
+    \item Métodos numéricos para EDO: Euler, Runge--Kutta; error de truncamiento y estabilidad a nivel práctico.
+    \item Exploración de parámetros, bifurcaciones numéricas y visualización de retratos de fase.
+    \item Introducción opcional a modelos en redes (grafos) según criterio de la persona docente.
+\end{enumerate}
+
+\item \textbf{Validación, incertidumbre e interpretación con datos (2 semanas):}
+\begin{enumerate}
+    \item Ajuste de parámetros por mínimos cuadrados u otros criterios elementales.
+    \item Comparación modelo--experimento; residuos y diagnóstico gráfico.
+    \item Estimación de error y complementos probabilísticos básicos para cuantificar incertidumbre (sin exigir un curso avanzado de inferencia).
+    \item Comunicación de resultados a públicos especializados y no especializados.
+\end{enumerate}
+
+\item \textbf{Temas complementarios a elección de la persona docente (2 semanas):}
+\begin{enumerate}
+    \item La persona docente selecciona uno o dos bloques acordes con su especialidad, por ejemplo: introducción a modelos estocásticos (cadenas de Markov, procesos de Poisson); EDP prototipo (calor, onda, difusión); optimización en calibración de modelos; modelación en ecología o ciencias actuariales; dinámica de opinión o modelos de interacción social.
+    \item Puede incluir contenidos matemáticos no vistos antes en la malla si son necesarios para el proceso de modelación del tema elegido, siempre que se mantenga el nivel de exigencia del curso.
+\end{enumerate}
+
+\item \textbf{Proyecto final integrador (transversal, semanas 11--15):}
+\begin{enumerate}
+    \item Planteamiento de un problema, construcción del modelo, análisis teórico o numérico, validación parcial con datos o experimento, y entrega de informe y presentación oral.
+\end{enumerate}
+
+\end{enumerate}
+
+\subsubsection*{Metodología}
+
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+
+\begin{enumerate}
+    \item El curso es \textbf{teórico-práctico}: cada bloque temático debe incluir problemas reales o estudios de caso, no solo ejercicios cerrados del libro.
+    \item Se privilegia un nivel de formalismo \textbf{accesible}: demostraciones completas solo cuando aporten comprensión del fenómeno modelado; el rigor se orienta a justificar supuestos, interpretar resultados y reconocer limitaciones.
+    \item La persona docente debe \textbf{delimitar explícitamente} el nivel matemático exigido en cada actividad (por ejemplo, cuándo basta análisis cualitativo frente a cálculo explícito de soluciones).
+    \item No se exige un software único; se aceptan entornos de computación científica (Python, Julia, R, Octave, \emph{SageMath}, etc.) según disponibilidad y criterio docente, priorizando reproducibilidad y documentación del código.
+    \item Se debe promover la lectura de fuentes externas (artículos, capítulos de libros, informes) y el trabajo colaborativo en el proyecto final.
+    \item La evaluación debe incluir un \textbf{proyecto final} con avances intermedios (bitácoras o entregas parciales) que recorra el ciclo completo de modelación.
+\end{enumerate}
+
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
+
+\begin{enumerate}
+    \item Iniciar con un mini-proyecto corto (p.\ ej.\ péndulo o crecimiento poblacional) antes del proyecto final, para interiorizar el ciclo de modelación.
+    \item Alternar sesiones de formulación analítica con laboratorios de simulación y visualización.
+    \item Invitar, cuando sea posible, a una charla de un especialista de otra disciplina (biología, epidemiología, ingeniería, ciencias sociales) para ilustrar el rol del traductor matemático.
+    \item Fomentar el uso de conjuntos de datos abiertos o mediciones sencillas realizadas por el estudiantado.
+    \item Incluir rúbricas claras para el informe escrito y la presentación oral del proyecto final.
+    \item Recordar que la malla aplicada contempla optativas de otras disciplinas: el proyecto puede enlazarse con esas áreas cuando el estudiantado lo desee.
+\end{enumerate}
+
+\nocite{Bra93}
+\nocite{Per01}
+\nocite{VE21}
+\nocite{Mag23}
+\nocite{Pol14}
+\nocite{Cod89}
+
+\printbibliography[heading=subbibliography,section=\the\value{refsection}]
+\end{refsection}

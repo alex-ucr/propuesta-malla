@@ -167,6 +167,33 @@ _MATH_P: list[tuple[str, str]] = [
 ]
 _SUP = str.maketrans("0123456789+-=()n", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿ")
 _SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+_SUP_LETTERS = str.maketrans(
+    "abcdefghijklmnopqrstuvwxyz",
+    "ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖᵠʳˢᵗᵘᵛʷˣʸᶻ",
+)
+
+
+def _find_unescaped(s: str, ch: str, start: int) -> int:
+    p = start
+    while True:
+        p = s.find(ch, p)
+        if p < 0:
+            return -1
+        if not _bslash_escaped(s, p):
+            return p
+        p += 1
+
+
+def _to_superscript(inner: str) -> str:
+    if not inner:
+        return "⁺"
+    return inner.translate(_SUP).translate(_SUP_LETTERS)
+
+
+def _to_subscript(inner: str) -> str:
+    if not inner:
+        return "₊"
+    return inner.translate(_SUB)
 
 
 def _math_to_plain(s: str) -> str:
@@ -174,16 +201,18 @@ def _math_to_plain(s: str) -> str:
     for a, b in _MATH_P:
         t = re.sub(a, b, t, flags=re.IGNORECASE)
     t = t.replace("\\\\", " ")
+    t = re.sub(r"\^\{([^{}]*)\}", lambda m: _to_superscript(m.group(1)), t)
+    t = re.sub(r"\_\{([^{}]*)\}", lambda m: _to_subscript(m.group(1)), t)
     t = re.sub(
-        r"\^\{([^{}]*)\}", lambda m: m.group(1).translate(_SUP) if m.group(1) else "⁺", t
+        r"\^([0-9A-Za-z+\-=()n])",
+        lambda m: _to_superscript(m.group(1)),
+        t,
     )
     t = re.sub(
-        r"\_\{([^{}]*)\}", lambda m: m.group(1).translate(_SUB) if m.group(1) else "₊", t
+        r"\_([0-9A-Za-z])",
+        lambda m: _to_subscript(m.group(1)),
+        t,
     )
-    t = re.sub(
-        r"\^([0-9+\-=()n])", lambda m: m.group(1).translate(_SUP) if m.group(1) else "", t
-    )
-    t = re.sub(r"\_([0-9])", lambda m: m.group(1).translate(_SUB) if m.group(1) else "", t)
     t = re.sub(r"\\frac\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", t)
     t = re.sub(r"\\left\(", "(", t)
     t = re.sub(r"\\right\)", ")", t)
@@ -193,21 +222,19 @@ def _math_to_plain(s: str) -> str:
     return t
 
 
+def _read_math_group(s: str, i: int) -> tuple[str, int] | None:
+    if i >= len(s) or s[i] != "$":
+        return None
+    j = i + 1
+    while j < len(s):
+        if s[j] == "$" and not _bslash_escaped(s, j):
+            return s[i + 1 : j], j + 1
+        j += 1
+    return None
+
+
 def _inline_latex_to_html(s: str) -> str:
-    if not s:
-        return ""
-    out: list[str] = []
-    last = 0
-    for m in re.finditer(
-        r"(?<!\\)\$((?:\\.|[^$\\])*?)(?<!\\)\$", s, flags=re.DOTALL
-    ):
-        out.append(_plain_latex_to_html(s[last : m.start()]))
-        out.append(
-            f'<span class="math" lang="la">{escape(_math_to_plain(m.group(1)))}</span>'
-        )
-        last = m.end()
-    out.append(_plain_latex_to_html(s[last:]))
-    return "".join(out)
+    return _plain_latex_to_html(s)
 
 
 def _plain_latex_to_html(s: str) -> str:
@@ -223,16 +250,31 @@ def _plain_latex_to_html(s: str) -> str:
         t0 = s.find(r"\texttt{", i)
         u0 = s.find(r"\url{", i)
         c0 = s.find(r"\cite", i)
+        d0 = _find_unescaped(s, "$", i)
         opts: list[tuple[int, str]] = []
         for pos, k in (b, "b"), (c0, "c"), (e0, "e"), (it0, "i"), (t0, "t"), (u0, "u"):
             if pos >= 0:
                 opts.append((pos, k))
+        if d0 >= 0:
+            opts.append((d0, "$"))
         if not opts:
             out.append(escape(s[i:]))
             break
         pos, kind = min(opts, key=lambda t: t[0])
         if pos > i:
             out.append(escape(s[i:pos]))
+        if kind == "$":
+            mg = _read_math_group(s, pos)
+            if mg is None:
+                out.append(escape(s[pos]))
+                i = pos + 1
+                continue
+            body, nxt = mg
+            out.append(
+                f'<span class="math" lang="la">{escape(_math_to_plain(body))}</span>'
+            )
+            i = nxt
+            continue
         if kind == "c":
             m = re.match(
                 r"\\cite(?:(?:\s*\[[^\]]+\])+)?\s*\{([^}]+)\}",
