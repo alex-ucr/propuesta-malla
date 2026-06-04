@@ -283,14 +283,6 @@
         "V Ciclo", "VI Ciclo", "VII Ciclo", "Optativas"
       ];
 
-      /** Proyecto Overleaf unificado; anclas = \\hypertarget{…} en *cuerpo*.tex */
-      const OVERLEAF_PROGRAMAS =
-        "https://www.overleaf.com/project/69dd3ad24aede6daa14b1b87";
-
-      function ol(ancla) {
-        return OVERLEAF_PROGRAMAS + "#" + ancla;
-      }
-
       const CONFIG = {
         pura: {
           mallaFile: "pura.json",
@@ -299,26 +291,32 @@
           enfasis: "Énfasis en matemática pura",
           PDF_POR_TITULO: {
             "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
-              ol("MA0151"),
-            "MA-0152 Matemática Exploratoria": ol("MA0152"),
-            "MA-0251 Introducción al Cálculo en una variable": ol("MA0251"),
-            "MA-0252 Introducción a las Demostraciones": ol("MA0252"),
-            "MA-0361 Algebra Lineal I": ol("MA0361"),
-            "MA-0341 Matemática Computacional I": ol("MA0341"),
-            "MA-0351 Introducción al Cálculo en varias variables": ol("MA0351"),
-            "MA-0461 Algebra Lineal II": ol("MA0461"),
-            "MA-0641 Matemática Computacional II": ol("MA0641"),
-            "MA-0451 Principios de análisis en una variable": ol("MA0451"),
-            "MA-0496 Teoría de Números": ol("MA0496"),
-            "MA-0471 Introducción a la Geometría Diferencial": ol("MA0471"),
-            "MA-0561 Algebra Abstracta I": ol("MA0561"),
-            "MA-0551 Principios de análisis en varias variables": ol("MA0551"),
-            "MA-0515 Ecuaciones Diferenciales": ol("MA0515"),
-            "MA-0705 Análisis Real I": ol("MA0705"),
-            "MA-0661 Algebra Abstracta II": ol("MA0661"),
-            "MA-0702 Análisis Complejo": ol("MA0702"),
-            "MA-0635 Introducción a la Topología": ol("MA0635"),
-            "MA-0725 Análisis Real II": ol("MA0725"),
+              "MA0151-fundamentos.pdf",
+            "MA-0152 Matemática Exploratoria": "MA0152-matematica-exploratoria.pdf",
+            "MA-0251 Introducción al Cálculo en una variable":
+              "MA0251-calculo-una-variable.pdf",
+            "MA-0252 Introducción a las Demostraciones":
+              "MA0252-intro-demostraciones.pdf",
+            "MA-0361 Algebra Lineal I": "MA0361-algebra-lineal-i.pdf",
+            "MA-0341 Matemática Computacional I": "MA0341-matematica-computacional-i.pdf",
+            "MA-0351 Introducción al Cálculo en varias variables":
+              "MA0351-calculo-varias-variables.pdf",
+            "MA-0461 Algebra Lineal II": "MA0461-algebra-lineal-ii.pdf",
+            "MA-0641 Matemática Computacional II":
+              "MA0641-matematica-computacional-ii.pdf",
+            "MA-0451 Principios de análisis en una variable":
+              "MA0451-principios-analisis-i.pdf",
+            "MA-0496 Teoría de Números": "MA0496-teoria-numeros.pdf",
+            "MA-0471 Introducción a la Geometría Diferencial": "MA0471-geometria.pdf",
+            "MA-0561 Algebra Abstracta I": "MA0561-algebra-abstracta-i.pdf",
+            "MA-0551 Principios de análisis en varias variables":
+              "MA0551-principios-analisis-ii.pdf",
+            "MA-0515 Ecuaciones Diferenciales": "MA0515-ecuaciones-diferenciales.pdf",
+            "MA-0705 Análisis Real I": "MA0705-analisis-real-i-individual.pdf",
+            "MA-0661 Algebra Abstracta II": "MA0661-algebra-abstracta-ii.pdf",
+            "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
+            "MA-0635 Introducción a la Topología": "MA0635-topologia.pdf",
+            "MA-0725 Análisis Real II": "MA0725-analisis-real-ii-individual.pdf",
           },
           ID_POR_TITULO: {
                 "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
@@ -389,27 +387,34 @@
           imageAlt: "Diagrama de la propuesta de malla curricular (énfasis en matemática aplicada)",
           enfasis: "Énfasis en matemática aplicada",
           PDF_POR_TITULO: {
-            "CA-0204 Herramientas de ciencia de datos I": ol("CA0204"),
-            "CA-0303 Estadística actuarial I": ol("CA0303"),
-            "CA-0721 Probabilidad": ol("CA0721"),
-            "CA-0411 Análisis de Datos I": ol("CA0411"),
+            "CA-0204 Herramientas de ciencia de datos I":
+              "CA0204-herramientas-ciencia-datos-i.pdf",
+            "CA-0303 Estadística actuarial I": "CA0303-estadistica-actuarial-i.pdf",
+            "CA-0721 Probabilidad": "CA0721-probabilidad.pdf",
+            "CA-0411 Análisis de Datos I": "CA0411-analisis-datos-i.pdf",
             "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
-              ol("MA0151"),
-            "MA-0152 Matemática Exploratoria": ol("MA0152"),
-            "MA-0251 Introducción al Cálculo en una variable": ol("MA0251"),
-            "MA-0252 Introducción a las Demostraciones": ol("MA0252"),
-            "MA-0361 Algebra Lineal I": ol("MA0361"),
-            "MA-0341 Matemática Computacional I": ol("MA0341"),
-            "MA-0351 Introducción al Cálculo en varias variables": ol("MA0351"),
-            "MA-0461 Algebra Lineal II": ol("MA0461"),
-            "MA-0641 Matemática Computacional II": ol("MA0641"),
-            "MA-0451 Principios de análisis en una variable": ol("MA0451"),
-            "MA-0551 Principios de análisis en varias variables": ol("MA0551"),
-            "MA-0515 Ecuaciones Diferenciales": ol("MA0515"),
-            "MA-0705 Análisis Real I": ol("MA0705"),
-            "MA-0702 Análisis Complejo": ol("MA0702"),
-            "MA-0635 Introducción a la Topología": ol("MA0635"),
-            "MA-0725 Análisis Real II": ol("MA0725"),
+              "MA0151-fundamentos.pdf",
+            "MA-0152 Matemática Exploratoria": "MA0152-matematica-exploratoria.pdf",
+            "MA-0251 Introducción al Cálculo en una variable":
+              "MA0251-calculo-una-variable.pdf",
+            "MA-0252 Introducción a las Demostraciones":
+              "MA0252-intro-demostraciones.pdf",
+            "MA-0361 Algebra Lineal I": "MA0361-algebra-lineal-i.pdf",
+            "MA-0341 Matemática Computacional I": "MA0341-matematica-computacional-i.pdf",
+            "MA-0351 Introducción al Cálculo en varias variables":
+              "MA0351-calculo-varias-variables.pdf",
+            "MA-0461 Algebra Lineal II": "MA0461-algebra-lineal-ii.pdf",
+            "MA-0641 Matemática Computacional II":
+              "MA0641-matematica-computacional-ii.pdf",
+            "MA-0451 Principios de análisis en una variable":
+              "MA0451-principios-analisis-i.pdf",
+            "MA-0551 Principios de análisis en varias variables":
+              "MA0551-principios-analisis-ii.pdf",
+            "MA-0515 Ecuaciones Diferenciales": "MA0515-ecuaciones-diferenciales.pdf",
+            "MA-0705 Análisis Real I": "MA0705-analisis-real-i-individual.pdf",
+            "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
+            "MA-0635 Introducción a la Topología": "MA0635-topologia.pdf",
+            "MA-0725 Análisis Real II": "MA0725-analisis-real-ii-individual.pdf",
           },
           ID_POR_TITULO: {
             "CA-0204 Herramientas de ciencia de datos I":
