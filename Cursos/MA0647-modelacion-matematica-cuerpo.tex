@@ -11,8 +11,8 @@
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} MA-0615 Ecuaciones Diferenciales, MA-0541 Matemática Computacional II \\ 
-\textbf{Ciclo:} VII  & \textbf{Correquisitos:} Ninguno \\ 
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0615 Ecuaciones Diferenciales, \\ & MA-0461 Álgebra Lineal II \\ 
+\textbf{Ciclo:} VII  & \textbf{Correquisitos:} MA-0641 Matemática Computacional II  \\ 
 \textbf{Tipo de curso:} Teórico-práctico & \textbf{Horas presenciales por semana:} 4 \\ 
 \textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana:} 6 \\ \hline
 \end{tabular}
@@ -29,7 +29,7 @@ El curso retoma y aplica contenidos de MA-0615 Ecuaciones Diferenciales (cualita
 
 \subsubsection*{Objetivos}
 
-\textbf{General:} Formular, analizar, simular e interpretar modelos matemáticos determinísticos---principalmente basados en ecuaciones diferenciales y sistemas dinámicos---a partir de problemas de ciencias, ingeniería o contextos interdisciplinarios, evaluando la validez del modelo y comunicando resultados con claridad.
+\textbf{General:} Modelar problemas determinísticos a través de ecuaciones diferenciales y sistemas dinámicos para situaciones de ciencias, ingeniería o contextos interdisciplinarios, evaluando la validez del modelo y comunicando resultados con claridad.
 
 \textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
 
@@ -63,16 +63,15 @@ El curso retoma y aplica contenidos de MA-0615 Ecuaciones Diferenciales (cualita
     \item Repaso operativo de sistemas lineales y retratos de fase en dimensión baja; uso de álgebra lineal en la linealización.
     \item Puntos de equilibrio, estabilidad local, nociones de bien planteado (existencia, unicidad, dependencia de condiciones iniciales) a nivel interpretativo.
     \item Bifurcaciones elementales y cambios cualitativos en la dinámica (ejemplos motivadores).
-    \item Casos integradores: oscilaciones y péndulo (incluyendo registro experimental sencillo, p.\ ej.\ con sensores de un dispositivo móvil); modelos de reacción--difusión o competencia en versión reducida.
-    \item Modelos clásicos en epidemiología (SIR y variantes) y otros ejemplos de dinámica poblacional o social.
+
 \end{enumerate}
 
 \item \textbf{Modelación discreta y simulación computacional (3 semanas):}
 \begin{enumerate}
-    \item Ecuaciones en diferencias y mapas iterados; relación con modelos continuos (Euler, discretización).
+    \item Ecuaciones en diferencias y aplicaciones iteradas; relación con modelos continuos (Euler, discretización).
     \item Métodos numéricos para EDO: Euler, Runge--Kutta; error de truncamiento y estabilidad a nivel práctico.
     \item Exploración de parámetros, bifurcaciones numéricas y visualización de retratos de fase.
-    \item Introducción opcional a modelos en redes (grafos) según criterio de la persona docente.
+
 \end{enumerate}
 
 \item \textbf{Validación, incertidumbre e interpretación con datos (2 semanas):}
@@ -80,7 +79,6 @@ El curso retoma y aplica contenidos de MA-0615 Ecuaciones Diferenciales (cualita
     \item Ajuste de parámetros por mínimos cuadrados u otros criterios elementales.
     \item Comparación modelo--experimento; residuos y diagnóstico gráfico.
     \item Estimación de error y complementos probabilísticos básicos para cuantificar incertidumbre (sin exigir un curso avanzado de inferencia).
-    \item Comunicación de resultados a públicos especializados y no especializados.
 \end{enumerate}
 
 \item \textbf{Temas complementarios a elección de la persona docente (2 semanas):}
@@ -104,9 +102,10 @@ El curso retoma y aplica contenidos de MA-0615 Ecuaciones Diferenciales (cualita
     \item El curso es \textbf{teórico-práctico}: cada bloque temático debe incluir problemas reales o estudios de caso, no solo ejercicios cerrados del libro.
     \item Se privilegia un nivel de formalismo \textbf{accesible}: demostraciones completas solo cuando aporten comprensión del fenómeno modelado; el rigor se orienta a justificar supuestos, interpretar resultados y reconocer limitaciones.
     \item La persona docente debe \textbf{delimitar explícitamente} el nivel matemático exigido en cada actividad (por ejemplo, cuándo basta análisis cualitativo frente a cálculo explícito de soluciones).
-    \item No se exige un software único; se aceptan entornos de computación científica (Python, Julia, R, Octave, \emph{SageMath}, etc.) según disponibilidad y criterio docente, priorizando reproducibilidad y documentación del código.
+    \item No se exige un software único; se aceptan entornos de computación científica (Python, Julia, R, Matlab, Octave, SageMath, etc.) según disponibilidad y criterio docente, priorizando reproducibilidad y documentación del código.
     \item Se debe promover la lectura de fuentes externas (artículos, capítulos de libros, informes) y el trabajo colaborativo en el proyecto final.
     \item La evaluación debe incluir un \textbf{proyecto final} con avances intermedios (bitácoras o entregas parciales) que recorra el ciclo completo de modelación.
+    \item Debe enfatizarse en la importancia de la cmunicación de modelos y resultados a públicos especializados y no especializados.
 \end{enumerate}
 
 \textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
@@ -117,6 +116,7 @@ El curso retoma y aplica contenidos de MA-0615 Ecuaciones Diferenciales (cualita
     \item Invitar, cuando sea posible, a una charla de un especialista de otra disciplina (biología, epidemiología, ingeniería, ciencias sociales) para ilustrar el rol del traductor matemático.
     \item Fomentar el uso de conjuntos de datos abiertos o mediciones sencillas realizadas por el estudiantado.
     \item Incluir rúbricas claras para el informe escrito y la presentación oral del proyecto final.
+    \item Para los temas de modelación continua se pueden usar casos integradores. Por ejemplo: oscilaciones y péndulo (incluyendo registro experimental sencillo, p.\ ej.\ con sensores de un dispositivo móvil); modelos de reacción--difusión o competencia en versión reducida. También se sugieren modelos clásicos en epidemiología (SIR y variantes) y otros ejemplos de dinámica poblacional o social, así como modelos de redes.
     \item Recordar que la malla aplicada contempla optativas de otras disciplinas: el proyecto puede enlazarse con esas áreas cuando el estudiantado lo desee.
 \end{enumerate}
 
