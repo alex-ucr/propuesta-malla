@@ -3,7 +3,7 @@
 % Si las bibliografías por curso muestran entradas de otro curso, borre propuesta.bbl (y propuesta.bcf) y vuelva a compilar todo el ciclo: un .bbl desactualizado respecto al .bcf desordena las refsections.
 \documentclass[11pt]{report}
 
-\input{propuesta-preamble.tex}
+\input{propuesta-preamble}
 
 \begin{document}
 
@@ -21,5 +21,7 @@
 \input{propuesta-estructura-curricular}
 \input{propuesta-elementos-programas}
 \input{propuesta-gestion-plan}
+
+\printbibliography[]
 
 \end{document}
