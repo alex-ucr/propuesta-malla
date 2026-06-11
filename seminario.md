@@ -1,0 +1,19 @@
+# Seminario de matemática
+- Este curso está dirigido a estudiantes de último año, con el fin de ayudarles a aprender sobre temas relevantes en la historia y en la actualidad en matemáticas. La persona docente asigna charlas, coloquios, seminarios o conferencias para que los estudiantes asistan.
+- Un crédito
+- Obligatoriedad de asistencia (averiguar)
+- El horario es el horario del coloquio/seminario.
+- Deben asistir a un mínimo de 10 charlas (revisar legalidad de esto)
+- Sétimo ciclo
+- Requisitos: Álgebra Abstracta II o Topología o Matemática computacional II
+- Una sesión a final de semestre para analizar la experiencia y tener discusión sobre el contenido de las charlas y aspectos de forma tales como:
+    - Claridad en la exposición
+    - Calidad de la presentación
+    - Fluidez al exponer
+    - Capacidad de comunicación
+    - Manejo del público
+    - Estructuración de la charla
+- La asistencia a la última sesión es abierta al público.
+- Sugerencia metodológica: la persona docente debería ser quien ocupe la dirección del departamento.
+- Evaluación: Asistencia al mínimo de 10 charlas y la participación en la última clase. Averiguar si es posible evaluarlo con aprobado o reprobado.
+- Modalidad seminario
