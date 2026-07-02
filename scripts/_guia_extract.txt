@@ -1,0 +1,589 @@
+
+--- PAGE 1 ---
+GUÍA PARA LOS PROCESOS
+DE LA UNIVERSIDAD DE COSTA RICA
+CURRICULARES
+/gid00055/gid00037
+/gid00055/gid00072/gid00066/gid00068/gid00081/gid00081/gid00068/gid00066/gid00083/gid00078/gid00081/gid00173/gid00064/gid00001/gid00067/gid00068
+Docencia
+/gid00036/gid00038/gid00034
+/gid00036/gid00068/gid00077/gid00083/gid00081/gid00078/gid00001/gid00067/gid00068
+Evaluación Académica
+
+--- PAGE 2 ---
+Este documento es propiedad de la Universidad de Costa Rica.
+Ciudad Universitaria Rodrigo Facio, junio 2024
+Abreviaturas 
+ADCEA:
+CEA: 
+CONARE: 
+SAE:
+SIIA
+GC: 
+UCR: 
+UNESCO:
+Área de Desarrollo Curricular y Evaluación Académica 
+Centro de Evaluación Académica 
+Consejo Nacional de Rectores
+Observatorio Laboral de Profesiones
+Reglamento de Régimen Académico Estudiantil
+Sistema de Aplicaciones Estudiantiles 
+Sistema de Información Institucional de Autoevaluación y Gestión de 
+la Calidad 
+Universidad de Costa Rica  
+Organización de las Naciones Unidas para la Educación, la Ciencia
+Vicerrectoría de Docencia 
+ 
+Un iversidad de Costa Rica 
+Vic errectoría de Docencia 
+Centro de Evaluación Académica 
+Guía teórico-metodológica para el diseño y rediseño curricular de plane s de estudios en la 
+Universidad de Costa Rica. San José, Costa Rica.  
+Edición 2024 
+VD: 
+OLAP:
+RRAE:
+--- PAGE 3 ---
+3 
+Tabla de contenido 
+PRESENTACIÓN ................................ ................................ ................................ .............. 5 
+INTRODUCCIÓN ................................ ................................ ................................ ............... 7 
+CAPÍTULO I. COMPONENTES CURRICULARES DEL PLAN DE ESTUDIOS ................ 9 
+1.1 ANTECEDENTES Y JUSTIFICACIÓN ................................ ................................  9 
+1.1.1 Antecedentes de la carrera en la UCR................................ .......................... 9 
+1.1.2 Justificación socioprofesional ................................ ................................ ..... 10 
+1.2 OBJETO DE ESTUDIO DE LA CARRERA ................................ ....................... 12 
+1.2.1 Definición del objeto de estudio ................................ ................................ .. 12 
+1.2.2 Definición de las áreas de conocimiento ................................ ..................... 13 
+1.3 PROPÓSITOS DE LA CARRERA ................................ ................................ ..... 13 
+1.4 PERFIL DE EGRESO ................................ ................................ ........................ 14 
+1.5 ESTRUCTURA CURRICULAR ................................ ................................ ......... 16 
+1.5.1 Selección de contenidos ................................ ................................ ............. 16 
+1.5.2 Organización de contenidos ................................ ................................ ....... 18 
+1.5.3 Consideraciones generales de la estructura curricular ................................  19 
+1.5.4 Justificaciones específicas de cambios en la estructura curricular .............. 21 
+1.6 ELEMENTOS PEDAGÓGICOS Y LOS PROGRAMAS DE CURSOS ............... 22 
+1.6.1 Mediación pedagógica ................................ ................................ ..................... 22 
+1.6.2 Rol docente y rol estudiantil ................................ ................................ ............. 23 
+1.6.3 Estrategias pedagógicas y de evaluación ................................ ........................ 23 
+1.6.4 Los programas de cursos ................................ ................................ ................. 24 
+1.6.5 La flexibilidad pedagógica ................................ ................................ ................ 24 
+1.6 GESTIÓN DEL PLAN DE ESTUDIOS ................................ ...............................  25 
+1.7.1 Situación de la población estudiantil ................................ ................................  25 
+1.7.2 Factibilidad administrativa y presupuestaria del plan de estudios .................... 27 
+1.7.3 Plan de transición ................................ ................................ ............................ 29 
+1.7.4 Plan de desarrollo docente ................................ ................................ .............. 29 
+1.7.5 Plan de comunicación ................................ ................................ ...................... 30 
+1.7.6 Seguimiento y evaluación del plan de estudios ................................ ................ 30 
+1.7.7 Flexibilidad administrativa ................................ ................................ ................ 31 
+CAPÍTULO II.  OTRAS REFLEXIONES CURRICULARES ................................ ............. 32 
+2.1 Objetivos del desarrollo sostenible ................................ ................................ .... 32 
+2.2 Informes de la UNESCO ........................................................................................ 32 
+2.3 Dimensión internacional, intercultural y global en los planes de estudios ......32 
+2.4 Virtualización de los planes de estudios .............................................................32 
+2.5 Interdisciplinariedad y transdisciplinariedad ......................................................32 
+REFERENCIAS ................................................................................................................33 
+--- PAGE 4 ---
+Índice de figuras 
+Figura 1. Principales guías desarrolladas para los procesos de diseño y rediseño 
+curricular en la Universidad de Costa Rica……………………………………………………..7 
+Figura 2. Apartado de antecedentes y justificación……………………………………………9 
+Figura 3. Objeto de estudio de la carrera………………………………………………………12 
+Figura 4. Perfil de egreso………………………………………………………………………. 15 
+Figura 5. Proceso de selección y organización de contenidos………………………………16 
+Figura 6. Elementos pedagógicos del plan de estudios de la carrera…………………..… 22 
+Figura 7. Elementos de la gestión y seguimiento del plan de estudios…………………….25 
+Índice de tablas 
+Tabla 1. Indicadores sobre la población estudiantil de la carrera…………………………..26 
+Tabla 2. Caracterización del personal administrativo requerido para la ejecución del plan 
+de estudios………………………………………………………………………………………..27 
+Tabla 3. Caracterización de los recursos materiales e infraestructura requerida para la 
+ejecución del plan de estudio……………………………………………………………………28 
+Tabla 4. Descripción de la logística para la gestión de actividades 
+prácticas……………………………………….......................................................................28 
+Figura 8. Otras reflexiones curriculares por considerar........................…………………….31
+
+--- PAGE 5 ---
+PRESENTACIÓN 
+Dos procesos vitales sustentan la educación: la adquisición de conocimientos 
+como parte del patrimonio común de la humanidad y la creación colectiva de 
+nuevos saberes y nuevos futuros posibles. De cara a 2050, tenemos que ir más 
+allá de la visión tradicional de los planes de estudio como una simple tabla de 
+asignaturas y, en su lugar, reimaginarlos a través de perspectivas 
+interdisciplinarias e interculturales que permitan a los estudiantes aprender de los 
+bienes comunes de la humanidad y contribuir a ellos. (Unesco, 2022, p. 153)
+La Vicerrectoría de Docencia (VD) y el Centro de Evaluación Académica (CEA) se 
+complacen en presentar a la comunidad universitaria de la Universidad de Costa Rica 
+(UCR) este documento llamado “Guía para los procesos curriculares de la 
+Universidad de Costa Rica”.
+Esta guía nace a partir del compromiso con la mejora continua de los procesos 
+curriculares desarrollados por estas instancias, el cual esperamos sea de gran utilidad para 
+las unidades académicas. Precisamente, la participación de diversas instancias de 
+nuestra comunidad académica y su generosa realimentación para las orientaciones 
+hacia la transformación curricular ha sido central. Se busca, con este documento, que el 
+desarrollo de los procesos curriculares de nuestra institución sean pertinentes, de tal 
+manera que cumplan con las demandas internas y externas de la Universidad, la 
+sociedad y la profesión; eficaces, en el entendido de alcanzar propósito y la meta de 
+diseñar y rediseña r
+ planes de estudios con excelencia académica y rigurosidad, y 
+eficientes, en cuanto a la utilización óptima y responsable  de los recursos disponibles: 
+el tecnológico, el humano, así como el tiempo y el presupuesto.  
+La Universidad como idea central de la Ilustración, consolidada en los siglos XIX y XX se 
+encuentra hoy bajo una amenaza constante. Sus tradiciones y culturas se enfrentan a un 
+primer desafío de cómo adaptarse a una sociedad cada vez más dinámica y vertiginosa. 
+Las personas y generaciones cambian aceleradamente incluso en sus formas de 
+aprender; las redes sociales y la inteligencia artificial, por citar solo algunos ejemplos,  han 
+impactado profundamente el mundo social, cultural y económico. En esa aceleración del 
+tiempo, que señaló D. Harvey en su momento, el conocimiento también sufre revoluciones 
+constantes. Todo lo anterior supone que las universidades se ven llamadas a mejorar su 
+capacidad de adaptación y a responder a las demandas de la sociedad. Tal como lo 
+ha señalado la UNESCO, la reinvención de los planes de estudio supone uno de los 
+elementos claves para la propia supervivencia de la humanidad, toda vez que en ese 
+tránsito creativo por los saberes también reimagine otros futuros posibles, que se 
+sobreponen a la desigualdad, las crisis sanitarias, la debacle de la democracia y la 
+violencia. 
+Frente a estos desafíos, la Vicerrectoría de Docencia ha realizado un esfuerzo para estar 
+a la altura de los tiempos y los retos que nos plantean la crisis de la Ilustración. Para 
+ello, hemos reafirmado nuestro compromiso con la calidad a la vez que buscamos una 
+mayor 
+5 
+--- PAGE 6 ---
+celeridad y simplificación en los procesos. Esta guía acompaña los procesos de reflexión 
+curricular de las unidades académicas y orienta la elaboración de planes de estudios  
+con la calidad que caracteriza a la Universidad de Costa Rica. Además, hemos elaborado 
+un el Entorno virtual de apoyo para los procesos curriculares de la Universidad de Costa 
+Rica; disponible en el siguiente enlace: hipervínculo.
+ Esta herramienta 
+es un apoyo 
+adicional para los procesos curriculares. Invito a las comisiones y coordinaciones 
+a cargo de los procesos de transformación curricular a apostar por la 
+innovación curricular y pedagógica, que permita la formación de profesionales con 
+excelencia académica, propósito que nos demanda la sociedad costarricense y el 
+Estatuto Orgánico de la Universidad de Costa Rica.   
+Finalmente, extiendo un profundo agradecimiento a todas las personas que, con su 
+experiencia y conocimiento, aportaron los insumos necesarios para la elaboración de este 
+documento. 
+Dr. Felipe Alpízar Rodríguez 
+Vicerrector de Docencia (2022-2024) 
+Universidad de Costa Rica 
+
+--- PAGE 7 ---
+INTRODUCCIÓN 
+Durante los últimos cincuenta años la VD y el CEA han desarrollado documentos y 
+herramientas que permitan a la comunidad universitaria contar con la adecuada guía para 
+el desarrollo de procesos de  transformación curricular, entre ellos  el diseño de nuevas 
+carreras, rediseños curriculares y modificaciones parciales . Esto se puede observar en la 
+siguiente línea del tiempo:  
+Figura 1. Principales guías desarrolladas para los procesos de diseño y rediseño curricular 
+en la Universidad de Costa Rica 
+Es importante indicar que el documento del 2015 , último vigente,  está basado 
+fundamentalmente en el de 1999; por lo tanto, después de 25 años se presenta la necesidad 
+de repensar el quehacer de la asesoría y los procesos curriculares , situación que se 
+pretende subsanar con este nuevo documento, el cual persigue los siguientes objetivos:  
+Objetivo general 
+Orientar a las unidades académicas de la UCR en el diseño y rediseño de planes de 
+estudios, con base en criterios curriculares, normativos y técnicos que rigen esta materia. 
+Objetivos específicos 
+1. Definir los componentes curriculares que deben estar presentes en un plan de
+estudios de la UCR.
+2. Aportar herramientas metodológicas que faciliten  la reflexión de las unidades
+académicas en los procesos curriculares que llevan a cabo.
+7 
+--- PAGE 8 ---
+Los procesos de diseño y rediseño de planes de estudios requieren una investigación 
+curricular rigurosa que, mediante técnicas cuantitativas, cualitativas o mixtas, recoja la 
+información necesaria para fundamentar las decisiones que se tomarán en la elabor ación 
+de una propuesta de formación académica. Por lo tanto, en atención a los dos objetivos 
+específicos mencionados, este documento responderá al qué y al cómo de estos procesos. 
+En la primera parte, se presenta la descripción de los siete componentes curriculares que 
+debe tener todo plan de estudios de la UCR  y, en su segunda parte, las unidades 
+académicas podrán acceder a un enlace que  las remitirá a un entorno virtual donde se 
+podrán encontrar las herramientas metodológicas que responden al cómo de estos 
+procesos.  
+Es importante recordar que, para el diseño de nuevas carreras, las unidades académicas 
+deberán elaborar un Estudio de Pertinencia y Factibilidad  como anteproyecto de la 
+propuesta, el cual será revisado por una comisión especial y, finalmente, aprobado o no por 
+la Vicerrectoría de Docencia. Esta guía, entonces, aplicará para los procesos de diseño en 
+los que el anteproyecto haya sido aprobado previamente.   
+--- PAGE 9 ---
+9 
+CAPÍTULO I. COMPONENTES CURRICULARES DEL PLAN DE ESTUDIOS 
+En esta sección se describen los componentes curriculares que deben estar presentes en 
+el documento correspondiente al plan de estudios de las carreras de pregrado (diplomado 
+y profesorado) y grado (bachillerato y licenciatura) en la Universidad de Costa Rica. Como 
+se indicó, en esta primera parte se colocará la descripción de cada componente y las 
+herramientas metodológicas se p odrán encontrar en el entorno virtual  creado para tal 
+propósito.  
+Adicional a la presentación de estos componentes, cada plan de estudios deberá incluir un 
+apartado metodológico que describa la forma en que se desarrolló el proceso de reflexión 
+y construcción de la propuesta curricular1. 
+1.1 ANTECEDENTES Y JUSTIFICACIÓN 
+Figura 2. Apartado de antecedentes y justificación 
+1.1.1 Antecedentes de la carrera en la UCR 
+Esta sección se trata de una breve presentación de la carrera en la que se puedan visualizar 
+datos sobre su creación, trayectoria y principales hitos . Por ejemplo, podrían incluirse los 
+últimos procesos curriculares que haya tenido la carrera (modificaciones o revisiones 
+integrales), procesos de autoevaluación o acreditación que consideren aspectos por 
+mejorar en el plan de estudios, dónde se imparte la carrera (si se imparte en distintas sedes 
+1 Al final de este documento se propone una plantilla de plan de estudios donde se sugiere una forma 
+de presentar la información. 
+
+--- PAGE 10 ---
+9 
+o recintos) y desde hace cuánto tiempo. Para el caso de las creaciones de carreras, no se
+requiere este apartado , a menos que se trate del diseño de un énfasis o un tramo de
+licenciatura de una carrera existente.
+1.1.2 Justificación socioprofesional 
+En este apartado la unidad académica deberá realizar una contextualización de la 
+profesión, en general , y de la carrera , en particular, que permita justificar y conocer la 
+relevancia y pertinencia de la oferta educativa  a nivel institucional, nacional y regional . 
+Expone, entonces, cómo responde a las necesidades o demandas existentes hacia esa 
+profesión y campo de estudio, así como la relevancia o importancia de este tipo de 
+formación académica en el contexto actual y futuro. En ese sentido, esta justificación 
+destaca la forma en que el plan de estudios propuesto contribuirá a la formación de 
+personas profesionales competentes y preparadas para enfrentar los desafíos propios de 
+su ámbito de acción . Debe ser un texto claro, conciso y argumentado, que muestre, de 
+manera convincente, la necesidad y relevancia de dicha carrera.  
+Ahora bien, como se muestra en la figura 2, los subapartados que integran este componente 
+son: 
+a) Caracterización profesional:  la unidad académica realizará una reflexión sobre
+tres aspectos que permiten caracterizar a la persona profesional  en determinado
+campo:
+• Radiografía laboral: en este punto se incorporan y analizan datos sobre el
+estado laboral actual de la  profesión en el país a partir de lo indicado por el
+Observatorio Laboral de Profesiones (OLAP), el Estado de la Nación, el Estado
+de la Educación, entre otras instancias.
+• Situación de la población graduada2: la unidad académica deberá realizar un
+seguimiento a la población graduada de las últimas cinco cohortes3 con el
+propósito de obtener datos sobre la inserción laboral, valoraciones  respecto de
+la formación recibida y el perfil de egreso . Estos representan  insumos
+fundamentales para la actualización o elaboración del perfil de egreso, según
+corresponda. En este punto, se valorarán los siguientes elementos:
+- Situación de empleabilidad o trabajo de las últimas cinco cohortes de
+personas graduadas del plan de estudios en revisión.
+- Nivel de dificultad de las personas profesionales para obtener un puesto
+de trabajo relacionado con la carrera.
+2 Si se trata de una creación de carrera se debe valorar con la asesora curricular si este punto aplica. 
+3 Si la carrera no cuenta con esa cantidad de cohortes, se realizará con las que cuente en el momento 
+de la revisión curricular. 
+--- PAGE 11 ---
+10 
+- Nivel de satisfacción de las personas graduadas respecto de la formación
+recibida en la carrera (valoración del perfil de egreso).
+• Campos de inserción laboral: abarca los espacios laborales específicos que
+existen o se vislumbran para la profesión  en diversos ámbitos, como docencia,
+investigación, manufactura, regencia, atención al público, análisis de datos,
+entre otros. Delimitar cada campo permitirá identificar, en apartados posteriores,
+la necesidad de formación en la carrera  y podría orientar las áreas curriculares
+y los conocimientos por desarrollar.
+• Funciones o tareas profesionales:  se refiere a lo que realizan las personas
+profesionales para cada campo de inserción laboral. Definir las funciones o
+tareas permitirá identificar , más adelante , los conocimientos, habilidades,
+valores y actitudes (perfil de egreso) requiere la persona para desempeñarlas.
+b) Contribución al desarrollo del país: se deben aportar datos que permitan conocer
+la contribución de la profesión para la atención de las necesidades sociales,
+ambientales, económicas, culturales, tecnológicas o científicas del país. Igualmente,
+debe establecer se cómo se enmarca la profesión en los planes de desarrollo
+nacional y en otros documentos de políticas públicas nacionales e internacionales,
+así como en la normativa institucional.
+Se espera que en este apartado se incorpore un análisis que evidencie la reflexión
+de los siguientes puntos claves:
+• Contribución de la profesión al desarrollo del proyecto humanista de la
+Universidad para atender las transformaciones que requiere la sociedad.
+• Contribución de la profesión en mejora de la calidad de vida de las personas.
+• Impacto de la profesión en el crecimiento económico, aportes a la cultura, la
+producción del conocimiento y la generación de oportunidades laborales.
+• Avances o innovaciones más importantes logrados por las personas
+profesionales en este campo.
+• Políticas nacionales, planes de desarrollo o colegios profesionales que
+contribuyen al desarrollo del país en el marco de esta profesión.
+• Intervención de la profesión en proyectos o iniciativas que impulsan el desarrollo
+del país.
+c) Prospectiva de la profesión:  la unidad académica deberá realizar una reflexión
+sobre hacia dónde se proyecta o se visualizan las tendencias de la profesión en los
+próximos 10 años, así como nuevos hitos a nivel teórico y práctico que les permita
+identificar aquellos elementos que se deberán considerar en  la formación de las
+personas profesionales.
+--- PAGE 12 ---
+12 
+También, se deberá referir a las tendencias de formación de aquellas universidades 
+a nivel internacional que se consideran referentes de la profesión, así como nuevos 
+ámbitos profesionales por atender.  
+1.2 OBJETO DE ESTUDIO DE LA CARRERA 
+En el diseño y rediseño curricular de los planes de estudios de la U CR, se requiere definir 
+el objeto de estudio  de la carrera  y las áreas de conocimiento que lo constituyen. Se 
+presentan a continuación los dos subcomponentes del objeto de estudio: 
+Figura 3. Objeto de estudio de la carrera 
+1.2.1 Definición del objeto de estudio 
+Existen diversas definiciones sobre objeto de estudio y la mayoría se concentran en lo que 
+respecta al campo de la investigación.  Leyva y Guerra (2020) plantean que el objeto de 
+estudio se menciona indistintamente, ya sea como objeto de investigación , o bien como 
+objeto de conocimiento disciplinar . Sin embargo, en lo que concierne al campo curricular, 
+el objeto de estudio de una carrera  se entenderá como el segmento de la realidad por el 
+cual se interesa una carrera, plantea cómo este se define espec íficamente para esa 
+comunidad académica y se considera el centro del proceso de enseñanza y aprendizaje. 
+Este componente tiene como objetivo realizar una síntesis de los límites disciplinares, 
+epistémicos, filosóficos y de acción que guiarán la formación del estudiantado durante la 
+carrera y que se verán reflejados en las áreas de conocimiento, el perfil de egreso y, 
+finalmente, en la estructura curricular. 
+El objeto de estudio  puede ser adoptado por la comunidad académica a partir de una 
+definición ya existente, o dicha comunidad puede darse a la tarea de construirlo . Lo 
+relevante es su definición sea producto de un proceso de reflexión académica, cuyo logro 
+
+--- PAGE 13 ---
+13 
+implica un proceso de di álogo, ac uerdos y desacuerdos . Algunas interrogantes que 
+permiten abrir esta reflexión son, por ejemplo: 
+• ¿Qué estudia la carrera o profesión? ¿Desde qué perspectiva epistemológica?
+• ¿Qué tipo de fenómenos aborda?
+• ¿A qué tipo de cuestiones busca darle explicación o solución?
+• ¿Cuáles son las palabras o conceptos clave que deben estar presentes en el
+objeto de estudio de la carrera para su delimitación y comprensión? ¿Cuáles son
+las relaciones que se dan entre esos conceptos?
+Debe considerarse que el objeto de estudio de una carrera no puede alejarse del objeto de 
+estudio disciplinar, pero debe circunscribirse a lo que  se puede enseñar conforme a las 
+condiciones institucionales y la normativa universitaria interna y externa relacionada con los 
+grados y títulos que se van a otorgar.  
+1.2.2 Definición de las áreas de conocimiento 
+Las áreas de conocimiento pueden conceptualizarse como subdivisiones que conforman el 
+objeto de estudio de la carrera, las cuales permiten su abordaje y comprensión; y que, a su 
+vez, están integradas por objetos de estudio y líneas de investigación específicas.   
+También, las áreas de conocimiento están definidas por consenso académico, con el 
+propósito de delimitar el inicio de una disciplina, así como sus límites y alcances en relación 
+con otras (Díaz, comunicación personal, marzo 2024).   
+Se puede decir que esas áreas de conocimiento, que forman parte de los fundamentos de 
+una carrera, son aportes de otras disciplinas o carreras que le permiten generar sus propios 
+resultados dentro de un campo disciplinar específico que es igualmente amplio. 
+1.3 PROPÓSITOS DE LA CARRERA 
+Los propósitos de la carrera representan el fin último del plan de estudios  dentro del 
+contexto social, económico, político y cultural. Además, deben mantener  relación y  
+coherencia con la normativa institucional4, el perfil de egreso y la visión de ser humano que 
+se quiere formar.  
+Con el fin de cumplir con lo anterior, entonces, los propósitos deben ser: 
+• Realistas y evaluables ( deben considerar presupuesto, infraestructura, recursos
+4 Estatuto Orgánico de la Universidad de Costa Rica, Políticas y normas curriculares, Políticas 
+Institucionales vigentes, Plan Estratégico Institucional vigente, ejes transversales, entre otros. 
+--- PAGE 14 ---
+14 
+―tanto humanos como materiales―, duración de los ciclos lectivos, entre otros).
+• Congruentes con la justificación socioprofesional y el perfil de egreso.
+• Redactados de manera clara y precisa, así como articulados entre sí.
+• Alusivos a los ejes transversales disciplinares e institucionales.
+1.4 PERFIL DE EGRESO 
+Se refiere a l conjunto  de rasgos que adquiere una persona tras cursar una carrera 
+universitaria, con identidad epistémica ―conforme el objeto de estudio definido ― e
+institucional, a través de los cu ales se logra diferenciar de otras carreras existentes. Para 
+comprender mejor este componente, se deben considerar las siguientes premisas:  
+• La elaboración del perfil de egreso requiere de un proceso reflexivo sobre el tipo de
+ser humano que se pretende formar y, con ello, orientar las decisiones sobre las
+actividades de formación académica (cursos) del plan de estudios.
+• El perfil de egreso e s un compromiso público en cuanto comunica a la sociedad la
+formación que se compromete a brindar al estudiantado que ingresa a una carrera
+determinada, con lo cual también orienta a los sectores empleadores sobre  de las
+habilidades, conocimientos, valores y actitudes que tendrán las personas graduadas
+de una carrera.
+• El perfil de egreso deberá  reflejar los principios orientadores y propósitos
+establecidos en los artículos 4 y 5 del Estatuto Orgánico de la Universidad de Costa
+Rica e incorporar los ejes transversales disciplinares e institucionales.
+• Los perfiles de egreso deberán ser elaborados con la rigurosidad científica  que
+caracteriza una investigación.
+• Aunque es común que los perfiles de egreso en la UCR se organicen por
+habilidades, conocimientos, valores y actitudes, también se pueden diseñar de otras
+formas (competencias, resultados de aprendizaje, por ejemplo). Esto dependerá de
+las características propias de  la carrera y de las decisiones internas de la unidad
+académica5.
+• Conforme el Consejo Nacional de Rectores ( CONARE), los perfiles de egreso
+deberán ser diferenciados por cada grado y título que se otorgue en la carrera:
+diplomado, profesorado, bachillerato o licenciatura.
+• Los perfiles de egreso de las carreras de la UCR deberán cumplir con los criterios
+de coherencia, pertinencia, factibilidad  y sostenibilidad, evaluabilidad y
+socialización.
+Ahora bien, a  manera de resumen, considérese la figura  4 que incluye los aspectos 
+relevantes que se engloban en el perfil de egreso. 
+5 Sin embargo, se deben tomar en cuenta los lineamientos del CONARE en este aspecto. 
+--- PAGE 15 ---
+15 
+Figura 4. Perfil de egreso 
+Las orientaciones metodológicas para el diseño o rediseño de un perfil de egreso se 
+colocan en el entorno virtual al final de este documento. 
+
+--- PAGE 16 ---
+16 
+1.5 ESTRUCTURA CURRICULAR6 
+Figura 5. Proceso de selección y organización de contenidos 
+De acuerdo con el Consejo Nacional de Rectores  (CONARE), en su documento 
+Lineamientos para la creación y rediseño de carreras universitarias estatales , el término 
+estructura curricular refiere a: 
+...la organización gradual y armónica de las actividades de formación académicas 
+por desarrollar en la carrera para lograr el cumplimiento del perfil académico -
+profesional conducente a la obtención del diploma. Muestra el detalle de nombre de 
+los cursos y sus créditos por período lectivo. (CONARE, 2022, p. 8) 
+Según el mismo documento, la elaboración de la estructura de cursos o estructura curricular 
+requiere de un proceso de “selección y organización de contenidos  (SOC)”, con base en 
+todos los apartados desarrollados hasta e ste momento del proceso . Para realizar dicha 
+selección y organización, se requerirá de criterios que orienten a las unidades académicas 
+a definir la esencialidad del currículo, es decir, los contenidos que son estrictamente 
+necesarios para una formación académica, en un tiempo determinado.  
+1.5.1 Selección de contenidos 
+a) Los contenidos de un plan de estudios
+Tejada (2005) indica que los contenidos “forman parte constitutiva del currículum” (p. 171). 
+A su vez, Vera et al. proponen que estos sean comprendidos como: 
+Un conjunto de saberes y productos culturales seleccionados para ser aprendidos 
+por los alumnos [el estudiantado] que responden a la interrogante de “qué” hay que 
+6 Anteriormente llamada “malla curricular”. 
+
+--- PAGE 17 ---
+17 
+enseñar/aprender, por lo que abarcan conocimientos (hechos, conceptos y 
+principios), procedimientos, normas y valores. (Vera et al., 2000, p.18)  
+Dicho esto, se comprende el término contenido no solo desde el conocimiento disciplinar 
+que requiere ser enseñado y aprendido, sino desde una perspectiva integradora que incluye 
+el componente actitudinal y los valores necesarios para llevar el conocimiento a la práctica. 
+Para el caso de los planes de estudios de la UCR, las actitudes, valores y habilidades 
+blandas, más allá de contenidos, también se podrán promover mediante las oportunidades 
+y espacios pedagógicos que ofrezca cada docente en el desarrollo de los cursos. La unidad 
+académica siempre debe rá promover los valores, actitudes y las habilidades blandas  de 
+manera transversal, de tal manera que garantice la formación de ser humano humanista 
+que se desea alcanzar en la Universidad.  
+b) Criterios para la selección de contenidos
+Como bien lo apunta Casanova (2009) , esta selección  de contenidos  asegura que la 
+persona estudiante desarrolle conocimientos, capacidades y competencias que le permitan 
+aprender a lo largo de su vida (p.  46). Dicho de otra forma,  estos contenidos no tienen 
+como único objetivo la obtención de una formación en un área de estudio específica o un 
+grado académico, también deben brindarle al estudiantado las herramientas para continuar 
+el proceso de aprendizaje durante toda su vida. 
+Existen diversas orientaciones para la selección de contenidos de un plan de estudios. Para 
+este documento se toma n las referencias de Vera et al . (2000) y Tejada (2005) ; sin 
+embargo, no son exhaustivas ni excluyentes de otras formas propuestas por otros autores. 
+Una vez establecida esta aclaración, al seleccionar los contenidos debe tenerse en cuenta 
+lo siguiente:  
+• Congruencia e idoneidad con los propósitos del plan de estudios:  los
+propósitos se concretan a través de los contenidos, por ende, estos últimos
+deben corresponder con los objetivos planteados para la carrera que, a su vez,
+deben tener congruencia con los fines y principios orientadores del Estatuto
+Orgánico.
+• Convencionalidad y consenso: se deberán incluir los contenidos que no solo
+generaron el  mayor consenso en la comunidad académica , sino también
+aquellos que s on los pertinentes para la carrera, de conformidad con la
+investigación realizada y los núcleos básicos del currículo a nivel mundial.
+• Actualidad: los contenidos deben responder a los problemas o situaciones
+actuales que debe atender la disciplina o profesión, sin dejar de lad o aquellos
+que mantienen una relevancia histórica para ese campo de estudio. Se
+recomienda considerar los contenidos que tienen menos probabilidad de una
+--- PAGE 18 ---
+18 
+pronta obsolescencia  o decadencia ; de ahí la importancia de consultar con 
+personas graduadas, empleadoras y expertas para la toma de decisiones. 
+• Representatividad: los contenidos seleccionados deben ser un reflejo del
+conjunto. Dado que no se puede incluir todo el conocimiento que existe sobre un
+campo o disciplina, la selección puede centrarse en “casos representativos” del
+campo de conocimiento.
+• Significatividad epistemológica e importancia científica:  respecto a la
+estructura de una disciplina y capacidad de organizarla en conceptos clave , la
+selección de los contenidos deberá responder a  esta pregunta:  ¿qué es lo
+esencial que se debe saber de esa disciplina o campo de conocimiento en la
+carrera conforme su duración y grado por ofertar?
+• Transferibilidad: según Vera et al. (2000), la educación tiene sentido en cuanto
+prepara para la vida y en tanto lo aprendido puede utilizarse en otros contextos
+(p. 47); por consiguiente, los contenidos deben privilegiar aquellos aspectos con
+mayor nivel de transferencia y utilidad para la vida.
+1.5.2 Organización de contenidos 
+a) Criterios para la organización y secuencia de los contenidos
+Los contenidos se pueden agrupar por elementos en común (temas o áreas) y, con ello, 
+diseñar las actividades de formación (cursos, módulos, seminarios,  laboratorios, entre 
+otros). La unidad académica podrá establecer una secuencia horizontal (en un mismo ciclo 
+lectivo) y vertical (orden por niveles) para lograr la continuidad y la integración entre las 
+actividades formativas.  
+b) Las áreas curriculares
+En términos del agrupamiento de los contenidos, un primer paso es determinar las áreas 
+curriculares que se preponderan en el plan de estudios de la carrera y que son congruentes 
+con el perfil de egreso propuesto. En este sentido, el concepto de área curricular se 
+entenderá como la categorización establecida por la unidad académica a partir de los 
+contenidos seleccionados para la estructura curricular , que los agrupa , por similitudes 
+sustanciales, en varias temáticas o tópicos y tienen relación directa con el perfil de egreso 
+definido. 
+Los resultados de la investigación curricular desarrollada hasta este momento del proceso 
+serán insumos esenciales que van enfocando una propuesta de áreas curriculares. No se 
+puede olvidar que, en el caso de la UCR, un área curricular definida por defecto son los 
+saberes humanistas, conformados por los cursos de la Escuela de Estudios Generales.  
+--- PAGE 19 ---
+19 
+c) La secuencia curricular
+En cuanto a la secuencia  curricular, se debe considerar cuál es el orden más apropiado 
+para abordar ciertos contenidos, qué conocimientos son base para el desarrollo de otros, 
+las relaciones entre ellos y la necesidad de abordarlos en una sola actividad de formación 
+académica o en varias. Esta disposición tiene como fin que el estudiantado logre una mejor 
+comprensión y mayor profundización.  
+Para la organización y secuenciación de contenidos es importante considerar lo que se 
+establece en la normativa universitaria y entes como CONARE. Algunos elementos para 
+tomar en cuenta son:  
+• Las asignaturas de cada plan de estudios estarán colocadas en un orden
+armónico y gradual; las del ciclo básico de Estudios Generales serán de
+matrícula previa y preferente a cualesquiera otras mientras la persona estudiante
+no las haya aprobado ( Estatuto Orgánico de la Universidad de Costa Rica ,
+Artículo 194).
+• Los cursos introductorios o de niveles de aprendizajes básicos podrán ubicarse
+en los ciclos del primer año de carrera.
+• La secuencia de los cursos por cada ciclo lectivo no debe sobrepasar los 18
+créditos, según n
+ormativa del CONARE 7.
+• En el interciclo de verano se puede matricular un máximo de dos cursos, siempre
+que no sumen más de nueve créditos8.
+• La estructura curricular representa cómo se organizan finalmente los saberes de
+un plan de estudios de una carrera y debe ser estrictamente congruente con toda
+la fundamentación del plan y el perfil de egreso definido.
+• La elaboración de la estructura curricular es, posiblemente, uno de los elementos
+de mayor desafío para las unidades académicas, pues demanda, del colectivo
+académico y su saber sabio9, la definición de aquellos conocimientos que son
+pertinentes y esenciale s de desarrollar para la carrera,  más allá de los
+intereses o convicciones individuales que puedan prevalecer; de ahí que, en este
+punto, la vigilancia de la congruencia con los resultados de la investigación
+realizada es esencial.
+7 Convenio para unificar la definición de crédito en la educación superior de Costa Rica (1976). 
+8 Reglamento de ciclos de estudio de la Universidad de Costa Rica (2012), Art.4. 
+9 Conforme el desarrollo teórico de Yves Chevallard (2000) en su texto “La transposición didáctica: 
+del saber sabio al saber enseñado”. 
+1.5.3 Consideracioines generales de la estructura curricular
+--- PAGE 20 ---
+20 
+• El formato 10 de estructura curricular utilizada en la UCR está compuesta por
+varios elementos: años y niveles, cursos (sigla y nombre), cantidad y tipo de
+horas de docencia directa, cantidad de créditos, requisitos y correquisitos y notas
+al pie de la estructura donde se pueden colocar comentarios para informar sobre
+requisitos de graduación, el Trabajo Comunal Universitario, el Trabajo Final de
+Graduación u otros definidos por la unidad académica, además, de detalles
+aclaratorios.
+• La 
+elaboración de la estructura curricular es un proceso técnico y académico que
+deberá contar con el acompañamiento cercano del personal asesor del CEA.
+Esto 
+se debe a que deberá considerar la normativa interna y externa, la viabilidad
+con los sistemas informáticos institucionales, implicaciones en otras carreras con
+las que se comparten cursos, entre otros aspectos que se colocan en el entorno
+virtual.
+• La estructura curricular representa un enfoque de diseño curricular. En el caso
+de la UCR, se cuenta con diseños curriculares que, en su mayoría, siguen una
+organización lineal por ciclos. Sin embargo, también ofrece otros diseños que
+consideran, por ejemplo, una estructura curricular modular (Licenciatura en
+Enfermería), por proyectos de formación (Licenciatura en Nutrición), por áreas
+temáticas (Bachillerato y Licenciatura en Filosofía), por núcleos o tronco común
+(carreras de Artes, Ingeniería o enseñanzas), lo que quiere decir que las
+unidades académicas podrán proponer diseños estructurados o flexibles, según
+la naturaleza de la profesión y las posibilidades de gestión institucional.
+• La estructura curricular puede reflejar una organización multi-, inter- o
+transdisciplinar de acuerdo con su objeto de estudio y las áreas de conocimiento
+definidas. Es importante que las unidades académicas puedan reflexionar sobre
+este punto y considerar las articulaciones necesarias para el logro óptimo de esa
+organización que, finalmente, se deberá reflejar en la formación y desempeño
+de la persona egresada o graduada de la carrera.
+• La estructura curricular también deberá reflejar el tratamiento de los ejes
+transversales disciplinares e institucionales (ambiente gestión integral del riesgo,
+condición de discapacidad y equidad de género), estos últimos basados en las
+disposiciones de la Resolución VD-11454-2020.
+• El diseño de la estructura curricular debe considerar la reflexión sobre la
+flexibilidad en la gestión y gobernanza del plan de estudios. La flexibilidad
+curricular es vista, desde el planteamiento de Dí az Villa (2007),  como la
+posibilidad de debilitar los límites académicos, administrativos, curriculares y
+pedagógicos 
+en el desarrollo de una carrera. Un acercamiento teórico de este
+10 En el entorno virtual se podrá encontrar el documento de ejemplo de estructura curricular. 

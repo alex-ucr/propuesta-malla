@@ -46,6 +46,30 @@
       color: var(--muted);
       font-weight: 600;
     }
+    .sidebar-nav {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-main-link {
+      display: block;
+      padding: 0.55rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .nav-main-link:hover {
+      background: rgba(30, 77, 123, 0.06);
+      color: var(--accent);
+    }
+    .nav-main-link[aria-current="page"] {
+      background: var(--accent-soft);
+      border-color: var(--border);
+      color: var(--accent);
+    }
     .sidebar .nav-malla {
       display: flex;
       flex-direction: column;
@@ -210,6 +234,39 @@
       text-decoration: none;
     }
     .contenidos .pdf-link a:hover { text-decoration: underline; }
+    .contenidos .saberes-perfil {
+      margin: 0 0 0.9rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .contenidos .saberes-perfil-label {
+      margin: 0 0 0.35rem;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    .contenidos .saberes-perfil-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.5rem;
+    }
+    .contenidos .saberes-perfil-list a {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-decoration: none;
+      border: 1px solid var(--border);
+    }
+    .contenidos .saberes-perfil-list a:hover {
+      text-decoration: underline;
+    }
     .contenidos .falta-contenidos { color: #a63; font-style: italic; }
     .load-error {
       background: #fff3e0;
@@ -224,8 +281,11 @@
 </head>
 <body>
   <div class="app">
-    <aside class="sidebar" aria-label="Elegir malla">
-      <h2>Malla por énfasis</h2>
+    <aside class="sidebar" aria-label="Navegación">
+      <nav class="sidebar-nav">
+        <a href="perfil-salida.html" class="nav-main-link">Perfil de salida</a>
+      </nav>
+      <h2>Malla</h2>
       <div class="nav-malla" role="radiogroup" aria-label="Énfasis curricular">
         <label>
           <input type="radio" name="malla-mod" id="radio-pura" value="pura" checked />
@@ -236,11 +296,6 @@
           Matemática aplicada
         </label>
       </div>
-      <!-- <p class="note">
-        También puede abrir
-        <a href="malla-pura.html">malla-pura.html</a> o
-        <a href="malla-aplicada.html">malla-aplicada.html</a> por separado.
-      </p> -->
     </aside>
     <div class="content">
       <div class="page">
@@ -280,10 +335,11 @@
 
       const ORDEN_CICLOS = [
         "I Ciclo", "II Ciclo", "III Ciclo", "IV Ciclo",
-        "V Ciclo", "VI Ciclo", "VII Ciclo", "Optativas"
+        "V Ciclo", "VI Ciclo", "VII Ciclo",
+        "Optativas de núcleo", "Optativas temáticas"
       ];
 
-      const CONFIG = {
+                              const CONFIG = {
         pura: {
           mallaFile: "pura.json",
           image: "propuesta_pura.png",
@@ -295,108 +351,187 @@
             "MA-0152 Matemática Exploratoria": "MA0152-matematica-exploratoria.pdf",
             "MA-0251 Introducción al Cálculo en una variable":
               "MA0251-calculo-una-variable.pdf",
-            "MA-0252 Introducción a las Demostraciones":
-              "MA0252-intro-demostraciones.pdf",
-            "MA-0361 Algebra Lineal I": "MA0361-algebra-lineal-i.pdf",
+            "MA-0252 Introducción a las Demostraciones": "MA0252-intro-demostraciones.pdf",
             "MA-0341 Matemática Computacional I": "MA0341-matematica-computacional-i.pdf",
             "MA-0351 Introducción al Cálculo en varias variables":
               "MA0351-calculo-varias-variables.pdf",
             "MA-0461 Algebra Lineal II": "MA0461-algebra-lineal-ii.pdf",
-            "MA-0641 Matemática Computacional II":
-              "MA0641-matematica-computacional-ii.pdf",
             "MA-0451 Principios de análisis en una variable":
               "MA0451-principios-analisis-i.pdf",
+            "MA-0471 Introducción a la Geometría Diferencial":
+              "MA0471-geometria.pdf",
             "MA-0496 Teoría de Números": "MA0496-teoria-numeros.pdf",
-            "MA-0471 Introducción a la Geometría Diferencial": "MA0471-geometria.pdf",
             "MA-0561 Algebra Abstracta I": "MA0561-algebra-abstracta-i.pdf",
             "MA-0551 Principios de análisis en varias variables":
               "MA0551-principios-analisis-ii.pdf",
             "MA-0515 Ecuaciones Diferenciales": "MA0515-ecuaciones-diferenciales.pdf",
-            "MA-0705 Análisis Real I": "MA0705-analisis-real-i-individual.pdf",
             "MA-0661 Algebra Abstracta II": "MA0661-algebra-abstracta-ii.pdf",
-            "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
             "MA-0635 Introducción a la Topología": "MA0635-topologia.pdf",
+            "MA-0641 Matemática Computacional II": "MA0641-matematica-computacional-ii.pdf",
+            "MA-0705 Análisis Real I": "MA0705-analisis-real-i-individual.pdf",
+            "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
             "MA-0725 Análisis Real II": "MA0725-analisis-real-ii-individual.pdf",
-            "MA-0840 Probabilidad": "MA0840-probabilidad.pdf",
-            "MA-0918 Procesos estocásticos": "MA0918-procesos-estocasticos.pdf",
-            "SP-1320 Análisis Real I": "SP1320-analisis-real-i.pdf",
-            "MA-0790 Tópicos de análisis": "MA0790-topicos-analisis.pdf",
+            "MA-0707 Geometría Diferencial": "MA0707-geometria-diferencial.pdf",
+            "MA-0920 Ecuaciones en derivadas parciales numéricas":
+              "MA0920-edp-numericas.pdf",
+            "MA-0806 Análisis funcional": "MA0806-analisis-funcional.pdf",
+            "MA-0703 Integración": "MA0703-integracion.pdf",
+            "MA-0525 Combinatoria": "MA0525-combinatoria.pdf",
+            "MA-0528 Sistemas dinámicos": "MA0528-sistemas-dinamicos.pdf",
+            "CA-0411 Análisis de Datos I": "CA0411-analisis-datos-i.pdf",
+            "MA-0815 Análisis armónico": "MA0815-analisis-armonico.pdf",
+            "MA-0506 Teoría algebraica de números": "MA0506-teoria-algebraica-numeros.pdf",
+            "MA-0512 Teoría de conjuntos": "MA0512-teoria-conjuntos.pdf",
+            "MA-0709 Geometría algebraica I": "MA0709-geometria-algebraica-i.pdf",
             "MA-0711 Lógica": "MA0711-logica.pdf",
+            "MA-0755 Ecuaciones diferenciales parciales": "MA0755-ecuaciones-diferenciales-parciales.pdf",
+            "MA-0889 Álgebra conmutativa": "MA0889-algebra-conmutativa.pdf",
+            "MA-0804 Topología algebraica": "MA0804-topologia-algebraica.pdf",
+            "MA-0817 Estadística matemática I": "MA0817-estadistica-matematica-i.pdf",
             "MA-0820 Teoría de modelos": "MA0820-teoria-modelos.pdf",
+            "MA-0840 Probabilidad": "MA0840-probabilidad.pdf",
+            "MA-0860 Teoría de módulos": "MA0860-teoria-modulos.pdf",
+            "MA-0714 Optimización": "MA0714-optimizacion.pdf",
+            "CA-0721 Probabilidad": "CA0721-probabilidad.pdf",
+            "MA-0647 Modelación Matemática": "MA0647-modelacion-matematica.pdf",
+            "MA-0918 Procesos estocásticos": "MA0918-procesos-estocasticos.pdf",
+            "MA-0917 Estadística II": "MA0917-estadistica-matematica-ii.pdf",
+            "CA-0512 Modelos lineales": "CA0512-modelos-lineales.pdf",
+            "CA-0612 Series de tiempo": "CA0612-series-tiempo.pdf",
+            "MA-0406 Introducción a la optimización": "MA0406-introduccion-optimizacion.pdf",
+            "CA-0204 Herramientas de ciencia de datos I": "CA0204-herramientas-ciencia-datos-i.pdf",
+            "CA-0304 Herramientas de ciencia de datos II":
+              "CA0304-herramientas-ciencia-datos-ii.pdf",
+            "MA-0790 Tópicos de análisis": "MA0790-topicos-analisis.pdf",
+            "MA-0791 Tópicos de Probabilidad": "MA0791-topicos-probabilidad.pdf",
+            "MA-0792 Tópicos de Ecuaciones diferenciales":
+              "MA0792-topicos-ecuaciones-diferenciales.pdf",
+            "MA-0793 Tópicos de Geometría": "MA0793-topicos-geometria.pdf",
+            "MA-0794 Tópicos de Modelación": "MA0794-topicos-modelacion.pdf",
+            "MA-0795 Tópicos de Computación científica": "MA0795-topicos-computacion-cientifica.pdf",
+            "MA-0796 Tópicos de Álgebra": "MA0796-topicos-algebra.pdf",
+            "MA-0797 Tópicos de Matemática discreta": "MA0797-topicos-matematica-discreta.pdf",
+            "MA-0798 Tópicos de Análisis de datos": "MA0798-topicos-analisis-datos.pdf",
+            "MA-0799 Tópicos de Aprendizaje automático": "MA0799-topicos-aprendizaje-automatico.pdf",
+            "MA-0609 Teoría analítica de números": "MA0609-teoria-analitica-numeros.pdf",
+            "MA-0830 Tópicos de Teoría de Números": "MA0830-topicos-teoria-numeros.pdf",
+            "MA-0831 Tópicos de Lógica": "MA0831-topicos-logica.pdf",
+            "MA-0832 Tópicos en Topología": "MA0832-topicos-topologia.pdf",
+            "CA-0412 Análisis de datos II": "CA0412-analisis-datos-ii.pdf",
           },
           ID_POR_TITULO: {
-                "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
+            "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
               "curso-fundamentos-algebra",
             "MA-0152 Matemática Exploratoria": "curso-matematica-exploratoria",
             "MA-0251 Introducción al Cálculo en una variable":
               "curso-calculo-una-variable",
             "MA-0252 Introducción a las Demostraciones": "curso-intro-demostraciones",
-            "MA-0361 Algebra Lineal I": "curso-algebra-lineal-i",
             "MA-0341 Matemática Computacional I": "curso-mat-computacional-i",
             "MA-0351 Introducción al Cálculo en varias variables":
               "curso-calculo-varias-variables",
             "MA-0461 Algebra Lineal II": "curso-algebra-lineal-ii",
-            "MA-0641 Matemática Computacional II": "curso-mat-computacional-ii",
             "MA-0451 Principios de análisis en una variable":
               "curso-principios-analisis-una-variable",
-            "MA-0496 Teoría de Números": "curso-teoria-numeros",
             "MA-0471 Introducción a la Geometría Diferencial":
               "curso-geometria-diferencial",
+            "MA-0496 Teoría de Números": "curso-teoria-numeros",
             "MA-0561 Algebra Abstracta I": "curso-algebra-abstracta-i",
             "MA-0551 Principios de análisis en varias variables":
               "curso-principios-analisis-varias-variables",
             "MA-0515 Ecuaciones Diferenciales": "curso-ecuaciones-diferenciales",
-            "MA-0705 Análisis Real I": "curso-analisis-real-i",
             "MA-0661 Algebra Abstracta II": "curso-algebra-abstracta-ii",
-            "MA-0702 Análisis Complejo": "curso-analisis-complejo",
             "MA-0635 Introducción a la Topología": "curso-topologia",
+            "MA-0641 Matemática Computacional II": "curso-mat-computacional-ii",
+            "MA-0705 Análisis Real I": "curso-analisis-real-i",
+            "MA-0702 Análisis Complejo": "curso-analisis-complejo",
             "MA-0725 Análisis Real II": "curso-analisis-real-ii",
-            "MA-0840 Probabilidad": "curso-probabilidad",
-            "MA-0918 Procesos estocásticos": "curso-procesos-estocasticos",
-            "SP-1320 Análisis Real I": "curso-sp1320-analisis-real-i",
-            "MA-0790 Tópicos de análisis": "curso-topicos-analisis",
+            "MA-0707 Geometría Diferencial": "curso-ma0707-geometria-diferencial",
+            "MA-0920 Ecuaciones en derivadas parciales numéricas":
+              "curso-ma0920-edp-numericas",
+            "MA-0806 Análisis funcional": "curso-ma0806-analisis-funcional",
+            "MA-0703 Integración": "curso-integracion",
+            "MA-0525 Combinatoria": "curso-ma0525-combinatoria",
+            "MA-0528 Sistemas dinámicos": "curso-ma0528-sistemas-dinamicos",
+            "CA-0411 Análisis de Datos I": "curso-ca-0411-analisis-datos-i",
+            "MA-0815 Análisis armónico": "curso-ma0815-analisis-armonico",
+            "MA-0506 Teoría algebraica de números": "curso-ma0506-teoria-algebraica-numeros",
+            "MA-0512 Teoría de conjuntos": "curso-ma0512-teoria-conjuntos",
+            "MA-0709 Geometría algebraica I": "curso-ma0709-geometria-algebraica-i",
             "MA-0711 Lógica": "curso-logica",
+            "MA-0755 Ecuaciones diferenciales parciales": "curso-ma0755-ecuaciones-diferenciales-parciales",
+            "MA-0889 Álgebra conmutativa": "curso-ma0889-algebra-conmutativa",
+            "MA-0804 Topología algebraica": "curso-ma0804-topologia-algebraica",
+            "MA-0817 Estadística matemática I": "curso-ma0817-estadistica-matematica-i",
             "MA-0820 Teoría de modelos": "curso-teoria-modelos",
+            "MA-0840 Probabilidad": "curso-probabilidad",
+            "MA-0860 Teoría de módulos": "curso-ma0860-teoria-modulos",
+            "MA-0714 Optimización": "curso-ma0714-optimizacion",
+            "CA-0721 Probabilidad": "curso-ca-0721-probabilidad",
+            "MA-0647 Modelación Matemática": "curso-ma0647-modelacion-matematica",
+            "MA-0918 Procesos estocásticos": "curso-procesos-estocasticos",
+            "MA-0917 Estadística II": "curso-ma0917-estadistica-matematica-ii",
+            "CA-0512 Modelos lineales": "curso-ca-0512-modelos-lineales",
+            "CA-0612 Series de tiempo": "curso-ca-0612-series-tiempo",
+            "MA-0406 Introducción a la optimización": "curso-ma0406-introduccion-optimizacion",
+            "CA-0204 Herramientas de ciencia de datos I": "curso-ca-0204-herramientas-ciencia-datos-i",
+            "CA-0304 Herramientas de ciencia de datos II":
+              "curso-ca-0304-herramientas-ciencia-datos-ii",
+            "MA-0790 Tópicos de análisis": "curso-topicos-analisis",
+            "MA-0791 Tópicos de Probabilidad": "curso-topicos-probabilidad",
+            "MA-0792 Tópicos de Ecuaciones diferenciales":
+              "curso-topicos-ecuaciones-diferenciales",
+            "MA-0793 Tópicos de Geometría": "curso-topicos-geometria",
+            "MA-0794 Tópicos de Modelación": "curso-topicos-modelacion",
+            "MA-0795 Tópicos de Computación científica": "curso-topicos-computacion-cientifica",
+            "MA-0796 Tópicos de Álgebra": "curso-topicos-algebra",
+            "MA-0797 Tópicos de Matemática discreta": "curso-topicos-matematica-discreta",
+            "MA-0798 Tópicos de Análisis de datos": "curso-topicos-analisis-datos",
+            "MA-0799 Tópicos de Aprendizaje automático": "curso-topicos-aprendizaje-automatico",
+            "MA-0609 Teoría analítica de números": "curso-ma0609-teoria-analitica-numeros",
+            "MA-0830 Tópicos de Teoría de Números": "curso-topicos-teoria-numeros",
+            "MA-0831 Tópicos de Lógica": "curso-topicos-logica",
+            "MA-0832 Tópicos en Topología": "curso-topicos-topologia",
+            "CA-0412 Análisis de datos II": "curso-ca-0412-analisis-datos-ii",
           },
           HOTSPOT_POR_TITULO: {
             "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": {
               left: 50, top: 11, w: 14, h: 8,
             },
-            "MA-0152 Matemática Exploratoria": { left: 32, top: 11, w: 14, h: 8 },
+            "MA-0152 Matemática Exploratoria": { left: 14, top: 11, w: 14, h: 8 },
             "MA-0251 Introducción al Cálculo en una variable": {
-              left: 50, top: 22.5, w: 14, h: 8,
+              left: 50, top: 22, w: 14, h: 8,
             },
-            "MA-0252 Introducción a las Demostraciones": {
-              left: 32, top: 22.5, w: 14, h: 8,
-            },
-            "MA-0361 Algebra Lineal I": { left: 32, top: 34, w: 14, h: 8 },
-            "MA-0341 Matemática Computacional I": { left: 68, top: 34, w: 14, h: 8 },
+            "MA-0252 Introducción a las Demostraciones": { left: 14, top: 22, w: 14, h: 8 },
+            "MA-0361 Algebra Lineal I": { left: 68, top: 34, w: 14, h: 8 },
+            "MA-0341 Matemática Computacional I": { left: 14, top: 34, w: 14, h: 8 },
             "MA-0351 Introducción al Cálculo en varias variables": {
               left: 50, top: 34, w: 14, h: 8,
             },
-            "MA-0461 Algebra Lineal II": { left: 32, top: 45, w: 14, h: 8 },
+            "MA-0461 Algebra Lineal II": { left: 68, top: 45.5, w: 14, h: 8 },
             "MA-0451 Principios de análisis en una variable": {
-              left: 50, top: 45, w: 14, h: 8,
+              left: 50, top: 45.5, w: 14, h: 8,
             },
+            "MA-0471 Introducción a la Geometría Diferencial": {
+              left: 14, top: 45.5, w: 14, h: 8,
+            },
+            "MA-0496 Teoría de Números": { left: 32, top: 45.5, w: 14, h: 8 },
+            "MA-0561 Algebra Abstracta I": { left: 68, top: 57, w: 14, h: 8 },
             "MA-0551 Principios de análisis en varias variables": {
-              left: 50, top: 56, w: 14, h: 8,
+              left: 50, top: 57, w: 14, h: 8,
             },
-            "MA-0496 Teoría de Números": { left: 85.5, top: 45, w: 14, h: 8 },
-            "MA-0471 Introducción a la Geometría Diferencial": { left: 68, top: 45, w: 14, h: 8 },
-            "MA-0561 Algebra Abstracta I": { left: 32, top: 56, w: 14, h: 8 },
-            "MA-0515 Ecuaciones Diferenciales": { left: 68, top: 56, w: 14, h: 8 },
-            "MA-0661 Algebra Abstracta II": { left: 32, top: 67.5, w: 14, h: 8 },
-            "MA-0702 Análisis Complejo": { left: 50, top: 78.5, w: 14, h: 8 },
-            "MA-0641 Matemática Computacional II": { left: 68, top: 67.5, w: 14, h: 8 },
-            "MA-0635 Introducción a la Topología": { left: 50, top: 67.5, w: 14, h: 8 },
+            "MA-0515 Ecuaciones Diferenciales": { left: 32, top: 57, w: 14, h: 8 },
+            "MA-0661 Algebra Abstracta II": { left: 68, top: 68.5, w: 14, h: 8 },
+            "MA-0635 Introducción a la Topología": { left: 50, top: 68.5, w: 14, h: 8 },
+            "MA-0641 Matemática Computacional II": { left: 32, top: 68.5, w: 14, h: 8 },
             "MA-0705 Análisis Real I": { left: 68, top: 78.5, w: 14, h: 8 },
+            "MA-0702 Análisis Complejo": { left: 50, top: 78.5, w: 14, h: 8 },
             "MA-0725 Análisis Real II": { left: 32, top: 80, w: 14, h: 8 },
-            "MA-0840 Probabilidad": { left: 14, top: 80, w: 14, h: 8 },
-            "MA-0918 Procesos estocásticos": { left: 32, top: 89, w: 14, h: 8 },
-            "SP-1320 Análisis Real I": { left: 50, top: 89, w: 14, h: 8 },
-            "MA-0790 Tópicos de análisis": { left: 68, top: 89, w: 14, h: 8 },
+            "MA-0703 Integración": { left: 50, top: 89, w: 14, h: 8 },
             "MA-0711 Lógica": { left: 14, top: 97, w: 14, h: 8 },
             "MA-0820 Teoría de modelos": { left: 32, top: 97, w: 14, h: 8 },
+            "MA-0840 Probabilidad": { left: 14, top: 80, w: 14, h: 8 },
+            "MA-0918 Procesos estocásticos": { left: 32, top: 89, w: 14, h: 8 },
+            "MA-0790 Tópicos de análisis": { left: 68, top: 89, w: 14, h: 8 },
           },
         },
         aplicada: {
@@ -410,29 +545,73 @@
             "MA-0152 Matemática Exploratoria": "MA0152-matematica-exploratoria.pdf",
             "MA-0251 Introducción al Cálculo en una variable":
               "MA0251-calculo-una-variable.pdf",
-            "MA-0252 Introducción a las Demostraciones":
-              "MA0252-intro-demostraciones.pdf",
-            "MA-0261 Algebra Lineal I": "MA0261-algebra-lineal-i.pdf",
+            "MA-0252 Introducción a las Demostraciones": "MA0252-intro-demostraciones.pdf",
+            "MA-0361 Algebra Lineal I": "MA0361-algebra-lineal-i.pdf",
             "MA-0341 Matemática Computacional I": "MA0341-matematica-computacional-i.pdf",
             "MA-0351 Introducción al Cálculo en varias variables":
               "MA0351-calculo-varias-variables.pdf",
-            "MA-0361 Algebra Lineal II": "MA0361-algebra-lineal-ii.pdf",
+            "MA-0461 Algebra Lineal II": "MA0461-algebra-lineal-ii.pdf",
             "MA-0451 Principios de análisis en una variable":
               "MA0451-principios-analisis-i.pdf",
             "CA-0721 Probabilidad": "CA0721-probabilidad.pdf",
-            "CA-0204 Herramientas de ciencia de datos I":
-              "CA0204-herramientas-ciencia-datos-i.pdf",
+            "CA-0204 Herramientas de ciencia de datos I": "CA0204-herramientas-ciencia-datos-i.pdf",
             "MA-0551 Principios de análisis en varias variables":
               "MA0551-principios-analisis-ii.pdf",
             "MA-0615 Ecuaciones Diferenciales": "MA0615-ecuaciones-diferenciales.pdf",
             "CA-0303 Estadística actuarial I": "CA0303-estadistica-actuarial-i.pdf",
-            "MA-0541 Matemática Computacional II":
-              "MA0641-matematica-computacional-ii.pdf",
-            "MA-0625 Análisis Real I": "MA0705-analisis-real-i-individual.pdf",
+            "MA-0541 Matemática Computacional II": "MA0641-matematica-computacional-ii.pdf",
+            "MA-0625 Análisis Real I": "MA0625-analisis-real-i-individual.pdf",
             "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
             "MA-0635 Introducción a la Topología": "MA0635-topologia.pdf",
             "CA-0411 Análisis de Datos I": "CA0411-analisis-datos-i.pdf",
             "MA-0725 Análisis Real II": "MA0725-analisis-real-ii-individual.pdf",
+            "MA-0707 Geometría Diferencial": "MA0707-geometria-diferencial.pdf",
+            "MA-0920 Ecuaciones en derivadas parciales numéricas":
+              "MA0920-edp-numericas.pdf",
+            "MA-0806 Análisis funcional": "MA0806-analisis-funcional.pdf",
+            "MA-0703 Integración": "MA0703-integracion.pdf",
+            "MA-0525 Combinatoria": "MA0525-combinatoria.pdf",
+            "MA-0528 Sistemas dinámicos": "MA0528-sistemas-dinamicos.pdf",
+            "CA-0411 Análisis de Datos I": "CA0411-analisis-datos-i.pdf",
+            "MA-0815 Análisis armónico": "MA0815-analisis-armonico.pdf",
+            "MA-0506 Teoría algebraica de números": "MA0506-teoria-algebraica-numeros.pdf",
+            "MA-0512 Teoría de conjuntos": "MA0512-teoria-conjuntos.pdf",
+            "MA-0709 Geometría algebraica I": "MA0709-geometria-algebraica-i.pdf",
+            "MA-0711 Lógica": "MA0711-logica.pdf",
+            "MA-0755 Ecuaciones diferenciales parciales": "MA0755-ecuaciones-diferenciales-parciales.pdf",
+            "MA-0889 Álgebra conmutativa": "MA0889-algebra-conmutativa.pdf",
+            "MA-0804 Topología algebraica": "MA0804-topologia-algebraica.pdf",
+            "MA-0817 Estadística matemática I": "MA0817-estadistica-matematica-i.pdf",
+            "MA-0820 Teoría de modelos": "MA0820-teoria-modelos.pdf",
+            "MA-0840 Probabilidad": "MA0840-probabilidad.pdf",
+            "MA-0860 Teoría de módulos": "MA0860-teoria-modulos.pdf",
+            "MA-0714 Optimización": "MA0714-optimizacion.pdf",
+            "CA-0721 Probabilidad": "CA0721-probabilidad.pdf",
+            "MA-0647 Modelación Matemática": "MA0647-modelacion-matematica.pdf",
+            "MA-0918 Procesos estocásticos": "MA0918-procesos-estocasticos.pdf",
+            "MA-0917 Estadística II": "MA0917-estadistica-matematica-ii.pdf",
+            "CA-0512 Modelos lineales": "CA0512-modelos-lineales.pdf",
+            "CA-0612 Series de tiempo": "CA0612-series-tiempo.pdf",
+            "MA-0406 Introducción a la optimización": "MA0406-introduccion-optimizacion.pdf",
+            "CA-0204 Herramientas de ciencia de datos I": "CA0204-herramientas-ciencia-datos-i.pdf",
+            "CA-0304 Herramientas de ciencia de datos II":
+              "CA0304-herramientas-ciencia-datos-ii.pdf",
+            "MA-0790 Tópicos de análisis": "MA0790-topicos-analisis.pdf",
+            "MA-0791 Tópicos de Probabilidad": "MA0791-topicos-probabilidad.pdf",
+            "MA-0792 Tópicos de Ecuaciones diferenciales":
+              "MA0792-topicos-ecuaciones-diferenciales.pdf",
+            "MA-0793 Tópicos de Geometría": "MA0793-topicos-geometria.pdf",
+            "MA-0794 Tópicos de Modelación": "MA0794-topicos-modelacion.pdf",
+            "MA-0795 Tópicos de Computación científica": "MA0795-topicos-computacion-cientifica.pdf",
+            "MA-0796 Tópicos de Álgebra": "MA0796-topicos-algebra.pdf",
+            "MA-0797 Tópicos de Matemática discreta": "MA0797-topicos-matematica-discreta.pdf",
+            "MA-0798 Tópicos de Análisis de datos": "MA0798-topicos-analisis-datos.pdf",
+            "MA-0799 Tópicos de Aprendizaje automático": "MA0799-topicos-aprendizaje-automatico.pdf",
+            "MA-0609 Teoría analítica de números": "MA0609-teoria-analitica-numeros.pdf",
+            "MA-0830 Tópicos de Teoría de Números": "MA0830-topicos-teoria-numeros.pdf",
+            "MA-0831 Tópicos de Lógica": "MA0831-topicos-logica.pdf",
+            "MA-0832 Tópicos en Topología": "MA0832-topicos-topologia.pdf",
+            "CA-0412 Análisis de datos II": "CA0412-analisis-datos-ii.pdf",
           },
           ID_POR_TITULO: {
             "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
@@ -441,16 +620,15 @@
             "MA-0251 Introducción al Cálculo en una variable":
               "curso-calculo-una-variable",
             "MA-0252 Introducción a las Demostraciones": "curso-intro-demostraciones",
-            "MA-0261 Algebra Lineal I": "curso-algebra-lineal-i",
+            "MA-0361 Algebra Lineal I": "curso-algebra-lineal-i",
             "MA-0341 Matemática Computacional I": "curso-mat-computacional-i",
             "MA-0351 Introducción al Cálculo en varias variables":
               "curso-calculo-varias-variables",
-            "MA-0361 Algebra Lineal II": "curso-algebra-lineal-ii",
+            "MA-0461 Algebra Lineal II": "curso-algebra-lineal-ii",
             "MA-0451 Principios de análisis en una variable":
               "curso-principios-analisis-una-variable",
             "CA-0721 Probabilidad": "curso-ca-0721-probabilidad",
-            "CA-0204 Herramientas de ciencia de datos I":
-              "curso-ca-0204-herramientas-ciencia-datos-i",
+            "CA-0204 Herramientas de ciencia de datos I": "curso-ca-0204-herramientas-ciencia-datos-i",
             "MA-0551 Principios de análisis en varias variables":
               "curso-principios-analisis-varias-variables",
             "MA-0615 Ecuaciones Diferenciales": "curso-ecuaciones-diferenciales",
@@ -460,32 +638,75 @@
             "MA-0702 Análisis Complejo": "curso-analisis-complejo",
             "MA-0635 Introducción a la Topología": "curso-topologia",
             "CA-0411 Análisis de Datos I": "curso-ca-0411-analisis-datos-i",
-            "MA-0725 Análisis Real II": "curso-analisis-real-ii",
+            "MA-0725 Análisis Real II": "curso-analisis-real-ii-aplicada",
+            "MA-0707 Geometría Diferencial": "curso-ma0707-geometria-diferencial",
+            "MA-0920 Ecuaciones en derivadas parciales numéricas":
+              "curso-ma0920-edp-numericas",
+            "MA-0806 Análisis funcional": "curso-ma0806-analisis-funcional",
+            "MA-0703 Integración": "curso-integracion-aplicada",
+            "MA-0525 Combinatoria": "curso-ma0525-combinatoria",
+            "MA-0528 Sistemas dinámicos": "curso-ma0528-sistemas-dinamicos",
+            "CA-0411 Análisis de Datos I": "curso-ca-0411-analisis-datos-i",
+            "MA-0815 Análisis armónico": "curso-ma0815-analisis-armonico",
+            "MA-0506 Teoría algebraica de números": "curso-ma0506-teoria-algebraica-numeros",
+            "MA-0512 Teoría de conjuntos": "curso-ma0512-teoria-conjuntos",
+            "MA-0709 Geometría algebraica I": "curso-ma0709-geometria-algebraica-i",
+            "MA-0711 Lógica": "curso-logica-aplicada",
+            "MA-0755 Ecuaciones diferenciales parciales": "curso-ma0755-ecuaciones-diferenciales-parciales",
+            "MA-0889 Álgebra conmutativa": "curso-ma0889-algebra-conmutativa",
+            "MA-0804 Topología algebraica": "curso-ma0804-topologia-algebraica",
+            "MA-0817 Estadística matemática I": "curso-ma0817-estadistica-matematica-i",
+            "MA-0820 Teoría de modelos": "curso-teoria-modelos-aplicada",
+            "MA-0840 Probabilidad": "curso-probabilidad-aplicada",
+            "MA-0860 Teoría de módulos": "curso-ma0860-teoria-modulos",
+            "MA-0714 Optimización": "curso-ma0714-optimizacion",
+            "CA-0721 Probabilidad": "curso-ca-0721-probabilidad",
+            "MA-0647 Modelación Matemática": "curso-ma0647-modelacion-matematica",
+            "MA-0918 Procesos estocásticos": "curso-procesos-estocasticos-aplicada",
+            "MA-0917 Estadística II": "curso-ma0917-estadistica-matematica-ii",
+            "CA-0512 Modelos lineales": "curso-ca-0512-modelos-lineales",
+            "CA-0612 Series de tiempo": "curso-ca-0612-series-tiempo",
+            "MA-0406 Introducción a la optimización": "curso-ma0406-introduccion-optimizacion",
+            "CA-0204 Herramientas de ciencia de datos I": "curso-ca-0204-herramientas-ciencia-datos-i",
+            "CA-0304 Herramientas de ciencia de datos II":
+              "curso-ca-0304-herramientas-ciencia-datos-ii",
+            "MA-0790 Tópicos de análisis": "curso-topicos-analisis-aplicada",
+            "MA-0791 Tópicos de Probabilidad": "curso-topicos-probabilidad-aplicada",
+            "MA-0792 Tópicos de Ecuaciones diferenciales":
+              "curso-topicos-ecuaciones-diferenciales-aplicada",
+            "MA-0793 Tópicos de Geometría": "curso-topicos-geometria-aplicada",
+            "MA-0794 Tópicos de Modelación": "curso-topicos-modelacion-aplicada",
+            "MA-0795 Tópicos de Computación científica": "curso-topicos-computacion-cientifica-aplicada",
+            "MA-0796 Tópicos de Álgebra": "curso-topicos-algebra-aplicada",
+            "MA-0797 Tópicos de Matemática discreta": "curso-topicos-matematica-discreta-aplicada",
+            "MA-0798 Tópicos de Análisis de datos": "curso-topicos-analisis-datos-aplicada",
+            "MA-0799 Tópicos de Aprendizaje automático": "curso-topicos-aprendizaje-automatico-aplicada",
+            "MA-0609 Teoría analítica de números": "curso-ma0609-teoria-analitica-numeros",
+            "MA-0830 Tópicos de Teoría de Números": "curso-topicos-teoria-numeros-aplicada",
+            "MA-0831 Tópicos de Lógica": "curso-topicos-logica-aplicada",
+            "MA-0832 Tópicos en Topología": "curso-topicos-topologia-aplicada",
+            "CA-0412 Análisis de datos II": "curso-ca-0412-analisis-datos-ii",
           },
           HOTSPOT_POR_TITULO: {
             "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": {
               left: 50, top: 11, w: 14, h: 8,
             },
-            "MA-0152 Matemática Exploratoria": { left: 32, top: 11, w: 14, h: 8 },
+            "MA-0152 Matemática Exploratoria": { left: 14, top: 11, w: 14, h: 8 },
             "MA-0251 Introducción al Cálculo en una variable": {
-              left: 50, top: 22.5, w: 14, h: 8,
+              left: 50, top: 22, w: 14, h: 8,
             },
-            "MA-0252 Introducción a las Demostraciones": {
-              left: 32, top: 22.5, w: 14, h: 8,
-            },
-            "MA-0261 Algebra Lineal I": { left: 68, top: 34, w: 14, h: 8 },
+            "MA-0252 Introducción a las Demostraciones": { left: 14, top: 22, w: 14, h: 8 },
+            "MA-0361 Algebra Lineal I": { left: 68, top: 34, w: 14, h: 8 },
             "MA-0341 Matemática Computacional I": { left: 14, top: 34, w: 14, h: 8 },
             "MA-0351 Introducción al Cálculo en varias variables": {
               left: 50, top: 34, w: 14, h: 8,
             },
-            "MA-0361 Algebra Lineal II": { left: 32, top: 45.5, w: 14, h: 8 },
+            "MA-0461 Algebra Lineal II": { left: 68, top: 45.5, w: 14, h: 8 },
             "MA-0451 Principios de análisis en una variable": {
               left: 50, top: 45.5, w: 14, h: 8,
             },
             "CA-0721 Probabilidad": { left: 68, top: 45.5, w: 14, h: 8 },
-            "CA-0204 Herramientas de ciencia de datos I": {
-              left: 14, top: 45.5, w: 14, h: 8,
-            },
+            "CA-0204 Herramientas de ciencia de datos I": { left: 14, top: 45.5, w: 14, h: 8 },
             "MA-0551 Principios de análisis en varias variables": {
               left: 50, top: 57, w: 14, h: 8,
             },
@@ -493,10 +714,19 @@
             "CA-0303 Estadística actuarial I": { left: 14, top: 57, w: 14, h: 8 },
             "MA-0541 Matemática Computacional II": { left: 14, top: 68.5, w: 14, h: 8 },
             "MA-0625 Análisis Real I": { left: 32, top: 68.5, w: 14, h: 8 },
-            "MA-0635 Introducción a la Topología": { left: 50, top: 68.5, w: 14, h: 8 },
             "MA-0702 Análisis Complejo": { left: 32, top: 80, w: 14, h: 8 },
+            "MA-0635 Introducción a la Topología": { left: 50, top: 68.5, w: 14, h: 8 },
             "CA-0411 Análisis de Datos I": { left: 14, top: 80, w: 14, h: 8 },
-            "MA-0725 Análisis Real II": { left: 50, top: 80, w: 14, h: 8 },
+            "MA-0725 Análisis Real II": { left: 32, top: 88, w: 14, h: 8 },
+            "MA-0703 Integración": { left: 68, top: 88, w: 14, h: 8 },
+            "CA-0411 Análisis de Datos I": { left: 14, top: 80, w: 14, h: 8 },
+            "MA-0711 Lógica": { left: 32, top: 96, w: 14, h: 8 },
+            "MA-0820 Teoría de modelos": { left: 50, top: 96, w: 14, h: 8 },
+            "MA-0840 Probabilidad": { left: 14, top: 88, w: 14, h: 8 },
+            "CA-0721 Probabilidad": { left: 68, top: 45.5, w: 14, h: 8 },
+            "MA-0918 Procesos estocásticos": { left: 50, top: 88, w: 14, h: 8 },
+            "CA-0204 Herramientas de ciencia de datos I": { left: 14, top: 45.5, w: 14, h: 8 },
+            "MA-0790 Tópicos de análisis": { left: 14, top: 96, w: 14, h: 8 },
           },
         },
       };
@@ -504,7 +734,62 @@
       const STORAGE_KEY = "propuesta-malla-index-modo";
       const mallaData = { pura: null, aplicada: null };
       var contenidosGlobal = null;
+      var saberesPorTitulo = {};
+      var saberDescPorCodigo = {};
       var modoActivo = "pura";
+
+      function indexarSaberesPerfil(rows) {
+        saberesPorTitulo = {};
+        if (!Array.isArray(rows)) return;
+        rows.forEach(function (row) {
+          if (row.titulo && row.saberes) {
+            saberesPorTitulo[row.titulo] = row.saberes;
+          }
+        });
+      }
+
+      function indexarDescripcionSaberes(perfil) {
+        saberDescPorCodigo = {};
+        if (!perfil || !Array.isArray(perfil.items)) return;
+        perfil.items.forEach(function (it) {
+          saberDescPorCodigo[it.codigo] = it.descripcion;
+        });
+      }
+
+      function tipoSaberDesdeCodigo(codigo) {
+        if (codigo.indexOf("SC") === 0) return "Saber Conocer";
+        if (codigo.indexOf("SH") === 0) return "Saber Hacer";
+        if (codigo.indexOf("SS") === 0) return "Saber Ser";
+        return "Saber Conocer";
+      }
+
+      function appendSaberesPerfil(block, title) {
+        var saberes = saberesPorTitulo[title];
+        if (!saberes || !saberes.length) return;
+        var wrap = document.createElement("div");
+        wrap.className = "saberes-perfil";
+        var label = document.createElement("p");
+        label.className = "saberes-perfil-label";
+        label.textContent = "Saberes del perfil de salida";
+        wrap.appendChild(label);
+        var ul = document.createElement("ul");
+        ul.className = "saberes-perfil-list";
+        saberes.forEach(function (codigo) {
+          var li = document.createElement("li");
+          var a = document.createElement("a");
+          var tipo = tipoSaberDesdeCodigo(codigo);
+          a.href =
+            "perfil-salida.html?tipo=" + encodeURIComponent(tipo) + "#" + codigo;
+          a.textContent = codigo;
+          a.title = saberDescPorCodigo[codigo] || codigo;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        wrap.appendChild(ul);
+        block.appendChild(wrap);
+      }
 
       function aplanarCursos(malla) {
         const out = [];
@@ -560,6 +845,7 @@
               wrapP.appendChild(a);
               block.appendChild(wrapP);
             }
+            appendSaberesPerfil(block, title);
             const html = contenidosGlobal[title];
             if (html == null || html === "") {
               const p = document.createElement("p");
@@ -649,7 +935,7 @@
         if (!t || !t.closest) return;
         const a = t.closest("a.malla-hotspot[data-open-curso]");
         if (!a) return;
-        // e.preventDefault();
+        e.preventDefault();
         var id = a.getAttribute("data-open-curso");
         if (id) openCajaCursoById(id);
       });
@@ -674,11 +960,21 @@
           if (!r.ok) throw new Error("contenidos_por_curso.json");
           return r.json();
         }),
+        fetch("cursos_perfil_data.json").then((r) => {
+          if (!r.ok) throw new Error("cursos_perfil_data.json");
+          return r.json();
+        }),
+        fetch("perfil-salida.json").then((r) => {
+          if (!r.ok) throw new Error("perfil-salida.json");
+          return r.json();
+        }),
       ])
-        .then(([pura, aplicada, contenidos]) => {
+        .then(([pura, aplicada, contenidos, cursosPerfil, perfilSalida]) => {
           mallaData.pura = pura;
           mallaData.aplicada = aplicada;
           contenidosGlobal = contenidos;
+          indexarSaberesPerfil(cursosPerfil);
+          indexarDescripcionSaberes(perfilSalida);
           ponerModo(leerModoInicial());
         })
         .catch(function () {

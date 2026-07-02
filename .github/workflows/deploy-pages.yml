@@ -1,0 +1,55 @@
+# Publica en la rama gh-pages (evita actions/deploy-pages, que a menudo
+# se queda en deployment_queued hasta timeout).
+#
+# Después del primer deploy exitoso:
+#   Settings → Pages → Build and deployment → Source: Deploy from a branch
+#   Branch: gh-pages  /  Folder: / (root)
+
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site (solo archivos web)
+        run: |
+          set -e
+          mkdir -p _site
+          cp .nojekyll _site/
+          for f in index.html perfil-salida.html; do
+            [ -f "$f" ] && cp "$f" _site/
+          done
+          for f in pura.json aplicada.json contenidos_por_curso.json \
+                   cursos_perfil_data.json perfil-salida.json; do
+            [ -f "$f" ] && cp "$f" _site/
+          done
+          cp propuesta_*.png _site/ 2>/dev/null || true
+          cp *.pdf _site/ 2>/dev/null || true
+          find Cursos -name '*.pdf' -print0 2>/dev/null \
+            | xargs -0 -I{} cp {} _site/ 2>/dev/null || true
+          echo "Archivos en _site:"
+          find _site -type f | wc -l
+          du -sh _site
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          force_orphan: true

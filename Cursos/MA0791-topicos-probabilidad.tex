@@ -1,0 +1,12 @@
+% !TeX program = pdflatex
+% Compilar desde la raíz del proyecto: latexmk Cursos/MA0791-topicos-probabilidad.tex
+% Luego: biber MA0791-topicos-probabilidad y pdflatex de nuevo (×2), si aplica.
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+\begin{document}
+\input{MA0791-topicos-probabilidad-cuerpo.tex}
+\end{document}

@@ -1,0 +1,12 @@
+% !TeX program = pdflatex
+% Compilar desde la raíz del proyecto: latexmk Cursos/MA0703-integracion.tex
+% Luego: biber MA0703-integracion y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+\begin{document}
+\input{MA0703-integracion-cuerpo.tex}
+\end{document}
