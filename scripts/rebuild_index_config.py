@@ -9,6 +9,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
+CATALOG = Path(__file__).resolve().parent / "optativas_catalog.json"
+
+PDF_OVERRIDES = {
+    "MA-0625 Análisis Real I": "MA0625-analisis-real-i-individual.pdf",
+    "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
+    "MA-0705 Análisis Real I": "MA0705-analisis-real-i-individual.pdf",
+    "MA-0725 Análisis Real II": "MA0725-analisis-real-ii-individual.pdf",
+}
 
 PDF = {
     "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": "MA0151-fundamentos.pdf",
@@ -108,6 +116,24 @@ ID = {
     "CA-0721 Probabilidad": "curso-ca-0721-probabilidad",
 }
 
+
+def enrich_from_catalog(pdf: dict[str, str], ids: dict[str, str]) -> None:
+    data = json.loads(CATALOG.read_text(encoding="utf-8"))
+    for group in ("nucleo", "tematicos"):
+        for entry in data[group]:
+            title = f"{entry['code']} {entry['title']}"
+            stem = entry["stem"].removesuffix("-cuerpo")
+            pdf.setdefault(title, PDF_OVERRIDES.get(title, f"{stem}.pdf"))
+            code = entry["code"]
+            slug = stem.lower().replace("_", "-")
+            if code.startswith("CA-"):
+                ids.setdefault(title, f"curso-ca-{code[3:]}-{slug.split('-', 1)[-1]}")
+            else:
+                ids.setdefault(title, f"curso-{slug}")
+
+
+enrich_from_catalog(PDF, ID)
+
 HOTSPOT_PUR = {
     "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": (50, 11, 14, 8),
     "MA-0152 Matemática Exploratoria": (14, 11, 14, 8),
@@ -194,7 +220,9 @@ def load_titles(path: Path) -> list[str]:
     out: list[str] = []
     for key in (
         "I Ciclo", "II Ciclo", "III Ciclo", "IV Ciclo",
-        "V Ciclo", "VI Ciclo", "VII Ciclo", "Optativas",
+        "V Ciclo", "VI Ciclo", "VII Ciclo",
+        "Optativas de núcleo", "Optativas temáticas",
+        "Optativas",
     ):
         out.extend(data.get(key, []))
     return out
