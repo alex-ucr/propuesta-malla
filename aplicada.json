@@ -1,11 +1,11 @@
 {
   "I Ciclo": [
-    "MA-01XX Fundamentos de álgebra, trigonometría y geometría analítica",
-    "MA-01XX Matemática Exploratoria"
+    "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica",
+    "MA-0152 Matemática Exploratoria"
   ],
   "II Ciclo": [
-    "MA-02XX Introducción al Cálculo en una variable",
-    "MA-02XX Introducción a las Demostraciones"
+    "MA-0251 Introducción al Cálculo en una variable",
+    "MA-0252 Introducción a las Demostraciones"
   ],
   "III Ciclo": [
     "MA-0261 Algebra Lineal I",
@@ -14,12 +14,12 @@
   ],
   "IV Ciclo": [
     "MA-0361 Algebra Lineal II",
-    "MA-04XX Principios de análisis en una variable",
+    "MA-0451 Principios de análisis en una variable",
     "CA-0721 Probabilidad",
     "CA-0204 Herramientas de ciencia de datos I"
   ],
   "V Ciclo": [
-    "MA-04XX Principios de análisis en varias variables",
+    "MA-0551 Principios de análisis en varias variables",
     "MA-0615 Ecuaciones Diferenciales",
     "CA-0303 Estadística actuarial I"
   ],

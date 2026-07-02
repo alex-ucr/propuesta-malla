@@ -1,0 +1,12 @@
+% !TeX program = pdflatex
+% Compilar desde la raíz del proyecto: latexmk Cursos/SP1320-analisis-real-i.tex
+% Luego: biber SP1320-analisis-real-i y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+\begin{document}
+\input{SP1320-analisis-real-i-cuerpo.tex}
+\end{document}

@@ -1,0 +1,217 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue]{hyperref}
+
+\title{Research Note: Modelling Courses in Applied Mathematics Programs Worldwide}
+\author{Curricular benchmarking draft}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document surveys modelling-focused coursework in selected applied mathematics programs worldwide. Coverage follows the requested scope: three programs from the United States and one each from France, Germany, the United Kingdom, Spain, Switzerland, Mexico, Brazil, Chile, China, and Japan. The emphasis is on how programs operationalize modelling through differential equations, numerical analysis, optimization, simulation, data-driven modelling, and project-based case studies.
+\end{abstract}
+
+\section{Method and scope}
+The list is \emph{representative} rather than exhaustive. Programs and course titles are taken from official program pages, curriculum documents, or course catalogs available at the time of writing. Since universities update curricula often, this note should be treated as a benchmarking baseline.
+
+\section{Programs and modelling-course evidence by country}
+
+\subsection*{United States (Program 1): MIT --- BSc Mathematics (Applied Option)}
+MIT's applied option is explicitly organized around applied principles (propagation, equilibrium, stability, optimization, computation, statistics, random processes). Modelling-related core and elective subjects include:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{18.03 Differential Equations:} first-order and linear ODEs, oscillations and resonance, Fourier series, matrix exponential methods, and introductory heat/wave PDEs for physical modelling.
+  \item \textbf{18.300 Principles of Continuum Applied Mathematics:} formulation of continuum models from conservation laws and constitutive ideas; scaling arguments; asymptotic reasoning used to simplify models.
+  \item \textbf{18.303 Linear PDEs (analysis and numerics):} PDE classification, boundary-value structure, and analytic-plus-computational solution strategies for model equations.
+  \item \textbf{18.330 Numerical Analysis:} interpolation, quadrature, linear-system solvers, error/stability analysis, and algorithmic choices used in simulation workflows.
+  \item \textbf{18.361J Introduction to Modeling and Simulation:} translating real systems to mathematical models, calibrating assumptions, and evaluating computational simulation outputs.
+\end{itemize}
+The structure integrates theory and computational implementation early in the degree.
+
+\subsection*{United States (Program 2): UCLA --- Mathematics / Applied Mathematics offerings}
+UCLA provides dedicated modelling courses at undergraduate and graduate levels. Key modelling-oriented courses include:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{MATH 142 Mathematical Modeling:} construction and analysis of deterministic models and interpretation of model predictions in context.
+  \item \textbf{MATH 42 Data-Driven Mathematical Modeling:} model formulation with data visualization, nondimensionalization, discrete/continuous deterministic dynamics, and intro stochastic modelling with contest-style projects.
+  \item \textbf{MATH 260 Introduction to Applied Mathematics:} disciplined cycle of model construction, mathematical analysis, and interpretation for problems originating outside mathematics.
+\end{itemize}
+The catalog descriptions emphasize mechanistic and data-driven modelling, optimization, and project-based practice.
+
+\subsection*{United States (Program 3): Brown University --- Division of Applied Mathematics (APMA)}
+Brown's undergraduate \textbf{Applied Mathematics} concentrations (A.B.\ and Sc.B., plus joint Sc.B.\ tracks) embed modelling through a required differential-equations spine and early modelling-friendly entry points. Modelling-oriented courses and structures highlighted in the division's curriculum guidance include:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{APMA 200 Introduction to Modeling:} accessible entry after single-variable calculus; emphasizes formulation, computing, and introductory modelling practice without the full multivariable/linear-algebra prerequisite stack required for later theory courses.
+  \item \textbf{APMA 0355 Applied Ordinary Differential Equations with Theory:} ODE models with analytical rigor (existence/qualitative structure alongside applications), serving as the gateway to continuous-time modelling in the concentration.
+  \item \textbf{APMA 0365 Applied Partial Differential Equations I with Theory:} classical PDE models and theory-oriented treatment paired with modelling interpretations; sequenced after APMA 0355 for all APMA and joint-APMA concentrators.
+  \item \textbf{APMA 260 (selected multivariable calculus and linear algebra):} curated vector calculus and linear algebra topics chosen to support later APMA modelling and numerics prerequisites in one coordinated semester.
+  \item \textbf{Upper-level APMA in numerics, optimization, and probability with theory:} courses such as numerical optimization, numerical solution of differential equations, computational probability/statistics, and deterministic operations research (as listed in prerequisite chains) extend ODE/PDE models to algorithmic calibration, simulation, and decision modelling.
+  \item \textbf{Senior seminars (APMA 193* / 194*) and capstone options (e.g.\ APMA 1970/1971):} integrate multiple prior modelling threads through readings, projects, or supervised research, satisfying capstone expectations for Sc.B.\ and joint concentrations.
+\end{itemize}
+Brown's pattern combines a \emph{small fixed modelling-theory core} (ODE/PDE with theory) with open-curriculum STEM breadth and explicit early modelling entry (APMA 200).
+
+\subsection*{France: Universit\'e Paris-Saclay --- M1/M2 Analyse, Mod\'elisation, Simulation (AMS)}
+The AMS track is one of the clearest modelling-centered structures in Europe. Typical modelling-related units include:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Introduction \`a l'analyse fonctionnelle et aux EDP:} functional-analytic foundation for PDE models (spaces, weak formulations, operators).
+  \item \textbf{Optimisation num\'erique:} gradient and constrained optimization methods used in parameter identification and model fitting.
+  \item \textbf{Introduction au calcul scientifique et projet:} scientific computing pipeline with coding, verification, and project-based modelling deliverables.
+  \item \textbf{M\'ethodes inverses et assimilation de donn\'ees:} estimating hidden states/parameters from observations, linking PDE models and real data.
+  \item \textbf{M\'ethodes num\'eriques avanc\'ees et programmation:} advanced discretization and algorithm design for high-dimensional and PDE-governed models.
+\end{itemize}
+The program explicitly combines analysis, modelling, numerical simulation, and computational implementation.
+
+\subsection*{Germany: Technical University of Munich (TUM) --- Mathematics modules (applied/numerical profile)}
+TUM's mathematics curriculum includes strong modelling-through-numerics content, especially via PDE and dynamical-systems modules:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Numerical Methods for PDEs:} finite element discretization, a priori/a posteriori error ideas, adaptive mesh refinement, and solver strategies for elliptic/evolution models.
+  \item \textbf{Numerics of Dynamical Systems:} computational bifurcation analysis, invariant sets, Lyapunov-based diagnostics, and reduced-order modelling (POD/DMD-type tools).
+  \item \textbf{Advanced Finite Elements:} mixed/DG/nonconforming methods, iterative solvers, and mechanics/fluid applications where model fidelity and efficiency must be balanced.
+\end{itemize}
+The pedagogy consistently links mathematical analysis to algorithmic realization and software-based experimentation.
+
+\subsection*{United Kingdom: University of Oxford --- MSc Mathematical Modelling and Scientific Computing}
+Oxford's MSc is highly structured around modelling and scientific computation. It includes:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Core mathematical methods (A1/A2):} perturbation, asymptotics, transform and variational methods used to derive and analyze models.
+  \item \textbf{Core numerical sequence (B1/B2):} numerical linear algebra, PDE discretization, and continuous optimization as computational engines for models.
+  \item \textbf{Mathematical Modelling Case Study:} collaborative modelling project with problem statement, assumptions, derivation, and communication of results.
+  \item \textbf{Scientific Computing Case Study:} implementation-heavy project focused on algorithm selection, validation, and performance analysis.
+  \item \textbf{Dissertation:} four-month independent modelling/computational research project, frequently aligned with real scientific or industrial applications.
+\end{itemize}
+A notable feature is dual assessment of modelling and computation through case-study reports plus dissertation work.
+
+\subsection*{Spain: Universidad Polit\'ecnica de Madrid (UPM) --- M\'aster en Matem\'aticas Avanzadas}
+Although research-oriented, UPM's master includes a strong applied-modelling lane. Modelling-related courses in the published structure include:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Ecuaciones diferenciales ordinarias y aplicaciones:} model derivation and qualitative/quantitative behavior of time-evolving systems.
+  \item \textbf{EDP y su aproximaci\'on num\'erica:} PDE modelling plus numerical schemes for approximation and simulation.
+  \item \textbf{Modelizaci\'on avanzada:} continuum and fluid-style model classes, scaling, stability, and interpretation in engineering contexts.
+  \item \textbf{Sistemas din\'amicos avanzados:} attractors, chaos, and long-time behavior as tools for complex-system modelling.
+\end{itemize}
+The program highlights modelling of real phenomena in engineering, economics, and scientific computing.
+
+\subsection*{Switzerland: ETH Z\"urich --- MSc Applied Mathematics}
+ETH requires applied mathematics students to complete both advanced mathematical coursework and an external \emph{application area}. Modelling-related pathways are supported by focus areas such as numerical analysis and scientific computing, with recommended courses in:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Numerical methods for PDEs:} finite-element and related methods, stability, convergence, and computational complexity.
+  \item \textbf{Inverse problems:} reconstructing parameters/fields from indirect data under regularization and ill-posedness constraints.
+  \item \textbf{Numerical SDE methods:} stochastic model simulation and discretization error control for random dynamics.
+  \item \textbf{Uncertainty quantification:} Monte Carlo, stochastic collocation/Galerkin-type tools, and propagation of uncertainty in model outputs.
+\end{itemize}
+The explicit application-area requirement makes modelling interdisciplinary by design.
+
+\subsection*{Mexico: UNAM --- Maestr\'ia en Ciencias Matem\'aticas}
+In UNAM's graduate structure, modelling appears in the field \emph{An\'alisis Num\'erico y Computaci\'on Cient\'ifica (incluyendo Modelaci\'on)}. Relevant courses include:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{An\'alisis Num\'erico I:} floating-point computation, conditioning/stability, linear algebraic solvers, interpolation/approximation, and quadrature.
+  \item \textbf{Soluci\'on num\'erica de EDO:} one-step/multistep schemes, consistency/stability/convergence, and computational treatment of model ODEs.
+  \item \textbf{Soluci\'on num\'erica de EDP:} finite-difference style methods and discretization analysis for PDE-governed models.
+  \item \textbf{Temas selectos de modelaci\'on/simulaci\'on:} specialized modelling case studies (for example biological, physical, or complex-system contexts).
+\end{itemize}
+The syllabi emphasize stability, conditioning, algorithmic implementation, and scientific applications.
+
+\subsection*{Brazil: Universidade de S\~ao Paulo (USP) --- Bacharelado em Matem\'atica Aplicada e Computa\c{c}\~ao Cient\'ifica}
+USP's program is explicitly framed around modelling and simulation for applied domains. Reported core modelling content includes:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Introdu\c{c}\~ao \`a Modelagem Matem\'atica:} abstraction of real problems into mathematically tractable models and validation logic.
+  \item \textbf{Fundamentos de An\'alise Num\'erica:} approximation, numerical stability, and error analysis foundations for simulation.
+  \item \textbf{M\'etodos Num\'ericos em Equa\c{c}\~oes Diferenciais:} computational methods for ODE/PDE models and algorithm implementation.
+  \item \textbf{Otimiza\c{c}\~ao linear/n\~ao linear:} optimization modelling, constraints, and numerical solvers linked to data and engineering decisions.
+\end{itemize}
+It also offers modelling-oriented elective chains (e.g., fluids simulation and computational modelling).
+
+\subsection*{Chile: Pontificia Universidad Cat\'olica de Chile (PUC) --- Major en Ingenier\'ia Matem\'atica}
+PUC's major is interdisciplinary and defined around formulation and application of mathematical models to complex engineering/science problems. Public pages emphasize:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{IMT1001 Introducci\'on a la Ingenier\'ia Matem\'atica:} early orientation to modelling workflows, interdisciplinary problem framing, and model-based reasoning.
+  \item \textbf{Major + depth minor architecture:} coherent bundles in theory-and-application that connect mathematical foundations to engineering modelling practice.
+  \item \textbf{Elective malla with application focus:} courses chosen to build specialization in optimization, stochastic/data methods, and simulation-driven problem solving.
+\end{itemize}
+The program logic is competence-based: modelling + analysis + interdisciplinary deployment.
+
+\subsection*{China: Tsinghua University --- Mathematics and Applied Mathematics}
+Tsinghua's published curriculum documents identify applied tracks with strong modelling preparation. In the applied/computational direction, key courses include:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Partial Differential Equations:} canonical PDE models (heat/wave/elliptic classes), well-posedness ideas, and analytical solution frameworks.
+  \item \textbf{Numerical Analysis:} interpolation, quadrature, linear/nonlinear solvers, eigenvalue algorithms, and ODE numerical methods.
+  \item \textbf{Numerical Solution of PDEs:} discretization-based simulation for PDE models, including difference/finite-element style methods.
+  \item \textbf{Applied Analysis:} analytical techniques underpinning model derivation and qualitative behavior analysis.
+  \item \textbf{Scientific computing/optimization electives:} matrix computation, advanced numerics, modern optimization, and large-scale scientific computing.
+\end{itemize}
+The structure combines rigorous analysis with computational modelling tools.
+
+\subsection*{Japan: Science Tokyo (formerly Tokyo Tech) --- Mathematical and Computing Science}
+Science Tokyo's undergraduate/graduate curriculum explicitly balances mathematics, applied mathematics, and computing. Modelling-relevant courses include:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Applied Theory on Differential Equations:} derivation of PDE models from phenomena, Fourier-based solution techniques, and interpretation of solution properties.
+  \item \textbf{Mathematical Optimization:} optimization formulations and algorithmic tools used in model calibration and decision problems.
+  \item \textbf{Numerical Analysis:} approximation algorithms and computational error control for model simulation.
+  \item \textbf{Statistics / Mathematical Statistics:} probabilistic modelling, inference, and data-analysis support for model validation.
+\end{itemize}
+The curriculum narrative emphasizes solving real phenomena through model formulation, analysis, and algorithmic implementation.
+
+\section{Cross-program comparison focused on modelling}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}l l X@{}}
+\toprule
+Country & Program & Distinct modelling-course pattern \\
+\midrule
+USA & MIT Applied Option & Core continuum/discrete applied math + explicit modelling/simulation subject \\
+USA & UCLA Math/Applied Math & Dedicated mathematical modeling and data-driven modeling courses \\
+USA & Brown APMA & APMA 200 entry; required ODE/PDE with theory; numerics/OR/probability; capstone seminars \\
+France & Paris-Saclay AMS & Integrated analysis--modelling--simulation curriculum with project units \\
+Germany & TUM Mathematics & PDE numerics and dynamical systems modelling through advanced numerical modules \\
+UK & Oxford MMSC & Balanced core methods + two case studies + dissertation \\
+Spain & UPM M\'aster Matem\'aticas Avanzadas & Applied lane with ODE/PDE modelling and advanced modelization \\
+Switzerland & ETH Applied Mathematics & Modelling reinforced by mandatory non-math application area \\
+Mexico & UNAM Maestr\'ia & Numerical analysis/computing field explicitly includes modelling \\
+Brazil & USP BMACC & Undergraduate modelling, simulation, and optimization tracks \\
+Chile & PUC Major Ing. Matem\'atica & Interdisciplinary engineering-major framing around mathematical models \\
+China & Tsinghua Math \& Applied Math & Applied/computational direction with PDE + numerical methods sequence \\
+Japan & Science Tokyo MCS & Mathematics-applied math-computing triad with differential-equation modelling \\
+\bottomrule
+\end{tabularx}
+\caption{How modelling is embedded across selected programs.}
+\end{table}
+
+\section{Synthesis for curriculum design}
+Three recurrent design choices appear across the surveyed programs:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Model-first differential equations block:} ODE/PDE as language for physical and engineered systems.
+  \item \textbf{Numerics plus computing block:} numerical linear algebra, PDE/ODE solvers, and implementation projects.
+  \item \textbf{Application integration block:} either a formal application area (ETH), case studies (Oxford), or interdisciplinary tracks (USP/PUC/Science Tokyo).
+\end{enumerate}
+
+A robust modelling pathway in applied mathematics therefore typically requires a minimum spine in ODE/PDE, numerical analysis, optimization, statistics, and project-based modelling labs.
+
+\section*{References (program and course pages)}
+\begin{itemize}[leftmargin=*]
+  \item MIT Applied Mathematics option: \url{https://math.mit.edu/academics/undergrad/major/course18/applied.html}
+  \item UCLA course pages (MATH 142 etc.): \url{https://catalog.registrar.ucla.edu/course/2025/math142} and \url{https://ww3.math.ucla.edu/courses/}
+  \item Brown APMA, \emph{Courses and Curriculum}: \url{https://appliedmath.brown.edu/academics/undergraduate-program/courses-and-curriculum}
+  \item Brown College Bulletin, \emph{Applied Mathematics} concentration: \url{https://bulletin.brown.edu/the-college/concentrations/apma/}
+  \item Paris-Saclay AMS M1/M2: \url{https://www.universite-paris-saclay.fr/en/education/master/mathematics-and-applications/m1-analyse-modelisation-simulation}
+  \item TUM module descriptions (numerical PDE/dynamical systems): \url{https://campus.tum.de/tumonline/}
+  \item Oxford MSc MMSC: \url{https://www.maths.ox.ac.uk/study-here/postgraduate-study/msc-courses/msc-mathematical-modelling-and-scientific-computing}
+  \item UPM M\'aster en Matem\'aticas Avanzadas: \url{https://matematicas.epes.upm.es/master/estructura/}
+  \item ETH Applied Mathematics and application areas: \url{https://math.ethz.ch/studies/master-programmes/master-mathematics-applied-mathematics.html}
+  \item UNAM Maestr\'ia course syllabi: \url{https://matematicas.posgrado.unam.mx/cursos-temarios-maestria/}
+  \item USP BMAC/BMACC pages: \url{https://www.ime.usp.br/bmac/} and \url{https://icmc.usp.br/graduacao/matematica-aplicada-e-computacao-cientifica-bacharelado}
+  \item PUC Major en Ingenier\'ia Matem\'atica: \url{https://imc.uc.cl/docencia/pregrado/licenciatura-en-ciencias-de-la-ingenieria-major-en-ingenieria-matematica/major-en-ingenieria-matematica/}
+  \item Tsinghua curriculum documents (Math and Applied Math): \url{https://www.zlc.tsinghua.edu.cn/__local/7/4B/99/E45C627BD3F68339762B2070641_D73009B9_48366.pdf}
+  \item Science Tokyo curriculum/syllabi: \url{https://educ.titech.ac.jp/is/eng/education/is_undergraduate/curriculum.html}
+\end{itemize}
+
+\end{document}
