@@ -34,7 +34,7 @@ python scripts/compile_cursos_drivers.py
 | MA-0725 | Análisis Real II | Por determinar en programa | Análisis real intermedio |
 | MA-0840 | Probabilidad | MA-0705 Análisis Real I | Teoría de la medida aplicada a probabilidad |
 | MA-0918 | Procesos estocásticos | MA-0840 Probabilidad | Cálculo estocástico, movimiento browniano |
-| SP-1320 | Análisis Real I | MA-0725 Análisis Real II | Medida abstracta (oferta posgrado / optativa) |
+| MA-0703 | Integración | MA-0725 Análisis Real II | Medida abstracta (optativa) |
 | MA-0790 | Tópicos de análisis | MA-0551 Principios de análisis en varias variables | **Contenidos abiertos por oferta** (ver abajo) |
 | MA-0711 | Lógica | MA-0451; MA-0461 | Fundamentos de lógica matemática |
 | MA-0820 | Teoría de modelos | MA-0711 Lógica | Teoría de modelos; aplicaciones al álgebra |

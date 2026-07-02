@@ -1,0 +1,12 @@
+% !TeX program = pdflatex
+% Compilar desde la raíz del proyecto: latexmk Cursos/MA0793-topicos-geometria.tex
+% Luego: biber MA0793-topicos-geometria y pdflatex de nuevo (×2), si aplica.
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+\begin{document}
+\input{MA0793-topicos-geometria-cuerpo.tex}
+\end{document}

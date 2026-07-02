@@ -1,0 +1,12 @@
+% !TeX program = pdflatex
+% Compilar desde la raíz del proyecto: latexmk Cursos/MA0792-topicos-ecuaciones-diferenciales.tex
+% Luego: biber MA0792-topicos-ecuaciones-diferenciales y pdflatex de nuevo (×2), si aplica.
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+\begin{document}
+\input{MA0792-topicos-ecuaciones-diferenciales-cuerpo.tex}
+\end{document}
