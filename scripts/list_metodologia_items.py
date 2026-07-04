@@ -91,7 +91,7 @@ def main() -> int:
         "(no se listan por separado)."
     )
     lines.append("")
-    lines.append("Los párrafos sin listas (p. ej. CA-0721) no generan entradas aquí.")
+    lines.append("Los párrafos sin listas (p. ej. MA-0421) no generan entradas aquí.")
     lines.append("")
     lines.append(f"- **Archivos con sección Metodología:** {len(per_file)}")
     lines.append(f"- **Ítems distintos:** {len(unique_sorted)}")

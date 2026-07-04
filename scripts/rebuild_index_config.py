@@ -26,6 +26,7 @@ PDF = {
     "MA-0261 Algebra Lineal I": "MA0261-algebra-lineal-i.pdf",
     "MA-0341 Matemática Computacional I": "MA0341-matematica-computacional-i.pdf",
     "MA-0351 Introducción al Cálculo en varias variables": "MA0351-calculo-varias-variables.pdf",
+    "MA-0361 Algebra Lineal I": "MA0361-algebra-lineal-i.pdf",
     "MA-0361 Algebra Lineal II": "MA0361-algebra-lineal-ii.pdf",
     "MA-0451 Principios de análisis en una variable": "MA0451-principios-analisis-i.pdf",
     "MA-0461 Algebra Lineal II": "MA0461-algebra-lineal-ii.pdf",
@@ -40,8 +41,10 @@ PDF = {
     "MA-0635 Introducción a la Topología": "MA0635-topologia.pdf",
     "MA-0641 Matemática Computacional II": "MA0641-matematica-computacional-ii.pdf",
     "MA-0661 Algebra Abstracta II": "MA0661-algebra-abstracta-ii.pdf",
+    "MA-0701 Seminario de Matemática": "MA0701-seminario-matematica.pdf",
     "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
     "MA-0705 Análisis Real I": "MA0705-analisis-real-i-individual.pdf",
+    "MA-0780 Comunicación en las ciencias": "MA0780-comunicacion-ciencias.pdf",
     "MA-0725 Análisis Real II": "MA0725-analisis-real-ii-individual.pdf",
     "MA-0840 Probabilidad": "MA0840-probabilidad.pdf",
     "MA-0918 Procesos estocásticos": "MA0918-procesos-estocasticos.pdf",
@@ -61,10 +64,11 @@ PDF = {
     "MA-0832 Tópicos en Topología": "MA0832-topicos-topologia.pdf",
     "MA-0711 Lógica": "MA0711-logica.pdf",
     "MA-0820 Teoría de modelos": "MA0820-teoria-modelos.pdf",
-    "CA-0204 Herramientas de ciencia de datos I": "CA0204-herramientas-ciencia-datos-i.pdf",
-    "CA-0303 Estadística actuarial I": "CA0303-estadistica-actuarial-i.pdf",
-    "CA-0411 Análisis de Datos I": "CA0411-analisis-datos-i.pdf",
-    "CA-0721 Probabilidad": "CA0721-probabilidad.pdf",
+    "MA-0404 Herramientas de ciencia de datos I": "MA0404-herramientas-ciencia-datos-i.pdf",
+    "MA-0503 Estadística I": "MA0503-estadistica-i.pdf",
+    "MA-0711 Análisis de Datos I": "MA0711-analisis-datos-i.pdf",
+    "MA-0421 Probabilidad": "MA0421-probabilidad.pdf",
+    "MA-0647 Modelación Matemática": "MA0647-modelacion-matematica.pdf",
 }
 
 ID = {
@@ -75,6 +79,7 @@ ID = {
     "MA-0261 Algebra Lineal I": "curso-algebra-lineal-i",
     "MA-0341 Matemática Computacional I": "curso-mat-computacional-i",
     "MA-0351 Introducción al Cálculo en varias variables": "curso-calculo-varias-variables",
+    "MA-0361 Algebra Lineal I": "curso-algebra-lineal-i",
     "MA-0361 Algebra Lineal II": "curso-algebra-lineal-ii",
     "MA-0451 Principios de análisis en una variable": "curso-principios-analisis-una-variable",
     "MA-0461 Algebra Lineal II": "curso-algebra-lineal-ii",
@@ -89,8 +94,10 @@ ID = {
     "MA-0635 Introducción a la Topología": "curso-topologia",
     "MA-0641 Matemática Computacional II": "curso-mat-computacional-ii",
     "MA-0661 Algebra Abstracta II": "curso-algebra-abstracta-ii",
+    "MA-0701 Seminario de Matemática": "curso-seminario-matematica",
     "MA-0702 Análisis Complejo": "curso-analisis-complejo",
     "MA-0705 Análisis Real I": "curso-analisis-real-i",
+    "MA-0780 Comunicación en las ciencias": "curso-comunicacion-ciencias",
     "MA-0725 Análisis Real II": "curso-analisis-real-ii",
     "MA-0840 Probabilidad": "curso-probabilidad",
     "MA-0918 Procesos estocásticos": "curso-procesos-estocasticos",
@@ -110,10 +117,11 @@ ID = {
     "MA-0832 Tópicos en Topología": "curso-topicos-topologia",
     "MA-0711 Lógica": "curso-logica",
     "MA-0820 Teoría de modelos": "curso-teoria-modelos",
-    "CA-0204 Herramientas de ciencia de datos I": "curso-ca-0204-herramientas-ciencia-datos-i",
-    "CA-0303 Estadística actuarial I": "curso-ca-0303-estadistica-actuarial-i",
-    "CA-0411 Análisis de Datos I": "curso-ca-0411-analisis-datos-i",
-    "CA-0721 Probabilidad": "curso-ca-0721-probabilidad",
+    "MA-0404 Herramientas de ciencia de datos I": "curso-ma-0404-herramientas-ciencia-datos-i",
+    "MA-0503 Estadística I": "curso-ma-0503-estadistica-i",
+    "MA-0711 Análisis de Datos I": "curso-ma-0711-analisis-datos-i",
+    "MA-0647 Modelación Matemática": "curso-modelacion-matematica",
+    "MA-0421 Probabilidad": "curso-ma-0421-probabilidad",
 }
 
 
@@ -134,62 +142,73 @@ def enrich_from_catalog(pdf: dict[str, str], ids: dict[str, str]) -> None:
 
 enrich_from_catalog(PDF, ID)
 
+# Posiciones relativas: left = origin.left + dx, top = origin.top + dy.
+# Valores en % del contenedor. (dx, dy) o (dx, dy, w, h) si el tamaño difiere.
+HOTSPOT_ORIGIN_PUR = {"left": 14, "top": 11, "w": 14, "h": 8}
+HOTSPOT_ORIGIN_APL = {"left": 14, "top": 11, "w": 14, "h": 8}
+
 HOTSPOT_PUR = {
-    "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": (50, 11, 14, 8),
-    "MA-0152 Matemática Exploratoria": (14, 11, 14, 8),
-    "MA-0251 Introducción al Cálculo en una variable": (50, 22, 14, 8),
-    "MA-0252 Introducción a las Demostraciones": (14, 22, 14, 8),
-    "MA-0361 Algebra Lineal I": (68, 34, 14, 8),
-    "MA-0341 Matemática Computacional I": (14, 34, 14, 8),
-    "MA-0351 Introducción al Cálculo en varias variables": (50, 34, 14, 8),
-    "MA-0461 Algebra Lineal II": (68, 45.5, 14, 8),
-    "MA-0451 Principios de análisis en una variable": (50, 45.5, 14, 8),
-    "MA-0471 Introducción a la Geometría Diferencial": (14, 45.5, 14, 8),
-    "MA-0496 Teoría de Números": (32, 45.5, 14, 8),
-    "MA-0561 Algebra Abstracta I": (68, 57, 14, 8),
-    "MA-0551 Principios de análisis en varias variables": (50, 57, 14, 8),
-    "MA-0515 Ecuaciones Diferenciales": (32, 57, 14, 8),
-    "MA-0661 Algebra Abstracta II": (68, 68.5, 14, 8),
-    "MA-0635 Introducción a la Topología": (50, 68.5, 14, 8),
-    "MA-0641 Matemática Computacional II": (32, 68.5, 14, 8),
-    "MA-0705 Análisis Real I": (68, 78.5, 14, 8),
-    "MA-0702 Análisis Complejo": (50, 78.5, 14, 8),
-    "MA-0725 Análisis Real II": (32, 80, 14, 8),
-    "MA-0840 Probabilidad": (14, 80, 14, 8),
-    "MA-0918 Procesos estocásticos": (32, 89, 14, 8),
-    "MA-0703 Integración": (50, 89, 14, 8),
-    "MA-0790 Tópicos de análisis": (68, 89, 14, 8),
-    "MA-0711 Lógica": (14, 97, 14, 8),
-    "MA-0820 Teoría de modelos": (32, 97, 14, 8),
+    "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": (36, 0),
+    "MA-0152 Matemática Exploratoria": (0, 0),
+    "MA-0251 Introducción al Cálculo en una variable": (36, 11),
+    "MA-0252 Introducción a las Demostraciones": (0, 11),
+    "MA-0361 Algebra Lineal I": (54, 23),
+    "MA-0341 Matemática Computacional I": (0, 23),
+    "MA-0351 Introducción al Cálculo en varias variables": (36, 23),
+    "MA-0461 Algebra Lineal II": (54, 34.5),
+    "MA-0451 Principios de análisis en una variable": (36, 34.5),
+    "MA-0471 Introducción a la Geometría Diferencial": (0, 34.5),
+    "MA-0496 Teoría de Números": (18, 34.5),
+    "MA-0561 Algebra Abstracta I": (54, 46),
+    "MA-0551 Principios de análisis en varias variables": (36, 46),
+    "MA-0515 Ecuaciones Diferenciales": (18, 46),
+    "MA-0661 Algebra Abstracta II": (54, 57.5),
+    "MA-0635 Introducción a la Topología": (36, 57.5),
+    "MA-0641 Matemática Computacional II": (18, 57.5),
+    "MA-0705 Análisis Real I": (54, 67.5),
+    "MA-0702 Análisis Complejo": (36, 67.5),
+    "MA-0780 Comunicación en las ciencias": (54, 69),
+    "MA-0701 Seminario de Matemática": (72, 69),
+    "MA-0725 Análisis Real II": (18, 69),
+    "MA-0840 Probabilidad": (0, 69),
+    "MA-0918 Procesos estocásticos": (18, 78),
+    "MA-0703 Integración": (36, 78),
+    "MA-0790 Tópicos de análisis": (54, 78),
+    "MA-0711 Lógica": (0, 86),
+    "MA-0820 Teoría de modelos": (18, 86),
+    "MA-0647 Modelación Matemática": (36, 86),
 }
 
 HOTSPOT_APL = {
-    "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": (50, 11, 14, 8),
-    "MA-0152 Matemática Exploratoria": (14, 11, 14, 8),
-    "MA-0251 Introducción al Cálculo en una variable": (50, 22, 14, 8),
-    "MA-0252 Introducción a las Demostraciones": (14, 22, 14, 8),
-    "MA-0261 Algebra Lineal I": (68, 34, 14, 8),
-    "MA-0341 Matemática Computacional I": (14, 34, 14, 8),
-    "MA-0351 Introducción al Cálculo en varias variables": (50, 34, 14, 8),
-    "MA-0361 Algebra Lineal II": (68, 45.5, 14, 8),
-    "MA-0451 Principios de análisis en una variable": (50, 45.5, 14, 8),
-    "CA-0721 Probabilidad": (68, 45.5, 14, 8),
-    "CA-0204 Herramientas de ciencia de datos I": (14, 45.5, 14, 8),
-    "MA-0551 Principios de análisis en varias variables": (50, 57, 14, 8),
-    "MA-0615 Ecuaciones Diferenciales": (32, 57, 14, 8),
-    "CA-0303 Estadística actuarial I": (14, 57, 14, 8),
-    "MA-0541 Matemática Computacional II": (14, 68.5, 14, 8),
-    "MA-0625 Análisis Real I": (32, 68.5, 14, 8),
-    "MA-0635 Introducción a la Topología": (50, 68.5, 14, 8),
-    "MA-0702 Análisis Complejo": (32, 80, 14, 8),
-    "CA-0411 Análisis de Datos I": (14, 80, 14, 8),
-    "MA-0725 Análisis Real II": (32, 88, 14, 8),
-    "MA-0840 Probabilidad": (14, 88, 14, 8),
-    "MA-0918 Procesos estocásticos": (50, 88, 14, 8),
-    "MA-0703 Integración": (68, 88, 14, 8),
-    "MA-0790 Tópicos de análisis": (14, 96, 14, 8),
-    "MA-0711 Lógica": (32, 96, 14, 8),
-    "MA-0820 Teoría de modelos": (50, 96, 14, 8),
+    "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": (36, 0),
+    "MA-0152 Matemática Exploratoria": (0, 0),
+    "MA-0251 Introducción al Cálculo en una variable": (36, 11),
+    "MA-0252 Introducción a las Demostraciones": (0, 11),
+    "MA-0361 Algebra Lineal I": (54, 23),
+    "MA-0341 Matemática Computacional I": (0, 23),
+    "MA-0351 Introducción al Cálculo en varias variables": (36, 23),
+    "MA-0461 Algebra Lineal II": (54, 34.5),
+    "MA-0451 Principios de análisis en una variable": (36, 34.5),
+    "MA-0421 Probabilidad": (54, 34.5),
+    "MA-0404 Herramientas de ciencia de datos I": (0, 34.5),
+    "MA-0551 Principios de análisis en varias variables": (36, 46),
+    "MA-0615 Ecuaciones Diferenciales": (18, 46),
+    "MA-0503 Estadística I": (0, 46),
+    "MA-0541 Matemática Computacional II": (0, 57.5),
+    "MA-0625 Análisis Real I": (18, 57.5),
+    "MA-0635 Introducción a la Topología": (36, 57.5),
+    "MA-0702 Análisis Complejo": (18, 69),
+    "MA-0711 Análisis de Datos I": (0, 69),
+    "MA-0780 Comunicación en las ciencias": (54, 69),
+    "MA-0701 Seminario de Matemática": (72, 69),
+    "MA-0725 Análisis Real II": (18, 77),
+    "MA-0840 Probabilidad": (0, 77),
+    "MA-0918 Procesos estocásticos": (36, 77),
+    "MA-0703 Integración": (54, 77),
+    "MA-0790 Tópicos de análisis": (0, 85),
+    "MA-0711 Lógica": (18, 85),
+    "MA-0820 Teoría de modelos": (36, 85),
+    "MA-0647 Modelación Matemática": (54, 85),
 }
 
 ID_APL_SUFFIX = {
@@ -241,18 +260,28 @@ def js_map(d: dict[str, str], titles: list[str], indent: str) -> str:
     return "\n".join(lines)
 
 
+def js_origin(origin: dict, indent: str) -> str:
+    return (
+        f'{indent}left: {origin["left"]}, top: {origin["top"]}, '
+        f'w: {origin["w"]}, h: {origin["h"]},'
+    )
+
+
 def js_hotspot(d: dict[str, tuple], titles: list[str], indent: str) -> str:
     lines = []
     for t in titles:
         if t not in d:
             continue
-        l, tp, w, h = d[t]
-        if len(t) > 42:
-            lines.append(
-                f'{indent}"{t}": {{\n{indent}  left: {l}, top: {tp}, w: {w}, h: {h},\n{indent}}},'
-            )
+        vals = d[t]
+        dx, dy = vals[0], vals[1]
+        if len(vals) >= 4:
+            body = f"dx: {dx}, dy: {dy}, w: {vals[2]}, h: {vals[3]}"
         else:
-            lines.append(f'{indent}"{t}": {{ left: {l}, top: {tp}, w: {w}, h: {h} }},')
+            body = f"dx: {dx}, dy: {dy}"
+        if len(t) > 42:
+            lines.append(f'{indent}"{t}": {{\n{indent}  {body},\n{indent}}},')
+        else:
+            lines.append(f'{indent}"{t}": {{ {body} }},')
     return "\n".join(lines)
 
 
@@ -272,6 +301,9 @@ def build_config() -> str:
           ID_POR_TITULO: {{
 {js_map(ID, pura_t, "            ")}
           }},
+          HOTSPOT_ORIGIN: {{
+{js_origin(HOTSPOT_ORIGIN_PUR, "            ")}
+          }},
           HOTSPOT_POR_TITULO: {{
 {js_hotspot(HOTSPOT_PUR, pura_t, "            ")}
           }},
@@ -286,6 +318,9 @@ def build_config() -> str:
           }},
           ID_POR_TITULO: {{
 {js_map(apl_id, apl_t, "            ")}
+          }},
+          HOTSPOT_ORIGIN: {{
+{js_origin(HOTSPOT_ORIGIN_APL, "            ")}
           }},
           HOTSPOT_POR_TITULO: {{
 {js_hotspot(HOTSPOT_APL, apl_t, "            ")}

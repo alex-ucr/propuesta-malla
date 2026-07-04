@@ -17,10 +17,10 @@ PDF_DIR = ROOT / "Cursos"
 
 def main() -> None:
     specs = [
-        ("CA0204", ("CA0204.pdf",)),
-        ("CA0303", ("CA0303.pdf",)),
-        ("CA0721", ("CA0721.pdf", "ca0721.pdf")),
-        ("CA0411", ("CA0411.pdf",)),
+        ("MA0404", ("MA0404.pdf",)),
+        ("MA0503", ("MA0503.pdf",)),
+        ("MA0421", ("MA0421.pdf", "ma0421.pdf")),
+        ("MA0711", ("MA0711.pdf",)),
     ]
     for stem, names in specs:
         pdf = next((PDF_DIR / n for n in names if (PDF_DIR / n).is_file()), None)
