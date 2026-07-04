@@ -30,7 +30,9 @@
   ],
   "VII Ciclo": [
     "MA-0705 Análisis Real I",
-    "MA-0702 Análisis Complejo"
+    "MA-0702 Análisis Complejo",
+    "MA-0701 Seminario de Matemática",
+    "MA-0780 Comunicación en las ciencias"
   ],
   "Optativas de núcleo": [
     "MA-0725 Análisis Real II",
@@ -40,7 +42,7 @@
     "MA-0703 Integración",
     "MA-0525 Combinatoria",
     "MA-0528 Sistemas dinámicos",
-    "CA-0411 Análisis de Datos I",
+    "MA-0711 Análisis de Datos I",
     "MA-0815 Análisis armónico",
     "MA-0506 Teoría algebraica de números",
     "MA-0512 Teoría de conjuntos",
@@ -56,14 +58,14 @@
     "MA-0714 Optimización"
   ],
   "Optativas temáticas": [
-    "CA-0721 Probabilidad",
+    "MA-0421 Probabilidad",
     "MA-0647 Modelación Matemática",
     "MA-0918 Procesos estocásticos",
     "MA-0917 Estadística II",
     "CA-0512 Modelos lineales",
     "CA-0612 Series de tiempo",
     "MA-0406 Introducción a la optimización",
-    "CA-0204 Herramientas de ciencia de datos I",
+    "MA-0404 Herramientas de ciencia de datos I",
     "CA-0304 Herramientas de ciencia de datos II",
     "MA-0790 Tópicos de análisis",
     "MA-0791 Tópicos de Probabilidad",
