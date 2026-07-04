@@ -31,14 +31,15 @@ jobs:
           set -e
           mkdir -p _site
           cp .nojekyll _site/
-          for f in index.html perfil-salida.html; do
+          for f in index.html malla-curricular.html perfil-salida.html; do
             [ -f "$f" ] && cp "$f" _site/
           done
-          for f in pura.json aplicada.json contenidos_por_curso.json \
-                   cursos_perfil_data.json perfil-salida.json; do
+          for f in pura.json aplicada.json optativas.json contenidos_por_curso.json \
+                   cursos_perfil_data.json perfil-salida.json comentarios.json; do
             [ -f "$f" ] && cp "$f" _site/
           done
           cp propuesta_*.png _site/ 2>/dev/null || true
+          if [ -d assets ]; then cp -r assets _site/; fi
           cp *.pdf _site/ 2>/dev/null || true
           find Cursos -name '*.pdf' -print0 2>/dev/null \
             | xargs -0 -I{} cp {} _site/ 2>/dev/null || true

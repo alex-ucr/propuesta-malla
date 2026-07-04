@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla curricular — Propuesta curricular</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #fff;
+      --text: #1a1d21;
+      --muted: #5c6370;
+      --border: #d8dee6;
+      --accent: #1e4d7b;
+      --accent-soft: #e8f0f8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .app {
+      display: flex;
+      min-height: 100vh;
+      align-items: flex-start;
+    }
+    .sidebar {
+      width: 15.5rem;
+      flex-shrink: 0;
+      background: var(--card);
+      border-right: 1px solid var(--border);
+      padding: 1.25rem 1.1rem 2rem;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      min-height: 100vh;
+    }
+    .sidebar h2 {
+      margin: 0 0 0.75rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .sidebar-nav {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-main-link {
+      display: block;
+      padding: 0.55rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .nav-main-link:hover {
+      background: rgba(30, 77, 123, 0.06);
+      color: var(--accent);
+    }
+    .nav-main-link[aria-current="page"] {
+      background: var(--accent-soft);
+      border-color: var(--border);
+      color: var(--accent);
+    }
+    .sidebar .nav-malla {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .sidebar label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.65rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+    }
+    .sidebar label:has(input:checked) {
+      background: var(--accent-soft);
+      border-color: var(--border);
+      color: var(--accent);
+    }
+    .sidebar label:hover {
+      background: rgba(30, 77, 123, 0.06);
+    }
+    .sidebar input {
+      margin: 0;
+      accent-color: var(--accent);
+    }
+    .sidebar .note {
+      margin: 1.25rem 0 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    @media (max-width: 720px) {
+      .app { flex-direction: column; }
+      .sidebar {
+        width: 100%;
+        min-height: 0;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+    }
+    .content {
+      flex: 1;
+      min-width: 0;
+    }
+    .content .page {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.55rem;
+      font-weight: 650;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    header .subtitle {
+      margin: 0.2rem 0;
+      font-size: 1.05rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    header .malla-fig {
+      margin: 1.1rem 0 0;
+    }
+    header .malla-fig-inner {
+      position: relative;
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      line-height: 0;
+    }
+    header .malla-fig img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    header .malla-hotspot {
+      position: absolute;
+      display: block;
+      text-indent: -9999px;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.15s ease, box-shadow 0.15s ease;
+    }
+    header .malla-hotspot:hover {
+      background: rgba(30, 77, 123, 0.12);
+      box-shadow: inset 0 0 0 2px rgba(30, 77, 123, 0.35);
+    }
+    header .malla-hotspot:focus { outline: none; }
+    header .malla-hotspot:focus-visible {
+      background: rgba(30, 77, 123, 0.16);
+      box-shadow: inset 0 0 0 3px rgba(30, 77, 123, 0.45);
+    }
+    .cycle { margin-bottom: 1.75rem; }
+    .cycle h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.35rem;
+      color: var(--accent);
+      font-weight: 650;
+    }
+    .cycle-comentario {
+      margin: 0 0 0.65rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    details.course {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+    }
+    details.course summary {
+      list-style: none;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      background: var(--accent-soft);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    details.course summary::-webkit-details-marker { display: none; }
+    details.course summary::before {
+      content: "▶";
+      font-size: 0.65rem;
+      opacity: 0.6;
+      transition: transform 0.15s ease;
+    }
+    details.course[open] summary::before { transform: rotate(90deg); }
+    details.course summary:hover { filter: brightness(0.98); }
+    .contenidos {
+      margin: 0;
+      padding: 1rem 1.1rem 1.1rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      word-break: break-word;
+      background: #fafbfc;
+      border-top: 1px solid var(--border);
+      max-height: min(70vh, 36rem);
+      overflow: auto;
+    }
+    .contenidos .contenidos-bloque ol { margin: 0.4rem 0 0.4rem 1.25rem; }
+    .contenidos .contenidos-bloque ol ol { list-style: lower-alpha; }
+    .contenidos .contenidos-bloque ul { margin: 0.35rem 0 0.35rem 1.1rem; }
+    .contenidos .math { font-family: "Cambria Math", "STIX Two Math", serif; }
+    .contenidos .cite { color: #555; }
+    .contenidos .pdf-link { margin: 0 0 0.9rem; font-size: 0.9rem; }
+    .contenidos .pdf-link a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contenidos .pdf-link a:hover { text-decoration: underline; }
+    .contenidos .saberes-perfil {
+      margin: 0 0 0.9rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .contenidos .saberes-perfil-label {
+      margin: 0 0 0.35rem;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    .contenidos .saberes-perfil-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.5rem;
+    }
+    .contenidos .saberes-perfil-list a {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-decoration: none;
+      border: 1px solid var(--border);
+    }
+    .contenidos .saberes-perfil-list a:hover {
+      text-decoration: underline;
+    }
+    .contenidos .falta-contenidos { color: #a63; font-style: italic; }
+    .load-error {
+      background: #fff3e0;
+      border: 1px solid #e0a040;
+      color: #5d3a0a;
+      padding: 1rem 1.1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    .load-error code { font-size: 0.88em; }
+  </style>
+  <link rel="stylesheet" href="assets/site-brand.css" />
+  <script src="assets/site-brand.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Navegación">
+      <h2>Perfil de salida</h2>
+      <nav class="sidebar-nav">
+        <a href="perfil-salida.html" class="nav-main-link">Perfil de salida</a>
+      </nav>
+      <h2>Malla</h2>
+      <div class="nav-malla" role="radiogroup" aria-label="Énfasis curricular">
+        <label>
+          <input type="radio" name="malla-mod" id="radio-pura" value="pura" checked />
+          Matemática pura
+        </label>
+        <label>
+          <input type="radio" name="malla-mod" id="radio-aplicada" value="aplicada" />
+          Matemática aplicada
+        </label>
+      </div>
+    </aside>
+    <div class="content">
+      <div class="page">
+        <header>
+          <h1>Propuesta de malla curricular</h1>
+          <p class="subtitle">Carrera de matemática</p>
+          <p class="subtitle" id="enfasis-line">Énfasis en matemática pura</p>
+          <figure class="malla-fig">
+            <div class="malla-fig-inner" id="malla-fig-wrap">
+              <img
+                id="malla-img"
+                src="propuesta_pura.png"
+                alt="Diagrama de la propuesta de malla curricular (énfasis en matemática pura)"
+              />
+            </div>
+          </figure>
+        </header>
+        <div id="err" class="load-error" hidden>
+          No se pudieron cargar <code>pura.json</code>, <code>aplicada.json</code>,
+          <code>optativas.json</code>, <code>contenidos_por_curso.json</code> o
+          <code>comentarios.json</code> (los navegadores suelen bloquear
+          <code>file://</code>).
+          En esta carpeta ejecute, por ejemplo:
+          <br /><code>python -m http.server 8080</code>
+          y abra <code>http://localhost:8080/malla-curricular.html</code>
+        </div>
+        <main id="malla" aria-live="polite"></main>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const main = document.getElementById("malla");
+      const errBox = document.getElementById("err");
+      const mallaImg = document.getElementById("malla-img");
+      const enfasisLine = document.getElementById("enfasis-line");
+      const figWrap = document.getElementById("malla-fig-wrap");
+
+      const ORDEN_CICLOS = [
+        "I Ciclo", "II Ciclo", "III Ciclo", "IV Ciclo",
+        "V Ciclo", "VI Ciclo", "VII Ciclo", "VIII Ciclo",
+        "Optativas de núcleo", "Optativas temáticas"
+      ];
+
+                                                                  const CONFIG = {
+        pura: {
+          mallaFile: "pura.json",
+          image: "propuesta_pura.png",
+          imageAlt: "Diagrama de la propuesta de malla curricular (énfasis en matemática pura)",
+          enfasis: "Énfasis en matemática pura",
+          PDF_POR_TITULO: {
+            "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
+              "MA0151-fundamentos.pdf",
+            "MA-0152 Matemática Exploratoria": "MA0152-matematica-exploratoria.pdf",
+            "MA-0251 Introducción al Cálculo en una variable":
+              "MA0251-calculo-una-variable.pdf",
+            "MA-0252 Introducción a las Demostraciones": "MA0252-intro-demostraciones.pdf",
+            "MA-0361 Algebra Lineal I": "MA0361-algebra-lineal-i.pdf",
+            "MA-0341 Matemática Computacional I": "MA0341-matematica-computacional-i.pdf",
+            "MA-0351 Introducción al Cálculo en varias variables":
+              "MA0351-calculo-varias-variables.pdf",
+            "MA-0461 Algebra Lineal II": "MA0461-algebra-lineal-ii.pdf",
+            "MA-0451 Principios de análisis en una variable":
+              "MA0451-principios-analisis-i.pdf",
+            "MA-0471 Introducción a la Geometría Diferencial":
+              "MA0471-geometria.pdf",
+            "MA-0496 Teoría de Números": "MA0496-teoria-numeros.pdf",
+            "MA-0561 Algebra Abstracta I": "MA0561-algebra-abstracta-i.pdf",
+            "MA-0551 Principios de análisis en varias variables":
+              "MA0551-principios-analisis-ii.pdf",
+            "MA-0515 Ecuaciones Diferenciales": "MA0515-ecuaciones-diferenciales.pdf",
+            "MA-0661 Algebra Abstracta II": "MA0661-algebra-abstracta-ii.pdf",
+            "MA-0635 Introducción a la Topología": "MA0635-topologia.pdf",
+            "MA-0641 Análisis Numérico I": "MA0641-matematica-computacional-ii.pdf",
+            "MA-0705 Análisis Real I": "MA0705-analisis-real-i-individual.pdf",
+            "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
+            "MA-0701 Seminario de Matemática": "MA0701-seminario-matematica.pdf",
+            "MA-0780 Comunicación en las ciencias": "MA0780-comunicacion-ciencias.pdf",
+            "MA-0781 Pasantía en matemáticas": "MA0781-pasantia-matematicas.pdf",
+            "MA-0725 Análisis Real II": "MA0725-analisis-real-ii-individual.pdf",
+            "MA-0707 Geometría Diferencial": "MA0707-geometria-diferencial.pdf",
+            "MA-0920 Ecuaciones en derivadas parciales numéricas":
+              "MA0920-edp-numericas.pdf",
+            "MA-0806 Análisis funcional": "MA0806-analisis-funcional.pdf",
+            "MA-0703 Integración": "MA0703-integracion.pdf",
+            "MA-0525 Combinatoria": "MA0525-combinatoria.pdf",
+            "MA-0528 Sistemas dinámicos": "MA0528-sistemas-dinamicos.pdf",
+            "MA-0711 Análisis de Datos I": "MA0711-analisis-datos-i.pdf",
+            "MA-0815 Análisis armónico": "MA0815-analisis-armonico.pdf",
+            "MA-0506 Teoría algebraica de números": "MA0506-teoria-algebraica-numeros.pdf",
+            "MA-0512 Teoría de conjuntos": "MA0512-teoria-conjuntos.pdf",
+            "MA-0709 Geometría algebraica I": "MA0709-geometria-algebraica-i.pdf",
+            "MA-0711 Lógica": "MA0711-logica.pdf",
+            "MA-0755 Ecuaciones diferenciales parciales": "MA0755-ecuaciones-diferenciales-parciales.pdf",
+            "MA-0889 Álgebra conmutativa": "MA0889-algebra-conmutativa.pdf",
+            "MA-0804 Topología algebraica": "MA0804-topologia-algebraica.pdf",
+            "MA-0817 Estadística matemática I": "MA0817-estadistica-matematica-i.pdf",
+            "MA-0820 Teoría de modelos": "MA0820-teoria-modelos.pdf",
+            "MA-0840 Probabilidad": "MA0840-probabilidad.pdf",
+            "MA-0860 Teoría de módulos": "MA0860-teoria-modulos.pdf",
+            "MA-0714 Optimización": "MA0714-optimizacion.pdf",
+            "MA-0421 Probabilidad": "MA0421-probabilidad.pdf",
+            "MA-0647 Modelación Matemática": "MA0647-modelacion-matematica.pdf",
+            "MA-0918 Procesos estocásticos": "MA0918-procesos-estocasticos.pdf",
+            "MA-0917 Estadística II": "MA0917-estadistica-matematica-ii.pdf",
+            "CA-0512 Modelos lineales": "CA0512-modelos-lineales.pdf",
+            "CA-0612 Series de tiempo": "CA0612-series-tiempo.pdf",
+            "MA-0406 Introducción a la optimización": "MA0406-introduccion-optimizacion.pdf",
+            "MA-0404 Herramientas de ciencia de datos I": "MA0404-herramientas-ciencia-datos-i.pdf",
+            "CA-0304 Herramientas de ciencia de datos II":
+              "CA0304-herramientas-ciencia-datos-ii.pdf",
+            "MA-0790 Tópicos de análisis": "MA0790-topicos-analisis.pdf",
+            "MA-0791 Tópicos de Probabilidad": "MA0791-topicos-probabilidad.pdf",
+            "MA-0792 Tópicos de Ecuaciones diferenciales":
+              "MA0792-topicos-ecuaciones-diferenciales.pdf",
+            "MA-0793 Tópicos de Geometría": "MA0793-topicos-geometria.pdf",
+            "MA-0794 Tópicos de Modelación": "MA0794-topicos-modelacion.pdf",
+            "MA-0795 Tópicos de Computación científica": "MA0795-topicos-computacion-cientifica.pdf",
+            "MA-0796 Tópicos de Álgebra": "MA0796-topicos-algebra.pdf",
+            "MA-0797 Tópicos de Matemática discreta": "MA0797-topicos-matematica-discreta.pdf",
+            "MA-0798 Tópicos de Análisis de datos": "MA0798-topicos-analisis-datos.pdf",
+            "MA-0799 Tópicos de Aprendizaje automático": "MA0799-topicos-aprendizaje-automatico.pdf",
+            "MA-0609 Teoría analítica de números": "MA0609-teoria-analitica-numeros.pdf",
+            "MA-0830 Tópicos de Teoría de Números": "MA0830-topicos-teoria-numeros.pdf",
+            "MA-0831 Tópicos de Lógica": "MA0831-topicos-logica.pdf",
+            "MA-0832 Tópicos en Topología": "MA0832-topicos-topologia.pdf",
+            "CA-0412 Análisis de datos II": "CA0412-analisis-datos-ii.pdf",
+          },
+          ID_POR_TITULO: {
+            "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
+              "curso-fundamentos-algebra",
+            "MA-0152 Matemática Exploratoria": "curso-matematica-exploratoria",
+            "MA-0251 Introducción al Cálculo en una variable":
+              "curso-calculo-una-variable",
+            "MA-0252 Introducción a las Demostraciones": "curso-intro-demostraciones",
+            "MA-0361 Algebra Lineal I": "curso-algebra-lineal-i",
+            "MA-0341 Matemática Computacional I": "curso-mat-computacional-i",
+            "MA-0351 Introducción al Cálculo en varias variables":
+              "curso-calculo-varias-variables",
+            "MA-0461 Algebra Lineal II": "curso-algebra-lineal-ii",
+            "MA-0451 Principios de análisis en una variable":
+              "curso-principios-analisis-una-variable",
+            "MA-0471 Introducción a la Geometría Diferencial":
+              "curso-geometria-diferencial",
+            "MA-0496 Teoría de Números": "curso-teoria-numeros",
+            "MA-0561 Algebra Abstracta I": "curso-algebra-abstracta-i",
+            "MA-0551 Principios de análisis en varias variables":
+              "curso-principios-analisis-varias-variables",
+            "MA-0515 Ecuaciones Diferenciales": "curso-ecuaciones-diferenciales",
+            "MA-0661 Algebra Abstracta II": "curso-algebra-abstracta-ii",
+            "MA-0635 Introducción a la Topología": "curso-topologia",
+            "MA-0641 Análisis Numérico I": "curso-mat-computacional-ii",
+            "MA-0705 Análisis Real I": "curso-analisis-real-i",
+            "MA-0702 Análisis Complejo": "curso-analisis-complejo",
+            "MA-0701 Seminario de Matemática": "curso-seminario-matematica",
+            "MA-0780 Comunicación en las ciencias": "curso-comunicacion-ciencias",
+            "MA-0781 Pasantía en matemáticas": "curso-pasantia-matematicas",
+            "MA-0725 Análisis Real II": "curso-analisis-real-ii",
+            "MA-0707 Geometría Diferencial": "curso-ma0707-geometria-diferencial",
+            "MA-0920 Ecuaciones en derivadas parciales numéricas":
+              "curso-ma0920-edp-numericas",
+            "MA-0806 Análisis funcional": "curso-ma0806-analisis-funcional",
+            "MA-0703 Integración": "curso-integracion",
+            "MA-0525 Combinatoria": "curso-ma0525-combinatoria",
+            "MA-0528 Sistemas dinámicos": "curso-ma0528-sistemas-dinamicos",
+            "MA-0711 Análisis de Datos I": "curso-ma-0711-analisis-datos-i",
+            "MA-0815 Análisis armónico": "curso-ma0815-analisis-armonico",
+            "MA-0506 Teoría algebraica de números": "curso-ma0506-teoria-algebraica-numeros",
+            "MA-0512 Teoría de conjuntos": "curso-ma0512-teoria-conjuntos",
+            "MA-0709 Geometría algebraica I": "curso-ma0709-geometria-algebraica-i",
+            "MA-0711 Lógica": "curso-logica",
+            "MA-0755 Ecuaciones diferenciales parciales": "curso-ma0755-ecuaciones-diferenciales-parciales",
+            "MA-0889 Álgebra conmutativa": "curso-ma0889-algebra-conmutativa",
+            "MA-0804 Topología algebraica": "curso-ma0804-topologia-algebraica",
+            "MA-0817 Estadística matemática I": "curso-ma0817-estadistica-matematica-i",
+            "MA-0820 Teoría de modelos": "curso-teoria-modelos",
+            "MA-0840 Probabilidad": "curso-probabilidad",
+            "MA-0860 Teoría de módulos": "curso-ma0860-teoria-modulos",
+            "MA-0714 Optimización": "curso-ma0714-optimizacion",
+            "MA-0421 Probabilidad": "curso-ma-0421-probabilidad",
+            "MA-0647 Modelación Matemática": "curso-modelacion-matematica",
+            "MA-0918 Procesos estocásticos": "curso-procesos-estocasticos",
+            "MA-0917 Estadística II": "curso-ma0917-estadistica-matematica-ii",
+            "CA-0512 Modelos lineales": "curso-ca-0512-modelos-lineales",
+            "CA-0612 Series de tiempo": "curso-ca-0612-series-tiempo",
+            "MA-0406 Introducción a la optimización": "curso-ma0406-introduccion-optimizacion",
+            "MA-0404 Herramientas de ciencia de datos I": "curso-ma-0404-herramientas-ciencia-datos-i",
+            "CA-0304 Herramientas de ciencia de datos II":
+              "curso-ca-0304-herramientas-ciencia-datos-ii",
+            "MA-0790 Tópicos de análisis": "curso-topicos-analisis",
+            "MA-0791 Tópicos de Probabilidad": "curso-topicos-probabilidad",
+            "MA-0792 Tópicos de Ecuaciones diferenciales":
+              "curso-topicos-ecuaciones-diferenciales",
+            "MA-0793 Tópicos de Geometría": "curso-topicos-geometria",
+            "MA-0794 Tópicos de Modelación": "curso-topicos-modelacion",
+            "MA-0795 Tópicos de Computación científica": "curso-topicos-computacion-cientifica",
+            "MA-0796 Tópicos de Álgebra": "curso-topicos-algebra",
+            "MA-0797 Tópicos de Matemática discreta": "curso-topicos-matematica-discreta",
+            "MA-0798 Tópicos de Análisis de datos": "curso-topicos-analisis-datos",
+            "MA-0799 Tópicos de Aprendizaje automático": "curso-topicos-aprendizaje-automatico",
+            "MA-0609 Teoría analítica de números": "curso-ma0609-teoria-analitica-numeros",
+            "MA-0830 Tópicos de Teoría de Números": "curso-topicos-teoria-numeros",
+            "MA-0831 Tópicos de Lógica": "curso-topicos-logica",
+            "MA-0832 Tópicos en Topología": "curso-topicos-topologia",
+            "CA-0412 Análisis de datos II": "curso-ca-0412-analisis-datos-ii",
+          },
+          HOTSPOT_ORIGIN: {
+            left: 14, top: 12, w: 14, h: 8,
+          },
+          HOTSPOT_POR_TITULO: {
+            "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": {
+              dx: 36, dy: 0,
+            },
+            "MA-0152 Matemática Exploratoria": { dx: 18, dy: 0 },
+            "MA-0251 Introducción al Cálculo en una variable": {
+              dx: 36, dy: 11,
+            },
+            "MA-0252 Introducción a las Demostraciones": { dx: 18, dy: 11 },
+            "MA-0361 Algebra Lineal I": { dx: 18, dy: 22.5 },
+            "MA-0341 Matemática Computacional I": { dx: 0, dy: 22.5 },
+            "MA-0351 Introducción al Cálculo en varias variables": {
+              dx: 36, dy: 22.5,
+            },
+            "MA-0461 Algebra Lineal II": { dx: 18, dy: 34 },
+            "MA-0451 Principios de análisis en una variable": {
+              dx: 36, dy: 34,
+            },
+            "MA-0471 Introducción a la Geometría Diferencial": {
+              dx: 54, dy: 34,
+            },
+            "MA-0496 Teoría de Números": { dx: 0, dy: 34 },
+            "MA-0561 Algebra Abstracta I": { dx: 18, dy: 45.5 },
+            "MA-0551 Principios de análisis en varias variables": {
+              dx: 36, dy: 45.5,
+            },
+            "MA-0515 Ecuaciones Diferenciales": { dx: 54, dy: 45.5 },
+            "MA-0661 Algebra Abstracta II": { dx: 18, dy: 57 },
+            "MA-0635 Introducción a la Topología": { dx: 36, dy: 57 },
+            "MA-0641 Análisis Numérico I": { dx: 54, dy: 57 },
+            "MA-0705 Análisis Real I": { dx: 36, dy: 68 },
+            "MA-0702 Análisis Complejo": { dx: 18, dy: 68 },
+            "MA-0701 Seminario de Matemática": { dx: 72, dy: 68 },
+            "MA-0780 Comunicación en las ciencias": { dx: 54, dy: 68 },
+            "MA-0781 Pasantía en matemáticas": { dx: 54, dy: 79.5 },
+          },
+        },
+        aplicada: {
+          mallaFile: "aplicada.json",
+          image: "propuesta_aplicada.png",
+          imageAlt: "Diagrama de la propuesta de malla curricular (énfasis en matemática aplicada)",
+          enfasis: "Énfasis en matemática aplicada",
+          PDF_POR_TITULO: {
+            "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
+              "MA0151-fundamentos.pdf",
+            "MA-0152 Matemática Exploratoria": "MA0152-matematica-exploratoria.pdf",
+            "MA-0251 Introducción al Cálculo en una variable":
+              "MA0251-calculo-una-variable.pdf",
+            "MA-0252 Introducción a las Demostraciones": "MA0252-intro-demostraciones.pdf",
+            "MA-0361 Algebra Lineal I": "MA0361-algebra-lineal-i.pdf",
+            "MA-0341 Matemática Computacional I": "MA0341-matematica-computacional-i.pdf",
+            "MA-0351 Introducción al Cálculo en varias variables":
+              "MA0351-calculo-varias-variables.pdf",
+            "MA-0461 Algebra Lineal II": "MA0461-algebra-lineal-ii.pdf",
+            "MA-0451 Principios de análisis en una variable":
+              "MA0451-principios-analisis-i.pdf",
+            "MA-0421 Probabilidad": "MA0421-probabilidad.pdf",
+            "MA-0404 Herramientas de ciencia de datos I": "MA0404-herramientas-ciencia-datos-i.pdf",
+            "MA-0551 Principios de análisis en varias variables":
+              "MA0551-principios-analisis-ii.pdf",
+            "MA-0615 Ecuaciones Diferenciales": "MA0615-ecuaciones-diferenciales.pdf",
+            "MA-0503 Estadística I": "MA0503-estadistica-i.pdf",
+            "MA-0541 Análisis Numérico I": "MA0641-matematica-computacional-ii.pdf",
+            "MA-0625 Análisis Real I": "MA0625-analisis-real-i-individual.pdf",
+            "MA-0702 Análisis Complejo": "MA0702-analisis-complejo-individual.pdf",
+            "MA-0635 Introducción a la Topología": "MA0635-topologia.pdf",
+            "MA-0711 Análisis de Datos I": "MA0711-analisis-datos-i.pdf",
+            "MA-0701 Seminario de Matemática": "MA0701-seminario-matematica.pdf",
+            "MA-0780 Comunicación en las ciencias": "MA0780-comunicacion-ciencias.pdf",
+            "MA-0781 Pasantía en matemáticas": "MA0781-pasantia-matematicas.pdf",
+            "MA-0725 Análisis Real II": "MA0725-analisis-real-ii-individual.pdf",
+            "MA-0707 Geometría Diferencial": "MA0707-geometria-diferencial.pdf",
+            "MA-0920 Ecuaciones en derivadas parciales numéricas":
+              "MA0920-edp-numericas.pdf",
+            "MA-0806 Análisis funcional": "MA0806-analisis-funcional.pdf",
+            "MA-0703 Integración": "MA0703-integracion.pdf",
+            "MA-0525 Combinatoria": "MA0525-combinatoria.pdf",
+            "MA-0528 Sistemas dinámicos": "MA0528-sistemas-dinamicos.pdf",
+            "MA-0711 Análisis de Datos I": "MA0711-analisis-datos-i.pdf",
+            "MA-0815 Análisis armónico": "MA0815-analisis-armonico.pdf",
+            "MA-0506 Teoría algebraica de números": "MA0506-teoria-algebraica-numeros.pdf",
+            "MA-0512 Teoría de conjuntos": "MA0512-teoria-conjuntos.pdf",
+            "MA-0709 Geometría algebraica I": "MA0709-geometria-algebraica-i.pdf",
+            "MA-0711 Lógica": "MA0711-logica.pdf",
+            "MA-0755 Ecuaciones diferenciales parciales": "MA0755-ecuaciones-diferenciales-parciales.pdf",
+            "MA-0889 Álgebra conmutativa": "MA0889-algebra-conmutativa.pdf",
+            "MA-0804 Topología algebraica": "MA0804-topologia-algebraica.pdf",
+            "MA-0817 Estadística matemática I": "MA0817-estadistica-matematica-i.pdf",
+            "MA-0820 Teoría de modelos": "MA0820-teoria-modelos.pdf",
+            "MA-0840 Probabilidad": "MA0840-probabilidad.pdf",
+            "MA-0860 Teoría de módulos": "MA0860-teoria-modulos.pdf",
+            "MA-0714 Optimización": "MA0714-optimizacion.pdf",
+            "MA-0421 Probabilidad": "MA0421-probabilidad.pdf",
+            "MA-0647 Modelación Matemática": "MA0647-modelacion-matematica.pdf",
+            "MA-0918 Procesos estocásticos": "MA0918-procesos-estocasticos.pdf",
+            "MA-0917 Estadística II": "MA0917-estadistica-matematica-ii.pdf",
+            "CA-0512 Modelos lineales": "CA0512-modelos-lineales.pdf",
+            "CA-0612 Series de tiempo": "CA0612-series-tiempo.pdf",
+            "MA-0406 Introducción a la optimización": "MA0406-introduccion-optimizacion.pdf",
+            "MA-0404 Herramientas de ciencia de datos I": "MA0404-herramientas-ciencia-datos-i.pdf",
+            "CA-0304 Herramientas de ciencia de datos II":
+              "CA0304-herramientas-ciencia-datos-ii.pdf",
+            "MA-0790 Tópicos de análisis": "MA0790-topicos-analisis.pdf",
+            "MA-0791 Tópicos de Probabilidad": "MA0791-topicos-probabilidad.pdf",
+            "MA-0792 Tópicos de Ecuaciones diferenciales":
+              "MA0792-topicos-ecuaciones-diferenciales.pdf",
+            "MA-0793 Tópicos de Geometría": "MA0793-topicos-geometria.pdf",
+            "MA-0794 Tópicos de Modelación": "MA0794-topicos-modelacion.pdf",
+            "MA-0795 Tópicos de Computación científica": "MA0795-topicos-computacion-cientifica.pdf",
+            "MA-0796 Tópicos de Álgebra": "MA0796-topicos-algebra.pdf",
+            "MA-0797 Tópicos de Matemática discreta": "MA0797-topicos-matematica-discreta.pdf",
+            "MA-0798 Tópicos de Análisis de datos": "MA0798-topicos-analisis-datos.pdf",
+            "MA-0799 Tópicos de Aprendizaje automático": "MA0799-topicos-aprendizaje-automatico.pdf",
+            "MA-0609 Teoría analítica de números": "MA0609-teoria-analitica-numeros.pdf",
+            "MA-0830 Tópicos de Teoría de Números": "MA0830-topicos-teoria-numeros.pdf",
+            "MA-0831 Tópicos de Lógica": "MA0831-topicos-logica.pdf",
+            "MA-0832 Tópicos en Topología": "MA0832-topicos-topologia.pdf",
+            "CA-0412 Análisis de datos II": "CA0412-analisis-datos-ii.pdf",
+          },
+          ID_POR_TITULO: {
+            "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica":
+              "curso-fundamentos-algebra",
+            "MA-0152 Matemática Exploratoria": "curso-matematica-exploratoria",
+            "MA-0251 Introducción al Cálculo en una variable":
+              "curso-calculo-una-variable",
+            "MA-0252 Introducción a las Demostraciones": "curso-intro-demostraciones",
+            "MA-0361 Algebra Lineal I": "curso-algebra-lineal-i",
+            "MA-0341 Matemática Computacional I": "curso-mat-computacional-i",
+            "MA-0351 Introducción al Cálculo en varias variables":
+              "curso-calculo-varias-variables",
+            "MA-0461 Algebra Lineal II": "curso-algebra-lineal-ii",
+            "MA-0451 Principios de análisis en una variable":
+              "curso-principios-analisis-una-variable",
+            "MA-0421 Probabilidad": "curso-ma-0421-probabilidad",
+            "MA-0404 Herramientas de ciencia de datos I": "curso-ma-0404-herramientas-ciencia-datos-i",
+            "MA-0551 Principios de análisis en varias variables":
+              "curso-principios-analisis-varias-variables",
+            "MA-0615 Ecuaciones Diferenciales": "curso-ecuaciones-diferenciales",
+            "MA-0503 Estadística I": "curso-ma-0503-estadistica-i",
+            "MA-0541 Análisis Numérico I": "curso-mat-computacional-ii",
+            "MA-0625 Análisis Real I": "curso-analisis-real-i",
+            "MA-0702 Análisis Complejo": "curso-analisis-complejo",
+            "MA-0635 Introducción a la Topología": "curso-topologia",
+            "MA-0711 Análisis de Datos I": "curso-ma-0711-analisis-datos-i",
+            "MA-0701 Seminario de Matemática": "curso-seminario-matematica",
+            "MA-0780 Comunicación en las ciencias": "curso-comunicacion-ciencias",
+            "MA-0781 Pasantía en matemáticas": "curso-pasantia-matematicas",
+            "MA-0725 Análisis Real II": "curso-analisis-real-ii-aplicada",
+            "MA-0707 Geometría Diferencial": "curso-ma0707-geometria-diferencial",
+            "MA-0920 Ecuaciones en derivadas parciales numéricas":
+              "curso-ma0920-edp-numericas",
+            "MA-0806 Análisis funcional": "curso-ma0806-analisis-funcional",
+            "MA-0703 Integración": "curso-integracion-aplicada",
+            "MA-0525 Combinatoria": "curso-ma0525-combinatoria",
+            "MA-0528 Sistemas dinámicos": "curso-ma0528-sistemas-dinamicos",
+            "MA-0711 Análisis de Datos I": "curso-ma-0711-analisis-datos-i",
+            "MA-0815 Análisis armónico": "curso-ma0815-analisis-armonico",
+            "MA-0506 Teoría algebraica de números": "curso-ma0506-teoria-algebraica-numeros",
+            "MA-0512 Teoría de conjuntos": "curso-ma0512-teoria-conjuntos",
+            "MA-0709 Geometría algebraica I": "curso-ma0709-geometria-algebraica-i",
+            "MA-0711 Lógica": "curso-logica-aplicada",
+            "MA-0755 Ecuaciones diferenciales parciales": "curso-ma0755-ecuaciones-diferenciales-parciales",
+            "MA-0889 Álgebra conmutativa": "curso-ma0889-algebra-conmutativa",
+            "MA-0804 Topología algebraica": "curso-ma0804-topologia-algebraica",
+            "MA-0817 Estadística matemática I": "curso-ma0817-estadistica-matematica-i",
+            "MA-0820 Teoría de modelos": "curso-teoria-modelos-aplicada",
+            "MA-0840 Probabilidad": "curso-probabilidad-aplicada",
+            "MA-0860 Teoría de módulos": "curso-ma0860-teoria-modulos",
+            "MA-0714 Optimización": "curso-ma0714-optimizacion",
+            "MA-0421 Probabilidad": "curso-ma-0421-probabilidad",
+            "MA-0647 Modelación Matemática": "curso-modelacion-matematica",
+            "MA-0918 Procesos estocásticos": "curso-procesos-estocasticos-aplicada",
+            "MA-0917 Estadística II": "curso-ma0917-estadistica-matematica-ii",
+            "CA-0512 Modelos lineales": "curso-ca-0512-modelos-lineales",
+            "CA-0612 Series de tiempo": "curso-ca-0612-series-tiempo",
+            "MA-0406 Introducción a la optimización": "curso-ma0406-introduccion-optimizacion",
+            "MA-0404 Herramientas de ciencia de datos I": "curso-ma-0404-herramientas-ciencia-datos-i",
+            "CA-0304 Herramientas de ciencia de datos II":
+              "curso-ca-0304-herramientas-ciencia-datos-ii",
+            "MA-0790 Tópicos de análisis": "curso-topicos-analisis-aplicada",
+            "MA-0791 Tópicos de Probabilidad": "curso-topicos-probabilidad-aplicada",
+            "MA-0792 Tópicos de Ecuaciones diferenciales":
+              "curso-topicos-ecuaciones-diferenciales-aplicada",
+            "MA-0793 Tópicos de Geometría": "curso-topicos-geometria-aplicada",
+            "MA-0794 Tópicos de Modelación": "curso-topicos-modelacion-aplicada",
+            "MA-0795 Tópicos de Computación científica": "curso-topicos-computacion-cientifica-aplicada",
+            "MA-0796 Tópicos de Álgebra": "curso-topicos-algebra-aplicada",
+            "MA-0797 Tópicos de Matemática discreta": "curso-topicos-matematica-discreta-aplicada",
+            "MA-0798 Tópicos de Análisis de datos": "curso-topicos-analisis-datos-aplicada",
+            "MA-0799 Tópicos de Aprendizaje automático": "curso-topicos-aprendizaje-automatico-aplicada",
+            "MA-0609 Teoría analítica de números": "curso-ma0609-teoria-analitica-numeros",
+            "MA-0830 Tópicos de Teoría de Números": "curso-topicos-teoria-numeros-aplicada",
+            "MA-0831 Tópicos de Lógica": "curso-topicos-logica-aplicada",
+            "MA-0832 Tópicos en Topología": "curso-topicos-topologia-aplicada",
+            "CA-0412 Análisis de datos II": "curso-ca-0412-analisis-datos-ii",
+          },
+          HOTSPOT_ORIGIN: {
+            left: 14, top: 11, w: 14, h: 8,
+          },
+          HOTSPOT_POR_TITULO: {
+            "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica": {
+              dx: 36, dy: 0,
+            },
+            "MA-0152 Matemática Exploratoria": { dx: 18, dy: 0 },
+            "MA-0251 Introducción al Cálculo en una variable": {
+              dx: 36, dy: 11,
+            },
+            "MA-0252 Introducción a las Demostraciones": { dx: 18, dy: 11 },
+            "MA-0361 Algebra Lineal I": { dx: 18, dy: 23 },
+            "MA-0341 Matemática Computacional I": { dx: 0, dy: 23 },
+            "MA-0351 Introducción al Cálculo en varias variables": {
+              dx: 36, dy: 23,
+            },
+            "MA-0461 Algebra Lineal II": { dx: 18, dy: 34.5 },
+            "MA-0451 Principios de análisis en una variable": {
+              dx: 36, dy: 34.5,
+            },
+            "MA-0421 Probabilidad": { dx: 54, dy: 34.5 },
+            "MA-0404 Herramientas de ciencia de datos I": { dx: 0, dy: 34.5 },
+            "MA-0551 Principios de análisis en varias variables": {
+              dx: 36, dy: 46,
+            },
+            "MA-0615 Ecuaciones Diferenciales": { dx: 18, dy: 46 },
+            "MA-0503 Estadística I": { dx: 0, dy: 46 },
+            "MA-0541 Análisis Numérico I": { dx: 0, dy: 57.5 },
+            "MA-0702 Análisis Complejo": { dx: 18, dy: 69 },
+            "MA-0635 Introducción a la Topología": { dx: 36, dy: 57.5 },
+            "MA-0647 Modelación Matemática": { dx: 18, dy: 57.5 },
+            "MA-0711 Análisis de Datos I": { dx: 0, dy: 69 },
+            "MA-0625 Análisis Real I": { dx: 36, dy: 69 },
+            "MA-0701 Seminario de Matemática": { dx: 72, dy: 69 },
+            "MA-0780 Comunicación en las ciencias": { dx: 54, dy: 69 },
+            "MA-0781 Pasantía en matemáticas": { dx: 54, dy: 80.5 },
+            "MA-0711 Análisis de Datos I": { dx: 0, dy: 69 },
+          },
+        },
+      };
+
+      const STORAGE_KEY = "propuesta-malla-index-modo";
+      const mallaData = { pura: null, aplicada: null };
+      var contenidosGlobal = null;
+      var comentariosPorModo = { pura: {}, aplicada: {} };
+      var optativasPorModo = { pura: {}, aplicada: {} };
+      var saberesPorTitulo = {};
+      var saberDescPorCodigo = {};
+      var modoActivo = "pura";
+
+      const CLAVES_OPTATIVAS = ["Optativas de núcleo", "Optativas temáticas"];
+
+      function mallaConOptativas(modo) {
+        const base = mallaData[modo] || {};
+        const opt = optativasPorModo[modo] || {};
+        const out = Object.assign({}, base);
+        for (const k of CLAVES_OPTATIVAS) {
+          if (Object.prototype.hasOwnProperty.call(opt, k)) {
+            out[k] = Array.isArray(opt[k]) ? opt[k] : [];
+          } else {
+            delete out[k];
+          }
+        }
+        return out;
+      }
+
+      function indexarSaberesPerfil(rows) {
+        saberesPorTitulo = {};
+        if (!Array.isArray(rows)) return;
+        rows.forEach(function (row) {
+          if (row.titulo && row.saberes) {
+            saberesPorTitulo[row.titulo] = row.saberes;
+          }
+        });
+      }
+
+      function indexarDescripcionSaberes(perfil) {
+        saberDescPorCodigo = {};
+        if (!perfil || !Array.isArray(perfil.items)) return;
+        perfil.items.forEach(function (it) {
+          saberDescPorCodigo[it.codigo] = it.descripcion;
+        });
+      }
+
+      function tipoSaberDesdeCodigo(codigo) {
+        if (codigo.indexOf("SC") === 0) return "Saber Conocer";
+        if (codigo.indexOf("SH") === 0) return "Saber Hacer";
+        if (codigo.indexOf("SS") === 0) return "Saber Ser";
+        return "Saber Conocer";
+      }
+
+      function appendSaberesPerfil(block, title) {
+        var saberes = saberesPorTitulo[title];
+        if (!saberes || !saberes.length) return;
+        var wrap = document.createElement("div");
+        wrap.className = "saberes-perfil";
+        var label = document.createElement("p");
+        label.className = "saberes-perfil-label";
+        label.textContent = "Saberes del perfil de salida";
+        wrap.appendChild(label);
+        var ul = document.createElement("ul");
+        ul.className = "saberes-perfil-list";
+        saberes.forEach(function (codigo) {
+          var li = document.createElement("li");
+          var a = document.createElement("a");
+          var tipo = tipoSaberDesdeCodigo(codigo);
+          a.href =
+            "perfil-salida.html?tipo=" + encodeURIComponent(tipo) + "#" + codigo;
+          a.textContent = codigo;
+          a.title = saberDescPorCodigo[codigo] || codigo;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        wrap.appendChild(ul);
+        block.appendChild(wrap);
+      }
+
+      function aplanarCursos(malla) {
+        const out = [];
+        for (const c of ORDEN_CICLOS) {
+          if (!malla[c] || !Array.isArray(malla[c])) continue;
+          for (const t of malla[c]) out.push(t);
+        }
+        return out;
+      }
+
+      function openCajaCursoById(detailId) {
+        const det = document.getElementById(detailId);
+        if (!det) return;
+        det.open = true;
+        det.scrollIntoView({ behavior: "smooth", block: "center" });
+        const s = det.querySelector("summary");
+        if (s) s.focus({ preventScroll: true });
+      }
+
+      function build(malla, cfg) {
+        main.textContent = "";
+        const idMap = cfg.ID_POR_TITULO;
+        const pdfMap = cfg.PDF_POR_TITULO;
+        const frag = document.createDocumentFragment();
+        for (const label of ORDEN_CICLOS) {
+          if (!Object.prototype.hasOwnProperty.call(malla, label)) continue;
+          const courses = malla[label];
+          if (!Array.isArray(courses) || !courses.length) continue;
+          const section = document.createElement("section");
+          section.className = "cycle";
+          const h2 = document.createElement("h2");
+          h2.textContent = label;
+          section.appendChild(h2);
+          const comentarios = comentariosPorModo[modoActivo] || {};
+          const nota = comentarios[label];
+          if (nota != null && String(nota).trim() !== "") {
+            const pNota = document.createElement("p");
+            pNota.className = "cycle-comentario";
+            pNota.textContent = nota;
+            section.appendChild(pNota);
+          }
+          for (const title of courses) {
+            const det = document.createElement("details");
+            det.className = "course";
+            const cajaId = idMap[title];
+            if (cajaId) det.id = cajaId;
+            const sum = document.createElement("summary");
+            sum.textContent = title;
+            det.appendChild(sum);
+            const block = document.createElement("div");
+            block.className = "contenidos";
+            const pdfName = pdfMap[title];
+            if (pdfName) {
+              const wrapP = document.createElement("p");
+              wrapP.className = "pdf-link";
+              const a = document.createElement("a");
+              a.href = pdfName;
+              a.textContent = "Programa (PDF)";
+              a.target = "_blank";
+              a.rel = "noopener noreferrer";
+              wrapP.appendChild(a);
+              block.appendChild(wrapP);
+            }
+            appendSaberesPerfil(block, title);
+            const html = contenidosGlobal[title];
+            if (html == null || html === "") {
+              const p = document.createElement("p");
+              p.className = "falta-contenidos";
+              p.appendChild(
+                document.createTextNode(
+                  "(No hay texto de contenidos en contenidos_por_curso.json para este curso.)"
+                )
+              );
+              block.appendChild(p);
+            } else {
+              const inner = document.createElement("div");
+              inner.innerHTML = html;
+              block.appendChild(inner);
+            }
+            det.appendChild(block);
+            section.appendChild(det);
+          }
+          frag.appendChild(section);
+        }
+        main.appendChild(frag);
+      }
+
+      function crearHotspotsSobreMalla(malla, cfg) {
+        if (!figWrap) return;
+        for (const a of figWrap.querySelectorAll("a.malla-hotspot")) {
+          a.remove();
+        }
+        const idMap = cfg.ID_POR_TITULO;
+        const hotMap = cfg.HOTSPOT_POR_TITULO;
+        const origin = cfg.HOTSPOT_ORIGIN || { left: 0, top: 0, w: 14, h: 8 };
+        for (const title of aplanarCursos(malla)) {
+          const id = idMap[title];
+          const g = hotMap[title];
+          if (!id || !g) continue;
+          const el = document.createElement("a");
+          el.className = "malla-hotspot";
+          el.href = "#" + id;
+          el.setAttribute("data-open-curso", id);
+          el.title = "Ir a: " + title;
+          el.setAttribute("aria-label", "Abrir en la lista: " + title);
+          el.textContent = "Enlace: " + title;
+          const left = origin.left + (g.dx != null ? g.dx : 0);
+          const top = origin.top + (g.dy != null ? g.dy : 0);
+          const w = g.w != null ? g.w : origin.w;
+          const h = g.h != null ? g.h : origin.h;
+          el.style.left = left + "%";
+          el.style.top = top + "%";
+          el.style.width = w + "%";
+          el.style.height = h + "%";
+          figWrap.appendChild(el);
+        }
+      }
+
+      function leerModoInicial() {
+        const q = new URLSearchParams(location.search).get("malla");
+        if (q === "pura" || q === "aplicada") return q;
+        try {
+          const s = localStorage.getItem(STORAGE_KEY);
+          if (s === "pura" || s === "aplicada") return s;
+        } catch (e) {}
+        return "pura";
+      }
+
+      function ponerModo(modo) {
+        if (modo !== "pura" && modo !== "aplicada") return;
+        modoActivo = modo;
+        var cfg = CONFIG[modo];
+        try {
+          localStorage.setItem(STORAGE_KEY, modo);
+        } catch (e) {}
+        var qs = modo === "pura" ? "malla=pura" : "malla=aplicada";
+        if (location.search !== "?" + qs) {
+          history.replaceState(null, "", "?" + qs);
+        }
+        mallaImg.src = cfg.image;
+        mallaImg.alt = cfg.imageAlt;
+        enfasisLine.textContent = cfg.enfasis;
+        document.getElementById("radio-pura").checked = modo === "pura";
+        document.getElementById("radio-aplicada").checked = modo === "aplicada";
+        const malla = mallaConOptativas(modo);
+        build(malla, cfg);
+        crearHotspotsSobreMalla(malla, cfg);
+        if (location.hash) {
+          const id = location.hash.slice(1);
+          const el = document.getElementById(id);
+          if (el && el.tagName === "DETAILS") openCajaCursoById(id);
+        }
+      }
+
+      figWrap.addEventListener("click", function (e) {
+        const t = e.target;
+        if (!t || !t.closest) return;
+        const a = t.closest("a.malla-hotspot[data-open-curso]");
+        if (!a) return;
+        e.preventDefault();
+        var id = a.getAttribute("data-open-curso");
+        if (id) openCajaCursoById(id);
+      });
+
+      document.getElementById("radio-pura").addEventListener("change", function () {
+        if (this.checked) ponerModo("pura");
+      });
+      document.getElementById("radio-aplicada").addEventListener("change", function () {
+        if (this.checked) ponerModo("aplicada");
+      });
+
+      Promise.all([
+        fetch("pura.json").then((r) => {
+          if (!r.ok) throw new Error("pura.json");
+          return r.json();
+        }),
+        fetch("aplicada.json").then((r) => {
+          if (!r.ok) throw new Error("aplicada.json");
+          return r.json();
+        }),
+        fetch("contenidos_por_curso.json").then((r) => {
+          if (!r.ok) throw new Error("contenidos_por_curso.json");
+          return r.json();
+        }),
+        fetch("cursos_perfil_data.json").then((r) => {
+          if (!r.ok) throw new Error("cursos_perfil_data.json");
+          return r.json();
+        }),
+        fetch("perfil-salida.json").then((r) => {
+          if (!r.ok) throw new Error("perfil-salida.json");
+          return r.json();
+        }),
+        fetch("comentarios.json").then((r) => {
+          if (!r.ok) throw new Error("comentarios.json");
+          return r.json();
+        }),
+        fetch("optativas.json").then((r) => {
+          if (!r.ok) throw new Error("optativas.json");
+          return r.json();
+        }),
+      ])
+        .then(([pura, aplicada, contenidos, cursosPerfil, perfilSalida, comentarios, optativas]) => {
+          mallaData.pura = pura;
+          mallaData.aplicada = aplicada;
+          contenidosGlobal = contenidos;
+          comentariosPorModo = {
+            pura: (comentarios && comentarios.pura) || {},
+            aplicada: (comentarios && comentarios.aplicada) || {},
+          };
+          optativasPorModo = {
+            pura: (optativas && optativas.pura) || {},
+            aplicada: (optativas && optativas.aplicada) || {},
+          };
+          indexarSaberesPerfil(cursosPerfil);
+          indexarDescripcionSaberes(perfilSalida);
+          ponerModo(leerModoInicial());
+        })
+        .catch(function () {
+          errBox.hidden = false;
+        });
+    })();
+  </script>
+</body>
+</html>

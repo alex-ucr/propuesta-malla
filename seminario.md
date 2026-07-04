@@ -5,7 +5,7 @@
 - El horario es el horario del coloquio/seminario.
 - Deben asistir a un mínimo de 10 charlas (revisar legalidad de esto)
 - Sétimo ciclo
-- Requisitos: Álgebra Abstracta II o Topología o Matemática computacional II
+- Requisitos: Álgebra Abstracta II o Topología o Análisis Numérico I
 - Una sesión a final de semestre para analizar la experiencia y tener discusión sobre el contenido de las charlas y aspectos de forma tales como:
     - Claridad en la exposición
     - Calidad de la presentación

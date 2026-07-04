@@ -5,7 +5,7 @@
 - Se está considerando para promocionarlo en la Facultad de Ciencias
 - Dos créditos
 - Dos horas por semana
-- Requisitos: Álgebra abstracta II o Topología o Matemática computacional II
+- Requisitos: Álgebra abstracta II o Topología o Análisis Numérico I
 - En la metodología mencionar que se debe incluir trabajo en clase en la forma de:
     - Presentaciones
     - Discusiones

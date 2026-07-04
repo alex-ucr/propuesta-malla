@@ -24,13 +24,13 @@ Leyenda de énfasis: **Pura y aplicada** = presente en ambas mallas; **Pura** / 
 | MA-0471 | Introducción a la Geometría Diferencial | Pura | SC07, SC11, SH05, SH07, SH19, SH21 |
 | MA-0496 | Teoría de Números | Pura | SC10, SC16, SH05, SH10, SH20, SS02 |
 | MA-0515 | Ecuaciones Diferenciales | Pura | SC05, SC06, SH05, SH22 |
-| MA-0541 | Matemática Computacional II | Aplicada | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
+| MA-0541 | Análisis Numérico I | Aplicada | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
 | MA-0551 | Principios de análisis en varias variables | Pura y aplicada | SC04, SC15, SH05, SH07, SH19, SH21, SS02 |
 | MA-0561 | Algebra Abstracta I | Pura | SC10, SC16, SH05, SH06, SH20, SS02, SS17 |
 | MA-0615 | Ecuaciones Diferenciales | Aplicada | SC05, SC06, SH05, SH22, SS14 |
 | MA-0625 | Análisis Real I | Aplicada | SC05, SC14, SH05, SH08, SS02, SS17 |
 | MA-0635 | Introducción a la Topología | Pura y aplicada | SC15, SH05, SH06, SH07, SH19 |
-| MA-0641 | Matemática Computacional II | Pura | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
+| MA-0641 | Análisis Numérico I | Pura | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
 | MA-0661 | Algebra Abstracta II | Pura | SC10, SH05, SH06, SH20 |
 | MA-0702 | Análisis Complejo | Pura y aplicada | SC09, SC15, SH05, SH07, SH19, SS02, SS17 |
 | MA-0705 | Análisis Real I | Pura | SC05, SC14, SH05, SH08, SS02, SS17 |

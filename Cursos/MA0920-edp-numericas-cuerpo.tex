@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% MA-0920 Ecuaciones en derivadas parciales numéricas %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% MA-0920 Ecuaciones en derivadas parciales numéricas %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \subsection*{MA-0920 Ecuaciones en derivadas parciales numéricas}
@@ -11,28 +11,120 @@
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} Por determinar \\ 
-\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\ 
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} Por determinar \\ 
-\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} Por determinar \\ \hline
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0641 Análisis Numérico I \\
+\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\
+\textbf{Tipo de curso:} Teórico-práctico & \textbf{Horas presenciales por semana:} 5 \\
+\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} 10 \\ \hline
 \end{tabular}
 }
 \end{table}
 
 \subsubsection*{Descripción del curso}
 
-\textit{Programa pendiente de elaboración.}
+El análisis numérico es una parte esencial de diversas disciplinas y áreas de la ciencia, en las que se utilizan algoritmos para obtener resultados concretos en la modelización de problemas de matemática aplicada. Este curso introduce a la persona estudiante en la resolución numérica de ecuaciones diferenciales parciales, con énfasis en el análisis de la convergencia y la estabilidad de los algoritmos propuestos, así como en su implementación básica.
+
+Se estudian los métodos de diferencias finitas y de elemento finito como herramientas centrales para la aproximación de soluciones de ecuaciones diferenciales parciales, complementados con temas de álgebra lineal numérica que resultan útiles en la mayoría de las aplicaciones actuales. La parte teórica se acompaña de manera permanente con la implementación de los algoritmos en un lenguaje de programación científica como \texttt{MATLAB} u \texttt{Octave}.
+
+El curso articula los contenidos teóricos del análisis con la práctica computacional, de modo que la persona estudiante desarrolle tanto la intuición sobre el comportamiento de los métodos numéricos como las habilidades necesarias para programarlos, evaluar su desempeño y comunicar sus resultados.
 
 \subsubsection*{Objetivos}
 
-\textit{Pendiente de elaboración.}
+\textbf{General:} Aplicar la teoría del análisis numérico y sus herramientas básicas para aproximar soluciones numéricas de ecuaciones diferenciales parciales.
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Implementar códigos en \texttt{MATLAB} que permitan obtener la solución numérica de una ecuación diferencial parcial.
+\item Calcular soluciones para la ecuación del transporte.
+\item Analizar propiedades básicas de la ecuación de Poisson.
+\item Demostrar propiedades básicas del Método de Diferencias Finitas, tales como convergencia y estabilidad.
+\item Demostrar propiedades básicas de los espacios de Sobolev.
+\item Formular un problema débil para ecuaciones diferenciales parciales elípticas.
+\item Establecer la existencia y unicidad del problema débil asociado a ecuaciones diferenciales.
+\item Deducir cotas teóricas para el error en la interpolación y la resolución de ecuaciones diferenciales.
+\item Resolver numéricamente sistemas de ecuaciones lineales mediante métodos iterativos (gradiente conjugado y GMRES).
+\item Experimentar el efecto de precondicionadores básicos en la resolución iterativa de sistemas lineales.
+\item Analizar propiedades básicas en la resolución numérica de la ecuación del calor y la ecuación de onda.
+\item Experimentar numéricamente la convergencia del Método de Elementos Virtuales.
+\end{enumerate}
 
 \subsubsection*{Contenidos}
 
-\textit{Pendiente de elaboración.}
+\begin{enumerate}
+
+\item \textbf{Introducción a las ecuaciones diferenciales parciales (2 semanas):}
+\begin{enumerate}
+    \item Generalidades, definición y clasificación de las ecuaciones diferenciales parciales.
+    \item La ecuación del transporte: solución y propiedades básicas.
+\end{enumerate}
+
+\item \textbf{Método de diferencias finitas (2 semanas):}
+\begin{enumerate}
+    \item La ecuación de Poisson.
+    \item Método de diferencias finitas e implementación.
+    \item Análisis de convergencia.
+\end{enumerate}
+
+\item \textbf{Método de elemento finito (5 semanas):}
+\begin{enumerate}
+    \item Espacios de Sobolev.
+    \item Ecuaciones diferenciales elípticas. Formulación débil.
+    \item Existencia y unicidad.
+    \item Interpolación y estimados del error.
+    \item Mallas y discretización. Espacios de Lagrange.
+    \item Consideraciones de implementación.
+\end{enumerate}
+
+\item \textbf{Resolución numérica de sistemas lineales (1 semana):}
+\begin{enumerate}
+    \item Método de gradiente conjugado.
+    \item Precondicionadores básicos.
+    \item Implementación.
+\end{enumerate}
+
+\item \textbf{Resolución numérica de la ecuación de calor y de onda (4 semanas):}
+\begin{enumerate}
+    \item Definiciones.
+    \item Discretización.
+    \item Análisis de convergencia.
+\end{enumerate}
+
+\item \textbf{Temas adicionales (2 semanas):}
+\begin{enumerate}
+    \item Método de elemento virtual.
+    \item Formulaciones mixtas.
+\end{enumerate}
+
+\end{enumerate}
 
 \subsubsection*{Metodología}
 
-\textit{Pendiente de elaboración.}
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
 
+\begin{enumerate}
+    \item La presentación de los contenidos debe dar énfasis a la parte numérica (algoritmos, cotas del error, convergencia y estabilidad), acompañada de demostraciones de un nivel intermedio.
+    \item Cada algoritmo estudiado debe ir acompañado de su implementación básica en un lenguaje de programación científica como \texttt{MATLAB} u \texttt{Octave}, de modo que se integren los aspectos teóricos y computacionales del curso.
+    \item Se espera que cada persona estudiante realice una revisión bibliográfica de los contenidos como complemento al trabajo presencial.
+\end{enumerate}
+
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
+
+\begin{enumerate}
+    \item Utilizar el recurso tecnológico para reforzar los conceptos estudiados por medio de la visualización, el cálculo y la experimentación numérica, aprovechando los códigos de ejemplo asociados a cada método.
+    \item Promover el trabajo constante de las personas estudiantes a lo largo del ciclo lectivo mediante tareas que combinen la discusión de resultados teóricos con la implementación documentada de algoritmos.
+    \item Incorporar un proyecto final de investigación en el que la persona estudiante implemente numéricamente algún algoritmo relevante para modelar o resolver un problema de interés, fomentando el trabajo colaborativo dado el carácter mayoritariamente colaborativo del trabajo en matemática aplicada.
+    \item Aprovechar momentos adecuados del curso para motivar el estudio por medio de aplicaciones y de reseñas sobre el desarrollo histórico de los métodos numéricos.
+    \item Fomentar la comunicación clara y efectiva de ideas matemáticas, tanto de forma oral (exposiciones) como escrita, sugiriendo el uso de \LaTeX{} para la presentación de resultados.
+\end{enumerate}
+
+\nocite{CalvoSP1306}
+\nocite{CalvoMA0501}
+\nocite{BS08}
+\nocite{Bra07}
+\nocite{Eva97}
+\nocite{QV08}
+\nocite{QSG14}
+\nocite{TB97}
+
+\printbibliography[heading=subbibliography,section=\the\value{refsection}]
 \end{refsection}

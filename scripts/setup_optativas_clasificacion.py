@@ -148,17 +148,21 @@ def update_programas_tex(nucleo: list[dict], tematicos: list[dict]) -> None:
 def sync_json(nucleo: list[dict], tematicos: list[dict]) -> None:
     titles_n = [full_title(e) for e in nucleo]
     titles_t = [full_title(e) for e in tematicos]
-    for name in ("pura", "aplicada"):
-        path = ROOT / f"{name}.json"
+    path = ROOT / "optativas.json"
+    if path.exists():
         data = json.loads(path.read_text(encoding="utf-8"))
-        data.pop("Optativas", None)
-        data["Optativas de núcleo"] = titles_n
-        data["Optativas temáticas"] = titles_t
-        path.write_text(
-            json.dumps(data, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
-        print(f"Updated {path.name}")
+    else:
+        data = {}
+    for name in ("pura", "aplicada"):
+        data[name] = {
+            "Optativas de núcleo": titles_n,
+            "Optativas temáticas": titles_t,
+        }
+    path.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(f"Updated {path.name}")
 
 
 def main() -> int:

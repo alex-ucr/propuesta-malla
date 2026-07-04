@@ -126,9 +126,9 @@
     "saberes": ["SC05", "SC06", "SH05", "SH22"]
   },
   {
-    "titulo": "MA-0541 Matemática Computacional II",
+    "titulo": "MA-0541 Análisis Numérico I",
     "sigla": "MA-0541",
-    "nombre_corto": "Matemática Computacional II",
+    "nombre_corto": "Análisis Numérico I",
     "enfasis": "aplicada",
     "saberes": ["SC02", "SC03", "SC05", "SC13", "SH05", "SH10", "SH13", "SH22", "SS04", "SS17"]
   },
@@ -168,9 +168,9 @@
     "saberes": ["SC15", "SH05", "SH06", "SH07", "SH19"]
   },
   {
-    "titulo": "MA-0641 Matemática Computacional II",
+    "titulo": "MA-0641 Análisis Numérico I",
     "sigla": "MA-0641",
-    "nombre_corto": "Matemática Computacional II",
+    "nombre_corto": "Análisis Numérico I",
     "enfasis": "pura",
     "saberes": ["SC02", "SC03", "SC05", "SC13", "SH05", "SH10", "SH13", "SH22", "SS04", "SS17"]
   },

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync pura.json and aplicada.json optativas from propuesta-elementos-programas.tex."""
+"""Sync optativas.json (pura/aplicada) from propuesta-elementos-programas.tex."""
 
 from __future__ import annotations
 
@@ -10,9 +10,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROGRAMAS = ROOT / "propuesta-elementos-programas.tex"
+OPTATIVAS = ROOT / "optativas.json"
 INDEX = ROOT / "index.html"
 CUERPOS = ROOT / "Cursos"
 MALLAS = ("pura", "aplicada")
+
 
 TITLE_RE = re.compile(r"\\subsection\*\{([^}]+)\}")
 OPTATIVA_HEADERS = (
@@ -55,32 +57,35 @@ def extract_optativas_from_tex() -> dict[str, list[str]]:
     return result
 
 
-def sync_malla(name: str, expected: dict[str, list[str]]) -> bool:
-    path = ROOT / f"{name}.json"
-    data = json.loads(path.read_text(encoding="utf-8"))
-    data.pop("Optativas", None)
+def sync_optativas_json(expected: dict[str, list[str]]) -> bool:
+    if OPTATIVAS.exists():
+        data = json.loads(OPTATIVAS.read_text(encoding="utf-8"))
+    else:
+        data = {}
     changed = False
-    for key, titles in expected.items():
-        if data.get(key) != titles:
-            data[key] = titles
-            changed = True
+    for name in MALLAS:
+        block = data.get(name) or {}
+        for key, titles in expected.items():
+            if block.get(key) != titles:
+                block[key] = titles
+                changed = True
+        data[name] = block
     if changed:
-        path.write_text(
+        OPTATIVAS.write_text(
             json.dumps(data, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
         n = sum(len(v) for v in expected.values())
-        print(f"Updated {path.name} ({n} optativas en {len(expected)} bloques)")
+        print(f"Updated {OPTATIVAS.name} ({n} optativas por malla)")
     else:
         n = sum(len(v) for v in expected.values())
-        print(f"{path.name} already matches propuesta ({n} optativas)")
+        print(f"{OPTATIVAS.name} already matches propuesta ({n} optativas)")
     return True
 
 
 def main() -> int:
     expected = extract_optativas_from_tex()
-    for name in MALLAS:
-        sync_malla(name, expected)
+    sync_optativas_json(expected)
 
     all_titles = expected["Optativas de núcleo"] + expected["Optativas temáticas"]
     html = INDEX.read_text(encoding="utf-8")
