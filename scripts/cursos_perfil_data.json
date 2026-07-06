@@ -63,9 +63,9 @@
     "saberes": ["SC04", "SC06", "SH01", "SH02", "SH05", "SH07", "SH20", "SS02"]
   },
   {
-    "titulo": "MA-0341 Matemática Computacional I",
+    "titulo": "MA-0341 Matemática Computacional",
     "sigla": "MA-0341",
-    "nombre_corto": "Matemática Computacional I",
+    "nombre_corto": "Matemática Computacional",
     "enfasis": "ambos",
     "saberes": ["SC02", "SC03", "SC13", "SC16", "SH03", "SH10", "SH13", "SH23", "SS04"]
   },

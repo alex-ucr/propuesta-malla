@@ -15,7 +15,7 @@ Leyenda de énfasis: **Pura y aplicada** = presente en ambas mallas; **Pura** / 
 | MA-0251 | Introducción al Cálculo en una variable | Pura y aplicada | SC04, SH01, SH02, SH05, SS02 |
 | MA-0252 | Introducción a las Demostraciones | Pura y aplicada | SC01, SC12, SC16, SH05, SH08, SH12, SS02, SS04 |
 | MA-0261 | Algebra Lineal I | Aplicada | SC04, SC06, SH01, SH02, SH05, SH07, SH20, SS02 |
-| MA-0341 | Matemática Computacional I | Pura y aplicada | SC02, SC03, SC13, SC16, SH03, SH10, SH13, SH23, SS04 |
+| MA-0341 | Matemática Computacional | Pura y aplicada | SC02, SC03, SC13, SC16, SH03, SH10, SH13, SH23, SS04 |
 | MA-0351 | Introducción al Cálculo en varias variables | Pura y aplicada | SC04, SH02, SH05, SH07, SH21, SS02 |
 | MA-0361 | Algebra Lineal I | Pura | SC04, SC06, SH01, SH02, SH03, SH05, SH07, SH20, SS02 |
 | MA-0361 | Algebra Lineal II | Aplicada | SC06, SH01, SH03, SH05, SH06, SH20, SS02 |
