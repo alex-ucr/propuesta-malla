@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% CA-0411 Análisis de Datos I (propuesta) %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Propuesta a evaluar por separado. Fuentes resumidas:
+% - Cartas al estudiantado CA-0411 (I-2024, I-2025, I-2026),
+%   https://emate.ucr.ac.cr/carrera-ciencias-actuariales
+% - Programa vigente CA-0411 Análisis de Datos I (Cursos/)
+% No modificar sin decisión curricular expresa.
+\newpage
+\subsection*{CA-0411 Análisis de Datos I}
+\addcontentsline{toc}{subsection}{CA-0411 Análisis de Datos I (propuesta)}
+
+\hypertarget{CA0411AnalisisDatosPropuesta}{}
+\begin{refsection}
+\begin{table}[H]
+\centering{
+\begin{tabular}{|ll|}
+\hline
+\textbf{Año:} IV  & \textbf{Requisitos:} CA-0303 Estadística I \\
+\textbf{Ciclo:} VII  & \textbf{Correquisitos:} Ninguno \\
+\textbf{Tipo de curso:} Teórico-práctico & \textbf{Horas semanales:} 5 \\
+\textbf{Créditos:} 4 & \textbf{Virtualidad:} P, PV \\ \hline
+\end{tabular}
+}
+\end{table}
+
+\subsubsection*{Descripción del curso}
+
+Este curso está dirigido a estudiantes avanzados que han completado una formación básica en estadística e inferencia, por lo que se ubica en el cuarto año (ciclo~VII) de la ruta de matemática aplicada. Introduce la modelación de aprendizaje estadístico y la implementación de métodos de aprendizaje no supervisado y supervisado, de modo que la persona estudiante adquiera herramientas de análisis de datos con aplicaciones en múltiples disciplinas, incluyendo riesgos, seguros, finanzas, demografía y otras ciencias cuantitativas.
+
+La propuesta resume y adapta, al formato de programas de la carrera de Matemática, los contenidos y énfasis de las cartas al estudiantado de \textbf{CA-0411 Análisis de Datos~I} (ofertas recientes) y el programa existente de análisis de datos~I.
+
+\subsubsection*{Objetivo general}
+
+Fortalecer en el estudiantado las competencias teóricas y analíticas del aprendizaje estadístico para diseñar, implementar y evaluar críticamente modelos de aprendizaje supervisado y no supervisado aplicados a datos reales.
+
+\subsubsection*{Objetivos específicos}
+
+Al finalizar el curso el/la estudiante estará en la capacidad de:
+
+\begin{enumerate}
+\item Comprender el modelo de aprendizaje estadístico y su relación con el proceso de modelación en ciencia de datos. (SC11, SH05.)
+\item Implementar modelos de aprendizaje no supervisado y supervisado en conjuntos de datos de distinta índole. (SC11, SH05.)
+\item Analizar los procesos de construcción, validación y calibración de modelos, con especial énfasis en aplicaciones cuantitativas (por ejemplo, riesgos, seguros, finanzas o demografía). (SC11, SH05.)
+\item Comunicar resultados de modelación a públicos especializados y no especializados, mediante informes y presentaciones. (SH09.)
+\end{enumerate}
+
+\subsubsection*{Contenidos}
+
+La distribución por semanas es orientativa. La persona docente puede reordenar la práctica y profundizar subtemas, sin omitir los contenidos obligatorios. Los ítems marcados como \emph{ampliación} pueden cubrirse según el perfil del grupo y el tiempo disponible.
+
+\begin{enumerate}
+\item \textbf{Introducción al aprendizaje estadístico y al análisis multidimensional (2 semanas):}
+\begin{enumerate}
+\item Motivación del aprendizaje estadístico; marco de modelación en ciencia de datos; sesgo--varianza; conjuntos de entrenamiento, validación y prueba.
+\item Tabla de datos; nubes de individuos y nubes de variables.
+\item Métrica en un espacio euclidiano y distancia en un espacio afín; métrica de pesos.
+\item Centro de gravedad de la nube; matriz de varianza--covarianza; inercias.
+\end{enumerate}
+\item \textbf{Aprendizaje no supervisado (5--6 semanas):}
+\begin{enumerate}
+\item \textbf{Análisis en componentes principales (ACP):}
+\begin{enumerate}
+\item Aplicación e interpretación de un ACP.
+\item Algoritmo e implementación del ACP.
+\item Presentación geométrica y algebraica del ACP.
+\end{enumerate}
+\item \textbf{Clasificación automática (conglomerados):}
+\begin{enumerate}
+\item Panorama de algoritmos de clasificación automática.
+\item Método de $k$-medias.
+\item Método de $k$-medoïdes.
+\item Agrupación (clasificación) jerárquica.
+\end{enumerate}
+\item \textbf{Ampliaciones de análisis multidimensional} (a criterio docente):
+\begin{enumerate}
+\item Escalamiento multidimensional (\emph{multidimensional scaling}).
+\item Análisis de correspondencias simples (AFC).
+\item Análisis de correspondencias múltiples (AFCM).
+\end{enumerate}
+\end{enumerate}
+\item \textbf{Aprendizaje supervisado (6--7 semanas):}
+\begin{enumerate}
+\item Motivación del aprendizaje supervisado.
+\item Método de $k$ vecinos más cercanos (KNN) (\emph{ampliación} o puente hacia evaluación de clasificadores).
+\item \textbf{Medición de la calidad de un método supervisado:}
+\begin{enumerate}
+\item Matriz de confusión.
+\item Análisis del error y curvas ROC.
+\end{enumerate}
+\item \textbf{Análisis discriminante:}
+\begin{enumerate}
+\item Enfoque factorial.
+\item Enfoque bayesiano / métodos bayesianos asociados.
+\end{enumerate}
+\item Árboles de decisión (método CART).
+\item Bosques aleatorios.
+\item Valores de Shapley para explicar la predicción de los modelos.
+\item Máquinas de soporte vectorial.
+\item Validación cruzada y calibración de modelos.
+\end{enumerate}
+\item \textbf{Proyecto integrador} (transversal; énfasis en las semanas finales):
+\begin{enumerate}
+\item Planteamiento de una pregunta de investigación y uso de datos reales.
+\item Aplicación de al menos un método de aprendizaje supervisado o no supervisado \emph{no desarrollado en detalle} en clase.
+\item Bitácoras de avance, informe escrito y presentación oral; se recomienda orientar el tema, cuando los datos lo permitan, a riesgos, seguros, finanzas, crédito o segmentación.
+\end{enumerate}
+\end{enumerate}
+
+\subsubsection*{Metodología}
+
+Se espera que la persona docente aplique al menos tres de las siguientes estrategias didácticas:
+
+\begin{enumerate}
+\item Clases magistrales con casos prácticos de modelación.
+\item Laboratorios guiados en R o Python (el curso puede impartirse preferentemente en uno de los dos lenguajes; se permite que el estudiantado trabaje en el otro si demuestra dominio equivalente).
+\item Proyecto grupal a lo largo del ciclo, con bitácoras de avance.
+\item Búsqueda de datos y preguntas de investigación en fuentes externas.
+\item Solución de problemas reales ligados a la industria o a contextos interdisciplinarios.
+\item Visitas o charlas de personas expertas (banca, riesgos, segmentación u otros ámbitos de valor agregado).
+\item Identificación de conceptos en artículos científicos sencillos e interpretación de resultados.
+\item Peer project learning y retroalimentación entre pares en presentaciones.
+\end{enumerate}
+
+Se motiva a la persona docente a incentivar un proyecto con alto componente computacional durante las 15~semanas del curso, la aplicación de modelos en la cuantificación de incertidumbre o riesgo, y la interpretación de resultados hacia público no especializado. Cuando la disponibilidad de datos lo permita, se recomienda orientar el proyecto a temas de riesgos, seguros, finanzas, crédito o segmentación, sin excluir otras aplicaciones matemáticas o científicas coherentes con el perfil del estudiantado.
+
+\subsubsection*{Evaluación}
+
+La evaluación del aprovechamiento puede combinar, a criterio de la persona docente, los siguientes rubros (con ponderaciones definidas en la carta al estudiantado de cada oferta):
+
+\begin{enumerate}
+\item Tareas teóricas y de implementación.
+\item Laboratorios evaluados (componente teórico y de programación).
+\item Proyecto: bitácoras, presentaciones orales e informe escrito.
+\item Examen o prueba integradora (opcional según la oferta).
+\item Documentos sintéticos: póster, resumen (\emph{abstract}), etc.
+\end{enumerate}
+
+\subsubsection*{Bibliografía}
+
+\begin{enumerate}
+\item James, G., Witten, D., Hastie, T., Tibshirani, R. y Taylor, J. (2023). \emph{An Introduction to Statistical Learning: With Applications in Python.} Springer. También la edición con aplicaciones en R.
+\item Hastie, T., Tibshirani, R. y Friedman, J. (2009). \emph{The Elements of Statistical Learning: Data Mining, Inference, and Prediction} (2nd ed.). Springer.
+\item Trejos, J.; Castillo, W.; González, J. (2014). \emph{Análisis Multivariado de Datos. Métodos y Aplicaciones.} Editorial de la Universidad de Costa Rica.
+\item Breiman, L., Friedman, J., Olshen, R. y Stone, C. (1984). \emph{Classification and Regression Trees.} Chapman and Hall/CRC.
+\item Breiman, L. (2001). Random forests. \emph{Machine Learning}, 45(1), 5--32.
+\item Lundberg, S. M. y Lee, S.-I. (2017). A unified approach to interpreting model predictions. En \emph{Advances in Neural Information Processing Systems}.
+\item Géron, A. (2022). \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow.} O'Reilly.
+\item Wickham, H. y Grolemund, G. (2017). \emph{R for Data Science.} O'Reilly.
+\item McKinney, W. (2022). \emph{Python for Data Analysis.} O'Reilly.
+\item Hair, J. F., Black, W. C., Babin, B. J. y Anderson, R. E. (2019). \emph{Multivariate Data Analysis} (8th ed.). Cengage.
+\item Murphy, K. P. (2012). \emph{Machine Learning: A Probabilistic Perspective.} MIT Press.
+\item Yu, B. y Barter, R. \emph{Veridical Data Science: The Practice of Responsible Data Analysis and Decision Making.} \url{https://vdsbook.com/}
+\end{enumerate}
+
+\end{refsection}

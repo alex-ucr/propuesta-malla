@@ -6,10 +6,10 @@ Leyenda de énfasis: **Pura y aplicada** = presente en ambas mallas; **Pura** / 
 
 | Sigla | Curso | Énfasis | Saberes del perfil |
 |-------|-------|---------|-------------------|
-| MA-0404 | Herramientas de ciencia de datos I | Aplicada | SC03, SC04, SC11, SH01, SH06, SH09, SH10, SH11, SS04, SS14 |
-| MA-0503 | Estadística I | Aplicada | SC08, SC11, SH01, SH05, SH11, SS14 |
-| MA-0711 | Análisis de Datos I | Aplicada | SC02, SC11, SC17, SH05, SH09, SH11, SS14 |
-| MA-0421 | Probabilidad | Aplicada | SC05, SC08, SH05, SH11, SH22, SS14 |
+| CA-0203 | Herramientas de ciencia de datos I | Aplicada | SC03, SC04, SC11, SH01, SH06, SH09, SH10, SH11, SS04, SS14 |
+| CA-0303 | Estadística I | Aplicada | SC08, SC11, SH01, SH05, SH11, SS14 |
+| CA-0411 | Análisis de Datos I | Aplicada | SC02, SC11, SC17, SH05, SH09, SH11, SS14 |
+| CA-0721 | Probabilidad | Aplicada | SC05, SC08, SH05, SH11, SH22, SS14 |
 | MA-0151 | Fundamentos de álgebra, trigonometría y geometría analítica | Pura y aplicada | SC01, SC09, SH02, SH07, SH21, SS02 |
 | MA-0152 | Matemática Exploratoria | Pura y aplicada | SC01, SC12, SC16, SH02, SH05, SH12, SH23, SS02, SS05, SS13 |
 | MA-0251 | Introducción al Cálculo en una variable | Pura y aplicada | SC04, SH01, SH02, SH05, SS02 |

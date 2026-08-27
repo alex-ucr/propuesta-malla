@@ -1,0 +1,12 @@
+% !TeX program = pdflatex
+% Compilar desde la raíz del proyecto: latexmk Cursos/CA0303-estadistica-i.tex
+% Luego: biber CA0303-estadistica-i y pdflatex de nuevo (×2).
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\input{preamble-body.tex}
+
+\begin{document}
+\input{CA0303-estadistica-i-cuerpo.tex}
+\end{document}

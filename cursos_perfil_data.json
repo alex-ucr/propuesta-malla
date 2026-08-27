@@ -1,28 +1,28 @@
 [
   {
-    "titulo": "MA-0404 Herramientas de ciencia de datos I",
-    "sigla": "MA-0404",
+    "titulo": "CA-0203 Herramientas de ciencia de datos I",
+    "sigla": "CA-0203",
     "nombre_corto": "Herramientas de ciencia de datos I",
     "enfasis": "aplicada",
     "saberes": ["SC03", "SC04", "SC11", "SH01", "SH06", "SH09", "SH10", "SH11", "SS04", "SS14"]
   },
   {
-    "titulo": "MA-0503 Estadística I",
-    "sigla": "MA-0503",
+    "titulo": "CA-0303 Estadística I",
+    "sigla": "CA-0303",
     "nombre_corto": "Estadística I",
     "enfasis": "aplicada",
     "saberes": ["SC08", "SC11", "SH01", "SH05", "SH11", "SS14"]
   },
   {
-    "titulo": "MA-0711 Análisis de Datos I",
-    "sigla": "MA-0711",
+    "titulo": "CA-0411 Análisis de Datos I",
+    "sigla": "CA-0411",
     "nombre_corto": "Análisis de Datos I",
     "enfasis": "aplicada",
     "saberes": ["SC02", "SC11", "SC17", "SH05", "SH09", "SH11", "SS14"]
   },
   {
-    "titulo": "MA-0421 Probabilidad",
-    "sigla": "MA-0421",
+    "titulo": "CA-0721 Probabilidad",
+    "sigla": "CA-0721",
     "nombre_corto": "Probabilidad",
     "enfasis": "aplicada",
     "saberes": ["SC05", "SC08", "SH05", "SH11", "SH22", "SS14"]

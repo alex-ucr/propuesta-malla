@@ -25,7 +25,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0703 | Integración |
 | MA-0525 | Combinatoria |
 | MA-0528 | Sistemas dinámicos |
-| MA-0711 | Análisis de Datos I |
+| CA-0411 | Análisis de Datos I |
 | MA-0815 | Análisis armónico |
 | MA-0506 | Teoría algebraica de números |
 | MA-0512 | Teoría de conjuntos |
@@ -44,14 +44,14 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 
 | Sigla | Nombre |
 |-------|--------|
-| MA-0421 | Probabilidad |
+| CA-0721 | Probabilidad |
 | MA-0647 | Modelación Matemática |
 | MA-0918 | Procesos estocásticos |
 | MA-0917 | Estadística II |
 | CA-0512 | Modelos lineales |
 | CA-0612 | Series de tiempo |
 | MA-0406 | Introducción a la optimización |
-| MA-0404 | Herramientas de ciencia de datos I |
+| CA-0203 | Herramientas de ciencia de datos I |
 | CA-0304 | Herramientas de ciencia de datos II |
 | MA-0790 | Tópicos de análisis |
 | MA-0791 | Tópicos de Probabilidad |

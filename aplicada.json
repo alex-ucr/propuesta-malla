@@ -15,13 +15,13 @@
   "IV Ciclo": [
     "MA-0461 Algebra Lineal II",
     "MA-0451 Principios de análisis en una variable",
-    "MA-0421 Probabilidad",
-    "MA-0404 Herramientas de ciencia de datos I"
+    "CA-0721 Probabilidad",
+    "CA-0203 Herramientas de ciencia de datos I"
   ],
   "V Ciclo": [
     "MA-0551 Principios de análisis en varias variables",
     "MA-0615 Ecuaciones Diferenciales",
-    "MA-0503 Estadística I"
+    "CA-0303 Estadística I"
   ],
   "VI Ciclo": [
     "MA-0541 Análisis Numérico I",
@@ -30,7 +30,7 @@
   "VII Ciclo": [
     "MA-0702 Análisis Complejo",
     "MA-0635 Introducción a la Topología",
-    "MA-0711 Análisis de Datos I",
+    "CA-0411 Análisis de Datos I",
     "MA-0701 Seminario de Matemática",
     "MA-0780 Comunicación en las ciencias"
   ],

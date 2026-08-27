@@ -4,7 +4,7 @@ Cada entrada corresponde a un `\item` de **primer nivel** dentro de entornos `en
 
 Los sub-ítems de listas anidadas quedan dentro del texto del ítem padre (no se listan por separado).
 
-Los párrafos sin listas (p. ej. MA-0421) no generan entradas aquí.
+Los párrafos sin listas (p. ej. CA-0721) no generan entradas aquí.
 
 - **Archivos con sección Metodología:** 25
 - **Ítems distintos:** 113
@@ -127,7 +127,7 @@ Los párrafos sin listas (p. ej. MA-0421) no generan entradas aquí.
 
 ## Por archivo
 
-### `MA0404-herramientas-ciencia-datos-i-cuerpo.tex`
+### `CA0203-herramientas-ciencia-datos-i-cuerpo.tex`
 
 - Un repositorio \emph{git} (GitHub/GitLab) con la historia de su proyecto.
 - Código de la importación de datos ya sea mediante Excel o R.
@@ -135,7 +135,7 @@ Los párrafos sin listas (p. ej. MA-0421) no generan entradas aquí.
 - Código con los \emph{scripts} para visualizar sus datos.
 - Reporte descriptivo con los hallazgos encontrados.
 
-### `MA0503-estadistica-i-cuerpo.tex`
+\subsection `CA0303-estadistica-i-cuerpo.tex`
 
 - Proyecto.
 - Presentaciones orales a público fuera del grupo.
@@ -147,7 +147,7 @@ Los párrafos sin listas (p. ej. MA-0421) no generan entradas aquí.
 - Revisión por pares.
 - Laboratorios guiados en R y en hojas de cálculo.
 
-### `MA0711-analisis-datos-i-cuerpo.tex`
+### `CA0411-analisis-datos-i-cuerpo.tex`
 
 - Proyecto.
 - Avances de proyecto (bitácoras).
@@ -161,7 +161,7 @@ Los párrafos sin listas (p. ej. MA-0421) no generan entradas aquí.
 - Laboratorios guiados en R o Python.
 - Solución de problemas reales ligados a la industria.
 
-### `MA0421-probabilidad-cuerpo.tex`
+### `CA0721-probabilidad-cuerpo.tex`
 
 *(Sin listas enumerate/itemize en el bloque Metodología.)*
 
