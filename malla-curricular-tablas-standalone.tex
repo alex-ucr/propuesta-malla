@@ -1,0 +1,17 @@
+% !TeX program = pdflatex
+% Documento auxiliar para compilar las tablas de malla.
+% Uso: latexmk malla-curricular-tablas-standalone.tex
+\documentclass[11pt,a4paper,landscape]{article}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\begin{document}
+\input{malla-curricular-tablas.tex}
+\end{document}
