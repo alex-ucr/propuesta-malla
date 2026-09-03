@@ -1,38 +1,114 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% MA-0714 Optimización %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% MA-0714 Optimización %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \subsection*{MA-0714 Optimización}
 \addcontentsline{toc}{subsection}{MA-0714 Optimización}
-
 \hypertarget{MA0714}{}
 \begin{refsection}
 \begin{table}[H]
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} Por determinar \\ 
-\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\ 
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} Por determinar \\ 
-\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} Por determinar \\ \hline
+\textbf{Año:} IV  & \textbf{Requisitos:} Por definir \\
+\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:}   \\
+\textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana:}  \\ \hline
 \end{tabular}
 }
 \end{table}
 
 \subsubsection*{Descripción del curso}
 
-\textit{Programa pendiente de elaboración.}
+La optimización estudia la existencia y la caracterización de los valores extremos de una función sobre un conjunto factible. Este primer curso presenta sus fundamentos desde una perspectiva propia de la matemática pura: se da prioridad a las definiciones precisas, los enunciados completos, las demostraciones y la relación entre las hipótesis de cada teorema y sus conclusiones.
+
+A partir de herramientas del análisis real en varias variables, el álgebra lineal y la geometría convexa, se estudian de manera articulada los problemas sin restricciones, la programación lineal y los problemas con restricciones de igualdad y desigualdad. Los resultados de existencia, las condiciones necesarias y suficientes de optimalidad, los teoremas de separación y la dualidad constituyen el eje del curso. Los algoritmos clásicos se utilizan únicamente para ilustrar las consecuencias de la teoría y no como sustituto de su desarrollo matemático.
+
+El curso busca que la persona estudiante formule problemas de optimización con precisión, identifique las hipótesis que permiten garantizar o caracterizar sus soluciones y construya demostraciones rigurosas. De esta manera, sirve como base para estudios posteriores en análisis convexo, optimización no lineal, investigación de operaciones y áreas afines.
 
 \subsubsection*{Objetivos}
 
-\textit{Pendiente de elaboración.}
+\textbf{General:} Desarrollar los fundamentos matemáticos de la optimización para establecer la existencia y caracterizar las soluciones de problemas con y sin restricciones.
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Formular con precisión problemas de optimización e identificar sus conjuntos factibles y sus soluciones locales y globales.
+\item Establecer la existencia de soluciones mediante argumentos topológicos, en particular a partir de la compacidad y la semicontinuidad o continuidad de la función objetivo.
+\item Deducir y aplicar condiciones necesarias y suficientes de primer y segundo orden para problemas sin restricciones.
+\item Emplear la geometría de los conjuntos convexos, los teoremas de separación y las propiedades de las funciones convexas para demostrar resultados de optimalidad global.
+\item Analizar la estructura geométrica de los problemas de programación lineal y demostrar sus resultados fundamentales de dualidad.
+\item Deducir las condiciones de los multiplicadores de Lagrange y de Karush--Kuhn--Tucker, distinguiendo el papel de las cualificaciones de restricciones.
+\item Establecer condiciones de suficiencia y resultados básicos de dualidad para problemas convexos.
+\item Justificar matemáticamente los principios en que se basan algunos algoritmos clásicos, sin convertir su implementación en el objetivo central del curso.
+\item Consultar literatura especializada y comunicar argumentos matemáticos de manera clara, rigurosa y efectiva, tanto en forma oral como escrita.
+\end{enumerate}
 
 \subsubsection*{Contenidos}
+\begin{enumerate}
+\item \textbf{Fundamentos y optimización sin restricciones (5 semanas):}
+\begin{enumerate}
+    \item Formulación general de un problema de optimización. Óptimos locales y globales. Conceptos topológicos básicos.
+    \item Existencia de soluciones: compacidad, continuidad y teorema de valores extremos. Nociones elementales de coercividad.
+    \item Condiciones necesarias y suficientes de primer y segundo orden para óptimos locales.
+    \item Conjuntos convexos, combinaciones convexas y teoremas de separación.
+    \item Funciones convexas y estrictamente convexas. Caracterizaciones de primer y segundo orden y optimalidad global.
+    \item Optimización cuadrática sin restricciones como ejemplo integrador.
+    \item Principios teóricos de los métodos de descenso como ilustración de la teoría.
+\end{enumerate}
 
-\textit{Pendiente de elaboración.}
+\item \textbf{Programación lineal (4 semanas):}
+\begin{enumerate}
+    \item Formas canónica y estándar. Poliedros, puntos extremos, direcciones extremas y bases.
+    \item Existencia de soluciones y caracterización de soluciones óptimas mediante puntos extremos.
+    \item Lema de Farkas y alternativas lineales.
+    \item Problema dual. Dualidad débil, dualidad fuerte y holgura complementaria.
+    \item Fundamento geométrico del método símplex; ejemplos y aplicaciones.
+\end{enumerate}
+
+\item \textbf{Optimización con restricciones de igualdad y desigualdad (5 semanas):}
+\begin{enumerate}
+    \item Restricciones de igualdad: espacio tangente y teorema de los multiplicadores de Lagrange.
+    \item Restricciones de desigualdad: direcciones factibles, condiciones de Karush--Kuhn--Tucker y papel de las cualificaciones de restricciones.
+    \item Condiciones suficientes de optimalidad en problemas convexos.
+    \item Funciones cóncavas y cuasicóncavas como formulaciones equivalentes para problemas de maximización.
+    \item Función dual de Lagrange, dualidad débil y condiciones para la dualidad fuerte en programación convexa.
+    \item Optimización cuadrática con restricciones de igualdad y sistema KKT como ejemplo integrador.
+\end{enumerate}
+
+\item \textbf{Proyectos de descubrimiento (2 semanas):}
+Temas relacionados con la materia para ser desarrollados por las personas estudiantes mediante la lectura guiada de literatura matemática. Los temas serán seleccionados de común acuerdo con la persona docente; por ejemplo, métodos de punto interior, subgradientes y optimización no diferenciable, dualidad de Fenchel o aplicaciones de la optimización convexa.
+
+\end{enumerate}
 
 \subsubsection*{Metodología}
 
-\textit{Pendiente de elaboración.}
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item La presentación de los contenidos debe priorizar el rigor matemático: definiciones precisas, enunciados completos y demostraciones de los resultados fundamentales (existencia, condiciones de optimalidad, suficiencia y dualidad).
+    \item Los algoritmos de optimización se abordan principalmente desde la perspectiva de su justificación teórica y como ilustración de los resultados, sin que la implementación computacional sea el eje del curso.
+    \item Cada estudiante debe realizar una revisión de la bibliografía como complemento al trabajo presencial.
+\end{enumerate}
 
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
+\begin{enumerate}
+    \item Aprovechar los problemas de optimización cuadrática, sin y con restricciones de igualdad, como ejemplos recurrentes que conectan las condiciones de optimalidad con el álgebra lineal.
+    \item Utilizar la programación lineal y su dualidad como caso prototípico, de modo que las condiciones de Karush-Kuhn-Tucker y la dualidad de Lagrange aparezcan posteriormente como su generalización natural.
+    \item Promover el trabajo constante a lo largo del ciclo lectivo mediante tareas que combinen demostraciones, construcción de ejemplos y contraejemplos, y resolución analítica de problemas concretos.
+    \item Incorporar proyectos de descubrimiento sobre temas que extiendan la materia del curso, definidos de común acuerdo con la persona docente.
+    \item Fomentar la comunicación clara y efectiva de ideas matemáticas, tanto de forma oral como escrita, sugiriendo el uso de \LaTeX{} para la presentación de resultados.
+\end{enumerate}
+
+\subsubsection*{Orientación bibliográfica}
+
+Como introducciones generales a la teoría de optimización se recomiendan \textcite{Sun96} y \textcite{LY16}. La programación lineal, su interpretación geométrica y su dualidad pueden estudiarse con mayor profundidad en \textcite{BT97}. Para convexidad, programación convexa y dualidad, la referencia principal es \textcite{BV04}. Los problemas no lineales, las condiciones de optimalidad, las cualificaciones de restricciones y los fundamentos de los métodos clásicos se complementan con \textcite{Rus06} y \textcite{Ber16}.
+
+\nocite{Sun96}
+\nocite{LY16}
+\nocite{BT97}
+\nocite{BV04}
+\nocite{Rus06}
+\nocite{Ber16}
+
+\printbibliography[heading=subbibliography,section=\the\value{refsection}]
 \end{refsection}
