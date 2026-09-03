@@ -1,0 +1,85 @@
+/* Barra institucional compartida (todas las páginas del sitio). */
+.site-brand {
+  background: #003366;
+  border-bottom: 3px solid #ffcc00;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  /* La barra no crece; los logos se escalan visualmente por encima. */
+  overflow: visible;
+}
+
+.site-brand-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.65rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: nowrap;
+  /* Altura de barra igual a la anterior (padding + logo sin escalar). */
+  box-sizing: border-box;
+  height: calc(0.65rem * 2 + 3.5rem);
+}
+
+.site-brand a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.site-brand img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-height: 3.25rem;
+  transform: scale(2);
+  transform-origin: center center;
+}
+
+.site-brand .logo-ucr {
+  max-height: 2.75rem;
+  transform-origin: left center;
+}
+
+.site-brand .logo-mate {
+  max-height: 3.5rem;
+  transform-origin: right center;
+}
+
+.site-brand .logo-mobile {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .site-brand-inner {
+    justify-content: center;
+    padding: 0.55rem 0.85rem;
+    height: calc(0.55rem * 2 + 2.5rem);
+    gap: 2rem;
+  }
+
+  .site-brand .logo-desktop {
+    display: none;
+  }
+
+  .site-brand .logo-mobile {
+    display: block;
+  }
+
+  .site-brand img {
+    max-height: 2.5rem;
+    transform: scale(2);
+  }
+
+  .site-brand .logo-ucr {
+    transform-origin: center center;
+  }
+
+  .site-brand .logo-mate {
+    transform-origin: center center;
+  }
+}

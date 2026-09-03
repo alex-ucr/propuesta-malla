@@ -1,0 +1,41 @@
+{
+  "I Ciclo": [
+    "MA-0151 Fundamentos de álgebra, trigonometría y geometría analítica",
+    "MA-0152 Matemática Exploratoria"
+  ],
+  "II Ciclo": [
+    "MA-0251 Introducción al Cálculo en una variable",
+    "MA-0252 Introducción a las Demostraciones"
+  ],
+  "III Ciclo": [
+    "MA-0361 Algebra Lineal I",
+    "MA-0341 Matemática Computacional",
+    "MA-0351 Introducción al Cálculo en varias variables"
+  ],
+  "IV Ciclo": [
+    "MA-0461 Algebra Lineal II",
+    "MA-0451 Principios de análisis en una variable",
+    "MA-0471 Introducción a la Geometría Diferencial",
+    "MA-0496 Teoría de Números"
+  ],
+  "V Ciclo": [
+    "MA-0561 Algebra Abstracta I",
+    "MA-0551 Principios de análisis en varias variables",
+    "MA-0515 Ecuaciones Diferenciales"
+  ],
+  "VI Ciclo": [
+    "MA-0661 Algebra Abstracta II",
+    "MA-0635 Introducción a la Topología",
+    "MA-0641 Análisis Numérico I"
+  ],
+  "VII Ciclo": [
+    "MA-0705 Análisis Real I",
+    "MA-0702 Análisis Complejo",
+    "MA-0701 Seminario de Matemática",
+    "MA-0780 Comunicación en las ciencias"
+  ],
+  "VIII Ciclo": [
+    "MA-0781 Pasantía en matemáticas"
+  ]
+}
+
