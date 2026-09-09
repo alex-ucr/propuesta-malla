@@ -10,13 +10,9 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 
 \subsubsection*{Bloque común (ciclos I a III)}
 
-\begingroup
-\small
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.15}
-\begin{longtable}{|c|l|>{\raggedright\arraybackslash}p{4.6cm}|
-c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
->{\raggedright\scriptsize\arraybackslash}p{2.5cm}|}
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
 \hline
 \textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
 \multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
@@ -25,47 +21,24 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 \cline{4-7}
  &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
 \hline
-\endfirsthead
-\multicolumn{10}{c}{\textit{(continúa en la página siguiente)}} \\
-\endhead
+1 & EF- & ACTIVIDAD DEPORTIVA & 0 & 0 & 2 & 0 & 0 &  &  \\
 \hline
-\multicolumn{10}{|r|}{\textit{Continúa...}} \\
-\endfoot
+1 & EG-I & CURSO INTEGRADO DE HUMANIDADES I & 8 & 0 & 0 & 0 & 6 &  &  \\
 \hline
-\endlastfoot
 1 & MA0151 & FUNDAMENTOS DE ÁLGEBRA, TRIGONOMETRÍA Y GEOMETRÍA ANALÍTICA &  &  &  &  & 3 &  &  \\
 \hline
 1 & MA0152 & MATEMÁTICA EXPLORATORIA &  &  &  &  & 3 &  &  \\
 \hline
-\multicolumn{10}{|l|}{\textit{Créditos ciclo 1: 6}} \\
+1 & RP-1 & REPERTORIO & 1 & 0 & 2 & 0 & 3 &  &  \\
 \hline
-2 & MA0251 & INTRODUCCIÓN AL CÁLCULO EN UNA VARIABLE &  &  &  &  & 3 & MA0151 Fundamentos de Álgebra, Trigonometría y Geometría Analítica & MA0252 Introducción a las Demostraciones \\
+\multicolumn{10}{|l|}{\textit{Créditos ciclo 1: 15}} \\
 \hline
-2 & MA0252 & INTRODUCCIÓN A LAS DEMOSTRACIONES &  &  &  &  & 4 & MA-0152 Matemática Exploratoria &  \\
-\hline
-\multicolumn{10}{|l|}{\textit{Créditos ciclo 2: 7}} \\
-\hline
-3 & MA0361 & ALGEBRA LINEAL I &  &  &  &  & 3 & MA0252 Introducción a las Demostraciones &  \\
-\hline
-3 & MA0341 & MATEMÁTICA COMPUTACIONAL & 4 &  &  &  & 3 & MA0251 Cálculo en Una Variable & MA0361 Álgebra Lineal I \\
-\hline
-3 & MA0351 & INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES &  &  &  &  & 3 & MA-0251 Cálculo en una variable & MA-0361 Algebra Lineal I \\
-\hline
-\multicolumn{10}{|l|}{\textit{Créditos ciclo 3: 9}} \\
-\hline
-\multicolumn{10}{|r|}{\textbf{Total créditos bloque común: 22}} \\
-\end{longtable}
-\endgroup
+\end{tabular}
+\end{sidewaystable}
 
-\subsubsection*{Énfasis en Matemática Pura (ciclos IV a VIII)}
-
-\begingroup
-\small
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.15}
-\begin{longtable}{|c|l|>{\raggedright\arraybackslash}p{4.6cm}|
-c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
->{\raggedright\scriptsize\arraybackslash}p{2.5cm}|}
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
 \hline
 \textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
 \multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
@@ -74,23 +47,81 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 \cline{4-7}
  &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
 \hline
-\endfirsthead
-\multicolumn{10}{c}{\textit{(continúa en la página siguiente)}} \\
-\endhead
+1 & EG-II & CURSO INTEGRADO DE HUMANIDADES II & 8 & 0 & 0 & 0 & 6 & EG-I &  \\
 \hline
-\multicolumn{10}{|r|}{\textit{Continúa...}} \\
-\endfoot
+1 &  & INGLÉS PARA ESTADÍSTICA I &  &  &  &  &  &  &  \\
 \hline
-\endlastfoot
-4 & MA0461 & ALGEBRA LINEAL II &  &  &  &  & 3 & MA0361 Álgebra Lineal I &  \\
+2 & MA0251 & INTRODUCCIÓN AL CÁLCULO EN UNA VARIABLE &  &  &  &  & 3 & MA0151 FUNDAMENTOS DE ÁLGEBRA, TRIGONOMETRIA Y GEOMETRÍA ANALÍTICA & MA0252 INTRODUCCIÓN A LAS DEMOSTRACIONES \\
 \hline
-4 & MA0451 & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE &  &  &  &  & 4 & MA-0351 Cálculo en Varias Variables & MA0461 Álgebra Lineal II \\
+2 & MA0252 & INTRODUCCIÓN A LAS DEMOSTRACIONES &  &  &  &  & 4 & MA-0152 Matemática Exploratoria &  \\
 \hline
-4 & MA0471 & INTRODUCCIÓN A LA GEOMETRÍA DIFERENCIAL &  &  &  &  & 3 & MA-0351 Cálculo en Varias Variables &  \\
+\multicolumn{10}{|l|}{\textit{Créditos ciclo 2: 18}} \\
 \hline
-4 & MA0496 & TEORÍA DE NÚMEROS &  &  &  &  & 3 & MA-0252 Introducción a las Demostraciones &  \\
+\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
 \hline
-\multicolumn{10}{|l|}{\textit{Créditos ciclo 4: 13}} \\
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
+\hline
+3 & MA0361 & ALGEBRA LINEAL I &  &  &  &  & 3 & MA0252 INTRODUCCIÓN A LAS DEMOSTRACIONES &  \\
+\hline
+1 &  & INGLÉS PARA ESTADÍSTICA II &  &  &  &  &  &  &  \\
+\hline
+3 & MA0351 & INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES &  &  &  &  & 3 & MA-0251 CÁLCULO EN UNA VARIABLE & MA-0361 ÁLGEBRA LINEAL I \\
+\hline
+3 & MA0341 & MATEMÁTICA COMPUTACIONAL & 4 &  &  &  & 3 & MA0251 CÁLCULO EN UNA VARIABLE & MA0361 ÁLGEBRA LINEAL I \\
+\hline
+\multicolumn{10}{|l|}{\textit{Créditos ciclo 3: 17}} \\
+\hline
+\multicolumn{10}{|r|}{\textbf{Total créditos bloque común: 22}} \\
+\hline
+\end{tabular}
+\end{sidewaystable}
+
+\subsubsection*{Énfasis en Matemática Pura (ciclos IV a VIII)}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
+\hline
+4 & MA0461 & ALGEBRA LINEAL II &  &  &  &  & 3 & MA0361 ÁLGEBRA LINEAL I &  \\
+\hline
+4 & MA0451 & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE &  &  &  &  & 4 & MA-0351 INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES & MA0461 ÁLGEBRA LINEAL II \\
+\hline
+4 & MA0471 & INTRODUCCIÓN A LA GEOMETRÍA DIFERENCIAL &  &  &  &  & 3 & MA-0351 INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES &  \\
+\hline
+4 & MA0496 & TEORÍA DE NÚMEROS &  &  &  &  & 3 & MA-0252 INTRODUCCIÓN A LAS DEMOSTRACIONES &  \\
+\hline
+\multicolumn{10}{|l|}{\textit{Créditos ciclo 4: 16}} \\
+\hline
+\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
 \hline
 5 & MA0561 & ALGEBRA ABSTRACTA I &  &  &  &  & 4 & MA-0461 Algebra Lineal II y MA-0496 Teoría de Números &  \\
 \hline
@@ -100,6 +131,20 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 \hline
 \multicolumn{10}{|l|}{\textit{Créditos ciclo 5: 12}} \\
 \hline
+\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
+\hline
 6 & MA0661 & ALGEBRA ABSTRACTA II &  &  &  &  & 4 & MA-0561 Algebra Abstracta I &  \\
 \hline
 6 & MA0635 & INTRODUCCIÓN A LA TOPOLOGÍA &  &  &  &  & 4 & MA-0551 Principios de Análisis II &  \\
@@ -107,6 +152,20 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 6 & MA0641 & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias &  \\
 \hline
 \multicolumn{10}{|l|}{\textit{Créditos ciclo 6: 12}} \\
+\hline
+\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
 \hline
 7 & MA0705 & ANÁLISIS REAL I &  &  &  &  & 4 & MA-0635 Topología General &  \\
 \hline
@@ -118,23 +177,12 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 \hline
 \multicolumn{10}{|l|}{\textit{Créditos ciclo 7: 10}} \\
 \hline
-8 & MA0781 & PASANTÍA EN MATEMÁTICAS &  & Según convenio &  & Según convenio & 4 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
-\hline
-\multicolumn{10}{|l|}{\textit{Créditos ciclo 8: 4}} \\
-\hline
-\multicolumn{10}{|r|}{\textbf{Total créditos énfasis pura (incluye bloque común): 73}} \\
-\end{longtable}
-\endgroup
+\end{tabular}
+\end{sidewaystable}
 
-\subsubsection*{Énfasis en Matemática Aplicada (ciclos IV a VIII)}
-
-\begingroup
-\small
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.15}
-\begin{longtable}{|c|l|>{\raggedright\arraybackslash}p{4.6cm}|
-c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
->{\raggedright\scriptsize\arraybackslash}p{2.5cm}|}
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
 \hline
 \textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
 \multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
@@ -143,14 +191,29 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 \cline{4-7}
  &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
 \hline
-\endfirsthead
-\multicolumn{10}{c}{\textit{(continúa en la página siguiente)}} \\
-\endhead
+8 & MA0781 & PASANTÍA EN MATEMÁTICAS &  & Según convenio &  & Según convenio & 4 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
 \hline
-\multicolumn{10}{|r|}{\textit{Continúa...}} \\
-\endfoot
+\multicolumn{10}{|l|}{\textit{Créditos ciclo 8: 4}} \\
+\multicolumn{10}{|r|}{\textbf{Total créditos énfasis pura (incluye bloque común): 73}} \\
 \hline
-\endlastfoot
+\end{tabular}
+\end{sidewaystable}
+
+
+
+\subsubsection*{Énfasis en Matemática Aplicada (ciclos IV a VIII)}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
+\hline
 4 & MA0461 & ALGEBRA LINEAL II &  &  &  &  & 3 & MA0361 Álgebra Lineal I &  \\
 \hline
 4 & MA0451 & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE &  &  &  &  & 4 & MA-0351 Cálculo en Varias Variables & MA0461 Álgebra Lineal II \\
@@ -161,6 +224,20 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 \hline
 \multicolumn{10}{|l|}{\textit{Créditos ciclo 4: 15}} \\
 \hline
+\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
+\hline
 5 & MA0551 & PRINCIPIOS DE ANÁLISIS EN VARIAS VARIABLES &  &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
 \hline
 5 & MA0615 & ECUACIONES DIFERENCIALES &  &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
@@ -169,11 +246,39 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 \hline
 \multicolumn{10}{|l|}{\textit{Créditos ciclo 5: 12}} \\
 \hline
+\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
+\hline
 6 & MA0541 & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias &  \\
 \hline
 6 & MA0625 & ANÁLISIS REAL I &  &  &  &  & 4 & MA-0635 Topología General &  \\
 \hline
 \multicolumn{10}{|l|}{\textit{Créditos ciclo 6: 8}} \\
+\hline
+\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
 \hline
 7 & MA0702 & ANÁLISIS COMPLEJO &  &  &  &  & 4 & MA-0635 Topología General &  \\
 \hline
@@ -187,10 +292,26 @@ c|c|c|c|c|>{\raggedright\scriptsize\arraybackslash}p{3.3cm}|
 \hline
 \multicolumn{10}{|l|}{\textit{Créditos ciclo 7: 14}} \\
 \hline
+\end{tabular}
+\end{sidewaystable}
+
+
+\begin{sidewaystable}[H]
+\centering
+\begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+\hline
+\textbf{Ciclo} & \textbf{Curso} & \textbf{Nombre del curso} &
+\multicolumn{4}{c|}{\textbf{Horas}} & \textbf{Cred.} &
+\shortstack{Requisitos y\\ Req. Equivalentes} &
+\shortstack{Correquisitos y\\ Correq. Equivalentes} \\
+\cline{4-7}
+ &  &  & \textbf{T} & \textbf{P} & \textbf{L} & \textbf{TP} &  &  &  \\
+\hline
 8 & MA0781 & PASANTÍA EN MATEMÁTICAS &  & Según convenio &  & Según convenio & 4 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
 \hline
 \multicolumn{10}{|l|}{\textit{Créditos ciclo 8: 4}} \\
 \hline
 \multicolumn{10}{|r|}{\textbf{Total créditos énfasis aplicada (incluye bloque común): 75}} \\
-\end{longtable}
-\endgroup
+\hline
+\end{tabular}
+\end{sidewaystable}
