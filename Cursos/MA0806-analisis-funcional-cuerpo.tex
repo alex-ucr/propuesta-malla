@@ -1,6 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% MA-0806 Análisis funcional %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% MA-0806 Análisis funcional %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Propuesta de programa. Fuentes resumidas y adaptadas:
+% - NYU Courant, MATH-GA 2550 Functional Analysis I
+% - UC Berkeley, MATH 202B (bloque de análisis funcional) y MATH 206
+%   (temas de segundo curso, aquí como ampliación)
+% - Georgia Tech, MATH 6338 Real Analysis II y MATH 7338 Functional Analysis
+%   (este último, como ampliación)
 \newpage
 \subsection*{MA-0806 Análisis funcional}
 \addcontentsline{toc}{subsection}{MA-0806 Análisis funcional}
@@ -11,28 +17,140 @@
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} Por determinar \\ 
-\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\ 
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} Por determinar \\ 
-\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} Por determinar \\ \hline
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0705 (o MA-0625) Análisis Real I \\
+\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} 5 \\
+\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} 10 \\ \hline
 \end{tabular}
 }
 \end{table}
 
 \subsubsection*{Descripción del curso}
 
-\textit{Programa pendiente de elaboración.}
+Este curso optativo introduce el análisis funcional como el estudio de espacios de dimensión infinita ---principalmente espacios de Banach y de Hilbert--- y de los operadores lineales acotados entre ellos. Se ubica en el cuarto año, una vez que la persona estudiante dispone de la medida e integración de Lebesgue y de una primera aproximación a los espacios $L^p$ (MA-0705 Análisis Real~I). Marca el paso del análisis en $\R^n$ al análisis en espacios abstractos, y constituye una base para estudios posteriores en ecuaciones diferenciales, análisis armónico, teoría espectral y análisis aplicado.
+
+El programa se articula a partir de tres referencias curriculares contemporáneas. El núcleo coincide con \textbf{MATH~6338} de Georgia Tech (espacios $L^p$, Banach y Hilbert; operadores acotados; teoremas de Hahn--Banach, acotación uniforme, aplicación abierta y gráfica cerrada) y con \textbf{MATH-GA~2550} de NYU Courant (dualidad, topologías débiles, teorema de Alaoglu, operadores compactos y teorema espectral). El bloque de dualidad y convexidad se alinea con la parte de análisis funcional de \textbf{MATH~202B} de Berkeley. Los temas de segundo curso ---operadores no acotados, álgebras de Banach, cálculo funcional analítico, semigrupos--- aparecen en Berkeley \textbf{MATH~206} y Georgia Tech \textbf{MATH~7338}; aquí se reservan como \emph{ampliación} o proyectos de descubrimiento.
+
+El énfasis es teórico: definiciones precisas, enunciados completos y demostraciones de los teoremas fundamentales. Los ejemplos en $L^p$, $C(K)$, $\ell^p$ y espacios de Hilbert clásicos se usan para concretar la teoría, no para sustituirla. Se espera que la persona estudiante formule argumentos rigurosos, construya ejemplos y contraejemplos, y reconozca el alcance de cada hipótesis.
 
 \subsubsection*{Objetivos}
 
-\textit{Pendiente de elaboración.}
+\textbf{General:} Desarrollar los fundamentos del análisis funcional en espacios de Banach y de Hilbert, de modo que la persona estudiante demuestre los teoremas clásicos sobre funcionales, operadores y dualidad, y los aplique a espacios concretos de funciones.
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Reconocer y comparar las estructuras de espacio normado, de Banach y de Hilbert, y verificar completitud, separabilidad y reflexividad en ejemplos clásicos, en particular en $L^p$ y $\ell^p$.
+\item Emplear las desigualdades de Hölder, Minkowski y Bessel, y el teorema de la proyección, para resolver problemas en espacios de Hilbert y justificar la existencia de bases ortonormales.
+\item Analizar operadores lineales acotados, calcular normas de operadores, y relacionar un operador con su adjunto mediante el teorema de representación de Riesz en Hilbert.
+\item Demostrar el teorema de Hahn--Banach y aplicarlo a la separación de convexos, a la dualidad de $L^p$ y a la extensión de funcionales.
+\item Deducir, a partir del teorema de Baire, los principios de acotación uniforme, de la aplicación abierta y de la gráfica cerrada, e identificar hipótesis indispensables mediante contraejemplos.
+\item Distinguir las topologías fuerte, débil y débil-$*$, y aplicar el teorema de Banach--Alaoglu a problemas de existencia y compactidad.
+\item Caracterizar operadores compactos y demostrar el teorema espectral para operadores compactos autoadjuntos en Hilbert, con una aplicación a ecuaciones integrales.
+\item Consultar literatura especializada y comunicar argumentos de análisis funcional con rigor, tanto de forma oral como escrita.
+\end{enumerate}
 
 \subsubsection*{Contenidos}
 
-\textit{Pendiente de elaboración.}
+La distribución por semanas es orientativa (ciclo de aproximadamente 16~semanas). La persona docente puede reordenar subtemas y profundizar ejemplos, sin omitir los contenidos obligatorios. Los ítems marcados como \emph{ampliación} pueden cubrirse según el perfil del grupo y el tiempo disponible.
+
+\begin{enumerate}
+\item \textbf{Espacios de Banach y espacios $L^p$ (3 semanas):}
+\begin{enumerate}
+    \item Espacios normados y de Banach. Equivalencia de normas en dimensión finita. Completitud y series absolutamente convergentes.
+    \item Ejemplos: $C(K)$, $C_0$, $\ell^p$, $L^p(\mu)$ y operadores de multiplicación o de desplazamiento.
+    \item Desigualdades de Hölder, Minkowski y Jensen. Completitud de $L^p$ y de $\ell^p$.
+    \item Densidad de funciones continuas o simples, separabilidad de $L^p$ para $1\le p<\infty$, y el caso $L^\infty$.
+\end{enumerate}
+
+\item \textbf{Espacios de Hilbert (2 semanas):}
+\begin{enumerate}
+    \item Productos internos, identidad del paralelogramo y caracterización de normas hilbertianas.
+    \item Ortogonalidad, teorema de la proyección y teorema de la representación de Riesz.
+    \item Sistemas ortonormales, desigualdad de Bessel, identidad de Parseval y bases de Hilbert. El espacio $L^2$ como prototipo.
+\end{enumerate}
+
+\item \textbf{Operadores lineales acotados (2 semanas):}
+\begin{enumerate}
+    \item Operadores acotados y continuidad. Norma de operador y el álgebra $\mathcal{B}(X,Y)$.
+    \item Adjunto de un operador en Hilbert. Operadores autoadjuntos, unitarios, normales y de Hilbert--Schmidt (nociones).
+    \item Espectro y resolvente de un operador acotado: definiciones y propiedades elementales (espectro no vacío en el caso complejo).
+\end{enumerate}
+
+\item \textbf{Teoremas fundamentales (4 semanas):}
+\begin{enumerate}
+    \item Teorema de Baire y consecuencias para espacios de Banach.
+    \item Principio de acotación uniforme (Banach--Steinhaus) y aplicaciones a series de Fourier o a familias de operadores.
+    \item Teoremas de la aplicación abierta y de la gráfica cerrada. Equivalencia de normas que hacen de un espacio un Banach.
+    \item Teorema de Hahn--Banach: versiones analítica y geométrica. Separación de convexos.
+    \item Dual de $L^p$ y adjunto de un operador entre espacios de Banach.
+\end{enumerate}
+
+\item \textbf{Dualidad y topologías débiles (3 semanas):}
+\begin{enumerate}
+    \item Dual topológico, reflexividad y ejemplos ($L^p$, $\ell^p$, $c_0$).
+    \item Topologías débil y débil-$*$. Convergencia débil frente a convergencia en norma.
+    \item Teorema de Banach--Alaoglu. Compactidad débil y débil-$*$.
+    \item Medidas de Radon y dual de $C(K)$ o de $C_0(X)$ (teorema de Riesz--Markov), al menos en el caso de $K$ compacto metrizable.
+    \item Convexidad y teorema de Krein--Milman (\emph{ampliación}).
+\end{enumerate}
+
+\item \textbf{Operadores compactos y teorema espectral (2 semanas):}
+\begin{enumerate}
+    \item Operadores compactos y completamente continuos. Ideal de compactos. Ejemplos integrales.
+    \item Alternativa de Fredholm en Hilbert (o en Banach, según el tiempo).
+    \item Teorema espectral para operadores compactos autoadjuntos: descomposición espectral y convergencia de series de eigenfunciones.
+    \item Aplicación a ecuaciones integrales de Fredholm o a problemas de Sturm--Liouville elementales.
+\end{enumerate}
+
+\item \textbf{Proyectos de descubrimiento y ampliaciones (opcional, hasta 1 semana):}
+Temas para lectura guiada o exposición, de común acuerdo con la persona docente. Corresponden al segundo curso de las referencias (Berkeley MATH~206, Georgia Tech MATH~7338, y la parte avanzada de NYU MATH-GA~2550):
+\begin{enumerate}
+    \item Operadores no acotados autoadjuntos y teorema espectral general.
+    \item Álgebras de Banach, cálculo funcional analítico y teorema de Gelfand--Naimark conmutativo.
+    \item Semigrupos de operadores y teorema de Hille--Yosida.
+    \item Operadores de Fredholm, índice y álgebra de Calkin.
+    \item Introducción a espacios de Sobolev o a distribuciones.
+\end{enumerate}
+
+\end{enumerate}
 
 \subsubsection*{Metodología}
 
-\textit{Pendiente de elaboración.}
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item La presentación debe priorizar el rigor: definiciones precisas, enunciados completos y demostraciones de los teoremas fundamentales (Hahn--Banach, acotación uniforme, aplicación abierta, gráfica cerrada, Alaoglu y teorema espectral compacto).
+    \item Cada construcción abstracta debe acompañarse de al menos un espacio concreto ($L^p$, $\ell^p$, $C(K)$ o un espacio de Hilbert clásico) que ilustre el alcance de las hipótesis.
+    \item Cada estudiante debe realizar una revisión de la bibliografía como complemento al trabajo presencial.
+    \item Se fomenta la comunicación clara y rigurosa de argumentos, tanto oral como escrita.
+\end{enumerate}
 
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
+\begin{enumerate}
+    \item Explicitar el puente con MA-0705: los espacios $L^p$ dejan de ser un apéndice de la integral de Lebesgue y pasan a ser el prototipo de espacio de Banach.
+    \item Usar el espacio de Hilbert como laboratorio: proyección, Riesz y bases ortonormales deben aparecer antes de la teoría general de dualidad, para que Hahn--Banach se lea como su extensión.
+    \item Dedicar tiempo a contraejemplos (operadores no acotados densamente definidos, normas no equivalentes, sucesiones débilmente convergentes que no convergen en norma) para evitar una lectura puramente formal de los teoremas.
+    \item Promover el trabajo constante mediante listas de ejercicios que combinen demostraciones, cálculo de normas y construcción de ejemplos.
+    \item Incorporar un proyecto o exposición breve sobre un tema de ampliación, en la línea de las lecturas guiadas de los cursos de NYU y Berkeley.
+    \item Sugerir el uso de \LaTeX{} para la presentación de tareas y del proyecto.
+\end{enumerate}
+
+\subsubsection*{Orientación bibliográfica}
+
+Como texto principal, al nivel de Georgia Tech MATH~6338 y MATH~7338, se recomienda \textcite{Con90}.
+Las presentaciones de NYU MATH-GA~2550 se apoyan en \textcite{Lax02} y \textcite{RS80}; ambas enfatizan ejemplos y aplicaciones.
+Para dualidad, $L^p$ y una transición hacia Sobolev o EDP, es útil \textcite{Bre11}.
+El tratamiento más topológico y abstracto, cercano a Berkeley MATH~202B/206, aparece en \textcite{Lan93} y \textcite{Rud91}.
+Como referencia general de análisis real y funcional ya presente en la carrera puede usarse \textcite{Bog20}; la medida y los espacios $L^p$ se complementan con \textcite{Fol99}.
+
+\nocite{Con90}
+\nocite{Lax02}
+\nocite{RS80}
+\nocite{Bre11}
+\nocite{Lan93}
+\nocite{Rud91}
+\nocite{Bog20}
+\nocite{Fol99}
+
+\printbibliography[heading=subbibliography,section=\the\value{refsection}]
 \end{refsection}
