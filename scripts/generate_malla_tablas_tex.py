@@ -17,6 +17,7 @@ from typing import Any
 from generate_cursos_perfil_md import (
     CUROS,
     ROOT,
+    SIGLA_ALIASES,
     _build_cuerpo_index,
     _cuerpo_path_for_row,
     _parse_cuerpo_metadata,
@@ -93,6 +94,19 @@ def _lookup_meta(
         meta["nombre_corto"] = _course_name(title, meta)
         return meta
     return {"titulo": title, "sigla": sigla, "nombre_corto": _course_name(title, {})}
+
+
+def _malla_sigla_cell(title: str, sigla_compact: str) -> str:
+    """Clickable sigla targeting the \\hypertarget of the course program."""
+    raw_sigla = title.split(" ", 1)[0]
+    dest = SIGLA_ALIASES.get(raw_sigla, raw_sigla).replace("-", "")
+    if "estudios dirigidos" in title.casefold() and dest == "MA0781":
+        dest = "MA0781SED"
+    elif dest == "CA0411":
+        dest = "CA0411AnalisisDatos"
+    if dest == sigla_compact:
+        return rf"\MallaSigla{{{sigla_compact}}}"
+    return rf"\MallaSigla[{dest}]{{{sigla_compact}}}"
 
 
 def _split_horas(meta: dict[str, Any]) -> tuple[str, str, str, str]:
@@ -176,7 +190,7 @@ def _table_rows(cycle_courses: list[tuple[int, str, dict[str, Any]]]) -> list[st
             " & ".join(
                 [
                     str(ciclo_num),
-                    sigla,
+                    _malla_sigla_cell(title, sigla),
                     nombre,
                     _latex_escape(t),
                     _latex_escape(p),

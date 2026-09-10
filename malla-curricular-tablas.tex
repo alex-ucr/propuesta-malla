@@ -17,8 +17,8 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaHeader
 1 & EF- & ACTIVIDAD DEPORTIVA & 0 & 0 & 2 & 0 & 0 &  &  \\
 1 & EG-I & CURSO INTEGRADO DE HUMANIDADES I & 8 & 0 & 0 & 0 & 6 &  &  \\
-1 & MA0151 & FUNDAMENTOS DE ÁLGEBRA, TRIGONOMETRÍA Y GEOMETRÍA ANALÍTICA & 5 &  &  &  & 3 &  &  \\
-1 & MA0152 & MATEMÁTICA EXPLORATORIA & 5 &  &  &  & 3 &  &  \\
+1 & \MallaSigla{MA0151} & FUNDAMENTOS DE ÁLGEBRA, TRIGONOMETRÍA Y GEOMETRÍA ANALÍTICA & 5 &  &  &  & 3 &  &  \\
+1 & \MallaSigla{MA0152} & MATEMÁTICA EXPLORATORIA & 5 &  &  &  & 3 &  &  \\
 1 & RP-1 & REPERTORIO & 1 & 0 & 2 & 0 & 3 &  &  \\
 \MallaCicloTotal{1}{15}
 \end{tabular}
@@ -29,8 +29,8 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaHeader
 1 & EG-II & CURSO INTEGRADO DE HUMANIDADES II & 8 & 0 & 0 & 0 & 6 & EG-I &  \\
 1 &  & INGLÉS PARA ESTADÍSTICA I &  &  &  &  &  &  &  \\
-2 & MA0251 & INTRODUCCIÓN AL CÁLCULO EN UNA VARIABLE & 5 &  &  &  & 4 & MA0151 FUNDAMENTOS DE ÁLGEBRA, TRIGONOMETRIA Y GEOMETRÍA ANALÍTICA & MA0252 INTRODUCCIÓN A LAS DEMOSTRACIONES \\
-2 & MA0252 & INTRODUCCIÓN A LAS DEMOSTRACIONES & 5 &  &  &  & 4 & MA-0152 Matemática Exploratoria &  \\
+2 & \MallaSigla{MA0251} & INTRODUCCIÓN AL CÁLCULO EN UNA VARIABLE & 5 &  &  &  & 4 & MA0151 FUNDAMENTOS DE ÁLGEBRA, TRIGONOMETRIA Y GEOMETRÍA ANALÍTICA & MA0252 INTRODUCCIÓN A LAS DEMOSTRACIONES \\
+2 & \MallaSigla{MA0252} & INTRODUCCIÓN A LAS DEMOSTRACIONES & 5 &  &  &  & 4 & MA-0152 Matemática Exploratoria &  \\
 \MallaCicloTotal{2}{18}
 \end{tabular}
 \MallaSidewayEnd
@@ -38,10 +38,10 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-3 & MA0361 & ALGEBRA LINEAL I & 5 &  &  &  & 3 & MA0252 INTRODUCCIÓN A LAS DEMOSTRACIONES &  \\
+3 & \MallaSigla{MA0361} & ALGEBRA LINEAL I & 5 &  &  &  & 3 & MA0252 INTRODUCCIÓN A LAS DEMOSTRACIONES &  \\
 1 &  & INGLÉS PARA ESTADÍSTICA II &  &  &  &  &  &  &  \\
-3 & MA0351 & INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0251 CÁLCULO EN UNA VARIABLE & MA-0361 ÁLGEBRA LINEAL I \\
-3 & MA0341 & MATEMÁTICA COMPUTACIONAL & 4 &  &  &  & 3 & MA0251 CÁLCULO EN UNA VARIABLE & MA0361 ÁLGEBRA LINEAL I \\
+3 & \MallaSigla{MA0351} & INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0251 CÁLCULO EN UNA VARIABLE & MA-0361 ÁLGEBRA LINEAL I \\
+3 & \MallaSigla{MA0341} & MATEMÁTICA COMPUTACIONAL & 4 &  &  &  & 3 & MA0251 CÁLCULO EN UNA VARIABLE & MA0361 ÁLGEBRA LINEAL I \\
 \MallaCicloTotal{3}{17}
 \hline
 \MallaTotalFinal{Total créditos bloque común}{22}
@@ -53,10 +53,10 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-4 & MA0461 & ALGEBRA LINEAL II & 5 &  &  &  & 4 & MA0361 ÁLGEBRA LINEAL I &  \\
-4 & MA0451 & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE & 5  &  &  &  & 4 & MA-0351 INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES & MA0461 ÁLGEBRA LINEAL II \\
-4 & MA0471 & INTRODUCCIÓN A LA GEOMETRÍA DIFERENCIAL & 4  &  &  &  & 3 & MA-0351 INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES &  \\
-4 & MA0496 & TEORÍA DE NÚMEROS & 4 &  &  &  & 3 & MA-0252 INTRODUCCIÓN A LAS DEMOSTRACIONES &  \\
+4 & \MallaSigla{MA0461} & ALGEBRA LINEAL II & 5 &  &  &  & 4 & MA0361 ÁLGEBRA LINEAL I &  \\
+4 & \MallaSigla{MA0451} & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE & 5  &  &  &  & 4 & MA-0351 INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES & MA0461 ÁLGEBRA LINEAL II \\
+4 & \MallaSigla{MA0471} & INTRODUCCIÓN A LA GEOMETRÍA DIFERENCIAL & 4  &  &  &  & 3 & MA-0351 INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES &  \\
+4 & \MallaSigla{MA0496} & TEORÍA DE NÚMEROS & 4 &  &  &  & 3 & MA-0252 INTRODUCCIÓN A LAS DEMOSTRACIONES &  \\
 \MallaCicloTotal{4}{16}
 \end{tabular}
 \MallaSidewayEnd
@@ -64,9 +64,9 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-5 & MA0561 & ALGEBRA ABSTRACTA I & 5 &  &  &  & 4 & MA-0461 Algebra Lineal II y MA-0496 Teoría de Números &  \\
-5 & MA0551 & PRINCIPIOS DE ANÁLISIS EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
-5 & MA0515 & ECUACIONES DIFERENCIALES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
+5 & \MallaSigla{MA0561} & ALGEBRA ABSTRACTA I & 5 &  &  &  & 4 & MA-0461 Algebra Lineal II y MA-0496 Teoría de Números &  \\
+5 & \MallaSigla{MA0551} & PRINCIPIOS DE ANÁLISIS EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
+5 & \MallaSigla{MA0515} & ECUACIONES DIFERENCIALES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
 5 & OPT- & Optativa de otra disciplina &  &  &  &  &  &  &  \\
 \MallaCicloTotal{5}{15}
 \end{tabular}
@@ -75,9 +75,9 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-6 & MA0661 & ALGEBRA ABSTRACTA II & 5 &  &  &  & 4 & MA-0561 Algebra Abstracta I &  \\
-6 & MA0635 & INTRODUCCIÓN A LA TOPOLOGÍA & 5 &  &  &  & 4 & MA-0551 Principios de Análisis II &  \\
-6 & MA0641 & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias &  \\
+6 & \MallaSigla{MA0661} & ALGEBRA ABSTRACTA II & 5 &  &  &  & 4 & MA-0561 Algebra Abstracta I &  \\
+6 & \MallaSigla{MA0635} & INTRODUCCIÓN A LA TOPOLOGÍA & 5 &  &  &  & 4 & MA-0551 Principios de Análisis II &  \\
+6 & \MallaSigla{MA0641} & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias &  \\
 6 & OPT- & Optativa de otra disciplina &  &  &  &  &  &  &  \\
 \MallaCicloTotal{6}{15}
 \end{tabular}
@@ -86,10 +86,10 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-7 & MA0705 & ANÁLISIS REAL I & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
-7 & MA0702 & ANÁLISIS COMPLEJO & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
-7 & MA0701 & SEMINARIO DE MATEMÁTICA &  &  &  &  & 0 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Topología General, MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
-7 & MA0780 & COMUNICACIÓN EN LAS CIENCIAS & 2 &  &  & 4 & 2 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
+7 & \MallaSigla{MA0705} & ANÁLISIS REAL I & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
+7 & \MallaSigla{MA0702} & ANÁLISIS COMPLEJO & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
+7 & \MallaSigla{MA0701} & SEMINARIO DE MATEMÁTICA &  &  &  &  & 0 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Topología General, MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
+7 & \MallaSigla{MA0780} & COMUNICACIÓN EN LAS CIENCIAS & 2 &  &  & 4 & 2 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
 7 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{7}{16}
 \end{tabular}
@@ -98,7 +98,7 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-8 & MA0781 & PASANTÍA EN MATEMÁTICAS &  &  &  &  & 4 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
+8 & \MallaSigla{MA0781} & PASANTÍA EN MATEMÁTICAS &  &  &  &  & 4 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
 8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
@@ -114,10 +114,10 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-4 & MA0461 & ALGEBRA LINEAL II & 5 &  &  &  & 4 & MA0361 Álgebra Lineal I &  \\
-4 & MA0451 & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE & 5 &  &  &  & 4 & MA-0351 Cálculo en Varias Variables & MA0461 Álgebra Lineal II \\
-4 & CA0721 & PROBABILIDAD & 5 &  &  &  & 4 & MA-0351 Cálculo en Varias Variables &  \\
-4 & CA0203 & HERRAMIENTAS DE CIENCIA DE DATOS I & 3 & 2 &  &  & 4 & MA-0341 Matemática Computacional &  \\
+4 & \MallaSigla{MA0461} & ALGEBRA LINEAL II & 5 &  &  &  & 4 & MA0361 Álgebra Lineal I &  \\
+4 & \MallaSigla{MA0451} & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE & 5 &  &  &  & 4 & MA-0351 Cálculo en Varias Variables & MA0461 Álgebra Lineal II \\
+4 & \MallaSigla{CA0721} & PROBABILIDAD & 5 &  &  &  & 4 & MA-0351 Cálculo en Varias Variables &  \\
+4 & \MallaSigla{CA0203} & HERRAMIENTAS DE CIENCIA DE DATOS I & 3 & 2 &  &  & 4 & MA-0341 Matemática Computacional &  \\
 \MallaCicloTotal{4}{16}
 \end{tabular}
 \MallaSidewayEnd
@@ -125,9 +125,9 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-5 & MA0551 & PRINCIPIOS DE ANÁLISIS EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
-5 & MA0615 & ECUACIONES DIFERENCIALES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
-5 & CA0303 & ESTADÍSTICA I & 3 & 2 &  &  & 4 & CA-0203 Herramientas de Ciencia de Datos y CA-0721 Introducción a la Probabilidad &  \\
+5 & \MallaSigla{MA0551} & PRINCIPIOS DE ANÁLISIS EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
+5 & \MallaSigla[MA0515]{MA0615} & ECUACIONES DIFERENCIALES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
+5 & \MallaSigla{CA0303} & ESTADÍSTICA I & 3 & 2 &  &  & 4 & CA-0203 Herramientas de Ciencia de Datos y CA-0721 Introducción a la Probabilidad &  \\
 5 & OPT- & Optativa de otra disciplina &  &  &  &  &  &  &  \\
 5 &  & Seminario de realidad nacional II &  &  &  &  & 2 &  &  \\
 \MallaCicloTotal{5}{17}
@@ -137,9 +137,9 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-6 & MA0541 & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias &  \\
-6 & MA0647 & Modelación Matemática & 5 &  &  &  & 4 & MA-0515 Ecuaciones Diferenciales Ordinarias&  \\
-6 & MA0635 & INTRODUCCIÓN A LA TOPOLOGÍA &  &  &  &  & 4 & MA-0551 Principios de Análisis II &  \\
+6 & \MallaSigla[MA0641]{MA0541} & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias &  \\
+6 & \MallaSigla{MA0647} & Modelación Matemática & 5 &  &  &  & 4 & MA-0515 Ecuaciones Diferenciales Ordinarias&  \\
+6 & \MallaSigla{MA0635} & INTRODUCCIÓN A LA TOPOLOGÍA &  &  &  &  & 4 & MA-0551 Principios de Análisis II &  \\
 6 & OPT- & Optativa de otra disciplina &  &  &  &  &  &  &  \\
 \MallaCicloTotal{6}{8}
 \end{tabular}
@@ -148,11 +148,11 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-7 & MA0702 & ANÁLISIS COMPLEJO & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
-7 & CA0411 & ANÁLISIS DE DATOS I & 3 & 2 &  &  & 4 & CA-0307 &  \\
-7 & CA0411 & Análisis real I & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
-7 & MA0701 & SEMINARIO DE MATEMÁTICA &  &  &  &  & 0 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Topología General, MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
-7 & MA0780 & COMUNICACIÓN EN LAS CIENCIAS & 2 &  &  & 4 & 2 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
+7 & \MallaSigla{MA0702} & ANÁLISIS COMPLEJO & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
+7 & \MallaSigla[CA0411AnalisisDatos]{CA0411} & ANÁLISIS DE DATOS I & 3 & 2 &  &  & 4 & CA-0307 &  \\
+7 & \MallaSigla[CA0411AnalisisDatos]{CA0411} & Análisis real I & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
+7 & \MallaSigla{MA0701} & SEMINARIO DE MATEMÁTICA &  &  &  &  & 0 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Topología General, MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
+7 & \MallaSigla{MA0780} & COMUNICACIÓN EN LAS CIENCIAS & 2 &  &  & 4 & 2 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
 \MallaCicloTotal{7}{14}
 \end{tabular}
 \MallaSidewayEnd
@@ -161,7 +161,7 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-8 & MA0781 & PASANTÍA EN MATEMÁTICAS &  &  &  &  & 4 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
+8 & \MallaSigla{MA0781} & PASANTÍA EN MATEMÁTICAS &  &  &  &  & 4 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
 8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
@@ -178,12 +178,12 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-9 & MA0781 & Seminario de estudios dirigidos en matemática &  &  &  &  & 7 & Haber aprobado el bachillerato en matemática pura. &  \\
+9 & \MallaSigla[MA0781SED]{MA0781} & Seminario de estudios dirigidos en matemática &  &  &  &  & 7 & Haber aprobado el bachillerato en matemática pura. &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{9}{16}
 \hline
-10 & MA0881 & Seminario de estudios dirigidos en matemática &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática &  \\
+10 & \MallaSigla{MA0881} & Seminario de estudios dirigidos en matemática &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{10}{16}
@@ -198,12 +198,12 @@ Las tablas siguen el formato del plan de estudios SAE de la UCR (ciclo, sigla, n
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-9 & MA0781 & Seminario de estudios dirigidos en matemática &  &  &  &  & 7 & Haber aprobado el bachillerato en matemática. &  \\
+9 & \MallaSigla[MA0781SED]{MA0781} & Seminario de estudios dirigidos en matemática &  &  &  &  & 7 & Haber aprobado el bachillerato en matemática. &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{9}{16}
 \hline
-10 & MA0881 & Seminario de estudios dirigidos en matemática &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática &  \\
+10 & \MallaSigla{MA0881} & Seminario de estudios dirigidos en matemática &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{10}{16}

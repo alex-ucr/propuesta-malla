@@ -1,5 +1,5 @@
 % Estilo compartido para tablas de malla curricular (paleta UCR).
-% Requiere: xcolor[table], array, colortbl, rotating, float.
+% Requiere: xcolor[table], array, colortbl, rotating, float, hyperref.
 
 \providecolor{Celeste-UCR}{RGB}{0,192,243}
 \providecolor{Azul-UCR}{RGB}{0,93,164}
@@ -56,3 +56,16 @@
   \rowcolor{Amarillo-UCR!45}%
   \multicolumn{10}{|r|}{\textbf{#1: #2}} \\ \hline
 }
+
+% Sigla clicable hacia el programa (\hypertarget del cuerpo).
+% Uso: \MallaSigla{MA0151}  o  \MallaSigla[destino]{MA0615}
+\makeatletter
+\newcommand{\MallaSigla}[2][]{%
+  \def\MallaSigla@opt{#1}%
+  \ifx\MallaSigla@opt\empty
+    \hyperlink{#2}{#2}%
+  \else
+    \hyperlink{#1}{#2}%
+  \fi
+}
+\makeatother
