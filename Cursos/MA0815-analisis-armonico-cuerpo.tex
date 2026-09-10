@@ -1,6 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% MA-0815 Análisis armónico %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% MA-0815 Análisis armónico %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Propuesta de programa adaptada de:
+% Posgrado en Matemática, UCR, II-2019,
+% «Propuesta de Programa: Análisis Armónico».
+% Referencia principal de contenidos: Duoandikoetxea \cite{Duo01}.
 \newpage
 \subsection*{MA-0815 Análisis armónico}
 \addcontentsline{toc}{subsection}{MA-0815 Análisis armónico}
@@ -11,10 +15,10 @@
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} Por determinar \\ 
-\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\ 
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} Por determinar \\ 
-\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} Por determinar \\
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0705 (o MA-0625) Análisis Real I \\
+\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} 5 \\
+\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} 10 \\
 \textbf{Virtualidad:} P  &  \\ \hline
 \end{tabular}
 }
@@ -22,18 +26,121 @@
 
 \subsubsection*{Descripción del curso}
 
-\textit{Programa pendiente de elaboración.}
+Este curso optativo introduce el análisis armónico de variable real: el estudio de la transformada de Fourier, de operadores maximales y de integrales singulares sobre $\R^n$. Se ubica en el cuarto año, una vez que la persona estudiante dispone de la medida e integración de Lebesgue y de una primera aproximación a los espacios $L^p$ (MA-0705 Análisis Real~I). Complementa la introducción a series y transformadas de Fourier que puede haberse visto en MA-0725 Análisis Real~II, y se articula de manera natural con el análisis funcional y con las ecuaciones diferenciales parciales.
+
+El programa se articula a partir de la propuesta de Análisis Armónico del Posgrado en Matemática de la Universidad de Costa Rica (II-2019) y sigue, en lo esencial, el desarrollo de Duoandikoetxea \cite{Duo01}: espacios $L^p$ e interpolación, transformada de Fourier, funciones maximales, transformadas de Hilbert y de Riesz, integrales singulares de Calderón--Zygmund y teoría de Littlewood--Paley.
+
+El énfasis es teórico: se requieren definiciones precisas, enunciados completos y demostraciones de los teoremas fundamentales. Los ejemplos en $L^p(\R^n)$, en el círculo y en el espacio de Schwartz se usan para concretar la teoría, no para sustituirla. Se espera que la persona estudiante formule argumentos rigurosos, construya ejemplos y contraejemplos, y reconozca el alcance de cada hipótesis. Haber cursado MA-0725 Análisis Real~II o MA-0806 Análisis funcional es recomendable, aunque no es requisito formal.
 
 \subsubsection*{Objetivos}
 
-\textit{Pendiente de elaboración.}
+\textbf{General:} Que la persona estudiante sea capaz de resolver problemas y desarrollar teoría a partir de los fundamentos del análisis armónico de variable real en $\R^n$.
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Emplear las propiedades de los espacios $L^p$ y $L^{p,\infty}$, y los teoremas de interpolación de Riesz--Thorin y de Marcinkiewicz, para acotar operadores.
+\item Definir y manipular la transformada de Fourier en $L^1$, en la clase de Schwartz y en el sentido de las distribuciones temperadas, y extenderla a $L^p$ para $1<p\le 2$.
+\item Analizar aproximaciones de la identidad y la función maximal de Hardy--Littlewood, y aplicar el teorema maximal a problemas de convergencia y diferenciación.
+\item Construir las transformadas de Hilbert y de Riesz, relacionarlas con la función analítica y justificar su acotación en $L^p$.
+\item Demostrar la acotación $L^2$ de integrales singulares homogéneas y la acotación débil $(1,1)$ mediante la descomposición de Calderón--Zygmund, y deducir la acotación en $L^p$.
+\item Interpretar funciones cuadradas y multiplicadores de Fourier (Marcinkiewicz, Hörmander--Mihlin) en el marco de la teoría de Littlewood--Paley.
+\item Consultar literatura especializada y comunicar argumentos de análisis armónico con rigor, tanto de forma oral como escrita.
+\end{enumerate}
 
 \subsubsection*{Contenidos}
 
-\textit{Pendiente de elaboración.}
+\begin{enumerate}
+\item \textbf{Espacios $L^p$ (3 semanas):}
+\begin{enumerate}
+    \item Preliminares: funcionales lineales, acotación y dualidad.
+    \item Definición y propiedades de los espacios $L^p$.
+    \item Dualidad de los espacios $L^p$.
+    \item Espacios $L^p$-débiles.
+    \item Interpolación de espacios $L^p$: teoremas de Riesz--Thorin y de Marcinkiewicz.
+\end{enumerate}
+
+\item \textbf{La transformada de Fourier (3 semanas):}
+\begin{enumerate}
+    \item Transformada de Fourier en $L^1$.
+    \item Clase de Schwartz y distribuciones temperadas.
+    \item Transformada de Fourier en $\mathcal{S}$ y en $\mathcal{S}'$.
+    \item Transformada de Fourier en $L^p$, $1<p\le 2$.
+    \item Convergencia y sumabilidad de integrales de Fourier.
+\end{enumerate}
+
+\item \textbf{Funciones maximales (2 semanas):}
+\begin{enumerate}
+    \item Aproximaciones de la identidad.
+    \item Función maximal de Hardy--Littlewood.
+    \item Función maximal fuerte.
+    \item Función maximal diádica.
+\end{enumerate}
+
+\item \textbf{Las transformadas de Hilbert y de Riesz (2 semanas):}
+\begin{enumerate}
+    \item Construcción y propiedades.
+    \item Relación con las funciones analíticas.
+    \item Acotación en $L^p$. Teoremas de Riesz y de Kolmogorov.
+    \item Transformadas de Riesz.
+\end{enumerate}
+
+\item \textbf{Integrales singulares de tipo convolución (3 semanas):}
+\begin{enumerate}
+    \item Integrales singulares homogéneas y maximales.
+    \item Acotación en $L^2$.
+    \item Método de rotaciones.
+    \item Descomposición de Calderón--Zygmund.
+    \item Operadores de Calderón--Zygmund.
+    \item Acotación débil $(1,1)$ de integrales singulares.
+    \item Condiciones para la acotación en $L^p$.
+\end{enumerate}
+
+\item \textbf{Teoría de Littlewood--Paley (2 semanas):}
+\begin{enumerate}
+    \item Desigualdades en valores vectoriales.
+    \item Funciones cuadradas y $L^p$.
+    \item Multiplicadores de Marcinkiewicz.
+    \item Multiplicadores de Hörmander--Mihlin (\emph{ampliación}).
+    \item Multiplicadores de Bochner--Riesz (\emph{ampliación}).
+    \item Función maximal esférica (\emph{ampliación}).
+\end{enumerate}
+
+\end{enumerate}
 
 \subsubsection*{Metodología}
 
-\textit{Pendiente de elaboración.}
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item La presentación del material requiere de definiciones precisas, enunciados completos y demostraciones de los teoremas fundamentales (interpolación, teorema maximal, acotación de Hilbert--Riesz y descomposición de Calderón--Zygmund), aunque también es importante brindar contexto y motivación.
+    \item Cada construcción abstracta debe acompañarse de al menos un ejemplo concreto en $L^p(\R^n)$, en el círculo o en la clase de Schwartz que ilustre el alcance de las hipótesis.
+    \item Cada estudiante debe realizar una revisión de la bibliografía como complemento al trabajo presencial.
+    \item Se fomenta la comunicación clara y rigurosa de argumentos, tanto oral como escrita.
+\end{enumerate}
 
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
+\begin{enumerate}
+    \item Tomar \cite{Duo01} como hilo conductor y recurrir a \cite{Gra14} o a \cite{SW71} cuando se desee mayor detalle en interpolación, integrales singulares o Littlewood--Paley.
+    \item Explicitar el puente con el curso de análisis real: los espacios $L^p$ y la diferenciación de Lebesgue dejan de ser un apéndice de la integral y pasan a ser el lenguaje de los operadores.
+    \item Dado que algunos temas permiten cubrirse con distintos grados de profundidad, se recomienda no sobrecargar al estudiantado. Entre estos temas están:
+    \begin{itemize}
+        \item Las pruebas completas de los teoremas de interpolación (pueden enunciarse y aplicarse, con una de las dos demostrada).
+        \item El tratamiento sistemático de las distribuciones temperadas.
+        \item Los multiplicadores de Hörmander--Mihlin y de Bochner--Riesz, y la función maximal esférica.
+    \end{itemize}
+    \item Promover el trabajo constante mediante listas de ejercicios que combinen demostraciones, cálculo de núcleos y construcción de ejemplos.
+    \item Incorporar un proyecto o exposición breve sobre un tema de ampliación o sobre una aplicación a ecuaciones diferenciales o al análisis funcional.
+    \item Sugerir el uso de \LaTeX{} para la presentación de tareas y del proyecto.
+\end{enumerate}
+
+\nocite{Duo01}
+\nocite{Fol99}
+\nocite{Gra14}
+\nocite{Gra14b}
+\nocite{Kat04}
+\nocite{Ste93}
+\nocite{SS05}
+\nocite{SW71}
+
+\printbibliography[heading=subbibliography,section=\the\value{refsection}]
 \end{refsection}
