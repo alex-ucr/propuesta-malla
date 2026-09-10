@@ -1,17 +1,31 @@
 % !TeX program = pdflatex
 % Documento auxiliar para compilar las tablas de malla.
 % Uso: latexmk malla-curricular-tablas-standalone.tex
-\documentclass[11pt,a4paper,landscape]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[margin=1.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,es-tabla]{babel}
 \usepackage{lmodern}
 \usepackage{array}
-\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{rotfloat}
+
+\definecolor{Celeste-UCR}{RGB}{0,192,243}
+\definecolor{Azul-UCR}{RGB}{0,93,164}
+\definecolor{Verde-UCR}{RGB}{109,192,103}
+\definecolor{Amarillo-UCR}{RGB}{255,224,106}
+
+\title{\textcolor{Azul-UCR}{Malla curricular — tablas resumen}}
+\author{}
+\date{}
 
 \begin{document}
+\maketitle
 \input{malla-curricular-tablas.tex}
 \end{document}
