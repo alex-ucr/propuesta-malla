@@ -41,7 +41,8 @@ CUERPO = """%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \\textbf{{Año:}} IV  & \\textbf{{Requisitos:}} Por determinar \\\\ 
 \\textbf{{Ciclo:}} Optativa  & \\textbf{{Correquisitos:}} Ninguno \\\\ 
 \\textbf{{Tipo de curso:}} Teórico & \\textbf{{Horas presenciales por semana:}} Por determinar \\\\ 
-\\textbf{{Créditos:}} 5 & \\textbf{{Horas de trabajo independiente por semana:}} Por determinar \\\\ \\hline
+\\textbf{{Créditos:}} 5 & \\textbf{{Horas de trabajo independiente por semana:}} Por determinar \\\\
+\\textbf{{Virtualidad:}} P  &  \\\\ \\hline
 \\end{{tabular}}
 }}
 \\end{{table}}

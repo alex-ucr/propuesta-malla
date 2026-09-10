@@ -154,7 +154,8 @@ def cuerpo(code: str, title: str, requisito: str, area: str, area_gen: str, area
 \\textbf{{Año:}} IV  & \\textbf{{Requisitos:}} {requisito} \\\\ 
 \\textbf{{Ciclo:}} Optativa  & \\textbf{{Correquisitos:}} Ninguno \\\\ 
 \\textbf{{Tipo de curso:}} Teórico & \\textbf{{Horas presenciales por semana:}} 4 \\\\ 
-\\textbf{{Créditos:}} 4 & \\textbf{{Horas de trabajo independiente por semana:}} 8 \\\\ \\hline
+\\textbf{{Créditos:}} 4 & \\textbf{{Horas de trabajo independiente por semana:}} 8 \\\\
+\\textbf{{Virtualidad:}} P  &  \\\\ \\hline
 \\end{{tabular}}
 }}
 \\end{{table}}
