@@ -1,0 +1,58 @@
+% Estilo compartido para tablas de malla curricular (paleta UCR).
+% Requiere: xcolor[table], array, colortbl, rotating, float.
+
+\providecolor{Celeste-UCR}{RGB}{0,192,243}
+\providecolor{Azul-UCR}{RGB}{0,93,164}
+\providecolor{Verde-UCR}{RGB}{109,192,103}
+\providecolor{Amarillo-UCR}{RGB}{255,224,106}
+
+\newcommand{\MallaSubsection}[1]{%
+  \subsubsection*{\textcolor{Azul-UCR}{#1}}%
+}
+
+\newcommand{\MallaSidewayBegin}{%
+  \begingroup
+  \small
+  \setlength{\tabcolsep}{4.5pt}%
+  \renewcommand{\arraystretch}{1.2}%
+  \arrayrulecolor{Azul-UCR!80}%
+  \setlength{\arrayrulewidth}{0.5pt}%
+  \begin{sidewaystable}[H]%
+  \centering
+}
+
+\newcommand{\MallaSidewayEnd}{%
+  \end{sidewaystable}%
+  \endgroup
+}
+
+\newcommand{\MallaTabularBegin}{%
+  \rowcolors{3}{white}{Celeste-UCR!12}%
+  \begin{tabular}{@{}%
+    |c|l|>{\raggedright\arraybackslash}p{5.2cm}|%
+    c|c|c|c|c|%
+    >{\raggedright\scriptsize\arraybackslash}p{3.9cm}|%
+    >{\raggedright\scriptsize\arraybackslash}p{3.3cm}|@{}}
+}
+
+\newcommand{\MallaHeader}{%
+  \rowcolor{Azul-UCR}%
+  \color{white}\bfseries
+  Ciclo & Curso & Nombre del curso &
+  \multicolumn{4}{c|}{\cellcolor{Azul-UCR}Horas} & Cred. &
+  \shortstack{Requisitos y\\ Req. Equivalentes} &
+  \shortstack{Correquisitos y\\ Correq. Equivalentes} \\ \hline
+  \rowcolor{Celeste-UCR!35}%
+  \color{black}\bfseries
+  & & & T & P & L & TP & & & \\ \hline
+}
+
+\newcommand{\MallaCicloTotal}[2]{%
+  \rowcolor{Verde-UCR!28}%
+  \multicolumn{10}{|l|}{\textit{Créditos ciclo #1: #2}} \\ \hline
+}
+
+\newcommand{\MallaTotalFinal}[2]{%
+  \rowcolor{Amarillo-UCR!45}%
+  \multicolumn{10}{|r|}{\textbf{#1: #2}} \\ \hline
+}
