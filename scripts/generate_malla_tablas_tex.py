@@ -36,6 +36,8 @@ CICLO_NUM: dict[str, int] = {
     "VI Ciclo": 6,
     "VII Ciclo": 7,
     "VIII Ciclo": 8,
+    "IX Ciclo": 9,
+    "X Ciclo": 10,
 }
 COMMON_CYCLES = ("I Ciclo", "II Ciclo", "III Ciclo")
 EMPHASIS_CYCLES = ("IV Ciclo", "V Ciclo", "VI Ciclo", "VII Ciclo", "VIII Ciclo")
