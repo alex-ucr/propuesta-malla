@@ -13,6 +13,9 @@
 \usepackage{placeins}
 \usepackage[left=3cm,right=3cm,top=1cm,bottom=3cm]{geometry} 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage[spanish, es-tabla]{babel}
 \usepackage{fancyhdr}
 \usepackage{afterpage}
@@ -57,6 +60,14 @@
 \newcommand{\fr}[1]{\mathfrak{#1}}
 \newcommand{\legendre}[2]{\left( \dfrac{#1}{#2} \right)}
 \newcommand{\mcd}{\operatorname{mcd}}
+
+% Programas individuales: no figuran en la tabla de contenidos del documento unificado.
+\newcommand{\inputcurso}[1]{%
+  \begingroup
+  \renewcommand{\addcontentsline}[3]{}%
+  \input{#1}%
+  \endgroup
+}
 
 \input{definitions}
 
