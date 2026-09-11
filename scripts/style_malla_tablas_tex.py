@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 TEX = ROOT / "malla-curricular-tablas.tex"
 
-OLD_HEADER = r"""\begin{sidewaystable}[H]
+OLD_HEADER = r"""\begin{landscape}
 \centering
 \begin{tabular}{|c|l|>{\raggedright\arraybackslash}p{5.5cm}|c|c|c|c|c|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
 \hline
@@ -44,7 +44,7 @@ def main() -> None:
 
     text = text.replace(OLD_HEADER, NEW_HEADER)
     text = text.replace(
-        "\\end{tabular}\n\\end{sidewaystable}",
+        "\\end{tabular}\n\\end{landscape}",
         "\\end{tabular}\n\\MallaSidewayEnd",
     )
 

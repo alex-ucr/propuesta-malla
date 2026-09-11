@@ -1,5 +1,5 @@
 % Estilo compartido para tablas de malla curricular (paleta UCR).
-% Requiere: xcolor[table], array, colortbl, rotating, float, hyperref.
+% Requiere: xcolor[table], array, colortbl, pdflscape, hyperref.
 
 \providecolor{Celeste-UCR}{RGB}{0,192,243}
 \providecolor{Azul-UCR}{RGB}{0,93,164}
@@ -17,12 +17,12 @@
   \renewcommand{\arraystretch}{1.2}%
   \arrayrulecolor{Azul-UCR!80}%
   \setlength{\arrayrulewidth}{0.5pt}%
-  \begin{sidewaystable}[H]%
+  \begin{landscape}%
   \centering
 }
 
 \newcommand{\MallaSidewayEnd}{%
-  \end{sidewaystable}%
+  \end{landscape}%
   \endgroup
 }
 
