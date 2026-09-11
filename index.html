@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Propuesta curricular — Matemática</title>
+  <meta http-equiv="refresh" content="0; url=malla-curricular.html" />
+  <link rel="canonical" href="malla-curricular.html" />
+  <link rel="stylesheet" href="assets/site-brand.css" />
+  <script src="assets/site-brand.js" defer></script>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #fff;
+      --text: #1a1d21;
+      --muted: #5c6370;
+      --border: #d8dee6;
+      --accent: #1e4d7b;
+      --accent-soft: #e8f0f8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .landing {
+      max-width: 32rem;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem 3rem;
+      text-align: center;
+    }
+    .landing h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.45rem;
+      color: var(--accent);
+    }
+    .landing p {
+      margin: 0 0 1.5rem;
+      color: var(--muted);
+    }
+    .landing-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .landing-nav a {
+      display: block;
+      padding: 0.85rem 1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .landing-nav a:hover {
+      background: var(--accent-soft);
+    }
+  </style>
+</head>
+<body>
+  <main class="landing">
+    <h1>Propuesta curricular</h1>
+    <p>Carrera de matemática — Escuela de Matemática, UCR</p>
+    <nav class="landing-nav" aria-label="Secciones">
+      <a href="malla-curricular.html">Malla curricular</a>
+      <a href="perfil-salida.html">Perfil de salida</a>
+    </nav>
+  </main>
+  <script>
+    location.replace("malla-curricular.html" + location.search + location.hash);
+  </script>
+</body>
+</html>
