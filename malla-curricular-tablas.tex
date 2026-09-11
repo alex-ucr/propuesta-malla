@@ -1,10 +1,10 @@
 % =============================================================================
-% Tablas de malla curricular (generado automáticamente).
-% Regenerar: python scripts/generate_malla_tablas_tex.py
-% Modelo: Documentos/bach.-y-lic.-en-matematicas,-plan-2.pdf
+% Tablas de malla curricular.
+% Fuente: Documentos/210401-3 Pura.xlsx y 210401-3 Aplicada.xlsx
+% Regenerar: python scripts/generate_malla_from_210401.py
 % =============================================================================
 
-En este capítulo se presenta la estructura curricular del plan de estudios propuesto así como el análisis realizado para la selección y organización de contenidos. Como parte del proceso de reestructuración de la carrera Bachillerato y Licenciatura en Matemática, se ha considerado la participación del personal docente del departamento que expresó la necesidad de abandonar el modelo actual para pasar a uno más moderno, acorde con las necesidades y demandas del país, con diferentes áreas de especialización. 
+En este capítulo se presenta la estructura curricular del plan de estudios propuesto así como el análisis realizado para la selección y organización de contenidos. Como parte del proceso de reestructuración de la carrera Bachillerato y Licenciatura en Matemática, se ha considerado la participación del personal docente del departamento que expresó la necesidad de abandonar el modelo actual para pasar a uno más moderno, acorde con las necesidades y demandas del país, con diferentes áreas de especialización.
 
 \section{\textcolor{Azul-UCR}{Malla curricular obligatoria propuesta}}
 
@@ -12,55 +12,49 @@ Se presenta, en forma tabular, la estructura curricular propuesta. El detalle de
 
 \input{malla-curricular-tablas-macros}
 
-
 \MallaSidewayBegin
 \MallaSubsection{Bloque común (ciclos I a III)}
 
 \MallaTabularBegin
 \MallaHeader
-1 & EF- & ACTIVIDAD DEPORTIVA & 0 & 0 & 2 & 0 & 0 &  &  \\
-1 & EG-I & CURSO INTEGRADO DE HUMANIDADES I & 8 & 0 & 0 & 0 & 6 &  &  \\
+1 & EF- & ACTIVIDAD DEPORTIVA &  &  &  &  & 0 &  &  \\
+1 & EG-I & CURSO INTEGRADO DE HUMANIDADES I &  &  &  &  & 6 &  &  \\
 1 & \MallaSigla{MA0151} & FUNDAMENTOS DE ÁLGEBRA, TRIGONOMETRÍA Y GEOMETRÍA ANALÍTICA & 5 &  &  &  & 3 &  &  \\
 1 & \MallaSigla{MA0152} & MATEMÁTICA EXPLORATORIA & 5 &  &  &  & 3 &  &  \\
-1 & RP-1 & REPERTORIO & 1 & 0 & 2 & 0 & 3 &  &  \\
+1 & RP- & REPERTORIO &  &  &  &  & 3 &  &  \\
 \MallaCicloTotal{1}{15}
+2 & EG- & CURSO DE ARTE &  &  &  &  & 2 &  &  \\
+2 & EG-II & CURSO INTEGRADO DE HUMANIDADES II &  &  &  &  & 6 & EG-I &  \\
+2 & LM-3039 & INGLÉS PARA ESTADÍSTICA I &  &  &  & 4 & 3 & XS-1130 o MA-0152 &  \\
+2 & \MallaSigla{MA0251} & CÁLCULO EN UNA VARIABLE & 5 &  &  &  & 3 & MA-0151 & MA-0252 \\
+2 & \MallaSigla{MA0252} & INTRODUCCIÓN A LAS DEMOSTRACIONES & 5 &  &  &  & 4 & MA-0152 &  \\
+\MallaCicloTotal{2}{18}
+\end{tabular}
 
 \vspace{1cm}
 
-\MallaHeader
-2 & EG-II & CURSO INTEGRADO DE HUMANIDADES II & 8 & 0 & 0 & 0 & 6 & EG-I &  \\
-2 & LM-3039 & INGLÉS PARA ESTADÍSTICA I &  &  &  & 4 & 3 &  &  \\
-2 & \MallaSigla{MA0251} & INTRODUCCIÓN AL CÁLCULO EN UNA VARIABLE & 5 &  &  &  & 4 & MA0151 FUNDAMENTOS DE ÁLGEBRA, TRIGONOMETRIA Y GEOMETRÍA ANALÍTICA & MA0252 INTRODUCCIÓN A LAS DEMOSTRACIONES \\
-2 & \MallaSigla{MA0252} & INTRODUCCIÓN A LAS DEMOSTRACIONES & 5 &  &  &  & 4 & MA-0152 Matemática Exploratoria &  \\
-\MallaCicloTotal{2}{17}
-\end{tabular}
-\MallaSidewayEnd
-
-\MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-3 & \MallaSigla{MA0361} & ALGEBRA LINEAL I & 5 &  &  &  & 3 & MA0252 INTRODUCCIÓN A LAS DEMOSTRACIONES &  \\
-3 & LM-3040 & INGLÉS PARA ESTADÍSTICA II &  &  &  & 4 & 3 &  &  \\
-3 & \MallaSigla{MA0351} & INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0251 CÁLCULO EN UNA VARIABLE & MA-0361 ÁLGEBRA LINEAL I \\
-3 & \MallaSigla{MA0341} & MATEMÁTICA COMPUTACIONAL & 4 &  &  &  & 4 & MA0251 CÁLCULO EN UNA VARIABLE & MA0361 ÁLGEBRA LINEAL I \\
-&  & 4 & MA0251 CÁLCULO EN UNA VARIABLE & MA0361 ÁLGEBRA LINEAL I \\
+3 & SR-I & SEMINARIO DE REALIDAD NACIONAL I &  &  &  &  & 2 & EG-II &  \\
+3 & \MallaSigla{MA0361} & ÁLGEBRA LINEAL I & 5 &  &  &  & 4 & MA-0252 &  \\
+3 & LM-3040 & INGLÉS PARA ESTADÍSTICA II &  &  &  & 4 & 3 & LM-3039 &  \\
+3 & \MallaSigla{MA0351} & CÁLCULO EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0251, MA-0252 & MA-0361 \\
+3 & \MallaSigla{MA0341} & MATEMÁTICA COMPUTACIONAL &  &  &  & 5 & 4 & MA-0251 & MA-0361 \\
 \MallaCicloTotal{3}{17}
-\hline
-\MallaTotalFinal{Total créditos bloque común}{22}
+\MallaTotalFinal{Total créditos bloque común}{50}
 \end{tabular}
 \MallaSidewayEnd
 
-
 \MallaSidewayBegin
-
 \MallaSubsection{Énfasis en Matemática Pura (ciclos IV a VIII)}
 
 \MallaTabularBegin
 \MallaHeader
-4 & \MallaSigla{MA0461} & ALGEBRA LINEAL II & 5 &  &  &  & 4 & MA0361 ÁLGEBRA LINEAL I &  \\
-4 & \MallaSigla{MA0451} & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE & 5  &  &  &  & 4 & MA-0351 INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES & MA0461 ÁLGEBRA LINEAL II \\
-4 & \MallaSigla{MA0471} & INTRODUCCIÓN A LA GEOMETRÍA DIFERENCIAL & 4  &  &  &  & 3 & MA-0351 INTRODUCCIÓN AL CÁLCULO EN VARIAS VARIABLES &  \\
-4 & \MallaSigla{MA0496} & TEORÍA DE NÚMEROS & 4 &  &  &  & 3 & MA-0252 INTRODUCCIÓN A LAS DEMOSTRACIONES &  \\
+4 & SR-II & SEMINARIO DE REALIDAD NACIONAL II &  &  &  &  & 2 & SR-I &  \\
+4 & \MallaSigla{MA0461} & ÁLGEBRA LINEAL II & 5 &  &  &  & 4 & MA-0361 &  \\
+4 & \MallaSigla{MA0451} & PRINCIPIOS DE ANÁLISIS I & 5 &  &  &  & 4 & MA-0351 &  \\
+4 & \MallaSigla{MA0471} & INTRODUCCIÓN A LA GEOMETRÍA DIFERENCIAL & 5 &  &  &  & 3 & MA-0351 &  \\
+4 & \MallaSigla{MA0496} & TEORÍA DE NÚMEROS & 5 &  &  &  & 3 & MA-0252 &  \\
 \MallaCicloTotal{4}{16}
 \end{tabular}
 \MallaSidewayEnd
@@ -68,19 +62,17 @@ Se presenta, en forma tabular, la estructura curricular propuesta. El detalle de
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-5 & \MallaSigla{MA0561} & ALGEBRA ABSTRACTA I & 5 &  &  &  & 4 & MA-0461 Algebra Lineal II y MA-0496 Teoría de Números &  \\
-5 & \MallaSigla{MA0551} & PRINCIPIOS DE ANÁLISIS EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
-5 & \MallaSigla{MA0515} & ECUACIONES DIFERENCIALES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
-5 & OPT- & Optativa de otra disciplina &  &  &  &  &  &  &  \\
+5 & \MallaSigla{MA0561} & ÁLGEBRA ABSTRACTA I & 5 &  &  &  & 4 & MA-0461, MA-0496 &  \\
+5 & \MallaSigla{MA0551} & PRINCIPIOS DE ANÁLISIS II & 5 &  &  &  & 4 & MA-0451, MA-0461 &  \\
+5 & \MallaSigla{MA0515} & ECUACIONES DIFERENCIALES ORDINARIAS & 5 &  &  &  & 4 & MA-0451, MA-0461 &  \\
+5 & OPT- & OPTATIVA DE OTRA DISCIPLINA &  &  &  &  & 3 &  &  \\
 \MallaCicloTotal{5}{15}
-\end{tabular}
 
-\MallaTabularBegin
 \MallaHeader
-6 & \MallaSigla{MA0661} & ALGEBRA ABSTRACTA II & 5 &  &  &  & 4 & MA-0561 Algebra Abstracta I &  \\
-6 & \MallaSigla{MA0635} & INTRODUCCIÓN A LA TOPOLOGÍA & 5 &  &  &  & 4 & MA-0551 Principios de Análisis II &  \\
-6 & \MallaSigla{MA0641} & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias &  \\
-6 & OPT- & Optativa de otra disciplina &  &  &  &  &  &  &  \\
+6 & \MallaSigla{MA0661} & ÁLGEBRA ABSTRACTA II & 5 &  &  &  & 4 & MA-0561 &  \\
+6 & \MallaSigla{MA0635} & TOPOLOGÍA GENERAL & 5 &  &  &  & 4 & MA-0551 &  \\
+6 & \MallaSigla{MA0641} & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & CI-0112 o MA-0341, CA-0821 o MA-0515 &  \\
+6 & OPT- & OPTATIVA DE OTRA DISCIPLINA &  &  &  &  & 3 &  &  \\
 \MallaCicloTotal{6}{15}
 \end{tabular}
 \MallaSidewayEnd
@@ -88,88 +80,70 @@ Se presenta, en forma tabular, la estructura curricular propuesta. El detalle de
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-7 & \MallaSigla{MA0705} & ANÁLISIS REAL I & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
-7 & \MallaSigla{MA0702} & ANÁLISIS COMPLEJO & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
-7 & \MallaSigla{MA0701} & SEMINARIO DE MATEMÁTICA &  &  &  &  & 0 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Topología General, MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
-7 & \MallaSigla{MA0780} & COMUNICACIÓN EN LAS CIENCIAS & 2 &  &  & 4 & 2 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
-7 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
-\MallaCicloTotal{7}{16}
-\end{tabular}
+7 & \MallaSigla{MA0705} & ANÁLISIS REAL I & 5 &  &  &  & 4 & MA-0635 &  \\
+7 & \MallaSigla{MA0702} & ANÁLISIS COMPLEJO & 5 &  &  &  & 4 & MA-0635 &  \\
+7 & \MallaSigla{MA0701} & SEMINARIO &  &  &  &  & 0 & MA-0661 o MA-0635 o MA-0647 o MA-0641 &  \\
+7 & \MallaSigla{MA0780} & COMUNICACIÓN EN LAS CIENCIAS &  &  &  & 3 & 2 & MA-0661 o MA-0635 o MA-0647 o MA-0641 &  \\
+7 & OPT- & OPTATIVA ESPECÍFICA DE MATEMÁTICA &  &  &  &  & 4 &  &  \\
+\MallaCicloTotal{7}{14}
 
-\MallaTabularBegin
 \MallaHeader
-8 & \MallaSigla{MA0781} & PASANTÍA EN MATEMÁTICAS &  &  &  &  & 4 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
-8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
-8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
-8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
-\MallaCicloTotal{8}{4}
-\MallaTotalFinal{Total créditos énfasis pura (incluye bloque común)}{73}
+8 & \MallaSigla{MA0781} & PASANTÍA &  &  &  & 12 & 4 & MA-0661 o MA-0635 o MA-0647 o MA-0641 &  \\
+8 & OPT- & OPTATIVA ESPECÍFICA DE MATEMÁTICA &  &  &  &  & 12 &  &  \\
+\MallaCicloTotal{8}{16}
+\MallaTotalFinal{Total créditos bachillerato pura}{126}
 \end{tabular}
 \MallaSidewayEnd
-
-
-
-
 
 \MallaSidewayBegin
 \MallaSubsection{Énfasis en Matemática Aplicada (ciclos IV a VIII)}
+
 \MallaTabularBegin
 \MallaHeader
-4 & \MallaSigla{MA0461} & ALGEBRA LINEAL II & 5 &  &  &  & 4 & MA0361 Álgebra Lineal I &  \\
-4 & \MallaSigla{MA0451} & PRINCIPIOS DE ANÁLISIS EN UNA VARIABLE & 5 &  &  &  & 4 & MA-0351 Cálculo en Varias Variables & MA0461 Álgebra Lineal II \\
-4 & \MallaSigla{CA0721} & PROBABILIDAD & 5 &  &  &  & 4 & MA-0351 Cálculo en Varias Variables &  \\
-4 & \MallaSigla{CA0203} & HERRAMIENTAS DE CIENCIA DE DATOS I & 3 & 2 &  &  & 4 & MA-0341 Matemática Computacional &  \\
+4 & \MallaSigla{MA0461} & ÁLGEBRA LINEAL II & 5 &  &  &  & 4 & MA-0361 &  \\
+4 & \MallaSigla{MA0451} & PRINCIPIOS DE ANÁLISIS I & 5 &  &  &  & 4 & MA-0351 &  \\
+4 & \MallaSigla{CA0721} & PROBABILIDAD & 5 &  &  &  & 4 & (CA-0351, CA-0352) o MA-0351 &  \\
+4 & \MallaSigla[CA0203]{CA-0204} & HERRAMIENTAS DE CIENCIA DE DATOS I &  &  &  & 5 & 4 & (CA-0101, CI-0112) o MA-0341 &  \\
 \MallaCicloTotal{4}{16}
 \end{tabular}
-
 \MallaSidewayEnd
 
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-5 & \MallaSigla{MA0551} & PRINCIPIOS DE ANÁLISIS EN VARIAS VARIABLES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
-5 & \MallaSigla[MA0515]{MA0615} & ECUACIONES DIFERENCIALES & 5 &  &  &  & 4 & MA-0451 Principios de Análisis I y MA-0461 Álgebra Lineal II &  \\
-5 & \MallaSigla{CA0303} & ESTADÍSTICA I & 3 & 2 &  &  & 4 & CA-0203 Herramientas de Ciencia de Datos y CA-0721 Introducción a la Probabilidad &  \\
-5 & OPT- & Optativa de otra disciplina &  &  &  &  &  &  &  \\
-5 &  & Seminario de realidad nacional II &  &  &  &  & 2 &  &  \\
+5 & SR-II & SEMINARIO DE REALIDAD NACIONAL II &  &  &  &  & 2 & SR-I &  \\
+5 & \MallaSigla{MA0551} & PRINCIPIOS DE ANÁLISIS II & 5 &  &  &  & 4 & MA-0451, MA-0461 &  \\
+5 & \MallaSigla{MA0515} & ECUACIONES DIFERENCIALES ORDINARIAS & 5 &  &  &  & 4 & MA-0451, MA-0461 &  \\
+5 & \MallaSigla{CA0303} & ESTADÍSTICA ACTUARIAL I &  &  &  & 5 & 4 & MA-0720 o CA-0721, CA-0204 &  \\
+5 & OPT- & OPTATIVA DE OTRA DISCIPLINA &  &  &  &  & 3 &  &  \\
 \MallaCicloTotal{5}{17}
-\end{tabular}
 
-\MallaTabularBegin
 \MallaHeader
-6 & \MallaSigla[MA0641]{MA0541} & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias &  \\
-6 & \MallaSigla{MA0647} & Modelación Matemática & 5 &  &  &  & 4 & MA-0515 Ecuaciones Diferenciales Ordinarias&  \\
-6 & \MallaSigla{MA0635} & INTRODUCCIÓN A LA TOPOLOGÍA &  &  &  &  & 4 & MA-0551 Principios de Análisis II &  \\
-6 & OPT- & Optativa de otra disciplina &  &  &  &  &  &  &  \\
-\MallaCicloTotal{6}{8}
+6 & \MallaSigla{MA0641} & ANÁLISIS NUMÉRICO I & 5 &  &  &  & 4 & CI-0112 o MA-0341, CA-0821 o MA-0515 &  \\
+6 & \MallaSigla{MA0635} & TOPOLOGÍA GENERAL & 5 &  &  &  & 4 & MA-0551 &  \\
+6 & \MallaSigla{MA0647} & MODELACIÓN MATEMÁTICA & 5 &  &  &  & 4 & MA-0515 &  \\
+6 & OPT- & OPTATIVA DE OTRA DISCIPLINA &  &  &  &  & 3 &  &  \\
+\MallaCicloTotal{6}{15}
 \end{tabular}
 \MallaSidewayEnd
 
 \MallaSidewayBegin
 \MallaTabularBegin
 \MallaHeader
-7 & \MallaSigla{MA0702} & ANÁLISIS COMPLEJO & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
-7 & \MallaSigla[CA0411AnalisisDatos]{CA0411} & ANÁLISIS DE DATOS I & 3 & 2 &  &  & 4 & CA-0307 &  \\
-7 & \MallaSigla[CA0411AnalisisDatos]{CA0411} & Análisis real I & 5 &  &  &  & 4 & MA-0635 Topología General &  \\
-7 & \MallaSigla{MA0701} & SEMINARIO DE MATEMÁTICA &  &  &  &  & 0 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Topología General, MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
-7 & \MallaSigla{MA0780} & COMUNICACIÓN EN LAS CIENCIAS & 2 &  &  & 4 & 2 & Haber aprobado al menos uno de: MA-0661 Algebra Abstracta II, MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
+7 & \MallaSigla{MA0705} & ANÁLISIS REAL I & 5 &  &  &  & 4 & MA-0635 &  \\
+7 & \MallaSigla{MA0702} & ANÁLISIS COMPLEJO & 5 &  &  &  & 4 & MA-0635 &  \\
+7 & \MallaSigla[CA0411AnalisisDatos]{CA-0411} & ANÁLISIS DE DATOS I &  &  &  & 5 & 4 & CA-0307 &  \\
+7 & \MallaSigla{MA0701} & SEMINARIO &  &  &  &  & 0 & MA-0661 o MA-0635 o MA-0647 o MA-0641 &  \\
+7 & \MallaSigla{MA0780} & COMUNICACIÓN EN LAS CIENCIAS &  &  &  & 3 & 2 & MA-0661 o MA-0635 o MA-0647 o MA-0641 &  \\
 \MallaCicloTotal{7}{14}
-\end{tabular}
 
-\MallaTabularBegin
 \MallaHeader
-8 & \MallaSigla{MA0781} & Práctica en matemática aplicada &  &  &  &  & 4 & Haber aprobado al menos uno de: MA-0635 Introducción a la Topología MA-0647 Modelación Matemática o MA-0641 Análisis Numérico I &  \\
-8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
-8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
-8 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
+8 & \MallaSigla{MA0781} & PASANTÍA &  &  &  & 12 & 4 & MA-0661 o MA-0635 o MA-0647 o MA-0641 &  \\
+8 & OPT- & OPTATIVA ESPECÍFICA DE MATEMÁTICA &  &  &  &  & 12 &  &  \\
 \MallaCicloTotal{8}{16}
-\hline
-\MallaTotalFinal{Total créditos énfasis aplicada (incluye bloque común)}{75}
+\MallaTotalFinal{Total créditos bachillerato aplicada}{128}
 \end{tabular}
 \MallaSidewayEnd
-
-
-
 
 \MallaSidewayBegin
 \MallaSubsection{Énfasis en Matemática Pura (licenciatura, ciclos IX y X)}
@@ -180,34 +154,27 @@ Se presenta, en forma tabular, la estructura curricular propuesta. El detalle de
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{9}{16}
-\hline
 10 & \MallaSigla{MA0881} & Seminario de estudios dirigidos en matemática pura II &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática pura I &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{10}{16}
-\hline
-\MallaTotalFinal{Total créditos énfasis pura (incluye bloque común)}{75}
+\MallaTotalFinal{Total créditos licenciatura pura}{32}
 \end{tabular}
 \MallaSidewayEnd
-
-
 
 \MallaSidewayBegin
 \MallaSubsection{Énfasis en Matemática Aplicada (licenciatura, ciclos IX y X)}
 
 \MallaTabularBegin
 \MallaHeader
-9 & \MallaSigla[MA0781SED]{MA0781} & Seminario de estudios dirigidos en matemática aplicada I &  &  &  &  & 7 & Práctica en matemática aplicada  &  \\
+9 & \MallaSigla[MA0781SED]{MA0781} & Seminario de estudios dirigidos en matemática aplicada I &  &  &  &  & 7 & Práctica en matemática aplicada &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{9}{16}
-\hline
-10 & \MallaSigla{MA0881} & Seminario de estudios dirigidos en matemática aplicada II &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática aplicada I&  \\
+10 & \MallaSigla{MA0881} & Seminario de estudios dirigidos en matemática aplicada II &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática aplicada I &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{10}{16}
-
-\hline
-\MallaTotalFinal{Total créditos énfasis aplicada (incluye bloque común)}{75}
+\MallaTotalFinal{Total créditos licenciatura aplicada}{32}
 \end{tabular}
 \MallaSidewayEnd
