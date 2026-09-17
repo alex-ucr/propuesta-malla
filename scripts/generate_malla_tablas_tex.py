@@ -102,6 +102,10 @@ def _malla_sigla_cell(title: str, sigla_compact: str) -> str:
     dest = SIGLA_ALIASES.get(raw_sigla, raw_sigla).replace("-", "")
     if "estudios dirigidos" in title.casefold() and dest == "MA0781":
         dest = "MA0781SED"
+    elif "práctica profesional en matemática pura" in title.casefold():
+        dest = "MA0781Pura"
+    elif "práctica profesional en matemática aplicada" in title.casefold():
+        dest = "MA0781Aplicada"
     elif dest == "CA0411":
         dest = "CA0411AnalisisDatos"
     if dest == sigla_compact:
