@@ -1,0 +1,604 @@
+{
+  "titulo": "Perfil de salida",
+  "seccion": "5.2.5",
+  "capitulo": "Perfil de Egreso",
+  "introduccion": "En el perfil se vislumbra a una persona que esté consciente de los conocimientos, habilidades y actitudes que le son propias de la carrera de Matemática. El docente es solo un guía que procura que dicho estudiante pueda comprender qué significa estar en Matemática.",
+  "columnas": [
+    "Código",
+    "Tipo del saber",
+    "Descripción del saber"
+  ],
+  "fuente": "propuesta-perfil-egreso.tex",
+  "items": [
+    {
+      "codigo": "SC01",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento avanzado en los fundamentos y conceptos básicos de la matemática: operadores lógicos, predicados, proposiciones, variables, aritmética, la geometría euclídea."
+    },
+    {
+      "codigo": "SC02",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento avanzado en software avanzado y aspectos computacionales de la matemática."
+    },
+    {
+      "codigo": "SC03",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico en lenguajes de programación que potencia su capacidad para programar algoritmos matemáticos."
+    },
+    {
+      "codigo": "SC04",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento avanzado en técnicas de cálculo en una y varias variables, y álgebra lineal."
+    },
+    {
+      "codigo": "SC05",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento intermedio en ecuaciones diferenciales, teoría de la medida y probabilidad."
+    },
+    {
+      "codigo": "SC06",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento avanzado en el análisis de espacios vectoriales reales de dimensión finita."
+    },
+    {
+      "codigo": "SC07",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento intermedio en los principales tipos de Geometría (Euclídea, Proyectiva, Hiperbólica, de curvas y superficies)."
+    },
+    {
+      "codigo": "SC08",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico en los objetos de naturaleza aleatoria (probabilidad, procesos estocásticos) y sus aplicaciones en el entorno de la vida real."
+    },
+    {
+      "codigo": "SC09",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico en el análisis sobre los números complejos y sus aplicaciones en el entorno de la vida real."
+    },
+    {
+      "codigo": "SC10",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento intermedio en las estructuras algebraicas(álgebra abstracta) y sus morfismos junto con las aplicaciones a otras áreas del conocimiento y del entorno de la vida real."
+    },
+    {
+      "codigo": "SC11",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico en las estructuras geométricas desde el punto de vista algebraico o diferencial junto con sus aplicaciones a otras áreas del conocimiento y el entorno de la vida real."
+    },
+    {
+      "codigo": "SC12",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico en la lógica matemática y los fundamentos de la matemática, así como sus aplicaciones a otras áreas del conocimiento y del entorno de la vida real."
+    },
+    {
+      "codigo": "SC13",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico de la estructura de los sistemas numéricos (análisis numérico) y sus aplicaciones en el entorno y en otras disciplinas."
+    },
+    {
+      "codigo": "SC14",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico en los principales conceptos y resultados del Análisis Funcional y sus aplicaciones a otras áreas del conocimiento."
+    },
+    {
+      "codigo": "SC15",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento intermedio en las estructuras topológicas desde el punto de vista general, geométrico y algebraico, junto con las aplicaciones a otras áreas de la matemática y de la vida real."
+    },
+    {
+      "codigo": "SC16",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico de los objetos de la Teoría de Números y sus relaciones con otras áreas del conocimiento."
+    },
+    {
+      "codigo": "SC17",
+      "tipo": "Saber Conocer",
+      "descripcion": "Conocimiento básico en modelación matemática y sus aplicaciones a la vida del entorno real."
+    },
+    {
+      "codigo": "SH01",
+      "tipo": "Saber Hacer",
+      "descripcion": "Piensa operacionalmente en áreas de la matemática básica y avanzada para el trabajo propio y con profesionales de otras disciplinas."
+    },
+    {
+      "codigo": "SH02",
+      "tipo": "Saber Hacer",
+      "descripcion": "Resuelve problemas elementales de aritmética, álgebra y cálculo."
+    },
+    {
+      "codigo": "SH03",
+      "tipo": "Saber Hacer",
+      "descripcion": "Experimenta con nuevas tecnologías para validar y conjeturar resultados."
+    },
+    {
+      "codigo": "SH04",
+      "tipo": "Saber Hacer",
+      "descripcion": "Aplica la matemática a la búsqueda de soluciones del entorno"
+    },
+    {
+      "codigo": "SH05",
+      "tipo": "Saber Hacer",
+      "descripcion": "Piensa de manera abstracta y formal en la resolución de problemas."
+    },
+    {
+      "codigo": "SH06",
+      "tipo": "Saber Hacer",
+      "descripcion": "Sintetiza distintos conceptos para abstraerse y condensarse en un solo objeto matemático."
+    },
+    {
+      "codigo": "SH07",
+      "tipo": "Saber Hacer",
+      "descripcion": "Visualiza y utiliza los conceptos geométricos-topológicos con el fin de encontrar nuevas aplicaciones a la matemática y a la vida real."
+    },
+    {
+      "codigo": "SH08",
+      "tipo": "Saber Hacer",
+      "descripcion": "Lee y entiende resultados escritos en lenguaje matemático."
+    },
+    {
+      "codigo": "SH09",
+      "tipo": "Saber Hacer",
+      "descripcion": "Plantea problemas reales en términos matemáticos, mediante la modelación con miras a la aproximación, simulación y pronóstico."
+    },
+    {
+      "codigo": "SH10",
+      "tipo": "Saber Hacer",
+      "descripcion": "Utiliza software científico para elaborar documentos, crear algoritmos que le permitan plantear problemas, obtener soluciones y divulgar los resultados."
+    },
+    {
+      "codigo": "SH11",
+      "tipo": "Saber Hacer",
+      "descripcion": "Obtiene resultados mediante la ciencia de los datos con el fin de encontrar relaciones e interpretaciones."
+    },
+    {
+      "codigo": "SH12",
+      "tipo": "Saber Hacer",
+      "descripcion": "Expresa sus ideas en forma coherente mediante el lenguaje matemático formal."
+    },
+    {
+      "codigo": "SH13",
+      "tipo": "Saber Hacer",
+      "descripcion": "Usa la tecnología para explorar científicamente en áreas del conocimiento matemático y afines."
+    },
+    {
+      "codigo": "SH14",
+      "tipo": "Saber Hacer",
+      "descripcion": "Incorpora nuevos espacios de discusión científica y matemática, o grupos de trabajo ya existentes."
+    },
+    {
+      "codigo": "SH15",
+      "tipo": "Saber Hacer",
+      "descripcion": "Explora científicamente con el fin de entender temas que no son de su especialidad."
+    },
+    {
+      "codigo": "SH16",
+      "tipo": "Saber Hacer",
+      "descripcion": "Intercambia ideas con otros científicos y matemáticos."
+    },
+    {
+      "codigo": "SH17",
+      "tipo": "Saber Hacer",
+      "descripcion": "Actualiza sus conocimientos con el fin de mantener vigencia en su área de especialidad."
+    },
+    {
+      "codigo": "SH18",
+      "tipo": "Saber Hacer",
+      "descripcion": "Divulga y comunica el conocimiento matemático que posee o las transformaciones que ha obtenido de este a comunidades de especialistas o audiencias más generales."
+    },
+    {
+      "codigo": "SH19",
+      "tipo": "Saber Hacer",
+      "descripcion": "Relaciona la topología, el análisis y la geometría con otras áreas de la Matemática y las ciencias en general."
+    },
+    {
+      "codigo": "SH20",
+      "tipo": "Saber Hacer",
+      "descripcion": "Relaciona el álgebra con otras áreas de la Matemática y las ciencias en general."
+    },
+    {
+      "codigo": "SH21",
+      "tipo": "Saber Hacer",
+      "descripcion": "Visualiza los espacios euclídeos, hiperbólicos, esféricos y protectivos, y las geometrías básicas en dos, tres y más dimensiones."
+    },
+    {
+      "codigo": "SH22",
+      "tipo": "Saber Hacer",
+      "descripcion": "Modela procesos reales (por ejemplo: fenómenos aleatorios) mediante el uso de modelos matemáticos tales como: procesos estocásticos, ecuaciones diferenciales, métodos numéricos,etc."
+    },
+    {
+      "codigo": "SH23",
+      "tipo": "Saber Hacer",
+      "descripcion": "Formula conjeturas con base en observaciones experimentales o teóricas sobre resultados plausibles."
+    },
+    {
+      "codigo": "SS01",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que cuenta con la información y los elementos necesarios para respetar la diversidad humana independientemente de la etnia, género, ideología, religión, estatus económico, orientación sexual, nacionalidad o cualquier otra característica."
+    },
+    {
+      "codigo": "SS02",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que escucha activamente para comprender la intención del mensaje que se le quiere transmitir, y sabe comunicar de manera clara y oportuna sus criterios y opiniones."
+    },
+    {
+      "codigo": "SS03",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona consciente de las diferencias que existen entre los grupos sociales, así como de sus necesidades y reconoce el valor de la organización y de la participación ciudadana."
+    },
+    {
+      "codigo": "SS04",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona crítica y analítica que aplica los principios éticos y de excelencia a las actividades relacionadas con su disciplina."
+    },
+    {
+      "codigo": "SS05",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que reconoce el valor del trabajo interdisciplinario y que trabaja en equipo y de forma colaborativa."
+    },
+    {
+      "codigo": "SS06",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que concibe la realidad sociocultural como una construcción fundada en la ciencia."
+    },
+    {
+      "codigo": "SS07",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que concibe la ciencia y la matemática como prácticas sociales interrelacionadas."
+    },
+    {
+      "codigo": "SS08",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que respeta la diversidad matemática y científica, y más generalmente, profesional y cultural."
+    },
+    {
+      "codigo": "SS09",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona con disposición crítica hacia las diversas prácticas científicas presentes en la sociedad."
+    },
+    {
+      "codigo": "SS10",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que concibe la matemática como fenómenos ligados a la cultura y la identidad de una comunidad científica"
+    },
+    {
+      "codigo": "SS11",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que toma posiciones críticas ante las instituciones académicas."
+    },
+    {
+      "codigo": "SS12",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que tiene una visión integral de la sociedad por medio del análisis de las producciones científicas y matemáticas."
+    },
+    {
+      "codigo": "SS13",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que cultiva y fomenta la creatividad intelectual y científica a partir del conocimiento matemático con el fin de ayudar a la comprensión de la realidad circundante."
+    },
+    {
+      "codigo": "SS14",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que conoce la importancia de la matemática en la resolución de problemas propios y prácticos del entorno."
+    },
+    {
+      "codigo": "SS15",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que valora la importancia de conocer la actualidad de la investigación científica y matemática."
+    },
+    {
+      "codigo": "SS16",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que distingue las fuentes y personalidades académicas a las cuales acudir para solicitar colaboración y ayuda en temas fuera de su área de experticia."
+    },
+    {
+      "codigo": "SS17",
+      "tipo": "Saber Ser",
+      "descripcion": "Es una persona que posee valor del autoaprendizaje y que puede llegar a ser líder en la organización y dirección de equipos de trabajo inter y multidisciplinario y dentro de la matemática."
+    }
+  ],
+  "grupos": [
+    {
+      "tipo": "Saber Conocer",
+      "prefijo": "SC",
+      "items": [
+        {
+          "codigo": "SC01",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento avanzado en los fundamentos y conceptos básicos de la matemática: operadores lógicos, predicados, proposiciones, variables, aritmética, la geometría euclídea."
+        },
+        {
+          "codigo": "SC02",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento avanzado en software avanzado y aspectos computacionales de la matemática."
+        },
+        {
+          "codigo": "SC03",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico en lenguajes de programación que potencia su capacidad para programar algoritmos matemáticos."
+        },
+        {
+          "codigo": "SC04",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento avanzado en técnicas de cálculo en una y varias variables, y álgebra lineal."
+        },
+        {
+          "codigo": "SC05",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento intermedio en ecuaciones diferenciales, teoría de la medida y probabilidad."
+        },
+        {
+          "codigo": "SC06",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento avanzado en el análisis de espacios vectoriales reales de dimensión finita."
+        },
+        {
+          "codigo": "SC07",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento intermedio en los principales tipos de Geometría (Euclídea, Proyectiva, Hiperbólica, de curvas y superficies)."
+        },
+        {
+          "codigo": "SC08",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico en los objetos de naturaleza aleatoria (probabilidad, procesos estocásticos) y sus aplicaciones en el entorno de la vida real."
+        },
+        {
+          "codigo": "SC09",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico en el análisis sobre los números complejos y sus aplicaciones en el entorno de la vida real."
+        },
+        {
+          "codigo": "SC10",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento intermedio en las estructuras algebraicas(álgebra abstracta) y sus morfismos junto con las aplicaciones a otras áreas del conocimiento y del entorno de la vida real."
+        },
+        {
+          "codigo": "SC11",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico en las estructuras geométricas desde el punto de vista algebraico o diferencial junto con sus aplicaciones a otras áreas del conocimiento y el entorno de la vida real."
+        },
+        {
+          "codigo": "SC12",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico en la lógica matemática y los fundamentos de la matemática, así como sus aplicaciones a otras áreas del conocimiento y del entorno de la vida real."
+        },
+        {
+          "codigo": "SC13",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico de la estructura de los sistemas numéricos (análisis numérico) y sus aplicaciones en el entorno y en otras disciplinas."
+        },
+        {
+          "codigo": "SC14",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico en los principales conceptos y resultados del Análisis Funcional y sus aplicaciones a otras áreas del conocimiento."
+        },
+        {
+          "codigo": "SC15",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento intermedio en las estructuras topológicas desde el punto de vista general, geométrico y algebraico, junto con las aplicaciones a otras áreas de la matemática y de la vida real."
+        },
+        {
+          "codigo": "SC16",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico de los objetos de la Teoría de Números y sus relaciones con otras áreas del conocimiento."
+        },
+        {
+          "codigo": "SC17",
+          "tipo": "Saber Conocer",
+          "descripcion": "Conocimiento básico en modelación matemática y sus aplicaciones a la vida del entorno real."
+        }
+      ]
+    },
+    {
+      "tipo": "Saber Hacer",
+      "prefijo": "SH",
+      "items": [
+        {
+          "codigo": "SH01",
+          "tipo": "Saber Hacer",
+          "descripcion": "Piensa operacionalmente en áreas de la matemática básica y avanzada para el trabajo propio y con profesionales de otras disciplinas."
+        },
+        {
+          "codigo": "SH02",
+          "tipo": "Saber Hacer",
+          "descripcion": "Resuelve problemas elementales de aritmética, álgebra y cálculo."
+        },
+        {
+          "codigo": "SH03",
+          "tipo": "Saber Hacer",
+          "descripcion": "Experimenta con nuevas tecnologías para validar y conjeturar resultados."
+        },
+        {
+          "codigo": "SH04",
+          "tipo": "Saber Hacer",
+          "descripcion": "Aplica la matemática a la búsqueda de soluciones del entorno"
+        },
+        {
+          "codigo": "SH05",
+          "tipo": "Saber Hacer",
+          "descripcion": "Piensa de manera abstracta y formal en la resolución de problemas."
+        },
+        {
+          "codigo": "SH06",
+          "tipo": "Saber Hacer",
+          "descripcion": "Sintetiza distintos conceptos para abstraerse y condensarse en un solo objeto matemático."
+        },
+        {
+          "codigo": "SH07",
+          "tipo": "Saber Hacer",
+          "descripcion": "Visualiza y utiliza los conceptos geométricos-topológicos con el fin de encontrar nuevas aplicaciones a la matemática y a la vida real."
+        },
+        {
+          "codigo": "SH08",
+          "tipo": "Saber Hacer",
+          "descripcion": "Lee y entiende resultados escritos en lenguaje matemático."
+        },
+        {
+          "codigo": "SH09",
+          "tipo": "Saber Hacer",
+          "descripcion": "Plantea problemas reales en términos matemáticos, mediante la modelación con miras a la aproximación, simulación y pronóstico."
+        },
+        {
+          "codigo": "SH10",
+          "tipo": "Saber Hacer",
+          "descripcion": "Utiliza software científico para elaborar documentos, crear algoritmos que le permitan plantear problemas, obtener soluciones y divulgar los resultados."
+        },
+        {
+          "codigo": "SH11",
+          "tipo": "Saber Hacer",
+          "descripcion": "Obtiene resultados mediante la ciencia de los datos con el fin de encontrar relaciones e interpretaciones."
+        },
+        {
+          "codigo": "SH12",
+          "tipo": "Saber Hacer",
+          "descripcion": "Expresa sus ideas en forma coherente mediante el lenguaje matemático formal."
+        },
+        {
+          "codigo": "SH13",
+          "tipo": "Saber Hacer",
+          "descripcion": "Usa la tecnología para explorar científicamente en áreas del conocimiento matemático y afines."
+        },
+        {
+          "codigo": "SH14",
+          "tipo": "Saber Hacer",
+          "descripcion": "Incorpora nuevos espacios de discusión científica y matemática, o grupos de trabajo ya existentes."
+        },
+        {
+          "codigo": "SH15",
+          "tipo": "Saber Hacer",
+          "descripcion": "Explora científicamente con el fin de entender temas que no son de su especialidad."
+        },
+        {
+          "codigo": "SH16",
+          "tipo": "Saber Hacer",
+          "descripcion": "Intercambia ideas con otros científicos y matemáticos."
+        },
+        {
+          "codigo": "SH17",
+          "tipo": "Saber Hacer",
+          "descripcion": "Actualiza sus conocimientos con el fin de mantener vigencia en su área de especialidad."
+        },
+        {
+          "codigo": "SH18",
+          "tipo": "Saber Hacer",
+          "descripcion": "Divulga y comunica el conocimiento matemático que posee o las transformaciones que ha obtenido de este a comunidades de especialistas o audiencias más generales."
+        },
+        {
+          "codigo": "SH19",
+          "tipo": "Saber Hacer",
+          "descripcion": "Relaciona la topología, el análisis y la geometría con otras áreas de la Matemática y las ciencias en general."
+        },
+        {
+          "codigo": "SH20",
+          "tipo": "Saber Hacer",
+          "descripcion": "Relaciona el álgebra con otras áreas de la Matemática y las ciencias en general."
+        },
+        {
+          "codigo": "SH21",
+          "tipo": "Saber Hacer",
+          "descripcion": "Visualiza los espacios euclídeos, hiperbólicos, esféricos y protectivos, y las geometrías básicas en dos, tres y más dimensiones."
+        },
+        {
+          "codigo": "SH22",
+          "tipo": "Saber Hacer",
+          "descripcion": "Modela procesos reales (por ejemplo: fenómenos aleatorios) mediante el uso de modelos matemáticos tales como: procesos estocásticos, ecuaciones diferenciales, métodos numéricos,etc."
+        },
+        {
+          "codigo": "SH23",
+          "tipo": "Saber Hacer",
+          "descripcion": "Formula conjeturas con base en observaciones experimentales o teóricas sobre resultados plausibles."
+        }
+      ]
+    },
+    {
+      "tipo": "Saber Ser",
+      "prefijo": "SS",
+      "items": [
+        {
+          "codigo": "SS01",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que cuenta con la información y los elementos necesarios para respetar la diversidad humana independientemente de la etnia, género, ideología, religión, estatus económico, orientación sexual, nacionalidad o cualquier otra característica."
+        },
+        {
+          "codigo": "SS02",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que escucha activamente para comprender la intención del mensaje que se le quiere transmitir, y sabe comunicar de manera clara y oportuna sus criterios y opiniones."
+        },
+        {
+          "codigo": "SS03",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona consciente de las diferencias que existen entre los grupos sociales, así como de sus necesidades y reconoce el valor de la organización y de la participación ciudadana."
+        },
+        {
+          "codigo": "SS04",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona crítica y analítica que aplica los principios éticos y de excelencia a las actividades relacionadas con su disciplina."
+        },
+        {
+          "codigo": "SS05",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que reconoce el valor del trabajo interdisciplinario y que trabaja en equipo y de forma colaborativa."
+        },
+        {
+          "codigo": "SS06",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que concibe la realidad sociocultural como una construcción fundada en la ciencia."
+        },
+        {
+          "codigo": "SS07",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que concibe la ciencia y la matemática como prácticas sociales interrelacionadas."
+        },
+        {
+          "codigo": "SS08",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que respeta la diversidad matemática y científica, y más generalmente, profesional y cultural."
+        },
+        {
+          "codigo": "SS09",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona con disposición crítica hacia las diversas prácticas científicas presentes en la sociedad."
+        },
+        {
+          "codigo": "SS10",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que concibe la matemática como fenómenos ligados a la cultura y la identidad de una comunidad científica"
+        },
+        {
+          "codigo": "SS11",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que toma posiciones críticas ante las instituciones académicas."
+        },
+        {
+          "codigo": "SS12",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que tiene una visión integral de la sociedad por medio del análisis de las producciones científicas y matemáticas."
+        },
+        {
+          "codigo": "SS13",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que cultiva y fomenta la creatividad intelectual y científica a partir del conocimiento matemático con el fin de ayudar a la comprensión de la realidad circundante."
+        },
+        {
+          "codigo": "SS14",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que conoce la importancia de la matemática en la resolución de problemas propios y prácticos del entorno."
+        },
+        {
+          "codigo": "SS15",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que valora la importancia de conocer la actualidad de la investigación científica y matemática."
+        },
+        {
+          "codigo": "SS16",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que distingue las fuentes y personalidades académicas a las cuales acudir para solicitar colaboración y ayuda en temas fuera de su área de experticia."
+        },
+        {
+          "codigo": "SS17",
+          "tipo": "Saber Ser",
+          "descripcion": "Es una persona que posee valor del autoaprendizaje y que puede llegar a ser líder en la organización y dirección de equipos de trabajo inter y multidisciplinario y dentro de la matemática."
+        }
+      ]
+    }
+  ]
+}
