@@ -36,7 +36,12 @@
 %\usepackage[sectionbib]{bibunits}
 \usepackage[backend=biber, style=alphabetic]{biblatex}
 %\usepackage[backend=biber,style=ieee,refsection=subsection]{biblatex} % Bibliografías por partes
-\addbibresource{Biblio.bib}
+% Los programas individuales viven en Cursos/; biber resuelve esta ruta respecto al .bcf.
+\providecommand{\BiblioFile}{Biblio.bib}
+\addbibresource{\BiblioFile}
+\newcommand{\printcursosbibliography}{%
+  \printbibliography[heading=subbibliography,section=\the\value{refsection}]%
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Definición de colores UCR %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

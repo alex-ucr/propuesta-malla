@@ -1,0 +1,2 @@
+# biber se ejecuta junto al .tex del curso; Biblio.bib está en la raíz del proyecto.
+ensure_path('BIBINPUTS', '..');

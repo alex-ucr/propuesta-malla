@@ -39,7 +39,11 @@
 \usepackage{rotfloat}
 \usepackage{pdflscape}
 \usepackage[backend=biber, style=alphabetic]{biblatex}
-\addbibresource{Biblio.bib}
+\providecommand{\BiblioFile}{Biblio.bib}
+\addbibresource{\BiblioFile}
+\newcommand{\printcursosbibliography}{%
+  \printbibliography[heading=subbibliography,section=\the\value{refsection}]%
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Definición de colores UCR %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
