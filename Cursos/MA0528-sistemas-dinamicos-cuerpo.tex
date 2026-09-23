@@ -11,10 +11,10 @@
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} Por determinar \\ 
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0515, MA-0551 y MA-0635 \\ 
 \textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\ 
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} Por determinar \\ 
-\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} Por determinar \\
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} 5 \\ 
+\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} 10 \\
 \textbf{Virtualidad:} P  &  \\ \hline
 \end{tabular}
 }
@@ -22,20 +22,115 @@
 
 \subsubsection*{Descripción del curso}
 
-\textit{Programa pendiente de elaboración.}
+Este curso ofrece una introducción rigurosa a los sistemas dinámicos y a la teoría ergódica, con énfasis en sistemas unidimensionales. Se estudian sistemas en tiempo discreto y continuo, puntos fijos y periódicos, conjuntos límite, recurrencia y conjugaciones; se analizan los difeomorfismos del intervalo, la linealización local de contracciones y la codificación simbólica de conjuntos de Cantor y de transformaciones expansoras por ramas completas.
+
+La segunda parte desarrolla las nociones de medida invariante, recurrencia de Poincaré, promedios de Birkhoff y ergodicidad. Estas herramientas se aplican a mapas afines y expansores por ramas, al mapa de Gauss y a la familia cuadrática.
 
 \subsubsection*{Objetivos}
 
-\textit{Pendiente de elaboración.}
+\textbf{General:} Que la persona estudiante adquiera las herramientas fundamentales para analizar sistemas dinámicos desde los puntos de vista topológico, diferenciable y ergódico, reconocer estructuras recurrentes, construir modelos simbólicos, estudiar medidas invariantes e interpretar el comportamiento estadístico de las órbitas mediante promedios temporales.
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Formular sistemas dinámicos en tiempo discreto y continuo, describir sus órbitas e identificar puntos fijos, puntos periódicos, conjuntos $\alpha$- y $\omega$-límite, y distinguir periodicidad, recurrencia y no errancia.
+\item Comparar sistemas mediante conjugaciones topológicas, diferenciables y semiconjugaciones, y reconocer los invariantes preservados por cada tipo de equivalencia.
+\item Describir la dinámica global de difeomorfismos del intervalo y aplicar resultados de linealización local cerca de puntos fijos contractivos o hiperbólicos.
+\item Construir conjuntos de Cantor definidos dinámicamente, asociar itinerarios simbólicos a puntos y órbitas, y codificar mapas expansores por ramas completas mediante particiones generadoras.
+\item Construir medidas invariantes para aplicaciones continuas de espacios compactos, aplicar el teorema de recurrencia de Poincaré y estudiar la convergencia de promedios temporales mediante el teorema ergódico de Birkhoff.
+\item Probar la invariancia y ergodicidad de la medida de Lebesgue para mapas afines por ramas completas, analizar el mapa de Gauss y utilizar estimaciones de distorsión acotada para mapas expansores no lineales.
+\item Analizar puntos fijos, órbitas periódicas y bifurcaciones en la familia logística, estudiar el papel de la órbita crítica y relacionar observaciones numéricas con propiedades topológicas y ergódicas.
+\item Formular argumentos rigurosos, consultar bibliografía especializada y utilizar experimentos computacionales como apoyo para la exploración y la formulación de conjeturas.
+\end{enumerate}
 
 \subsubsection*{Contenidos}
 
-\textit{Pendiente de elaboración.}
+\begin{enumerate}
+\item \textbf{Sistemas dinámicos en tiempo discreto y continuo (2 semanas):}
+\begin{enumerate}
+    \item Sistemas dinámicos como acciones de $\mathbb{N}$, $\mathbb{Z}$ y $\mathbb{R}$; iteraciones y flujos.
+    \item Órbitas positivas, negativas y completas; puntos fijos y de equilibrio; puntos y órbitas periódicas.
+    \item Estabilidad y atracción; relación entre un flujo y sus mapas de tiempo fijo.
+    \item Ejemplos elementales de ecuaciones diferenciales autónomas y mapas del intervalo.
+\end{enumerate}
+
+\item \textbf{Conjuntos límite, recurrencia y conjugaciones (2 semanas):}
+\begin{enumerate}
+    \item Conjuntos $\alpha$-límite y $\omega$-límite; puntos recurrentes y no errantes.
+    \item Conjuntos invariantes y minimales.
+    \item Conjugación topológica, semiconjugación y conjugación de flujos; invariantes topológicos.
+    \item Conjugación diferenciable; multiplicadores de puntos periódicos y obstrucciones a la conjugación diferenciable.
+\end{enumerate}
+
+\item \textbf{Difeomorfismos del intervalo y linealización local (2 semanas):}
+\begin{enumerate}
+    \item Homeomorfismos y difeomorfismos de intervalos compactos; orientación y monotonía.
+    \item Dinámica de difeomorfismos que preservan o invierten la orientación.
+    \item Contracciones y teorema del punto fijo; puntos fijos hiperbólicos.
+    \item Linealización topológica y diferenciable en dimensión uno; resultados de Hartman--Grobman en el contexto unidimensional.
+\end{enumerate}
+
+\item \textbf{Codificación simbólica (2 semanas):}
+\begin{enumerate}
+    \item Espacios de sucesiones y topología producto; desplazamientos unilateral y bilateral.
+    \item Cilindros, puntos periódicos y órbitas densas; sistemas iterados de funciones.
+    \item Construcción y codificación de conjuntos de Cantor definidos dinámicamente; ramas inversas e itinerarios.
+    \item Mapas expansores por ramas completas; particiones generadoras y conjugación o semiconjugación con el desplazamiento.
+\end{enumerate}
+
+\item \textbf{Medidas invariantes y teoría ergódica (3 semanas):}
+\begin{enumerate}
+    \item Espacios de probabilidad y transformaciones medibles; medidas invariantes.
+    \item Medidas de Dirac sobre órbitas periódicas; medidas empíricas.
+    \item Construcción de Krylov--Bogolyubov para aplicaciones continuas de espacios métricos compactos.
+    \item Teorema de recurrencia de Poincaré; ergodicidad, conjuntos invariantes y funciones invariantes.
+    \item Teorema ergódico de Birkhoff.
+\end{enumerate}
+
+\item \textbf{Mapas por ramas, mapa de Gauss y distorsión acotada (2 semanas):}
+\begin{enumerate}
+    \item Transformaciones afines por ramas completas; invariancia y ergodicidad de la medida de Lebesgue.
+    \item Operador de transferencia de Perron--Frobenius; el mapa de Gauss y fracciones continuas; medida de Gauss.
+    \item Distorsión y cocientes de derivadas; lemas de distorsión acotada.
+    \item Medidas invariantes absolutamente continuas para mapas expansores por ramas completas; ergodicidad respecto de la medida invariante y ergodicidad no singular respecto de Lebesgue.
+\end{enumerate}
+
+\item \textbf{La familia cuadrática (2 semanas):}
+\begin{enumerate}
+    \item Familia logística $q_a(x)=ax(1-x)$, con $0\leq a\leq4$, y relación con la familia $x\mapsto x^2+c$.
+    \item Puntos fijos, estabilidad, órbitas periódicas y bifurcaciones; órbita del punto crítico.
+    \item Intervalos invariantes, atractores, itinerarios y codificación simbólica; conjuntos de Cantor hiperbólicos.
+    \item Ventanas periódicas, diagramas de bifurcación y promedios de Birkhoff.
+\end{enumerate}
+\end{enumerate}
 
 \subsubsection*{Metodología}
 
-\textit{Pendiente de elaboración.}
+\noindent\textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item Combinar exposición teórica rigurosa con discusión de ejemplos concretos y resolución de problemas.
+    \item Destacar las hipótesis de los teoremas, las ideas centrales de las demostraciones y la relación entre los enfoques topológico, diferenciable, simbólico y medible.
+    \item Promover la comunicación clara de argumentos matemáticos en forma oral y escrita.
+    \item Fomentar el trabajo independiente mediante listas de ejercicios y lecturas guiadas de la bibliografía.
+\end{enumerate}
+
+\textbf{Sugerencias metodológicas:} Adicionalmente, se recomienda:
+\begin{enumerate}
+    \item Desarrollar talleres en los que las personas estudiantes calculen órbitas, construyan conjugaciones, verifiquen invariancia de medidas y elaboren demostraciones breves.
+    \item Utilizar Python, SageMath u otras herramientas disponibles para visualizar diagramas de telaraña, aproximar conjuntos de Cantor, representar itinerarios, construir diagramas de bifurcación y calcular promedios de Birkhoff; la experimentación computacional tendrá función exploratoria y no sustituirá la argumentación matemática.
+    \item Solicitar que, durante el trabajo independiente, se revisen definiciones y demostraciones antes de cada clase, se resuelvan ejercicios de manera constante, se registren dudas para discutirlas en consulta o talleres, se lean previamente los fragmentos indicados de la bibliografía y se contrasten los experimentos numéricos con los resultados teóricos.
+    \item Apoyarse en la plataforma institucional para distribuir materiales, listas de ejercicios, lecturas y recursos computacionales cuando corresponda.
+\end{enumerate}
+
+\nocite{BrSt02}
+\nocite{HaKa03}
+\nocite{KaHa95}
+\nocite{Rob99}
+\nocite{Sam05}
+\nocite{SamUr}
+\nocite{ViaOl16}
+\nocite{Wal82}
+\nocite{MeSt93}
 
 \printcursosbibliography
-
 \end{refsection}
