@@ -347,7 +347,9 @@
         "I Ciclo", "II Ciclo", "III Ciclo", "IV Ciclo",
         "V Ciclo", "VI Ciclo", "VII Ciclo", "VIII Ciclo",
         "IX Ciclo", "X Ciclo",
-        "Optativas de núcleo", "Optativas temáticas"
+        "OPT-001 — Núcleo en matemática pura",
+        "OPT-002 — Núcleo en matemática aplicada",
+        "OPT-003 — Optativas generales",
       ];
 
                                                                   const CONFIG = {
@@ -785,17 +787,26 @@
       var saberDescPorCodigo = {};
       var modoActivo = "pura";
 
-      const CLAVES_OPTATIVAS = ["Optativas de núcleo", "Optativas temáticas"];
+      /** Alineado con propuesta-lista-cursos.tex y malla-curricular-tablas.tex (OPT-001/002/003). */
+      const OPT_SECCIONES_POR_MODO = {
+        pura: [
+          "OPT-001 — Núcleo en matemática pura",
+          "OPT-003 — Optativas generales",
+        ],
+        aplicada: [
+          "OPT-002 — Núcleo en matemática aplicada",
+          "OPT-003 — Optativas generales",
+        ],
+      };
 
       function mallaConOptativas(modo) {
         const base = mallaData[modo] || {};
         const opt = optativasPorModo[modo] || {};
         const out = Object.assign({}, base);
-        for (const k of CLAVES_OPTATIVAS) {
+        const claves = OPT_SECCIONES_POR_MODO[modo] || [];
+        for (const k of claves) {
           if (Object.prototype.hasOwnProperty.call(opt, k)) {
             out[k] = Array.isArray(opt[k]) ? opt[k] : [];
-          } else {
-            delete out[k];
           }
         }
         return out;
