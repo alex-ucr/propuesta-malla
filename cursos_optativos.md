@@ -18,7 +18,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 
 | Sigla | Nombre |
 |-------|--------|
-| MA-0725 | Análisis Real II |
+| MA-0788 | Análisis Real II |
 | MA-0707 | Geometría Diferencial |
 | MA-0920 | Ecuaciones en derivadas parciales numéricas |
 | MA-0806 | Análisis funcional |

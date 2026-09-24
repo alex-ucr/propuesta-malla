@@ -1,6 +1,6 @@
 {
   "nucleo": [
-    {"code": "MA-0725", "title": "Análisis Real II", "stem": "MA0725-analisis-real-ii-cuerpo"},
+    {"code": "MA-0788", "title": "Análisis Real II", "stem": "MA0788-analisis-real-ii-cuerpo"},
     {"code": "MA-0707", "title": "Geometría Diferencial", "stem": "MA0707-geometria-diferencial-cuerpo"},
     {"code": "MA-0920", "title": "Ecuaciones en derivadas parciales numéricas", "stem": "MA0920-edp-numericas-cuerpo"},
     {"code": "MA-0806", "title": "Análisis funcional", "stem": "MA0806-analisis-funcional-cuerpo"},

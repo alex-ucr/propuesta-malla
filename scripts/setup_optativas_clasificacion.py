@@ -113,19 +113,19 @@ def tex_inputs(entries: list[dict]) -> str:
 def update_programas_tex(nucleo: list[dict], tematicos: list[dict]) -> None:
     tex = PROGRAMAS.read_text(encoding="utf-8")
 
-    tercer_nucleo = [e for e in nucleo if e["code"] == "MA-0725"]
-    cuarto_nucleo = [e for e in nucleo if e["code"] != "MA-0725"]
+    tercer_nucleo = [e for e in nucleo if e["code"] == "MA-0788"]
+    cuarto_nucleo = [e for e in nucleo if e["code"] != "MA-0788"]
 
     old_tercer = (
         "\\subsubsection{Cursos optativos}\n"
-        "\\input{Cursos/MA0725-analisis-real-ii-cuerpo}"
+        "\\input{Cursos/MA0788-analisis-real-ii-cuerpo}"
     )
     new_tercer = (
         "\\subsubsection{Cursos optativos de núcleo}\n"
         + tex_inputs(tercer_nucleo).rstrip()
     )
     if old_tercer not in tex:
-        raise RuntimeError("No se encontró optativa MA-0725 en tercer año")
+        raise RuntimeError("No se encontró optativa MA-0788 en tercer año")
     tex = tex.replace(old_tercer, new_tercer, 1)
 
     old_block = re.search(

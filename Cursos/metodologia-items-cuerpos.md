@@ -296,7 +296,7 @@ Los párrafos sin listas (p. ej. CA-0721) no generan entradas aquí.
 - Para fomentar el desarrollo de las habilidades investigativas en el estudiantado, se sugiere la implementación de proyectos de investigación y participación en coloquios o seminarios de investigación.
 - Dado que hoy en día la mayoría del trabajo en matemática, tanto a nivel académico como profesional, es de naturaleza colaborativa, se sugiere a la persona docente implementar estrategias que promuevan el trabajo en equipo.
 
-### `MA0725-analisis-real-ii-cuerpo.tex`
+### `MA0788-analisis-real-ii-cuerpo.tex`
 
 - Fomentar el desarrollo de intuición sobre los conceptos estudiados en el curso.
 - Requerir de parte del estudiantado, una comunicación clara y rigurosa de argumentos y pruebas matemáticas de manera oral y escrita.
