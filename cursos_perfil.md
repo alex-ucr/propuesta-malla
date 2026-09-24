@@ -1,6 +1,6 @@
-# Cursos obligatorios y Perfil de Salida
+# Cursos obligatorios y Perfil de Egreso
 
-Relación entre los **cursos obligatorios** de la malla curricular (todos los ciclos excepto Optativas en `pura.json` y `aplicada.json`) y los saberes del **Perfil de salida** (sección 5.2.5 de la propuesta).
+Relación entre los **cursos obligatorios** de la estructura curricular (todos los ciclos excepto Optativas en `pura.json` y `aplicada.json`) y los saberes del **Perfil de egreso** (sección 5.2.5 de la propuesta).
 
 Leyenda de énfasis: **Pura y aplicada** = presente en ambas mallas; **Pura** / **Aplicada** = obligatorio solo en esa malla.
 

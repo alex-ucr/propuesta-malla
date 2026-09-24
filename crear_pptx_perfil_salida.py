@@ -1,4 +1,4 @@
-"""Genera PPTX con las tres tablas de la subsección Perfil de salida."""
+"""Genera PPTX con las tres tablas de la subsección Perfil de egreso."""
 
 from pptx import Presentation
 from pptx.util import Inches, Pt
@@ -82,7 +82,7 @@ def add_title_slide(prs):
     p = tf.paragraphs[0]
     p.alignment = PP_ALIGN.CENTER
     run = p.add_run()
-    run.text = "Perfil de salida"
+    run.text = "Perfil de egreso"
     run.font.size = Pt(40)
     run.font.bold = True
     run.font.name = "Calibri"

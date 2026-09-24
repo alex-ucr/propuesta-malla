@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Perfil de salida — Propuesta curricular</title>
+  <title>Perfil de egreso — Propuesta curricular</title>
   <style>
     :root {
       --bg: #f6f7f9;
@@ -233,7 +233,7 @@
 <body>
   <div class="app">
     <aside class="sidebar" aria-label="Navegación">
-      <h2>Perfil de salida</h2>
+      <h2>Perfil de egreso</h2>
       <div class="nav-perfil" role="radiogroup" aria-label="Tipo de saber">
         <label>
           <input type="radio" name="perfil-tipo" id="radio-conocer" value="Saber Conocer" checked />
@@ -250,7 +250,7 @@
       </div>
       <h2>Malla</h2>
       <nav class="nav-malla">
-        <a href="malla-curricular.html" class="nav-main-link">Malla curricular</a>
+        <a href="malla-curricular.html" class="nav-main-link">Estructura curricular</a>
       </nav>
       <p class="note">
         Sección <strong>5.2.5</strong> de la propuesta curricular (capítulo Perfil de Egreso).
@@ -259,7 +259,7 @@
     <div class="content">
       <div class="page">
         <header>
-          <h1 id="page-title">Perfil de salida</h1>
+          <h1 id="page-title">Perfil de egreso</h1>
           <p class="meta" id="page-meta"></p>
         </header>
         <div id="err" class="load-error" hidden>
@@ -388,8 +388,8 @@
 
       function init(data) {
         perfilData = data;
-        titleEl.textContent = data.titulo || "Perfil de salida";
-        document.title = (data.titulo || "Perfil de salida") + " — Propuesta curricular";
+        titleEl.textContent = data.titulo || "Perfil de egreso";
+        document.title = (data.titulo || "Perfil de egreso") + " — Propuesta curricular";
 
         if (data.introduccion) {
           introEl.textContent = data.introduccion;

@@ -1,0 +1,12 @@
+%% !TeX program = pdflatex
+%% Compilar desde Cursos/: latexmk MA0881-seminario-estudios-dirigidos-aplicada.tex
+\documentclass[11pt]{report}
+\makeatletter
+\def\input@path{{../}{./Cursos/}{./}}
+\makeatother
+\newcommand{\BiblioFile}{../Biblio.bib}
+\input{preamble-body.tex}
+
+\begin{document}
+\input{MA0881-seminario-estudios-dirigidos-aplicada-cuerpo.tex}
+\end{document}
