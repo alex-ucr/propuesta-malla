@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Perfil de egreso — Propuesta curricular</title>
+  <title>Perfil de egreso previamente aprobado — Propuesta curricular</title>
   <style>
     :root {
       --bg: #f6f7f9;
@@ -48,6 +48,9 @@
       font-weight: 600;
     }
     .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
       margin-bottom: 1.25rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--border);
@@ -234,6 +237,10 @@
   <div class="app">
     <aside class="sidebar" aria-label="Navegación">
       <h2>Perfil de egreso</h2>
+      <nav class="sidebar-nav">
+        <a href="perfil-egreso-propuesta.html" class="nav-main-link">Perfil de egreso</a>
+        <a href="perfil-salida.html" class="nav-main-link" aria-current="page">Perfil de egreso previamente aprobado</a>
+      </nav>
       <div class="nav-perfil" role="radiogroup" aria-label="Tipo de saber">
         <label>
           <input type="radio" name="perfil-tipo" id="radio-conocer" value="Saber Conocer" checked />
@@ -253,13 +260,13 @@
         <a href="malla-curricular.html" class="nav-main-link">Estructura curricular</a>
       </nav>
       <p class="note">
-        Sección <strong>5.2.5</strong> de la propuesta curricular (capítulo Perfil de Egreso).
+        Perfil aprobado en Asamblea de Escuela (2020), síntesis con códigos SC/SH/SS.
       </p>
     </aside>
     <div class="content">
       <div class="page">
         <header>
-          <h1 id="page-title">Perfil de egreso</h1>
+          <h1 id="page-title">Perfil de egreso previamente aprobado</h1>
           <p class="meta" id="page-meta"></p>
         </header>
         <div id="err" class="load-error" hidden>
@@ -388,8 +395,8 @@
 
       function init(data) {
         perfilData = data;
-        titleEl.textContent = data.titulo || "Perfil de egreso";
-        document.title = (data.titulo || "Perfil de egreso") + " — Propuesta curricular";
+        titleEl.textContent = "Perfil de egreso previamente aprobado";
+        document.title = "Perfil de egreso previamente aprobado — Propuesta curricular";
 
         if (data.introduccion) {
           introEl.textContent = data.introduccion;

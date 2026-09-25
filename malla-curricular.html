@@ -47,6 +47,9 @@
       font-weight: 600;
     }
     .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
       margin-bottom: 1.25rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--border);
@@ -55,8 +58,9 @@
       display: block;
       padding: 0.55rem 0.65rem;
       border-radius: 6px;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
+      line-height: 1.35;
       color: var(--text);
       text-decoration: none;
       border: 1px solid transparent;
@@ -292,7 +296,8 @@
     <aside class="sidebar" aria-label="Navegación">
       <h2>Perfil de egreso</h2>
       <nav class="sidebar-nav">
-        <a href="perfil-salida.html" class="nav-main-link">Perfil de egreso</a>
+        <a href="perfil-egreso-propuesta.html" class="nav-main-link">Perfil de egreso</a>
+        <a href="perfil-salida.html" class="nav-main-link">Perfil de egreso previamente aprobado</a>
       </nav>
       <h2>Malla</h2>
       <div class="nav-malla" role="radiogroup" aria-label="Énfasis curricular">
