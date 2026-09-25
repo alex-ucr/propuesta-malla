@@ -110,7 +110,7 @@ Descripciones completas en [`perfil-salida.json`](perfil-salida.json) y la pági
 - Las asociaciones reflejan la **contribución principal** de cada curso a los saberes, según objetivos y contenidos de los programas (`Cursos/*-cuerpo.tex`).
 - Los cursos optativos no se incluyen en esta tabla.
 - Cursos obligatorios en las mallas: 29; filas en la tabla: 28.
-- **Pendiente de mapear:** MA-0780 Comunicación en las ciencias, MA-0781 Pasantía en matemáticas.
+- **Pendiente de mapear:** MA-0880 Comunicación en las ciencias, MA-0881 Pasantía en matemáticas.
 - **En datos pero no en mallas actuales:** MA-0261 Algebra Lineal I, MA-0361 Algebra Lineal II.
 
 Para regenerar: `python scripts/generate_cursos_perfil_md.py` (editar `scripts/cursos_perfil_data.json` para saberes; metadatos del curso se leen de `Cursos/*-cuerpo.tex`).

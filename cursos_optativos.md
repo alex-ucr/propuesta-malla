@@ -63,7 +63,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0797 | Tópicos de Matemática discreta |
 | MA-0798 | Tópicos de Análisis de datos |
 | MA-0799 | Tópicos de Aprendizaje automático |
-| MA-0609 | Teoría analítica de números |
+| MA-0809 | Teoría analítica de números |
 | MA-0830 | Tópicos de Teoría de Números |
 | MA-0831 | Tópicos de Lógica |
 | MA-0832 | Tópicos en Topología |

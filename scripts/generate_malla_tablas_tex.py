@@ -106,14 +106,18 @@ def _malla_sigla_cell(title: str, sigla_compact: str) -> str:
     raw_sigla = title.split(" ", 1)[0]
     dest = SIGLA_ALIASES.get(raw_sigla, raw_sigla).replace("-", "")
     title_cf = title.casefold()
-    if "estudios dirigidos" in title_cf and dest == "MA0781":
-        dest = "MA0781SEDAplicada" if "aplicada" in title_cf else "MA0781SEDPura"
-    elif dest == "MA0881" and "estudios dirigidos" in title_cf:
-        dest = "MA0881Aplicada" if "aplicada" in title_cf else "MA0881Pura"
-    elif "práctica profesional en matemática pura" in title_cf:
-        dest = "MA0781Pura"
+    if "práctica profesional en matemática pura" in title_cf:
+        dest = "MA0881Pura"
     elif "práctica profesional en matemática aplicada" in title_cf:
-        dest = "MA0781Aplicada"
+        dest = "MA0883"
+    elif "estudios dirigidos" in title_cf and "pura i" in title_cf:
+        dest = "MA0982"
+    elif "estudios dirigidos" in title_cf and "aplicada i" in title_cf:
+        dest = "MA0984"
+    elif "estudios dirigidos" in title_cf and "pura ii" in title_cf:
+        dest = "MA1081Pura"
+    elif "estudios dirigidos" in title_cf and "aplicada ii" in title_cf:
+        dest = "MA1082"
     if dest == sigla_compact:
         return rf"\MallaSigla{{{sigla_compact}}}"
     return rf"\MallaSigla[{dest}]{{{sigla_compact}}}"
@@ -239,10 +243,19 @@ def _is_ma_malla_row(sigla_cell: str) -> bool:
 def _normalize_legacy_dest(dest: str | None, compact: str, nombre: str) -> str | None:
     """Map old hypertarget names in the .tex file to current JSON/cuerpo keys."""
     nf = nombre.casefold()
-    if dest == "MA0781SED" or (compact == "MA0781" and "estudios dirigidos" in nf):
-        return "MA0781SEDAplicada" if "aplicada" in nf else "MA0781SEDPura"
-    if compact == "MA0881" and "estudios dirigidos" in nf:
-        return "MA0881Aplicada" if "aplicada" in nf else "MA0881Pura"
+    legacy = {
+        "MA1081SED": "MA0982" if "pura" in nf else "MA0984",
+        "MA1081SEDPura": "MA0982",
+        "MA1081SEDAplicada": "MA0984",
+        "MA1081Aplicada": "MA0883",
+        "MA1081Aplicada": "MA1082",
+    }
+    if dest in legacy:
+        return legacy[dest]
+    if compact == "MA1081" and "estudios dirigidos" in nf:
+        return "MA0984" if "aplicada" in nf else "MA0982"
+    if compact == "MA1081" and "estudios dirigidos" in nf and "aplicada" in nf:
+        return "MA1082"
     return dest
 
 

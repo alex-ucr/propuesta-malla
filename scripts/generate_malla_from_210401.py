@@ -171,11 +171,11 @@ def licenciatura_section() -> str:
 
 \MallaTabularBegin
 \MallaHeader
-9 & \MallaSigla[MA0781SEDPura]{MA0781} & Seminario de estudios dirigidos en matemática pura I &  &  &  &  & 7 & Práctica en matemática pura &  \\
+9 & \MallaSigla[MA0982]{MA0982} & Seminario de estudios dirigidos en matemática pura I &  &  &  &  & 7 & Práctica en matemática pura &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{9}{16}
-10 & \MallaSigla[MA0881Pura]{MA0881} & Seminario de estudios dirigidos en matemática pura II &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática pura I &  \\
+10 & \MallaSigla[MA1081Pura]{MA1081} & Seminario de estudios dirigidos en matemática pura II &  &  &  &  & 7 & MA-0982 Seminario de estudios dirigidos en matemática pura I &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{10}{16}
@@ -188,11 +188,11 @@ def licenciatura_section() -> str:
 
 \MallaTabularBegin
 \MallaHeader
-9 & \MallaSigla[MA0781SEDAplicada]{MA0781} & Seminario de estudios dirigidos en matemática aplicada I &  &  &  &  & 7 & Práctica en matemática aplicada &  \\
+9 & \MallaSigla[MA0984]{MA0984} & Seminario de estudios dirigidos en matemática aplicada I &  &  &  &  & 7 & Práctica en matemática aplicada &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 9 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{9}{16}
-10 & \MallaSigla[MA0881Aplicada]{MA0881} & Seminario de estudios dirigidos en matemática aplicada II &  &  &  &  & 7 & MA-0781 Seminario de estudios dirigidos en matemática aplicada I &  \\
+10 & \MallaSigla[MA1082]{MA1082} & Seminario de estudios dirigidos en matemática aplicada II &  &  &  &  & 7 & MA-0984 Seminario de estudios dirigidos en matemática aplicada I &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 10 & OPT- & Optativa de matemáticas &  &  &  &  &  &  &  \\
 \MallaCicloTotal{10}{16}
