@@ -11,31 +11,172 @@
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} Por determinar \\ 
-\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\ 
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} Por determinar \\ 
-\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} Por determinar \\
+%\multicolumn{2}{|c|}{\textbf{Nivel de virtualidad del curso:} Presencial}\\ \hline
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0661 Álgebra Abstracta II\\
+& y MA-0496 Teoría de Números \\ 
+\textbf{Ciclo:}   & \textbf{Correquisitos:} Ninguno \\ 
+\textbf{Tipo de curso:} Teórico-práctico & \textbf{Horas presenciales por semana:} 5 \\ 
+\textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana:} 7 \\
 \textbf{Virtualidad:} P  &  \\ \hline
 \end{tabular}
 }
 \end{table}
 
+
+
 \subsubsection*{Descripción del curso}
 
-\textit{Programa pendiente de elaboración.}
+Este curso introduce a la persona estudiante a las ideas centrales de la Teoría de Números Algebraicos desde un punto de vista adecuado para el Bachillerato en Matemática. El curso parte de una pregunta fundamental: ¿qué ocurre con la aritmética de los enteros cuando se trabaja en extensiones finitas de $\Q$? A partir de esta pregunta se estudian los cuerpos de números, sus anillos de enteros, la factorización de ideales, el grupo de clases de ideales, el grupo de unidades y los primeros aspectos analíticos asociados a la función zeta de Dedekind.
+
+Un eje central del curso es mostrar cómo la teoría de ideales permite recuperar una forma robusta de factorización única en contextos donde la factorización única de elementos falla. Se estudiará la finitud del grupo de clases de ideales mediante métodos geométricos, así como el teorema de Dirichlet sobre la estructura del grupo de unidades. También se introducirá la función contadora de ideales y su comportamiento asintótico, con el fin de motivar la definición de la función zeta de Dedekind y mencionar, sin demostración completa, sus propiedades analíticas básicas.
+
+El curso incluye además la teoría de factorización de ideales primos en extensiones de Galois de cuerpos de números, siguiendo la tradición de Hilbert: índices de ramificación, grados residuales, grupos de descomposición, grupos de inercia y automorfismos de Frobenius. Estos temas se desarrollarán junto con ejemplos explícitos en cuerpos cuadráticos, cúbicos, cuárticos y ciclotómicos.
+
+La metodología del curso combinará demostraciones rigurosas con cálculo explícito. Se hará uso de \texttt{SageMath} para calcular anillos de enteros, discriminantes, factorización de ideales primos, grupos de clases, unidades y ejemplos concretos de ramificación. De esta forma, el curso busca evitar una presentación puramente formal y promover una comprensión conceptual apoyada en ejemplos y experimentación computacional.
+
+
 
 \subsubsection*{Objetivos}
 
-\textit{Pendiente de elaboración.}
+\textbf{General:} Introducir a la persona estudiante a los conceptos, métodos y ejemplos fundamentales de la Teoría de Números Algebraicos, enfatizando la aritmética de los anillos de enteros de cuerpos de números, la factorización de ideales, el grupo de clases, el grupo de unidades, la factorización de primos en extensiones y el uso de herramientas computacionales para explorar ejemplos concretos. \\
+
+\textbf{Específicos:}
+
+\begin{enumerate}
+\item Comprender las definiciones básicas de número algebraico, entero algebraico, cuerpo de números, anillo de enteros, norma, traza y discriminante.
+\item Determinar explícitamente anillos de enteros e ideales en ejemplos de cuerpos de números de grado bajo.
+\item Explicar el fallo de la factorización única de elementos y el papel de los ideales en la recuperación de la factorización única.
+\item Construir y calcular ejemplos del grupo de clases de ideales, y comprender el significado aritmético de su finitud.
+\item Estudiar el grupo de unidades de un cuerpo de números y comprender el enunciado y las consecuencias del teorema de Dirichlet.
+\item Definir la función contadora de ideales y la función zeta de Dedekind, y describir sus propiedades básicas.
+\item Analizar la factorización de ideales primos en extensiones de cuerpos de números, especialmente en extensiones de Galois.
+\item Calcular grupos de descomposición, grupos de inercia y automorfismos de Frobenius en ejemplos explícitos.
+\item Utilizar \texttt{SageMath} para realizar cálculos y experimentos en cuerpos de números.
+\item Comunicar argumentos, cálculos y resultados de manera clara, rigurosa y efectiva en forma oral y escrita.
+\end{enumerate}
+
+
 
 \subsubsection*{Contenidos}
 
-\textit{Pendiente de elaboración.}
+\begin{enumerate}
+
+\item \textbf{Cuerpos de números y enteros algebraicos (3 semanas):}
+\begin{enumerate}
+\item Números algebraicos, enteros algebraicos y cuerpos de números.
+\item Anillos de enteros y bases integrales.
+\item Inmersiones reales y complejas de un cuerpo de números.
+\item Norma, traza y discriminante.
+\item Ejemplos de cuerpos de números de grado bajo y cálculo de sus anillos de enteros.
+\end{enumerate}
+
+\item \textbf{Ideales y factorización (2 semanas):}
+\begin{enumerate}
+\item Ideales enteros y fraccionarios. Norma de un ideal.
+\item Propiedades básicas de los anillos de enteros como dominios de Dedekind.
+\item Factorización única de ideales en ideales primos.
+\item Relación entre factorización de elementos y factorización de ideales.
+\item Ejemplos de fallo de la factorización única de elementos.
+\end{enumerate}
+
+\item \textbf{Factorización de ideales primos y ramificación (2 semanas):}
+\begin{enumerate}
+\item Factorización de ideales primos en extensiones de cuerpos de números.
+\item Índices de ramificación y grados residuales.
+\item Teorema de Dedekind para la factorización de primos.
+\item Relación entre ramificación y discriminantes.
+\item Ejemplos explícitos de descomposición de primos.
+\end{enumerate}
+
+\item \textbf{El grupo de clases y el teorema de Minkowski (2 semanas):}
+\begin{enumerate}
+\item Clases de ideales, grupo de clases y número de clases.
+\item Relación entre el grupo de clases y la factorización única.
+\item La inmersión de Minkowski y retículos asociados a ideales.
+\item Teorema de Minkowski y finitud del grupo de clases.
+\item Cálculo del grupo de clases en ejemplos sencillos.
+\end{enumerate}
+
+\item \textbf{Unidades y teorema de Dirichlet (2 semanas):}
+\begin{enumerate}
+\item El grupo de unidades de un cuerpo de números y raíces de la unidad.
+\item El encaje logarítmico.
+\item Teorema de Dirichlet sobre unidades.
+\item Unidades fundamentales y regulador.
+\item Ejemplos, incluyendo la relación con la ecuación de Pell.
+\end{enumerate}
+
+\item \textbf{Conteo de ideales y función zeta de Dedekind (2 semana):}
+\begin{enumerate}
+\item Finitud y conteo de ideales de norma acotada.
+\item Comportamiento asintótico de la función contadora de ideales.
+\item Definición y producto de Euler de la función zeta de Dedekind.
+\item Propiedades analíticas básicas y fórmula analítica del número de clases, sin demostración.
+\item 
+\end{enumerate}
+
+\item \textbf{Teoría de descomposición e inercia en extensiones de Galois (2 semanas):}
+\begin{enumerate}
+\item Acción del grupo de Galois sobre los ideales primos.
+\item Grupos de descomposición y de inercia.
+\item Ramificación, grado residual y número de primos sobre un primo dado.
+\item Primos no ramificados y automorfismo de Frobenius.
+\item Casos de descomposición completa, inercia y ramificación total.
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
 
 \subsubsection*{Metodología}
 
-\textit{Pendiente de elaboración.}
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item El curso debe mantener un equilibrio entre teoría, demostraciones y ejemplos explícitos. Los conceptos abstractos deben ir acompañados de cálculos concretos en cuerpos de números de grado bajo.
+    \item Se debe incorporar el uso de \texttt{SageMath} como herramienta de cálculo y experimentación matemática. El objetivo no es sustituir las demostraciones, sino complementar la intuición y facilitar la exploración de ejemplos.
+    \item La teoría de ideales, el grupo de clases, el grupo de unidades, la factorización de primos y la zeta de Dedekind deben presentarse como partes conectadas de una misma teoría aritmética.
+    \item La teoría de descomposición e inercia en extensiones de Galois debe incluir ejemplos concretos y no limitarse a una exposición formal.
+    \item El curso no debe asumir teoría de cuerpos de clases, teoría local avanzada ni análisis complejo avanzado. Estos temas pueden mencionarse como motivación o continuación natural, pero no como requisitos centrales.
+\end{enumerate}
+
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
+\begin{enumerate}
+    \item Iniciar el curso con ejemplos donde falla la factorización única, como $\Z[\sqrt{-5}]$, para motivar la introducción de ideales.
+    \item Usar cuerpos cuadráticos reales e imaginarios como laboratorio principal para desarrollar intuición.
+    \item Incluir ejemplos periódicos en cuerpos cúbicos, cuárticos y ciclotómicos, especialmente al estudiar discriminantes, ramificación y factorización de primos.
+    \item Preparar prácticas cortas en \texttt{SageMath} para calcular bases integrales, discriminantes, factorizaciones de primos, grupos de clases y grupos de unidades.
+    \item Proponer tareas que combinen demostraciones con cálculos explícitos.
+    \item Fomentar proyectos breves en los que cada estudiante estudie una familia concreta de cuerpos de números y compare la teoría con datos computacionales.
+    \item Promover la lectura guiada de secciones seleccionadas de las referencias, especialmente de textos con abundantes ejemplos.
+    \item Discutir brevemente el contexto histórico de Dedekind, Kummer, Dirichlet, Minkowski y Hilbert para mostrar cómo surgieron las ideas centrales del curso.
+    \item En la evaluación, se sugiere utilizar tareas, prácticas computacionales, exposiciones breves y exámenes escritos que evalúen tanto comprensión conceptual como capacidad de cálculo.
+\end{enumerate}
+
+
+
+\subsubsection*{Guía para las referencias}
+
+El texto de Frazer Jarvis \cite{Jar14} es una referencia principal muy adecuada para este curso, pues presenta la Teoría de Números Algebraicos a nivel de bachillerato avanzado, con abundantes ejemplos de cuerpos cuadráticos y también con una discusión de cuerpos de grado bajo y cuerpos ciclotómicos. El libro de Daniel A. Marcus \cite{Mar18} es otra referencia central, especialmente por su tratamiento claro de la factorización de ideales, la teoría de Galois aplicada a la descomposición de primos, el grupo de clases, el grupo de unidades, la distribución de ideales y la zeta de Dedekind.
+
+El libro de Ian Stewart y David Tall \cite{SteTal25} es especialmente útil por su enfoque concreto, su motivación a través del Último Teorema de Fermat, sus ejemplos de factorización, unidades, grupos de clases y su tratamiento accesible de la teoría. El libro de Kato, Kurokawa y Saito \cite{KKS00} puede servir como referencia complementaria para una visión elegante y conceptual de la teoría de números moderna, incluyendo cuerpos de números y funciones zeta. El libro de Cox \cite{Cox22} no es una referencia principal para todos los contenidos del curso, pero es una excelente fuente de motivación histórica y matemática alrededor de formas cuadráticas, cuerpos cuadráticos, teoría de cuerpos de clases y reciprocidad.
+
+Para ejemplos adicionales a nivel introductorio se recomienda el libro de Alaca y Williams \cite{AW04}. Para la parte computacional, el libro de Cohen \cite{Coh93} es una referencia clásica, aunque más avanzada, sobre algoritmos en teoría algebraica de números. El libro de Stein \cite{Ste09} y el sistema \texttt{SageMath} \cite{SageMath109} son referencias útiles para promover una aproximación computacional y experimental. Finalmente, para estudiantes que deseen continuar hacia un nivel más avanzado, se pueden consultar los libros de Neukirch \cite{Neu99} y Washington \cite{Was97}.
+
+
+
+\nocite{Jar14}
+\nocite{Mar18}
+\nocite{SteTal25}
+\nocite{KKS00}
+\nocite{Cox22}
+\nocite{AW04}
+\nocite{Coh93}
+\nocite{Ste09}
+\nocite{SageMath109}
+\nocite{Neu99}
+\nocite{Was97}
 
 \printcursosbibliography
-
 \end{refsection}
