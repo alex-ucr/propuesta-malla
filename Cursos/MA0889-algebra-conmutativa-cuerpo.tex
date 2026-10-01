@@ -1,125 +1,198 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% MA-0889 Álgebra conmutativa %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% MA-07XX Álgebra Conmutativa %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\subsection*{MA-0889 Álgebra conmutativa}
-\addcontentsline{toc}{subsection}{MA-0889 Álgebra conmutativa}
+\subsection*{MA-0889 Álgebra Conmutativa}
+\addcontentsline{toc}{subsection}{MA-0889 Álgebra Conmutativa}
 
-\hypertarget{MA0889}{}
 \begin{refsection}
 \begin{table}[H]
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} MA-0661 Álgebra Abstracta II \\
-\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} 5 \\
-\textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana:} 7 \\
-\textbf{Virtualidad:} P  &  \\ \hline
+%\multicolumn{2}{|c|}{\textbf{Nivel de virtualidad del curso:} Presencial}\\ \hline
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0661 Álgebra Abstracta II \\ 
+\textbf{Ciclo:} Optativo  & \textbf{Correquisitos:} Ninguno \\ 
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} 5 \\ 
+\textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana:} 7 \\ \textbf{Virtualidad:} P  &  \\ \hline
 \end{tabular}
 }
 \end{table}
 
+
 \subsubsection*{Descripción del curso}
 
-Este curso optativo profundiza en la teoría de anillos conmutativos y sus módulos, con énfasis en los métodos que conectan el álgebra con la geometría algebraica y con la aritmética. Se parte de la familiaridad con anillos, ideales, cocientes y módulos adquirida en álgebra abstracta, y se desarrollan herramientas clásicas ---espectro de un anillo, localización, descomposición primaria y anillos de valuación discreta--- que permiten analizar estructuras algebraicas mediante propiedades geométricas y aritméticas locales.
+Este curso introduce a la persona estudiante a las ideas y métodos fundamentales del Álgebra Conmutativa, profundizando en el estudio de anillos, ideales y módulos iniciado en la secuencia de Álgebra Abstracta. El curso busca desarrollar herramientas algebraicas que tienen aplicaciones importantes en otras áreas de la matemática, especialmente en Geometría Algebraica y Teoría de Números.
 
-El programa está orientado a la demostración rigurosa de teoremas centrales (por ejemplo, correspondencias entre ideales y subvariedades en el $\operatorname{Spec}$, existencia de descomposiciones primarias en anillos noetherianos, y caracterización de dominios de valuación discreta). Los ejemplos en anillos de polinomios, anillos de enteros en extensiones de cuerpos y anillos de series formales se usan para ilustrar los conceptos y preparar estudios posteriores en geometría algebraica, teoría de números algebraica o álgebra homológica.
+Se estudiarán propiedades de módulos finitamente generados, producto tensorial, condiciones de cadena, anillos noetherianos y artinianos, descomposición primaria, localización y anillos locales. Posteriormente se desarrollará la teoría de extensiones integrales, la normalización de Noether y la dimensión de Krull, enfatizando la relación entre propiedades algebraicas de los anillos y su interpretación geométrica.
+
+El curso incluye también una introducción a las bases de Gröbner y a métodos computacionales para trabajar con ideales en anillos de polinomios. Estas herramientas permiten complementar la teoría con cálculos explícitos y proporcionan una conexión natural con la Geometría Algebraica computacional.
+
+La parte final del curso se dedica al estudio de anillos locales regulares y anillos noetherianos de dimensión uno, incluyendo dominios de valuación discreta y dominios de Dedekind. A lo largo del curso se mantendrá una perspectiva que combine teoría, ejemplos concretos, interpretación geométrica y experimentación computacional.
+
 
 \subsubsection*{Objetivos}
 
-\textbf{General:} Que la persona estudiante domine los conceptos y técnicas fundamentales del álgebra conmutativa y pueda aplicarlos en demostraciones y problemas teóricos.
+\textbf{General:} Introducir a la persona estudiante a los conceptos, métodos y resultados fundamentales del Álgebra Conmutativa, enfatizando las propiedades de anillos y módulos noetherianos, la localización, la dependencia integral, la teoría de dimensión, los métodos computacionales y la estructura local de los anillos conmutativos. \\
 
-\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+\textbf{Específicos:}
 
 \begin{enumerate}
-\item Trabajar con anillos conmutativos noetherianos, ideales primos y maximales, y homomorfismos, utilizando los teoremas de isomorfismo y la correspondencia entre ideales en cocientes.
-\item Analizar módulos finitamente generados sobre anillos conmutativos noetherianos, submódulos, homomorfismos y propiedades de exactitud en secuencias cortas elementales.
-\item Describir el espacio $\operatorname{Spec}(R)$, su topología de Zariski, el lazo estructural y la relación entre propiedades algebraicas de $R$ y propiedades topológicas del espectro.
-\item Construir y aplicar anillos de fracciones y localizaciones en conjuntos multiplicativos, con énfasis en localizaciones en ideales primos y lemas de Nakayama.
-\item Establecer y utilizar descomposiciones primarias de ideales en anillos noetherianos, así como los teoremas de Lasker--Noether y criterios de unicidad en componentes primarias.
-\item Caracterizar anillos de valuación discreta, dominios de Dedekind y ejemplos aritméticos y geométricos, incluyendo la relación con la descomposición de ideales en productos de primos.
-\item Consultar bibliografía especializada y comunicar argumentos de álgebra conmutativa con rigor, de forma oral y escrita.
+    \item Profundizar en el estudio de módulos finitamente generados y sus operaciones fundamentales.
+    \item Comprender las condiciones noetheriana y artiniana para anillos y módulos y sus principales consecuencias.
+    \item Estudiar ideales primarios, descomposición primaria y primos asociados.
+    \item Utilizar la localización como herramienta para estudiar propiedades locales de anillos y módulos.
+    \item Comprender el concepto de dependencia integral y los principales teoremas sobre extensiones integrales.
+    \item Estudiar la normalización de Noether y su relación con las álgebras finitamente generadas sobre cuerpos.
+    \item Comprender la dimensión de Krull y los principales resultados de la teoría de dimensión.
+    \item Utilizar bases de Gröbner para efectuar cálculos explícitos con ideales en anillos de polinomios.
+    \item Estudiar anillos locales regulares, dominios de valuación discreta y anillos noetherianos de dimensión uno.
+    \item Relacionar los conceptos del Álgebra Conmutativa con problemas y construcciones de la Geometría Algebraica y la Teoría de Números.
+    \item Comunicar argumentos y resultados matemáticos de manera clara y rigurosa en forma oral y escrita.
 \end{enumerate}
+
 
 \subsubsection*{Contenidos}
 
 \begin{enumerate}
-\item \textbf{Anillos e ideales (3 semanas):}
+
+\item \textbf{Módulos y herramientas algebraicas fundamentales (2 semanas):}
 \begin{enumerate}
-    \item Repaso de anillos conmutativos con unidad: homomorfismos, subanillos, ideales, cocientes y teoremas de isomorfismo.
-    \item Ideales primos e maximales; espectro primario $\operatorname{Spec}(R)$ como conjunto. Radical de un ideal y nilradical.
-    \item Anillos noetherianos y artinianos: definición, ejemplos y equivalencias útiles (condición de cadena ascendente, ideales finitamente generados).
-    \item Anillos locales y elementos nilpotentes. Dimensión de Krull (definición y ejemplos en dominios integrales y anillos de polinomios).
+    \item Repaso de módulos, submódulos, módulos cociente y homomorfismos.
+    \item Módulos finitamente generados y finitamente presentados.
+    \item Sucesiones exactas y sumas directas.
+    \item Producto tensorial de módulos y sus propiedades fundamentales.
+    \item Cambio de escalares y ejemplos.
+    \item Lema de Nakayama y aplicaciones.
 \end{enumerate}
 
-\item \textbf{Módulos (2 semanas):}
+\item \textbf{El diccionario entre álgebra y geometría (2 semanas):}
 \begin{enumerate}
-    \item Módulos sobre anillos conmutativos noetherianos: homomorfismos, submódulos y cocientes; módulos finitamente generados y presentaciones finitas.
-    \item Productos tensoriales de módulos (definición, propiedad universal y ejemplos). Exactitud en casos elementales.
-    \item Módulos libres, proyectivos e inyectivos (nociones). Teorema de Cayley--Bacharach para módulos libres de rango finito sobre dominios de ideales principales (como puente).
-    \item Soporte de un módulo y aniquiladores; relación con $\operatorname{Supp}(M) \subseteq \operatorname{Spec}(R)$.
+    \item Ideales radicales, ideales primos e ideales maximales.
+    \item Espectro primo de un anillo y topología de Zariski.
+    \item Correspondencia entre ideales y conjuntos algebraicos.
+    \item Anillos de coordenadas y álgebras afines.
+    \item Teorema de los Ceros de Hilbert.
+    \item Interpretación geométrica de operaciones algebraicas básicas.
 \end{enumerate}
 
-\item \textbf{Geometría del $\operatorname{Spec}$ de un anillo (3 semanas):}
+\item \textbf{Noetherianidad y descomposición primaria (2 semanas):}
 \begin{enumerate}
-    \item Topología de Zariski en $\operatorname{Spec}(R)$: conjuntos cerrados $V(I)$, abiertos $D(f)$ y propiedades básicas.
-    \item El haz estructural $\widetilde{M}$ asociado a un módulo $M$ (definición en abiertos principales). Anillos estructurales en puntos.
-    \item Correspondencia entre ideales radicales e intersecciones de subvariedades; irreducibilidad y componentes irreducibles.
-    \item Morfismos de esquemas afines como dual de homomorfismos de anillos (nociones). Dimensión y puntos genéricos (ejemplos).
+    \item Condiciones de cadena para anillos y módulos.
+    \item Anillos y módulos noetherianos y artinianos.
+    \item Teorema de la base de Hilbert.
+    \item Ideales primarios.
+    \item Descomposición primaria en anillos noetherianos.
+    \item Primos asociados y primos mínimos.
+    \item Unicidad de los primos asociados a una descomposición primaria mínima.
 \end{enumerate}
 
-\item \textbf{Localización (2 semanas):}
+\item \textbf{Localización y anillos locales (2 semanas):}
 \begin{enumerate}
-    \item Construcción de $S^{-1}R$ y $S^{-1}M$ para un conjunto multiplicativo $S$. Propiedad universal.
-    \item Localización en un ideal primo: anillos y módulos localizados en $\mathfrak{p}$. Interpretación geométrica en $\operatorname{Spec}$.
-    \item Localización y exactitud; localización conmuta con cocientes y productos tensoriales (en los casos tratados).
-    \item Lema de Nakayama y aplicaciones a módulos finitos sobre anillos locales.
+    \item Localización de anillos y módulos.
+    \item Correspondencia entre ideales primos antes y después de localizar.
+    \item Localización en un ideal primo.
+    \item Anillos locales, ideal maximal y cuerpo residual.
+    \item Comportamiento local de módulos, ideales y propiedades algebraicas.
+    \item Aplicaciones del lema de Nakayama en anillos locales.
 \end{enumerate}
 
-\item \textbf{Descomposición primaria (2 semanas):}
+\item \textbf{Dependencia integral y normalización (2 semanas):}
 \begin{enumerate}
-    \item Ideales primarios; descomposición primaria de un ideal en un anillo noetheriano.
-    \item Teorema de Lasker--Noether (existencia). Componentes primarias y minimales; unicidad del conjunto de primos asociados.
-    \item Radical de un ideal como intersección de primos mínimos. Aplicaciones en anillos de polinomios y anillos de enteros.
-    \item Criterios de irreducibilidad de variedades afines vía descomposición primaria de ideales.
+    \item Elementos integrales y extensiones integrales.
+    \item Clausura integral y dominios integralmente cerrados.
+    \item Teoremas de lying-over, going-up y going-down.
+    \item Comportamiento de ideales primos en extensiones integrales.
+    \item Normalización de Noether.
+    \item Aplicaciones a álgebras afines y relación con dimensión.
 \end{enumerate}
 
-\item \textbf{Anillos de valuación discreta (2 semanas):}
+\item \textbf{Dimensión de Krull (2 semanas):}
 \begin{enumerate}
-    \item Valuaciones en un cuerpo; anillos de valuación y anillos de valuación discreta (DVR).
-    \item Caracterización de los DVR como dominios noetherianos locales de dimensión uno con ideal maximal principal.
-    \item Dominios de Dedekind: definición, factorización de ideales en productos de primos, y ejemplos (enteros de cuerpos numéricos, curvas algebraicas no singulares).
-    \item Completación y series formales (introducción). Ejemplos: $\mathbb{Z}_{(p)}$, anillos de series $k[[t]]$, y extensiones finitas de cuerpos locales.
+    \item Cadenas de ideales primos, altura y dimensión de Krull.
+    \item Dimensión y grado de trascendencia.
+    \item Teorema del ideal principal de Krull.
+    \item Altura de ideales generados por varios elementos.
+    \item Dimensión de anillos de polinomios y álgebras afines.
+    \item Interpretación geométrica de la dimensión.
+\end{enumerate}
+
+\item \textbf{Bases de Gröbner y métodos computacionales (2 semanas):}
+\begin{enumerate}
+    \item Órdenes monomiales y términos iniciales.
+    \item Ideales monomiales e ideales iniciales.
+    \item Bases de Gröbner.
+    \item Algoritmo de Buchberger.
+    \item Problema de pertenencia a un ideal.
+    \item Eliminación de variables y aplicaciones.
+    \item Ejemplos y cálculos mediante sistemas de álgebra computacional.
+\end{enumerate}
+
+\item \textbf{Anillos locales regulares y anillos de dimensión uno (1 semana):}
+\begin{enumerate}
+    \item Dimensión de un anillo local y dimensión del espacio cotangente.
+    \item Anillos locales regulares.
+    \item Relación con suavidad en geometría algebraica.
+    \item Dominios de valuación discreta.
+    \item Dominios noetherianos normales de dimensión uno.
+    \item Dominios de Dedekind y ejemplos provenientes de Teoría de Números.
 \end{enumerate}
 
 \end{enumerate}
+
 
 \subsubsection*{Metodología}
 
 \noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
 \begin{enumerate}
-    \item Presentar definiciones precisas, enunciados completos y demostraciones de los teoremas centrales del programa, alternando con ejemplos que motiven cada construcción.
-    \item Vincular de manera explícita los contenidos con MA-0661 (anillos y módulos) y, cuando corresponda, con geometría algebraica (ideal-variedad, $\operatorname{Spec}$).
-    \item Fomentar la comunicación clara y rigurosa de argumentos, tanto oral como escrita.
+    \item El curso debe combinar el desarrollo riguroso de la teoría con ejemplos concretos de anillos, ideales y módulos.
+    \item Siempre que resulte natural, se debe enfatizar la interpretación geométrica de los conceptos algebraicos estudiados.
+    \item La localización debe presentarse como una herramienta fundamental para pasar de propiedades globales a propiedades locales.
+    \item La teoría de dimensión debe desarrollarse tanto desde el punto de vista algebraico como mediante sus conexiones con álgebras afines y Geometría Algebraica.
+    \item El estudio de bases de Gröbner debe incluir cálculos explícitos y el uso de herramientas computacionales.
+    \item El curso debe concentrarse en las herramientas fundamentales de un primer curso de Álgebra Conmutativa; no se requiere desarrollar teoría de completaciones ni métodos avanzados de álgebra homológica.
 \end{enumerate}
 
-\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la
-persona docente a cargo de este curso:
+\textbf{Sugerencias metodológicas:} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
 \begin{enumerate}
-    \item Usar $\operatorname{Spec}(\mathbb{Z})$ y $\operatorname{Spec}(k[x,y])$ como laboratorios recurrentes para la topología de Zariski y la descomposición primaria.
-    \item Introducir la localización antes de la descomposición primaria cuando el grupo lo requiera, para enfatizar el carácter local de los argumentos.
-    \item Asignar tareas y exposiciones breves sobre un tema adicional (p. ej.\ dimensiones, regularidad o completaciones).
-    \item Asignar listas de ejercicios que combinen demostraciones, cálculo en anillos concretos y construcción de contraejemplos cuando una hipótesis (p. ej.\ noetheriano) se omite.
+    \item Utilizar anillos de polinomios, anillos cociente y anillos de enteros algebraicos como fuentes recurrentes de ejemplos.
+    \item Introducir la topología de Zariski y el espectro primo mediante ejemplos sencillos antes de desarrollar sus propiedades generales.
+    \item Mostrar mediante ejemplos cómo la localización permite estudiar una variedad o un anillo cerca de un punto o un ideal primo.
+    \item Complementar la descomposición primaria con ejemplos explícitos de ideales en anillos de polinomios.
+    \item Utilizar sistemas como \texttt{SageMath}, \texttt{Singular} o \texttt{Macaulay2} para el cálculo de bases de Gröbner, ideales iniciales, eliminación y otras operaciones con ideales.
+    \item Relacionar los temas de dependencia integral y dominios de Dedekind con ejemplos provenientes de Teoría de Números Algebraicos.
+    \item Relacionar los conceptos de dimensión y regularidad local con ejemplos provenientes de Geometría Algebraica.
+    \item En la evaluación, se sugiere combinar problemas de demostración, ejercicios de cálculo algebraico y pequeñas actividades computacionales.
+    \item Promover la lectura de secciones seleccionadas de distintas referencias para comparar enfoques y desarrollar autonomía matemática.
+    \item Promover la comunicación clara y rigurosa de argumentos e ideas matemáticas de manera oral y escrita.
 \end{enumerate}
 
-\nocite{Alu21}
-\nocite{ati69}
-\nocite{eisen95}
-\nocite{Hun80}
-\nocite{Kun13}
-\nocite{reid95}
 
-\printcursosbibliography
+\subsubsection*{Guía para las referencias}
 
+El libro de Gregor Kemper \cite{Kem11} constituye una referencia principal especialmente adecuada para este curso. Su organización combina el diccionario entre Álgebra Conmutativa y Geometría Algebraica, la teoría de dimensión, métodos computacionales y álgebra local. Su presentación moderna, la abundancia de ejemplos y la incorporación de bases de Gröbner permiten desarrollar conjuntamente los aspectos teóricos, geométricos y computacionales de la materia.
+
+El texto clásico de Atiyah y Macdonald \cite{AM69} continúa siendo una referencia fundamental por su exposición concisa de módulos, localización, descomposición primaria, dependencia integral, condiciones de cadena, anillos noetherianos y teoría de dimensión. El libro de Miles Reid \cite{Rei95} ofrece una introducción particularmente apropiada para estudiantes de bachillerato avanzado, con énfasis en módulos, anillos noetherianos, normalización de Noether, el Teorema de los Ceros, localización, descomposición primaria y dominios normales.
+
+El libro de Allen Altman y Steven Kleiman \cite{AK21}, \emph{A Term of Commutative Algebra}, constituye también una excelente referencia para un primer curso. Su organización sigue en buena medida la tradición de Atiyah y Macdonald, pero ofrece un tratamiento más desarrollado, numerosos ejemplos y una extensa colección de ejercicios con soluciones. Resulta especialmente útil para los temas de módulos, producto tensorial, localización, condiciones de cadena, descomposición primaria, dependencia integral y teoría de dimensión. Además, se encuentra disponible libremente en formato digital, lo que lo convierte en una referencia particularmente conveniente para el estudiantado.
+
+El libro de Rodney Sharp \cite{Sha00} proporciona un tratamiento detallado y accesible de descomposición primaria, localización, módulos, anillos noetherianos, dependencia integral, álgebras afines y dimensión. Puede utilizarse como fuente adicional de ejemplos, demostraciones y ejercicios.
+
+Para la parte computacional se recomienda especialmente el libro de Cox, Little y O'Shea \cite{CLO25}, que desarrolla bases de Gröbner, eliminación y métodos algorítmicos en estrecha relación con la Geometría Algebraica. El libro de Greuel y Pfister \cite{GP08} constituye una referencia más avanzada para el Álgebra Conmutativa computacional y para el uso del sistema \texttt{Singular}.
+
+Finalmente, los textos de Eisenbud \cite{Eis95} y Matsumura \cite{Mat86} constituyen referencias de nivel más avanzado. El primero enfatiza sistemáticamente las conexiones entre Álgebra Conmutativa y Geometría Algebraica, mientras que el segundo desarrolla en mayor profundidad la teoría local y de dimensión. Ambos son especialmente recomendables para estudiantes que deseen continuar posteriormente hacia cursos de Geometría Algebraica, Álgebra Conmutativa avanzada o investigación.
+
+
+\nocite{AK21}
+\nocite{Kem11}
+\nocite{AM69}
+\nocite{Rei95}
+\nocite{Sha00}
+\nocite{CLO25}
+\nocite{GP08}
+\nocite{Eis95}
+\nocite{Mat86}
+
+
+\printbibliography[heading=subbibliography]
 \end{refsection}
