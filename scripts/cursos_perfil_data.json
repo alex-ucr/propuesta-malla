@@ -133,8 +133,8 @@
     "saberes": ["SC02", "SC03", "SC05", "SC13", "SH05", "SH10", "SH13", "SH22", "SS04", "SS17"]
   },
   {
-    "titulo": "MA-0551 Principios de análisis en varias variables",
-    "sigla": "MA-0551",
+    "titulo": "MA-0552 Principios de Análisis II",
+    "sigla": "MA-0552",
     "nombre_corto": "Principios de análisis en varias variables",
     "enfasis": "ambos",
     "saberes": ["SC04", "SC15", "SH05", "SH07", "SH19", "SH21", "SS02"]
@@ -182,8 +182,8 @@
     "saberes": ["SC10", "SH05", "SH06", "SH20"]
   },
   {
-    "titulo": "MA-0702 Análisis Complejo",
-    "sigla": "MA-0702",
+    "titulo": "MA-0732 Análisis complejo",
+    "sigla": "MA-0732",
     "nombre_corto": "Análisis Complejo",
     "enfasis": "ambos",
     "saberes": ["SC09", "SC15", "SH05", "SH07", "SH19", "SS02", "SS17"]

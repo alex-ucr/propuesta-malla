@@ -278,7 +278,7 @@
       {
         "cycle_label": "V CICLO",
         "cycle": 5,
-        "sigla": "MA-0551",
+        "sigla": "MA-0552",
         "nombre": "PRINCIPIOS DE ANÁLISIS II",
         "T": "5",
         "P": "",
@@ -336,7 +336,7 @@
         "P": "",
         "L": "",
         "TP": "",
-        "req": "MA-0551",
+        "req": "MA-0552",
         "correq": "",
         "cred": "4"
       },
@@ -382,7 +382,7 @@
       {
         "cycle_label": "VII CICLO",
         "cycle": 7,
-        "sigla": "MA-0702",
+        "sigla": "MA-0732",
         "nombre": "ANÁLISIS COMPLEJO",
         "T": "5",
         "P": "",
@@ -793,7 +793,7 @@
       {
         "cycle_label": "V CICLO",
         "cycle": 5,
-        "sigla": "MA-0551",
+        "sigla": "MA-0552",
         "nombre": "PRINCIPIOS DE ANÁLISIS II",
         "T": "5",
         "P": "",
@@ -864,7 +864,7 @@
         "P": "",
         "L": "",
         "TP": "",
-        "req": "MA-0551",
+        "req": "MA-0552",
         "correq": "",
         "cred": "4"
       },
@@ -910,7 +910,7 @@
       {
         "cycle_label": "VII CICLO",
         "cycle": 7,
-        "sigla": "MA-0702",
+        "sigla": "MA-0732",
         "nombre": "ANÁLISIS COMPLEJO",
         "T": "5",
         "P": "",

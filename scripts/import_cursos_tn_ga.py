@@ -15,11 +15,11 @@ CUROS = ROOT / "Cursos"
 COURSES = (
     {
         "marker": r"\\subsection\*\{MA-07XX Teoría de Números Algebraicos\}",
-        "comment": "MA-0506 Teoría algebraica de números",
-        "title": r"MA-0506 Teoría algebraica de números",
-        "toc_title": r"MA-0506 Teoría algebraica de números",
-        "hypertarget": "MA0506",
-        "out": "MA0506-teoria-algebraica-numeros-cuerpo.tex",
+        "comment": "MA-0876 Teoría algebraica de números",
+        "title": r"MA-0876 Teoría algebraica de números",
+        "toc_title": r"MA-0876 Teoría algebraica de números",
+        "hypertarget": "MA0876",
+        "out": "MA0876-teoria-algebraica-numeros-cuerpo.tex",
     },
     {
         "marker": r"\\subsection\*\{MA-07XX Teoría Analítica de Números\}",
@@ -30,12 +30,12 @@ COURSES = (
         "out": "MA0809-teoria-analitica-numeros-cuerpo.tex",
     },
     {
-        "marker": r"\\subsection\*\{MA-0810 Geometría algebraica I\}",
-        "comment": "MA-0810 Geometría algebraica I",
-        "title": r"MA-0810 Geometría algebraica I",
-        "toc_title": r"MA-0810 Geometría algebraica I",
-        "hypertarget": "MA0810",
-        "out": "MA0810-geometria-algebraica-i-cuerpo.tex",
+        "marker": r"\\subsection\*\{MA-0719 Geometría algebraica\}",
+        "comment": "MA-0719 Geometría algebraica",
+        "title": r"MA-0719 Geometría algebraica",
+        "toc_title": r"MA-0719 Geometría algebraica",
+        "hypertarget": "MA0719",
+        "out": "MA0719-geometria-algebraica-cuerpo.tex",
     },
 )
 

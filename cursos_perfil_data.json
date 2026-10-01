@@ -441,8 +441,8 @@
     "horas_trabajo_independiente": "7"
   },
   {
-    "titulo": "MA-0551 Principios de análisis en varias variables",
-    "sigla": "MA-0551",
+    "titulo": "MA-0552 Principios de Análisis II",
+    "sigla": "MA-0552",
     "nombre_corto": "Principios de análisis en varias variables",
     "enfasis": "ambos",
     "saberes": [
@@ -545,7 +545,7 @@
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0551 Principios de Análisis II",
+    "requisitos": "MA-0552 Principios de Análisis II",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -597,8 +597,8 @@
     "horas_trabajo_independiente": "10"
   },
   {
-    "titulo": "MA-0702 Análisis Complejo",
-    "sigla": "MA-0702",
+    "titulo": "MA-0732 Análisis complejo",
+    "sigla": "MA-0732",
     "nombre_corto": "Análisis Complejo",
     "enfasis": "ambos",
     "saberes": [

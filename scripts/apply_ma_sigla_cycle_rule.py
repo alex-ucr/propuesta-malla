@@ -20,7 +20,7 @@ RENAME_CHAIN: list[tuple[str, str]] = [
     ("MA-0784", "MA-0984"),
     ("MA-0781", "MA-0881"),  # práctica pura / aplicada antigua 0781 → ver sync_siglas para aplicada→0883
     ("MA-0609", "MA-0809"),
-    ("MA-0709", "MA-0810"),
+    ("MA-0709", "MA-0719"),
 ]
 
 TEXT_GLOBS = ("*.tex", "*.json", "*.html", "*.py", "*.md", "*.bcf", "*.xml")

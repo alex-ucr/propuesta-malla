@@ -19,26 +19,26 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | Sigla | Nombre |
 |-------|--------|
 | MA-0788 | Análisis Real II |
-| MA-0707 | Geometría Diferencial |
+| MA-0717 | Geometría diferencial |
 | MA-0920 | Ecuaciones en derivadas parciales numéricas |
 | MA-0806 | Análisis funcional |
-| MA-0703 | Integración |
+| MA-0713 | Integración |
 | MA-0525 | Combinatoria |
 | MA-0528 | Sistemas dinámicos |
 | CA-0411 | Análisis de Datos I |
 | MA-0815 | Análisis armónico |
-| MA-0506 | Teoría algebraica de números |
-| MA-0512 | Teoría de conjuntos |
-| MA-0709 | Geometría algebraica I |
-| MA-0711 | Lógica |
+| MA-0876 | Teoría Algebraica de Números |
+| MA-0812 | Teoría de conjuntos |
+| MA-0719 | Geometría algebraica |
+| MA-0721 | Lógica |
 | MA-0755 | Ecuaciones diferenciales parciales |
 | MA-0889 | Álgebra conmutativa |
 | MA-0804 | Topología algebraica |
-| MA-0817 | Estadística matemática I |
+| MA-0827 | Estadística matemática |
 | MA-0820 | Teoría de modelos |
-| MA-0840 | Probabilidad |
-| MA-0860 | Teoría de módulos |
-| MA-0714 | Optimización |
+| MA-0841 | Probabilidad |
+| MA-0821 | Teoría de módulos |
+| MA-0734 | Optimización |
 
 ## Optativas temáticas (24)
 
@@ -46,7 +46,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 |-------|--------|
 | CA-0721 | Probabilidad |
 | MA-0647 | Modelación Matemática |
-| MA-0918 | Procesos estocásticos |
+| MA-0928 | Procesos estocásticos |
 | MA-0917 | Estadística II |
 | CA-0512 | Modelos lineales |
 | CA-0612 | Series de tiempo |
