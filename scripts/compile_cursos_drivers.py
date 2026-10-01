@@ -2,11 +2,12 @@
 """
 Compile every driver .tex in Cursos/ (files whose names do not contain "cuerpo").
 
-Runs from the project root, as required by preamble-body.tex and \\input@path:
+Runs each driver from ``Cursos/`` so ``\\BiblioFile{../Biblio.bib}`` resolves to the
+project-root ``Biblio.bib`` (same as ``Cursos/latexmkrc`` and manual compiles):
 
-    latexmk -pdf Cursos/<driver>.tex
-    biber <jobname>   # if <jobname>.bcf exists in the project root
-    latexmk -pdf Cursos/<driver>.tex
+    cd Cursos && latexmk -pdf <driver>.tex
+    biber <jobname>   # if <jobname>.bcf exists in Cursos/
+    latexmk -pdf <driver>.tex
 """
 
 from __future__ import annotations
@@ -19,6 +20,41 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CUROS = ROOT / "Cursos"
+
+# Build products that older runs (latexmk from project root) left in ROOT/.
+_STALE_ROOT_SUFFIXES = (
+    ".aux",
+    ".bcf",
+    ".bbl",
+    ".blg",
+    ".fdb_latexmk",
+    ".fls",
+    ".log",
+    ".out",
+    ".run.xml",
+    ".synctex.gz",
+)
+
+
+def _remove_stale_root_artifacts(jobname: str, *, dry_run: bool) -> bool:
+    """Drop aux files in ROOT from old root-based latexmk runs; return if any removed."""
+    removed = False
+    for suf in _STALE_ROOT_SUFFIXES:
+        path = ROOT / f"{jobname}{suf}"
+        if not path.is_file():
+            continue
+        removed = True
+        if dry_run:
+            print(f"  (dry-run) remove stale {path.relative_to(ROOT)}")
+        else:
+            path.unlink()
+            print(f"  removed stale {path.relative_to(ROOT)}")
+    if removed and not dry_run:
+        fdb = CUROS / f"{jobname}.fdb_latexmk"
+        if fdb.is_file():
+            fdb.unlink()
+            print(f"  reset {fdb.name} (stale bib path from root compile)")
+    return removed
 
 
 def driver_tex_files() -> list[Path]:
@@ -36,29 +72,38 @@ def run(cmd: list[str], *, cwd: Path, dry_run: bool) -> int:
     return subprocess.run(cmd, cwd=cwd).returncode
 
 
-def compile_driver(tex: Path, *, cwd: Path, dry_run: bool) -> int:
-    rel = tex.relative_to(cwd)
+def compile_driver(tex: Path, *, dry_run: bool, clean: bool = False) -> int:
+    """Compile with cwd=Cursos/ so ../Biblio.bib and \\input@path{../} work."""
     jobname = tex.stem
+    _remove_stale_root_artifacts(jobname, dry_run=dry_run)
+    if clean:
+        code = run(["latexmk", "-C", tex.name], cwd=CUROS, dry_run=dry_run)
+        if code != 0 and not dry_run:
+            return code
     latexmk = [
         "latexmk",
         "-pdf",
         "-interaction=nonstopmode",
         "-file-line-error",
-        str(rel),
+        tex.name,
     ]
+    latexmk_force = [*latexmk, "-g"]
 
-    code = run(latexmk, cwd=cwd, dry_run=dry_run)
-    if code != 0 and not dry_run:
-        return code
+    first_code = run(latexmk, cwd=CUROS, dry_run=dry_run)
+    if dry_run:
+        return 0
 
-    bcf = cwd / f"{jobname}.bcf"
+    bcf = CUROS / f"{jobname}.bcf"
     if bcf.exists():
-        code = run(["biber", jobname], cwd=cwd, dry_run=dry_run)
-        if code != 0 and not dry_run:
+        if shutil.which("biber") is None:
+            print("error: biber not found (required for course bibliographies)", file=sys.stderr)
+            return 1
+        code = run(["biber", jobname], cwd=CUROS, dry_run=False)
+        if code != 0:
             return code
-        code = run(latexmk, cwd=cwd, dry_run=dry_run)
+        return run(latexmk_force, cwd=CUROS, dry_run=False)
 
-    return code
+    return first_code
 
 
 def main() -> int:
@@ -88,6 +133,11 @@ def main() -> int:
         metavar="GLOB",
         help="Only drivers whose stem contains this substring (case-insensitive).",
     )
+    parser.add_argument(
+        "--clean",
+        action="store_true",
+        help="Run latexmk -C on each driver before building (full clean).",
+    )
     args = parser.parse_args()
 
     if not args.dry_run:
@@ -106,6 +156,7 @@ def main() -> int:
         return 1
 
     print(f"Project root: {ROOT}")
+    print(f"Compile cwd:  {CUROS}")
     print(f"Drivers to compile ({len(drivers)}):")
     for p in drivers:
         print(f"  {p.name}")
@@ -113,7 +164,7 @@ def main() -> int:
     failed: list[str] = []
     for tex in drivers:
         print(f"\n=== {tex.name} ===")
-        code = compile_driver(tex, cwd=ROOT, dry_run=args.dry_run)
+        code = compile_driver(tex, dry_run=args.dry_run, clean=args.clean)
         if code != 0:
             failed.append(tex.name)
             if not args.continue_on_error:

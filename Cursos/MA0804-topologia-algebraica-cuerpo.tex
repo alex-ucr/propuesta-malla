@@ -11,10 +11,10 @@
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} Por determinar \\ 
-\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\ 
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} Por determinar \\ 
-\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} Por determinar \\
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0635 Topología General \\
+\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} 5 \\
+\textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana:} 7 \\
 \textbf{Virtualidad:} P  &  \\ \hline
 \end{tabular}
 }
@@ -22,19 +22,108 @@
 
 \subsubsection*{Descripción del curso}
 
-\textit{Programa pendiente de elaboración.}
+Este curso optativo introduce la topología algebraica: el estudio de invariantes algebraicos (grupos de homotopía, grupos de homología y cohomología) asociados a espacios topológicos, y de las relaciones entre ellos. Se parte de la topología general (espacios, continuidad, compacidad y conexidad) y se desarrollan primero la homotopía y el grupo fundamental, luego teorías de homología en distintas presentaciones ---cúbica, simplicial y singular--- y, hacia el final del curso, nociones de cohomología de haces y de homotopía superior.
+
+El énfasis es teórico-demostrativo, con ejemplos en grafos, superficies, espacios proyectivos y complejos simpliciales. Se busca que la persona estudiante comprenda la functorialidad de los invariantes, el papel de los teoremas de exactitud y los isomorfismos clásicos (Hurewicz, Mayer--Vietoris, dualidad), y disponga de criterios para distinguir espacios que la topología puntual no separa.
 
 \subsubsection*{Objetivos}
 
-\textit{Pendiente de elaboración.}
+\textbf{General:} Que la persona estudiante domine los conceptos y técnicas elementales de la topología algebraica y pueda aplicarlos al análisis de espacios y aplicaciones continuas.
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Trabajar con homotopías de caminos y de aplicaciones, clases de homotopía y retracciones; calcular grupos fundamentales de espacios sencillos mediante el teorema de Seifert--van Kampen.
+\item Construir complejos cúbicos, simpliciales y cadenas singulares; verificar la axiomatica de homología y calcular grupos de homología de ejemplos estándar.
+\item Relacionar la homología cúbica, simplicial y singular mediante teoremas de equivalencia e isomorfismos naturales en las clases tratadas.
+\item Formular haces y cohomología de haces en espacios razonables (p. ej.\ variedades, espacios localmente contractiles); enunciar y aplicar resultados introductorios (largo exacto en haces, primeros grupos de cohomología).
+\item Introducir grupos de homotopía superior, fibraciones y secuencias exactas de homotopía en casos elementales.
+\item Consultar bibliografía especializada y comunicar argumentos topológicos con rigor, de forma oral y escrita.
+\end{enumerate}
 
 \subsubsection*{Contenidos}
 
-\textit{Pendiente de elaboración.}
+\begin{enumerate}
+\item \textbf{Homotopía (noción básica) (2 semanas):}
+\begin{enumerate}
+    \item Homotopía de caminos, concatenación e inversión; espacio de caminos y componentes path-conexas.
+    \item Homotopía de aplicaciones; homotopía relativa a un subconjunto; retracciones y deformaciones.
+    \item Equivalencias de homotopía; contracción y espacio contractil; ejemplos en $\mathbb{R}^n$, discos y segmentos.
+    \item Aplicaciones elementales: teorema de Brouwer en dimensiones bajas, no retracción de $D^n$ sobre $S^{n-1}$ (casos $n=2,3$).
+\end{enumerate}
+
+\item \textbf{Grupo fundamental (3 semanas):}
+\begin{enumerate}
+    \item Definición del grupo fundamental $\pi_1(X,x_0)$; functorialidad y homotopía de basepoint.
+    \item Cálculo en círculo, toro, bouquet de círculos y superficies compactas orientables.
+    \item Teorema de Seifert--van Kampen; presentaciones de grupos y ejemplos de espacios obtenidos por pegado.
+    \item Recubrimientos y acción del grupo fundamental; aplicaciones al cálculo de $\pi_1$ de ciertos cocientes.
+    \item Introducción a $\pi_n$ para $n \ge 2$ (definición y estabilidad en espacios simplemente conexos).
+\end{enumerate}
+
+\item \textbf{Homología (5 semanas):}
+\begin{enumerate}
+    \item \textbf{Homología cúbica:}
+    \begin{enumerate}
+        \item $n$-cubos y cadenas cúbicas; operador frontera y $\partial^2 = 0$.
+        \item Homología cúbica de un espacio; ejemplos en $[0,1]^n$, toros y productos.
+        \item Conexión con homología singular en el caso de uniones de cubos convexos.
+    \end{enumerate}
+    \item \textbf{Homología simplicial:}
+    \begin{enumerate}
+        \item Complejos simpliciales (abstractos y geométricos); cadenas simpliciales y homología simplicial.
+        \item Cálculo en triangulaciones de superficies y espacios de dimensión baja.
+        \item Mapas simpliciales e invarianza homotópica (enunciado y ejemplos).
+    \end{enumerate}
+    \item \textbf{Homología singular:}
+    \begin{enumerate}
+        \item Simplex estándar, cadenas singulares y homología singular; grado de una aplicación entre variedades compactas orientables de la misma dimensión.
+        \item Axiomas de Eilenberg--Steinrod (enunciado) y teorema de Mayer--Vietoris.
+        \item Homología reducida, homología relativa y secuencia larga de un par $(X,A)$.
+        \item Teorema de Hurewicz (caso $n=1$ y enunciado para $n \ge 2$ bajo hipótesis de conectividad).
+    \end{enumerate}
+\end{enumerate}
+
+\item \textbf{Cohomología de haces (Sheaf Cohomology) (3 semanas):}
+\begin{enumerate}
+    \item Haces de conjuntos, grupos abelianos y anillos; morfismos de haces y germen en un punto.
+    \item Haces constantes, haces de funciones continuas y haces de formas diferenciables (como motivación).
+    \item Resoluciones inyectivas; definición de los grupos de cohomología de un haz $H^q(X,\mathcal{F})$.
+    \item Largo exacto en cohomología asociado a sucesiones cortas de haces; primeros grupos de cohomología y clasificación de recubrimientos (caso abeliano).
+    \item Introducción al lenguaje de haces en variedades y espacios localmente euclídeos; nociones de cohomología de Čech y comparación (enunciado).
+\end{enumerate}
+
+\item \textbf{Homotopía superior (2 semanas):}
+\begin{enumerate}
+    \item Grupos de homotopía $\pi_n(X,x_0)$ para $n \ge 2$; abelianidad y acción de $\pi_1$.
+    \item Fibraciones y fibrados; secuencia exacta de homotopía de una fibración (enunciado y ejemplos).
+    \item Espacios de Eilenberg--MacLane y clasificación débil de espacios por invariantes homotópicos (nociones).
+    \item Panorama de herramientas modernas (complejos simpliciales en homotopía superior, categorías de modelos) como ampliación opcional.
+\end{enumerate}
+
+\end{enumerate}
 
 \subsubsection*{Metodología}
 
-\textit{Pendiente de elaboración.}
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item Presentar definiciones precisas, enunciados completos y demostraciones de los teoremas centrales (Seifert--van Kampen, Mayer--Vietoris, Hurewicz en los casos tratados), alternando con ejemplos computables.
+    \item Vincular de manera explícita los contenidos con MA-0635 (topología general) y, cuando corresponda, con geometría y álgebra abstracta.
+    \item Asignar listas de ejercicios que combinen cálculo de invariantes, construcción de retracciones y demostraciones cortas.
+    \item Fomentar la comunicación clara y rigurosa de argumentos, tanto oral como escrita.
+\end{enumerate}
+
+\textbf{Sugerencias metodológicas:}
+\begin{enumerate}
+    \item Utilizar superficies compactas, grafos y complejos simpliciales pequeños como laboratorio recurrente para $\pi_1$ y homología.
+    \item Presentar la homología singular como teoría unificadora, después de los modelos cúbico y simplicial, para comparar enfoques.
+    \item Reservar la cohomología de haces y la homotopía superior para la parte final, enfatizando aplicaciones antes de la máxima generalidad.
+    \item Sugerir el uso de \LaTeX{} en tareas y exposiciones breves sobre un tema de ampliación.
+\end{enumerate}
+
+\nocite{Hat02}
+\nocite{Mun00}
+\nocite{GG99}
 
 \printcursosbibliography
 

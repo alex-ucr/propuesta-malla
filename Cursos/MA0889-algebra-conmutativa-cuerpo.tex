@@ -11,10 +11,10 @@
 \centering{
 \begin{tabular}{|ll|}
 \hline
-\textbf{Año:} IV  & \textbf{Requisitos:} Por determinar \\ 
-\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\ 
-\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} Por determinar \\ 
-\textbf{Créditos:} 5 & \textbf{Horas de trabajo independiente por semana:} Por determinar \\
+\textbf{Año:} IV  & \textbf{Requisitos:} MA-0661 Álgebra Abstracta II \\
+\textbf{Ciclo:} Optativa  & \textbf{Correquisitos:} Ninguno \\
+\textbf{Tipo de curso:} Teórico & \textbf{Horas presenciales por semana:} 5 \\
+\textbf{Créditos:} 4 & \textbf{Horas de trabajo independiente por semana:} 7 \\
 \textbf{Virtualidad:} P  &  \\ \hline
 \end{tabular}
 }
@@ -22,19 +22,99 @@
 
 \subsubsection*{Descripción del curso}
 
-\textit{Programa pendiente de elaboración.}
+Este curso optativo profundiza en la teoría de anillos conmutativos y sus módulos, con énfasis en los métodos que conectan el álgebra con la geometría algebraica y con la aritmética. Se parte de la familiaridad con anillos, ideales, cocientes y módulos adquirida en álgebra abstracta, y se desarrollan herramientas clásicas ---espectro de un anillo, localización, descomposición primaria y anillos de valuación discreta--- que permiten analizar estructuras algebraicas mediante propiedades geométricas y aritméticas locales.
+
+El programa está orientado a la demostración rigurosa de teoremas centrales (por ejemplo, correspondencias entre ideales y subvariedades en el $\Spec$, existencia de descomposiciones primarias en anillos noetherianos, y caracterización de dominios de valuación discreta). Los ejemplos en anillos de polinomios, anillos de enteros en extensiones de cuerpos y anillos de series formales se usan para ilustrar los conceptos y preparar estudios posteriores en geometría algebraica, teoría de números algebraica o álgebra homológica.
 
 \subsubsection*{Objetivos}
 
-\textit{Pendiente de elaboración.}
+\textbf{General:} Que la persona estudiante domine los conceptos y técnicas fundamentales del álgebra conmutativa y pueda aplicarlos en demostraciones y problemas teóricos.
+
+\textbf{Específicos:} Al finalizar el curso se espera que la persona estudiante sea capaz de:
+
+\begin{enumerate}
+\item Trabajar con anillos conmutativos noetherianos, ideales primos y maximales, y homomorfismos, utilizando los teoremas de isomorfismo y la correspondencia entre ideales en cocientes.
+\item Analizar módulos finitamente generados sobre anillos conmutativos noetherianos, submódulos, homomorfismos y propiedades de exactitud en secuencias cortas elementales.
+\item Describir el espacio $\Spec(R)$, su topología de Zariski, el lazo estructural y la relación entre propiedades algebraicas de $R$ y propiedades topológicas del espectro.
+\item Construir y aplicar anillos de fracciones y localizaciones en conjuntos multiplicativos, con énfasis en localizaciones en ideales primos y lemas de Nakayama.
+\item Establecer y utilizar descomposiciones primarias de ideales en anillos noetherianos, así como los teoremas de Lasker--Noether y criterios de unicidad en componentes primarias.
+\item Caracterizar anillos de valuación discreta, dominios de Dedekind y ejemplos aritméticos y geométricos, incluyendo la relación con la descomposición de ideales en productos de primos.
+\item Consultar bibliografía especializada y comunicar argumentos de álgebra conmutativa con rigor, de forma oral y escrita.
+\end{enumerate}
 
 \subsubsection*{Contenidos}
 
-\textit{Pendiente de elaboración.}
+\begin{enumerate}
+\item \textbf{Anillos e ideales (3 semanas):}
+\begin{enumerate}
+    \item Repaso de anillos conmutativos con unidad: homomorfismos, subanillos, ideales, cocientes y teoremas de isomorfismo.
+    \item Ideales primos e maximales; espectro primario $\Spec(R)$ como conjunto. Radical de un ideal y nilradical.
+    \item Anillos noetherianos y artinianos: definición, ejemplos y equivalencias útiles (condición de cadena ascendente, ideales finitamente generados).
+    \item Anillos locales y elementos nilpotentes. Dimensión de Krull (definición y ejemplos en dominios integrales y anillos de polinomios).
+\end{enumerate}
+
+\item \textbf{Módulos (2 semanas):}
+\begin{enumerate}
+    \item Módulos sobre anillos conmutativos noetherianos: homomorfismos, submódulos y cocientes; módulos finitamente generados y presentaciones finitas.
+    \item Productos tensoriales de módulos (definición, propiedad universal y ejemplos). Exactitud en casos elementales.
+    \item Módulos libres, proyectivos e inyectivos (nociones). Teorema de Cayley--Bacharach para módulos libres de rango finito sobre dominios de ideales principales (como puente).
+    \item Soporte de un módulo y aniquiladores; relación con $\Supp(M) \subseteq \Spec(R)$.
+\end{enumerate}
+
+\item \textbf{Geometría del $\Spec$ de un anillo (3 semanas):}
+\begin{enumerate}
+    \item Topología de Zariski en $\Spec(R)$: conjuntos cerrados $V(I)$, abiertos $D(f)$ y propiedades básicas.
+    \item El haz estructural $\widetilde{M}$ asociado a un módulo $M$ (definición en abiertos principales). Anillos estructurales en puntos.
+    \item Correspondencia entre ideales radicales e intersecciones de subvariedades; irreducibilidad y componentes irreducibles.
+    \item Morfismos de esquemas afines como dual de homomorfismos de anillos (nociones). Dimensión y puntos genéricos (ejemplos).
+\end{enumerate}
+
+\item \textbf{Localización (2 semanas):}
+\begin{enumerate}
+    \item Construcción de $S^{-1}R$ y $S^{-1}M$ para un conjunto multiplicativo $S$. Propiedad universal.
+    \item Localización en un ideal primo: anillos y módulos localizados en $\mathfrak{p}$. Interpretación geométrica en $\Spec$.
+    \item Localización y exactitud; localización conmuta con cocientes y productos tensoriales (en los casos tratados).
+    \item Lema de Nakayama y aplicaciones a módulos finitos sobre anillos locales.
+\end{enumerate}
+
+\item \textbf{Descomposición primaria (2 semanas):}
+\begin{enumerate}
+    \item Ideales primarios; descomposición primaria de un ideal en un anillo noetheriano.
+    \item Teorema de Lasker--Noether (existencia). Componentes primarias y minimales; unicidad del conjunto de primos asociados.
+    \item Radical de un ideal como intersección de primos mínimos. Aplicaciones en anillos de polinomios y anillos de enteros.
+    \item Criterios de irreducibilidad de variedades afines vía descomposición primaria de ideales.
+\end{enumerate}
+
+\item \textbf{Anillos de valuación discreta (2 semanas):}
+\begin{enumerate}
+    \item Valuaciones en un cuerpo; anillos de valuación y anillos de valuación discreta (DVR).
+    \item Caracterización de los DVR como dominios noetherianos locales de dimensión uno con ideal maximal principal.
+    \item Dominios de Dedekind: definición, factorización de ideales en productos de primos, y ejemplos (enteros de cuerpos numéricos, curvas algebraicas no singulares).
+    \item Completación y series formales (introducción). Ejemplos: $\mathbb{Z}_{(p)}$, anillos de series $k[[t]]$, y extensiones finitas de cuerpos locales.
+\end{enumerate}
+
+\end{enumerate}
 
 \subsubsection*{Metodología}
 
-\textit{Pendiente de elaboración.}
+\noindent \textbf{Lineamientos metodológicos:} La persona docente a cargo de este curso debe respetar las siguientes pautas:
+\begin{enumerate}
+    \item Presentar definiciones precisas, enunciados completos y demostraciones de los teoremas centrales del programa, alternando con ejemplos que motiven cada construcción.
+    \item Vincular de manera explícita los contenidos con MA-0661 (anillos y módulos) y, cuando corresponda, con geometría algebraica (ideal-variedad, $\Spec$).
+    \item Asignar listas de ejercicios que combinen demostraciones, cálculo en anillos concretos y construcción de contraejemplos cuando una hipótesis (p. ej.\ noetheriano) se omite.
+    \item Fomentar la comunicación clara y rigurosa de argumentos, tanto oral como escrita.
+\end{enumerate}
+
+\textbf{Sugerencias metodológicas:}
+\begin{enumerate}
+    \item Usar $\Spec(\mathbb{Z})$ y $\Spec(k[x,y])$ como laboratorios recurrentes para la topología de Zariski y la descomposición primaria.
+    \item Introducir la localización antes de la descomposición primaria cuando el grupo lo requiera, para enfatizar el carácter local de los argumentos.
+    \item Sugerir el uso de \LaTeX{} en tareas y exposiciones breves sobre un tema de ampliación (p. ej.\ dimensiones, regularidad o completaciones).
+\end{enumerate}
+
+\nocite{Alu21}
+\nocite{Hun80}
+\nocite{Kun13}
 
 \printcursosbibliography
 
