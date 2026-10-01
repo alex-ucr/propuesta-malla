@@ -161,9 +161,9 @@
     "saberes": ["SC05", "SC14", "SH05", "SH08", "SS02", "SS17"]
   },
   {
-    "titulo": "MA-0635 Introducción a la Topología",
+    "titulo": "MA-0635 Topología general",
     "sigla": "MA-0635",
-    "nombre_corto": "Introducción a la Topología",
+    "nombre_corto": "Topología general",
     "enfasis": "ambos",
     "saberes": ["SC15", "SH05", "SH06", "SH07", "SH19"]
   },

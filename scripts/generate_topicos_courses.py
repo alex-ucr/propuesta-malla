@@ -113,7 +113,7 @@ COURSES = [
         "0832",
         "topicos-topologia",
         "Tópicos en Topología",
-        "MA-0635 Introducción a la Topología",
+        "MA-0635 Topología general",
         "Topología",
         "la topología",
         "topológicos",
