@@ -30,6 +30,7 @@
     {"code": "CA-0512", "title": "Modelos lineales", "stem": "CA0512-modelos-lineales-cuerpo"},
     {"code": "CA-0612", "title": "Series de tiempo", "stem": "CA0612-series-tiempo-cuerpo"},
     {"code": "MA-0406", "title": "Introducción a la optimización", "stem": "MA0406-introduccion-optimizacion-cuerpo"},
+    {"code": "MA-0477", "title": "Ecuaciones diferenciales parciales aplicadas", "stem": "MA0477-ecuaciones-diferenciales-parciales-aplicadas-cuerpo"},
     {"code": "CA-0203", "title": "Herramientas de ciencia de datos I", "stem": "CA0203-herramientas-ciencia-datos-i-cuerpo"},
     {"code": "CA-0304", "title": "Herramientas de ciencia de datos II", "stem": "CA0304-herramientas-ciencia-datos-ii-cuerpo"},
     {"code": "MA-0790", "title": "Tópicos de análisis", "stem": "MA0790-topicos-analisis-cuerpo"},

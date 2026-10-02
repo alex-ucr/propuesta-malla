@@ -40,7 +40,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0821 | Teoría de módulos |
 | MA-0734 | Optimización |
 
-## Optativas temáticas (25)
+## Optativas temáticas (26)
 
 | Sigla | Nombre |
 |-------|--------|
@@ -51,6 +51,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | CA-0512 | Modelos lineales |
 | CA-0612 | Series de tiempo |
 | MA-0406 | Introducción a la optimización |
+| MA-0477 | Ecuaciones diferenciales parciales aplicadas |
 | CA-0203 | Herramientas de ciencia de datos I |
 | CA-0304 | Herramientas de ciencia de datos II |
 | MA-0790 | Tópicos de análisis |
