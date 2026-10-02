@@ -156,8 +156,8 @@
     "ciclo": "II",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA0151 Fundamentos de Álgebra, Trigonometría y Geometría Analítica",
-    "correquisitos": "MA0252 Introducción a las Demostraciones",
+    "requisitos": "MA-0151 Fundamentos de Álgebra, Trigonometría y Geometría Analítica",
+    "correquisitos": "MA-0252 Introducción a las Demostraciones",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
   },
@@ -204,7 +204,7 @@
     "ciclo": "III",
     "tipo_curso": "Teórico",
     "creditos": 3,
-    "requisitos": "MA0252 Introducción a las Demostraciones",
+    "requisitos": "MA-0151 Fundamentos de álgebra, trinonometría y geometría analítica y MA-0252 Introducción a las Demostraciones",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "4"
@@ -229,8 +229,8 @@
     "ciclo": "III",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA0251 Cálculo en Una Variable",
-    "correquisitos": "MA0361 Álgebra Lineal I",
+    "requisitos": "MA-0251 Cálculo en Una Variable",
+    "correquisitos": "MA-0361 Álgebra Lineal I",
     "horas_presenciales_semana": "4",
     "horas_trabajo_independiente": null
   },
@@ -251,7 +251,7 @@
     "ciclo": "III",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0251 Cálculo en una variable",
+    "requisitos": "MA-0251 Cálculo en una variable y MA-0252 Introducción a las demostraciones",
     "correquisitos": "MA-0361 Algebra Lineal I",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -276,7 +276,7 @@
     "ciclo": "III",
     "tipo_curso": "Teórico",
     "creditos": 3,
-    "requisitos": "MA0252 Introducción a las Demostraciones",
+    "requisitos": "MA-0151 Fundamentos de álgebra, trinonometría y geometría analítica y MA-0252 Introducción a las Demostraciones",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "4"
@@ -299,7 +299,7 @@
     "ciclo": "III",
     "tipo_curso": "Teórico",
     "creditos": 3,
-    "requisitos": "MA0252 Introducción a las Demostraciones",
+    "requisitos": "MA-0151 Fundamentos de álgebra, trinonometría y geometría analítica y MA-0252 Introducción a las Demostraciones",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "4"
@@ -323,7 +323,7 @@
     "tipo_curso": "Teórico",
     "creditos": 4,
     "requisitos": "MA-0351 Cálculo en Varias Variables",
-    "correquisitos": "MA0461 Álgebra Lineal II",
+    "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
   },
@@ -415,9 +415,9 @@
     "horas_trabajo_independiente": "7"
   },
   {
-    "titulo": "MA-0541 Análisis Numérico I",
-    "sigla": "MA-0541",
-    "nombre_corto": "Análisis Numérico I",
+    "titulo": "MA-0501 Análisis numérico",
+    "sigla": "MA-0501",
+    "nombre_corto": "Análisis numérico",
     "enfasis": "aplicada",
     "saberes": [
       "SC02",
@@ -551,9 +551,9 @@
     "horas_trabajo_independiente": "7"
   },
   {
-    "titulo": "MA-0641 Análisis Numérico I",
-    "sigla": "MA-0641",
-    "nombre_corto": "Análisis Numérico I",
+    "titulo": "MA-0501 Análisis numérico",
+    "sigla": "MA-0501",
+    "nombre_corto": "Análisis numérico",
     "enfasis": "pura",
     "saberes": [
       "SC02",

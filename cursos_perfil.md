@@ -23,14 +23,14 @@ Leyenda de énfasis: **Pura y aplicada** = presente en ambas mallas; **Pura** / 
 | MA-0461 | Algebra Lineal II | Pura | SC06, SH01, SH03, SH05, SH06, SH20, SS02 |
 | MA-0471 | Introducción a la Geometría Diferencial | Pura | SC07, SC11, SH05, SH07, SH19, SH21 |
 | MA-0496 | Teoría de Números | Pura | SC10, SC16, SH05, SH10, SH20, SS02 |
+| MA-0501 | Análisis numérico | Aplicada | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
+| MA-0501 | Análisis numérico | Pura | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
 | MA-0515 | Ecuaciones Diferenciales | Pura | SC05, SC06, SH05, SH22 |
-| MA-0541 | Análisis Numérico I | Aplicada | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
 | MA-0552 | Principios de Análisis II | Pura y aplicada | SC04, SC15, SH05, SH07, SH19, SH21, SS02 |
 | MA-0561 | Algebra Abstracta I | Pura | SC10, SC16, SH05, SH06, SH20, SS02, SS17 |
 | MA-0615 | Ecuaciones Diferenciales | Aplicada | SC05, SC06, SH05, SH22, SS14 |
 | MA-0625 | Análisis Real I | Aplicada | SC05, SC14, SH05, SH08, SS02, SS17 |
 | MA-0635 | Topología general | Pura y aplicada | SC15, SH05, SH06, SH07, SH19 |
-| MA-0641 | Análisis Numérico I | Pura | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
 | MA-0661 | Algebra Abstracta II | Pura | SC10, SH05, SH06, SH20 |
 | MA-0705 | Análisis Real I | Pura | SC05, SC14, SH05, SH08, SS02, SS17 |
 | MA-0732 | Análisis complejo | Pura y aplicada | SC09, SC15, SH05, SH07, SH19, SS02, SS17 |
@@ -109,7 +109,7 @@ Descripciones completas en [`perfil-salida.json`](perfil-salida.json) y la pági
 
 - Las asociaciones reflejan la **contribución principal** de cada curso a los saberes, según objetivos y contenidos de los programas (`Cursos/*-cuerpo.tex`).
 - Los cursos optativos no se incluyen en esta tabla.
-- Cursos obligatorios en las mallas: 33; filas en la tabla: 28.
+- Cursos obligatorios en las mallas: 32; filas en la tabla: 28.
 - **Pendiente de mapear:** MA-0880 Comunicación en las ciencias, MA-0881 Práctica profesional en matemática pura, MA-0883 Práctica profesional en matemática aplicada, MA-0982 Seminario de estudios dirigidos en matemática pura I, MA-0984 Seminario de estudios dirigidos en matemática aplicada I, MA-1081 Seminario de estudios dirigidos en matemática pura II, MA-1082 Seminario de estudios dirigidos en matemática aplicada II.
 - **En datos pero no en mallas actuales:** MA-0261 Algebra Lineal I, MA-0361 Algebra Lineal II.
 

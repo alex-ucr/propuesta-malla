@@ -26,7 +26,6 @@ CUROS = ROOT / "Cursos"
 # Códigos de la malla aplicada que comparten programa con otro curso.
 SIGLA_ALIASES: dict[str, str] = {
     "MA-0261": "MA-0361",
-    "MA-0541": "MA-0641",
     "MA-0615": "MA-0515",
     "MA-0625": "MA-0705",
 }

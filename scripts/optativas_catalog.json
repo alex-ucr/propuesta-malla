@@ -13,7 +13,7 @@
     {"code": "MA-0812", "title": "Teoría de conjuntos", "stem": "MA0812-teoria-conjuntos-cuerpo"},
     {"code": "MA-0719", "title": "Geometría algebraica", "stem": "MA0719-geometria-algebraica-cuerpo"},
     {"code": "MA-0721", "title": "Lógica", "stem": "MA0721-logica-cuerpo"},
-    {"code": "MA-0755", "title": "Ecuaciones diferenciales parciales", "stem": "MA0755-ecuaciones-diferenciales-parciales-cuerpo"},
+    {"code": "MA-0756", "title": "Ecuaciones diferenciales parciales", "stem": "MA0756-ecuaciones-diferenciales-parciales-cuerpo"},
     {"code": "MA-0889", "title": "Álgebra conmutativa", "stem": "MA0889-algebra-conmutativa-cuerpo"},
     {"code": "MA-0804", "title": "Topología algebraica", "stem": "MA0804-topologia-algebraica-cuerpo"},
     {"code": "MA-0827", "title": "Estadística matemática", "stem": "MA0827-estadistica-matematica-cuerpo"},
@@ -46,6 +46,7 @@
     {"code": "MA-0830", "title": "Tópicos de Teoría de Números", "stem": "MA0830-topicos-teoria-numeros-cuerpo"},
     {"code": "MA-0831", "title": "Tópicos de Lógica", "stem": "MA0831-topicos-logica-cuerpo"},
     {"code": "MA-0832", "title": "Tópicos en Topología", "stem": "MA0832-topicos-topologia-cuerpo"},
+    {"code": "MA-0833", "title": "Tópicos de estadística", "stem": "MA0833-topicos-estadistica-cuerpo"},
     {"code": "CA-0412", "title": "Análisis de datos II", "stem": "CA0412-analisis-datos-ii-cuerpo"}
   ]
 }

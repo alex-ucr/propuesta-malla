@@ -31,7 +31,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0812 | Teoría de conjuntos |
 | MA-0719 | Geometría algebraica |
 | MA-0721 | Lógica |
-| MA-0755 | Ecuaciones diferenciales parciales |
+| MA-0756 | Ecuaciones diferenciales parciales |
 | MA-0889 | Álgebra conmutativa |
 | MA-0804 | Topología algebraica |
 | MA-0827 | Estadística matemática |
@@ -40,7 +40,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0821 | Teoría de módulos |
 | MA-0734 | Optimización |
 
-## Optativas temáticas (24)
+## Optativas temáticas (25)
 
 | Sigla | Nombre |
 |-------|--------|
@@ -67,6 +67,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0830 | Tópicos de Teoría de Números |
 | MA-0831 | Tópicos de Lógica |
 | MA-0832 | Tópicos en Topología |
+| MA-0833 | Tópicos de estadística |
 | CA-0412 | Análisis de datos II |
 
 Los cursos marcados como *pendiente de elaboración* tienen cascarón en `Cursos/` (`Programa pendiente de elaboración`).
