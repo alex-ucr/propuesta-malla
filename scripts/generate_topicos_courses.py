@@ -11,6 +11,15 @@ CUROS = ROOT / "Cursos"
 # (code, slug, title, requisito, area_emphasis, area_genitive, area_adjective)
 COURSES = [
     (
+        "0759",
+        "topicos-matematica-financiera",
+        "Tópicos de matemática financiera",
+        "MA-0841 Probabilidad o CA-0721 Probabilidad",
+        "Matemática financiera",
+        "la matemática financiera",
+        "de matemática financiera",
+    ),
+    (
         "0791",
         "topicos-probabilidad",
         "Tópicos de probabilidad",
@@ -59,7 +68,7 @@ COURSES = [
         "0796",
         "topicos-algebra",
         "Tópicos de álgebra",
-        "MA-0561 Álgebra Abstracta I",
+        "MA-0571 Álgebra Abstracta I",
         "Álgebra",
         "el álgebra",
         "algebraicos",
@@ -104,7 +113,7 @@ COURSES = [
         "0831",
         "topicos-logica",
         "Tópicos de lógica",
-        "MA-0721 Lógica",
+        "MA-0781 Lógica",
         "Lógica",
         "la lógica",
         "lógicos",
@@ -228,8 +237,10 @@ El curso incluirá estudio teórico, resolución de problemas y, según criterio
 """
 
 
-def main() -> None:
+def main(only: set[str] | None = None) -> None:
     for code, slug, title, req, area, area_gen, area_adj in COURSES:
+        if only and code not in only:
+            continue
         stem = f"MA{code}-{slug}"
         cuerpo_path = CUROS / f"{stem}-cuerpo.tex"
         driver_path = CUROS / f"{stem}.tex"
@@ -242,4 +253,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+
+    main(set(sys.argv[1:]) or None)

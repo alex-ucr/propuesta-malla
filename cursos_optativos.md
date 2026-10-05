@@ -22,25 +22,25 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0717 | Geometría diferencial |
 | MA-0920 | Ecuaciones en derivadas parciales numéricas |
 | MA-0806 | Análisis funcional |
-| MA-0713 | Integración |
+| MA-0783 | Integración |
 | MA-0525 | Combinatoria |
 | MA-0528 | Sistemas dinámicos |
 | CA-0411 | Análisis de Datos I |
 | MA-0815 | Análisis armónico |
 | MA-0876 | Teoría Algebraica de Números |
-| MA-0812 | Teoría de conjuntos |
+| MA-0858 | Teoría de conjuntos |
 | MA-0719 | Geometría algebraica |
-| MA-0721 | Lógica |
+| MA-0781 | Lógica |
 | MA-0756 | Ecuaciones diferenciales parciales |
 | MA-0889 | Álgebra conmutativa |
 | MA-0804 | Topología algebraica |
 | MA-0827 | Estadística matemática |
-| MA-0820 | Teoría de modelos |
+| MA-0824 | Teoría de modelos |
 | MA-0841 | Probabilidad |
-| MA-0821 | Teoría de módulos |
+| MA-0849 | Teoría de módulos |
 | MA-0734 | Optimización |
 
-## Optativas temáticas (26)
+## Optativas temáticas (27)
 
 | Sigla | Nombre |
 |-------|--------|
@@ -54,6 +54,7 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0477 | Ecuaciones diferenciales parciales aplicadas |
 | CA-0203 | Herramientas de ciencia de datos I |
 | CA-0304 | Herramientas de ciencia de datos II |
+| MA-0759 | Tópicos de Matemática Financiera |
 | MA-0790 | Tópicos de análisis |
 | MA-0791 | Tópicos de Probabilidad |
 | MA-0792 | Tópicos de Ecuaciones diferenciales |

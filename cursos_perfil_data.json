@@ -464,8 +464,8 @@
     "horas_trabajo_independiente": "7"
   },
   {
-    "titulo": "MA-0561 Algebra Abstracta I",
-    "sigla": "MA-0561",
+    "titulo": "MA-0571 Algebra Abstracta I",
+    "sigla": "MA-0571",
     "nombre_corto": "Algebra Abstracta I",
     "enfasis": "pura",
     "saberes": [
@@ -591,7 +591,7 @@
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 5,
-    "requisitos": "MA-0561 Algebra Abstracta I",
+    "requisitos": "MA-0571 Algebra Abstracta I",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "10"

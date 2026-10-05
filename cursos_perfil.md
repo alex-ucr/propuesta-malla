@@ -27,7 +27,7 @@ Leyenda de énfasis: **Pura y aplicada** = presente en ambas mallas; **Pura** / 
 | MA-0501 | Análisis numérico | Pura | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
 | MA-0515 | Ecuaciones Diferenciales | Pura | SC05, SC06, SH05, SH22 |
 | MA-0552 | Principios de Análisis II | Pura y aplicada | SC04, SC15, SH05, SH07, SH19, SH21, SS02 |
-| MA-0561 | Algebra Abstracta I | Pura | SC10, SC16, SH05, SH06, SH20, SS02, SS17 |
+| MA-0571 | Algebra Abstracta I | Pura | SC10, SC16, SH05, SH06, SH20, SS02, SS17 |
 | MA-0615 | Ecuaciones Diferenciales | Aplicada | SC05, SC06, SH05, SH22, SS14 |
 | MA-0625 | Análisis Real I | Aplicada | SC05, SC14, SH05, SH08, SS02, SS17 |
 | MA-0635 | Topología general | Pura y aplicada | SC15, SH05, SH06, SH07, SH19 |
