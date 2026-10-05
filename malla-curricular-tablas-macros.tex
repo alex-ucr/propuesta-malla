@@ -57,15 +57,16 @@
   \multicolumn{10}{|r|}{\textbf{#1: #2}} \\ \hline
 }
 
-% Sigla clicable hacia el programa (\hypertarget del cuerpo).
+% Sigla clicable hacia el programa (\hypertarget del cuerpo); se muestra con guion (MA-0151).
 % Uso: \MallaSigla{MA0151}  o  \MallaSigla[destino]{MA0615}
 \makeatletter
+\def\MallaSigla@fmt#1#2#3\@nil{#1#2-#3}
 \newcommand{\MallaSigla}[2][]{%
   \def\MallaSigla@opt{#1}%
   \ifx\MallaSigla@opt\empty
-    \hyperlink{#2}{#2}%
+    \hyperlink{#2}{\MallaSigla@fmt#2\@nil}%
   \else
-    \hyperlink{#1}{#2}%
+    \hyperlink{#1}{\MallaSigla@fmt#2\@nil}%
   \fi
 }
 \makeatother

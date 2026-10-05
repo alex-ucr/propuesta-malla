@@ -13,7 +13,7 @@ COURSES = [
     (
         "0791",
         "topicos-probabilidad",
-        "Tópicos de Probabilidad",
+        "Tópicos de probabilidad",
         "MA-0841 Probabilidad",
         "Probabilidad",
         "la probabilidad",
@@ -22,7 +22,7 @@ COURSES = [
     (
         "0792",
         "topicos-ecuaciones-diferenciales",
-        "Tópicos de Ecuaciones diferenciales",
+        "Tópicos de ecuaciones diferenciales",
         "MA-0515 Ecuaciones Diferenciales",
         "Ecuaciones diferenciales",
         "las ecuaciones diferenciales",
@@ -31,7 +31,7 @@ COURSES = [
     (
         "0793",
         "topicos-geometria",
-        "Tópicos de Geometría",
+        "Tópicos de geometría",
         "MA-0471 Introducción a la Geometría Diferencial",
         "Geometría",
         "la geometría",
@@ -40,7 +40,7 @@ COURSES = [
     (
         "0794",
         "topicos-modelacion",
-        "Tópicos de Modelación",
+        "Tópicos de modelación",
         "MA-0515 Ecuaciones Diferenciales",
         "Modelación matemática",
         "la modelación matemática",
@@ -49,7 +49,7 @@ COURSES = [
     (
         "0795",
         "topicos-computacion-cientifica",
-        "Tópicos de Computación científica",
+        "Tópicos de computación científica",
         "MA-0501 Análisis numérico",
         "Computación científica",
         "la computación científica",
@@ -58,8 +58,8 @@ COURSES = [
     (
         "0796",
         "topicos-algebra",
-        "Tópicos de Álgebra",
-        "MA-0561 Algebra Abstracta I",
+        "Tópicos de álgebra",
+        "MA-0561 Álgebra Abstracta I",
         "Álgebra",
         "el álgebra",
         "algebraicos",
@@ -67,7 +67,7 @@ COURSES = [
     (
         "0797",
         "topicos-matematica-discreta",
-        "Tópicos de Matemática discreta",
+        "Tópicos de matemática discreta",
         "MA-0496 Teoría de Números",
         "Matemática discreta",
         "la matemática discreta",
@@ -76,7 +76,7 @@ COURSES = [
     (
         "0798",
         "topicos-analisis-datos",
-        "Tópicos de Análisis de datos",
+        "Tópicos de análisis de datos",
         "MA-0501 Análisis numérico",
         "Análisis de datos",
         "el análisis de datos",
@@ -85,7 +85,7 @@ COURSES = [
     (
         "0799",
         "topicos-aprendizaje-automatico",
-        "Tópicos de Aprendizaje automático",
+        "Tópicos de aprendizaje automático",
         "MA-0501 Análisis numérico",
         "Aprendizaje automático",
         "el aprendizaje automático",
@@ -94,7 +94,7 @@ COURSES = [
     (
         "0830",
         "topicos-teoria-numeros",
-        "Tópicos de Teoría de Números",
+        "Tópicos de teoría de números",
         "MA-0496 Teoría de Números",
         "Teoría de números",
         "la teoría de números",
@@ -103,7 +103,7 @@ COURSES = [
     (
         "0831",
         "topicos-logica",
-        "Tópicos de Lógica",
+        "Tópicos de lógica",
         "MA-0721 Lógica",
         "Lógica",
         "la lógica",
@@ -112,7 +112,7 @@ COURSES = [
     (
         "0832",
         "topicos-topologia",
-        "Tópicos en Topología",
+        "Tópicos en topología",
         "MA-0635 Topología general",
         "Topología",
         "la topología",
@@ -146,6 +146,7 @@ DRIVER = """% !TeX program = pdflatex
 
 def cuerpo(code: str, title: str, requisito: str, area: str, area_gen: str, area_adj: str) -> str:
     sigla = f"MA-{code}"
+    de_area = f"del {area_gen[3:]}" if area_gen.startswith("el ") else f"de {area_gen}"
     hy = f"MA{code}"
     return f"""%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% {sigla} {title} %%%%%%%%%%%%%%%%%%%
@@ -171,13 +172,13 @@ def cuerpo(code: str, title: str, requisito: str, area: str, area_gen: str, area
 
 \\subsubsection*{{Descripción del curso}}
 
-Este curso optativo ofrece un espacio formativo para profundizar en temas de \\emph{{{area}}} que no se desarrollan de manera sistemática en otros cursos de la carrera. Cada curso ofrecido bajo esta sigla puede orientarse hacia líneas distintas dentro de {area_gen}---por ejemplo, pero no restringido a, aspectos clásicos o contemporáneos del área---según la especialidad de la persona docente y las necesidades formativas del estudiantado.
+Este curso optativo ofrece un espacio formativo para profundizar en temas de \\emph{{{area}}} que no se desarrollan de manera sistemática en otros cursos de la carrera. Cada curso ofrecido bajo esta sigla puede orientarse hacia líneas distintas dentro {de_area}---por ejemplo, pero no restringido a, aspectos clásicos o contemporáneos del área---según la especialidad de la persona docente y las necesidades formativas del estudiantado.
 
-La naturaleza abierta del curso permite responder a avances recientes de la disciplina, a demandas del estudiantado avanzado o a líneas de investigación activas en la Escuela de Matemática, siempre dentro del marco general de {area_gen}. Se espera que la persona estudiante consolide su capacidad de lectura de textos especializados, demostración o aplicación de resultados y comunicación matemática en un contexto de mayor autonomía intelectual.
+La naturaleza abierta del curso permite responder a avances recientes de la disciplina, a demandas del estudiantado avanzado o a líneas de investigación activas en la Escuela de Matemática, siempre dentro del marco general {de_area}. Se espera que la persona estudiante consolide su capacidad de lectura de textos especializados, demostración o aplicación de resultados y comunicación matemática en un contexto de mayor autonomía intelectual.
 
 \\subsubsection*{{Objetivos}}
 
-\\textbf{{General:}} Profundizar en un tema de {area_gen}, definido para cada oferta del curso, mediante el estudio guiado de resultados, problemas y, cuando corresponda, aplicaciones.
+\\textbf{{General:}} Profundizar en un tema {de_area}, definido para cada oferta del curso, mediante el estudio guiado de resultados, problemas y, cuando corresponda, aplicaciones.
 
 \\textbf{{Específicos:}} Al finalizar el curso se espera que la persona estudiante sea capaz de:
 
@@ -207,7 +208,7 @@ El curso incluirá estudio teórico, resolución de problemas y, según criterio
 \\noindent \\textbf{{Lineamientos metodológicos:}} La persona docente a cargo de este curso debe respetar las siguientes pautas:
 
 \\begin{{enumerate}}
-    \\item Definir y publicar al inicio del curso el programa concreto de la oferta, dentro del marco general de {area_gen}.
+    \\item Definir y publicar al inicio del curso el programa concreto de la oferta, dentro del marco general {de_area}.
     \\item Combinar \\textbf{{clases magistrales}} o \\textbf{{seminarios}} con trabajo independiente y, cuando proceda, sesiones de ejercicios o presentaciones del estudiantado.
     \\item Promover la lectura activa de fuentes especializadas y la discusión crítica de resultados.
     \\item Incluir evaluación formativa continua acorde con el tema y la modalidad de la oferta.
@@ -217,7 +218,7 @@ El curso incluirá estudio teórico, resolución de problemas y, según criterio
 \\textbf{{Sugerencias metodológicas:}} Adicionalmente, se tienen las siguientes recomendaciones para la persona docente a cargo de este curso:
 
 \\begin{{enumerate}}
-    \\item Coordinar con la jefatura del departamento la coherencia de la oferta con otros cursos de {area_gen} de la malla.
+    \\item Coordinar con la jefatura del departamento la coherencia de la oferta con otros cursos {de_area} de la malla.
     \\item Explicitar los prerrequisitos conceptuales particulares de la oferta, más allá del requisito formal del curso.
     \\item Fomentar la participación en coloquios, seminarios o actividades de divulgación del departamento cuando el tema lo permita.
     \\item Documentar la oferta (programa, bibliografía y evaluación) para apoyar futuras reiteraciones del curso.
