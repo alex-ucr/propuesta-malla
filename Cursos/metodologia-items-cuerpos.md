@@ -45,7 +45,7 @@ Los párrafos sin listas (p. ej. CA-0721) no generan entradas aquí.
 - Ejemplificar diferentes desempeños de algoritmos (factorizaciones, métodos iterativos, etc).
 - Elaboración de un wiki para identificación de conceptos relevantes.
 - En caso de que algunos temas lo permitan, presentar al estudiantado casos de demostraciones famosas en la historia de las matemáticas para ilustrar diferentes métodos de demostración y mostrar cómo la demostración matemática ha evolucionado con el tiempo. Un ejemplo concreto de esto es la demostración de Euclides de la existencia de infinitos números primos.
-- En este curso se aplican las bases de lógica y las estrategias de demostración vistas en el curso MA-0252 Introducción a las demostraciones.
+- En este curso se aplican las bases de lógica y las estrategias de demostración vistas en el curso MA-0252 Introducción a las Demostraciones.
 - En este curso se aplican las bases de lógica y las estrategias de demostración vistas en el curso MA-02XX Introducción a las Demostraciones.
 - En la evaluación, se sugiere utilizar estrategias que promuevan el trabajo constante de parte de las personas estudiantes a lo largo del ciclo lectivo. Por ejemplo, esto se puede hacer por medio de listas de ejercicios recomendados o proyectos.
 - En la evaluación, se sugiere utilizar estrategias que promuevan el trabajo constante de parte de las personas estudiantes a lo largo del ciclo lectivo. Por ejemplo, esto se puede hacer por medio de tareas o quizzes.
@@ -63,7 +63,7 @@ Los párrafos sin listas (p. ej. CA-0721) no generan entradas aquí.
 - Foros.
 - Identificación de conceptos en artículos científicos sencillos e interpretación de resultados.
 - La presentación de los contenidos debe priorizar la formalización de los conceptos del álgebra lineal. En particular en este curso se debe asumir que las personas estudiantes ya manejan las intuiciones y las habilidades operacionales sobre los conceptos básicos del cálculo diferencial e integral y del álgebra lineal.
-- La presentación de los contenidos debe priorizar la formalización de los conceptos estudiados en los cursos MA-0251 Introducción al cálculo en una variable y MA-0351 Introducción al cálculo en varias variables. En particular en este curso se debe asumir que las personas estudiantes ya manejan las intuiciones y las habilidades operacionales sobre los conceptos básicos del cálculo diferencial e integral.
+- La presentación de los contenidos debe priorizar la formalización de los conceptos estudiados en los cursos MA-0251 Introducción al Cálculo en una Variable y MA-0351 Introducción al Cálculo en Varias Variables. En particular en este curso se debe asumir que las personas estudiantes ya manejan las intuiciones y las habilidades operacionales sobre los conceptos básicos del cálculo diferencial e integral.
 - La presentación de los contenidos debe priorizar la formalización de los conceptos estudiados en los cursos MA-02XX Introducción al Cálculo en una Variable y MA-03XX Introducción al Cálculo en Varias Variables. En particular en este curso se debe asumir que las personas estudiantes ya manejan las intuiciones y las habilidades operacionales sobre los conceptos básicos del cálculo diferencial e integral.
 - La presentación de los contenidos debe priorizar la intuición y el desarrollo de habilidades algorítmicas por encima del formalismo. Por ejemplo, se deben evitar las demostraciones de cálculos relacionados con complejidad de algoritmos, el cual debe ser introductorio e informativo. Es posible dar una descripción heurística de diferentes algoritmos y su complejidad, sin requerir un tratamiento formal.
 - La presentación de los contenidos debe priorizar la intuición y el desarrollo de habilidades operacionales por encima del formalismo.
@@ -342,8 +342,8 @@ Los párrafos sin listas (p. ej. CA-0721) no generan entradas aquí.
 
 ### `MAxxxx-geometria-cuerpo.tex`
 
-- La presentación de los contenidos debe priorizar la formalización de los conceptos estudiados en los cursos MA-0251 Introducción al cálculo en una variable y MA-0351 Introducción al cálculo en varias variables. En particular en este curso se debe asumir que las personas estudiantes ya manejan las intuiciones y las habilidades operacionales sobre los conceptos básicos del cálculo diferencial e integral.
-- En este curso se aplican las bases de lógica y las estrategias de demostración vistas en el curso MA-0252 Introducción a las demostraciones.
+- La presentación de los contenidos debe priorizar la formalización de los conceptos estudiados en los cursos MA-0251 Introducción al Cálculo en una Variable y MA-0351 Introducción al Cálculo en Varias Variables. En particular en este curso se debe asumir que las personas estudiantes ya manejan las intuiciones y las habilidades operacionales sobre los conceptos básicos del cálculo diferencial e integral.
+- En este curso se aplican las bases de lógica y las estrategias de demostración vistas en el curso MA-0252 Introducción a las Demostraciones.
 - Las demostraciones deben presentarse tomando en cuenta que están dirigidas a una persona estudiante principiante. En particular, se debe priorizar dar un mayor nivel de detalle por encima de la brevedad y la estética, cuando esto ayude a mejorar la comprensión de los temas.
 - Cuando la naturaleza del contenido lo permita, se deben utilizar representaciones visuales que apoyen la comprensión de los temas.
 - Utilizar el recurso tecnológico para reforzar distintos conceptos estudiados en el curso por medio de la visualización, cálculo y experimentación. Se pone a disposición de la persona docente un repositorio de herramientas listas para ser implementadas en el curso, tanto en las clases como para el trabajo independiente de las personas estudiantes.

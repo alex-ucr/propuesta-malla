@@ -1,4 +1,4 @@
-# Modelación matemática
+# Modelación Matemática
 
 
 - Interiorizar por qué las cosas funcionan (JG)

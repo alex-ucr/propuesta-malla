@@ -6,34 +6,34 @@ Leyenda de énfasis: **Pura y aplicada** = presente en ambas mallas; **Pura** / 
 
 | Sigla | Curso | Énfasis | Saberes del perfil |
 |-------|-------|---------|-------------------|
-| CA-0203 | Herramientas de ciencia de datos I | Aplicada | SC03, SC04, SC11, SH01, SH06, SH09, SH10, SH11, SS04, SS14 |
+| CA-0203 | Herramientas de Ciencia de Datos I | Aplicada | SC03, SC04, SC11, SH01, SH06, SH09, SH10, SH11, SS04, SS14 |
 | CA-0303 | Estadística I | Aplicada | SC08, SC11, SH01, SH05, SH11, SS14 |
 | CA-0411 | Análisis de Datos I | Aplicada | SC02, SC11, SC17, SH05, SH09, SH11, SS14 |
 | CA-0721 | Probabilidad | Aplicada | SC05, SC08, SH05, SH11, SH22, SS14 |
-| MA-0151 | Fundamentos de álgebra, trigonometría y geometría analítica | Pura y aplicada | SC01, SC09, SH02, SH07, SH21, SS02 |
+| MA-0151 | Fundamentos de Álgebra, Trigonometría y Geometría Analítica | Pura y aplicada | SC01, SC09, SH02, SH07, SH21, SS02 |
 | MA-0152 | Matemática Exploratoria | Pura y aplicada | SC01, SC12, SC16, SH02, SH05, SH12, SH23, SS02, SS05, SS13 |
-| MA-0251 | Introducción al Cálculo en una variable | Pura y aplicada | SC04, SH01, SH02, SH05, SS02 |
+| MA-0251 | Introducción al Cálculo en una Variable | Pura y aplicada | SC04, SH01, SH02, SH05, SS02 |
 | MA-0252 | Introducción a las Demostraciones | Pura y aplicada | SC01, SC12, SC16, SH05, SH08, SH12, SS02, SS04 |
-| MA-0261 | Algebra Lineal I | Aplicada | SC04, SC06, SH01, SH02, SH05, SH07, SH20, SS02 |
+| MA-0261 | Álgebra Lineal I | Aplicada | SC04, SC06, SH01, SH02, SH05, SH07, SH20, SS02 |
 | MA-0341 | Matemática Computacional | Pura y aplicada | SC02, SC03, SC13, SC16, SH03, SH10, SH13, SH23, SS04 |
-| MA-0351 | Introducción al Cálculo en varias variables | Pura y aplicada | SC04, SH02, SH05, SH07, SH21, SS02 |
-| MA-0361 | Algebra Lineal I | Pura | SC04, SC06, SH01, SH02, SH03, SH05, SH07, SH20, SS02 |
-| MA-0361 | Algebra Lineal II | Aplicada | SC06, SH01, SH03, SH05, SH06, SH20, SS02 |
-| MA-0451 | Principios de análisis en una variable | Pura y aplicada | SC04, SC14, SH05, SH08, SH12, SS02, SS04 |
-| MA-0461 | Algebra Lineal II | Pura | SC06, SH01, SH03, SH05, SH06, SH20, SS02 |
+| MA-0351 | Introducción al Cálculo en Varias Variables | Pura y aplicada | SC04, SH02, SH05, SH07, SH21, SS02 |
+| MA-0361 | Álgebra Lineal I | Pura | SC04, SC06, SH01, SH02, SH03, SH05, SH07, SH20, SS02 |
+| MA-0361 | Álgebra Lineal II | Aplicada | SC06, SH01, SH03, SH05, SH06, SH20, SS02 |
+| MA-0451 | Principios de Análisis en una Variable | Pura y aplicada | SC04, SC14, SH05, SH08, SH12, SS02, SS04 |
+| MA-0461 | Álgebra Lineal II | Pura | SC06, SH01, SH03, SH05, SH06, SH20, SS02 |
 | MA-0471 | Introducción a la Geometría Diferencial | Pura | SC07, SC11, SH05, SH07, SH19, SH21 |
 | MA-0496 | Teoría de Números | Pura | SC10, SC16, SH05, SH10, SH20, SS02 |
-| MA-0501 | Análisis numérico | Aplicada | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
-| MA-0501 | Análisis numérico | Pura | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
+| MA-0501 | Análisis Numérico | Aplicada | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
+| MA-0501 | Análisis Numérico | Pura | SC02, SC03, SC05, SC13, SH05, SH10, SH13, SH22, SS04, SS17 |
 | MA-0515 | Ecuaciones Diferenciales | Pura | SC05, SC06, SH05, SH22 |
 | MA-0552 | Principios de Análisis II | Pura y aplicada | SC04, SC15, SH05, SH07, SH19, SH21, SS02 |
-| MA-0571 | Algebra Abstracta I | Pura | SC10, SC16, SH05, SH06, SH20, SS02, SS17 |
+| MA-0571 | Álgebra Abstracta I | Pura | SC10, SC16, SH05, SH06, SH20, SS02, SS17 |
 | MA-0615 | Ecuaciones Diferenciales | Aplicada | SC05, SC06, SH05, SH22, SS14 |
 | MA-0625 | Análisis Real I | Aplicada | SC05, SC14, SH05, SH08, SS02, SS17 |
-| MA-0635 | Topología general | Pura y aplicada | SC15, SH05, SH06, SH07, SH19 |
-| MA-0661 | Algebra Abstracta II | Pura | SC10, SH05, SH06, SH20 |
+| MA-0635 | Topología General | Pura y aplicada | SC15, SH05, SH06, SH07, SH19 |
+| MA-0661 | Álgebra Abstracta II | Pura | SC10, SH05, SH06, SH20 |
 | MA-0705 | Análisis Real I | Pura | SC05, SC14, SH05, SH08, SS02, SS17 |
-| MA-0732 | Análisis complejo | Pura y aplicada | SC09, SC15, SH05, SH07, SH19, SS02, SS17 |
+| MA-0732 | Análisis Complejo | Pura y aplicada | SC09, SC15, SH05, SH07, SH19, SS02, SS17 |
 
 ## Referencia de saberes
 
@@ -110,7 +110,7 @@ Descripciones completas en [`perfil-salida.json`](perfil-salida.json) y la pági
 - Las asociaciones reflejan la **contribución principal** de cada curso a los saberes, según objetivos y contenidos de los programas (`Cursos/*-cuerpo.tex`).
 - Los cursos optativos no se incluyen en esta tabla.
 - Cursos obligatorios en las mallas: 32; filas en la tabla: 28.
-- **Pendiente de mapear:** MA-0880 Comunicación en las ciencias, MA-0881 Práctica profesional en matemática pura, MA-0883 Práctica profesional en matemática aplicada, MA-0982 Seminario de estudios dirigidos en matemática pura I, MA-0984 Seminario de estudios dirigidos en matemática aplicada I, MA-1081 Seminario de estudios dirigidos en matemática pura II, MA-1082 Seminario de estudios dirigidos en matemática aplicada II.
-- **En datos pero no en mallas actuales:** MA-0261 Algebra Lineal I, MA-0361 Algebra Lineal II.
+- **Pendiente de mapear:** MA-0880 Comunicación en las Ciencias, MA-0881 Práctica Profesional en Matemática Pura, MA-0883 Práctica Profesional en Matemática Aplicada, MA-0982 Seminario de Estudios Dirigidos en Matemática Pura I, MA-0984 Seminario de Estudios Dirigidos en Matemática Aplicada I, MA-1081 Seminario de Estudios Dirigidos en Matemática Pura II, MA-1082 Seminario de Estudios Dirigidos en Matemática Aplicada II.
+- **En datos pero no en mallas actuales:** MA-0261 Álgebra Lineal I, MA-0361 Álgebra Lineal II.
 
 Para regenerar: `python scripts/generate_cursos_perfil_md.py` (editar `scripts/cursos_perfil_data.json` para saberes; metadatos del curso se leen de `Cursos/*-cuerpo.tex`).

@@ -1,11 +1,11 @@
-### Comunicación en las ciencias
+### Comunicación en las Ciencias
 - Este curso está dirigido a estudiantes de último año, con el fin de ayudarles a desarrollar sus habilidades de escritura y expresión oral para comunicar conocimientos científicos en una amplia variedad de contextos, incluyendo la docencia, las propuestas de investigacion, la publicación de investigación, solicitudes de fondos, presentaciones dirigidas a un público científico general o especializado, entre otros. Además, se incluyen temas de ética profesional tales como la formación en conducta responsable en la investigación (RCR, Responsible Conduct of Research en inglés) es una parte integral de este curso.
 - Es un curso eminentemente práctico, donde los estudiantes preparan y realizan presentaciones para las cuales reciben retroalimentación.
 - Octavo ciclo
 - Se está considerando para promocionarlo en la Facultad de Ciencias
 - Dos créditos
 - Dos horas por semana
-- Requisitos: Álgebra abstracta II o Topología o Análisis Numérico I
+- Requisitos: Álgebra Abstracta II o Topología o Análisis Numérico I
 - En la metodología mencionar que se debe incluir trabajo en clase en la forma de:
     - Presentaciones
     - Discusiones

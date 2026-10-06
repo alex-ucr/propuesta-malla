@@ -13,7 +13,7 @@ COURSES = [
     (
         "0759",
         "topicos-matematica-financiera",
-        "Tópicos de matemática financiera",
+        "Tópicos de Matemática Financiera",
         "MA-0841 Probabilidad o CA-0721 Probabilidad",
         "Matemática financiera",
         "la matemática financiera",
@@ -22,7 +22,7 @@ COURSES = [
     (
         "0791",
         "topicos-probabilidad",
-        "Tópicos de probabilidad",
+        "Tópicos de Probabilidad",
         "MA-0841 Probabilidad",
         "Probabilidad",
         "la probabilidad",
@@ -31,7 +31,7 @@ COURSES = [
     (
         "0792",
         "topicos-ecuaciones-diferenciales",
-        "Tópicos de ecuaciones diferenciales",
+        "Tópicos de Ecuaciones Diferenciales",
         "MA-0515 Ecuaciones Diferenciales",
         "Ecuaciones diferenciales",
         "las ecuaciones diferenciales",
@@ -40,7 +40,7 @@ COURSES = [
     (
         "0793",
         "topicos-geometria",
-        "Tópicos de geometría",
+        "Tópicos de Geometría",
         "MA-0471 Introducción a la Geometría Diferencial",
         "Geometría",
         "la geometría",
@@ -49,7 +49,7 @@ COURSES = [
     (
         "0794",
         "topicos-modelacion",
-        "Tópicos de modelación",
+        "Tópicos de Modelación",
         "MA-0515 Ecuaciones Diferenciales",
         "Modelación matemática",
         "la modelación matemática",
@@ -58,7 +58,7 @@ COURSES = [
     (
         "0795",
         "topicos-computacion-cientifica",
-        "Tópicos de computación científica",
+        "Tópicos de Computación Científica",
         "MA-0501 Análisis numérico",
         "Computación científica",
         "la computación científica",
@@ -67,7 +67,7 @@ COURSES = [
     (
         "0796",
         "topicos-algebra",
-        "Tópicos de álgebra",
+        "Tópicos de Álgebra",
         "MA-0571 Álgebra Abstracta I",
         "Álgebra",
         "el álgebra",
@@ -76,7 +76,7 @@ COURSES = [
     (
         "0797",
         "topicos-matematica-discreta",
-        "Tópicos de matemática discreta",
+        "Tópicos de Matemática Discreta",
         "MA-0496 Teoría de Números",
         "Matemática discreta",
         "la matemática discreta",
@@ -85,7 +85,7 @@ COURSES = [
     (
         "0798",
         "topicos-analisis-datos",
-        "Tópicos de análisis de datos",
+        "Tópicos de Análisis de Datos",
         "MA-0501 Análisis numérico",
         "Análisis de datos",
         "el análisis de datos",
@@ -94,7 +94,7 @@ COURSES = [
     (
         "0799",
         "topicos-aprendizaje-automatico",
-        "Tópicos de aprendizaje automático",
+        "Tópicos de Aprendizaje Automático",
         "MA-0501 Análisis numérico",
         "Aprendizaje automático",
         "el aprendizaje automático",
@@ -103,7 +103,7 @@ COURSES = [
     (
         "0830",
         "topicos-teoria-numeros",
-        "Tópicos de teoría de números",
+        "Tópicos de Teoría de Números",
         "MA-0496 Teoría de Números",
         "Teoría de números",
         "la teoría de números",
@@ -112,7 +112,7 @@ COURSES = [
     (
         "0831",
         "topicos-logica",
-        "Tópicos de lógica",
+        "Tópicos de Lógica",
         "MA-0781 Lógica",
         "Lógica",
         "la lógica",
@@ -121,7 +121,7 @@ COURSES = [
     (
         "0832",
         "topicos-topologia",
-        "Tópicos de topología",
+        "Tópicos de Topología",
         "MA-0635 Topología general",
         "Topología",
         "la topología",
@@ -130,7 +130,7 @@ COURSES = [
     (
         "0833",
         "topicos-estadistica",
-        "Tópicos de estadística",
+        "Tópicos de Estadística",
         "MA-0827 Estadística matemática",
         "Estadística",
         "la estadística",
