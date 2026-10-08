@@ -181,7 +181,7 @@
       background: rgba(30, 77, 123, 0.16);
       box-shadow: inset 0 0 0 3px rgba(30, 77, 123, 0.45);
     }
-    .cycle { margin-bottom: 1.75rem; }
+    .cycle { margin-bottom: 1.75rem; scroll-margin-top: 7rem; }
     .cycle h2 {
       font-size: 1.1rem;
       margin: 0 0 0.35rem;
@@ -794,6 +794,10 @@
             "MA-0984 Seminario de estudios dirigidos en matemática aplicada I": { dx: 34.5, dy: 75 },
             "MA-1082 Seminario de estudios dirigidos en matemática aplicada II": { dx: 34.5, dy: 84 },
           },
+          HOTSPOT_POR_SECCION: [
+            { seccion: "OPT-002 — Núcleo en matemática aplicada", dx: 0.5, dy: 65.5, w: 30 },
+            { seccion: "OPT-002 — Núcleo en matemática aplicada", dx: 0.5, dy: 75, w: 13 },
+          ],
         },
       };
 
@@ -893,6 +897,16 @@
         return out;
       }
 
+      function idSeccion(label) {
+        return "seccion-" + label.split(" ")[0].toLowerCase();
+      }
+
+      function irASeccion(id) {
+        const sec = document.getElementById(id);
+        if (!sec) return;
+        sec.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
       function openCajaCursoById(detailId) {
         const det = document.getElementById(detailId);
         if (!det) return;
@@ -913,6 +927,7 @@
           if (!Array.isArray(courses) || !courses.length) continue;
           const section = document.createElement("section");
           section.className = "cycle";
+          section.id = idSeccion(label);
           const h2 = document.createElement("h2");
           h2.textContent = label;
           section.appendChild(h2);
@@ -999,6 +1014,23 @@
           el.style.height = h + "%";
           figWrap.appendChild(el);
         }
+        for (const g of cfg.HOTSPOT_POR_SECCION || []) {
+          const courses = malla[g.seccion];
+          if (!Array.isArray(courses) || !courses.length) continue;
+          const id = idSeccion(g.seccion);
+          const el = document.createElement("a");
+          el.className = "malla-hotspot";
+          el.href = "#" + id;
+          el.setAttribute("data-open-seccion", id);
+          el.title = "Ir a: " + g.seccion;
+          el.setAttribute("aria-label", "Ir a la sección: " + g.seccion);
+          el.textContent = "Enlace: " + g.seccion;
+          el.style.left = origin.left + (g.dx != null ? g.dx : 0) + "%";
+          el.style.top = origin.top + (g.dy != null ? g.dy : 0) + "%";
+          el.style.width = (g.w != null ? g.w : origin.w) + "%";
+          el.style.height = (g.h != null ? g.h : origin.h) + "%";
+          figWrap.appendChild(el);
+        }
       }
 
       function leerModoInicial() {
@@ -1040,6 +1072,12 @@
       figWrap.addEventListener("click", function (e) {
         const t = e.target;
         if (!t || !t.closest) return;
+        const sec = t.closest("a.malla-hotspot[data-open-seccion]");
+        if (sec) {
+          e.preventDefault();
+          irASeccion(sec.getAttribute("data-open-seccion"));
+          return;
+        }
         const a = t.closest("a.malla-hotspot[data-open-curso]");
         if (!a) return;
         e.preventDefault();
