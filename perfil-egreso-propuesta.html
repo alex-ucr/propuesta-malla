@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil de egreso — Propuesta curricular</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #fff;
+      --text: #1a1d21;
+      --muted: #5c6370;
+      --border: #d8dee6;
+      --accent: #1e4d7b;
+      --accent-soft: #e8f0f8;
+      --header-bg: #00c0f3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .app {
+      display: flex;
+      min-height: 100vh;
+      align-items: flex-start;
+    }
+    .sidebar {
+      width: 15.5rem;
+      flex-shrink: 0;
+      background: var(--card);
+      border-right: 1px solid var(--border);
+      padding: 1.25rem 1.1rem 2rem;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      min-height: 100vh;
+    }
+    .sidebar h2 {
+      margin: 0 0 0.75rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-main-link {
+      display: block;
+      padding: 0.55rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid transparent;
+      line-height: 1.35;
+    }
+    .nav-main-link:hover {
+      background: rgba(30, 77, 123, 0.06);
+      color: var(--accent);
+    }
+    .nav-main-link[aria-current="page"] {
+      background: var(--accent-soft);
+      border-color: var(--border);
+      color: var(--accent);
+    }
+    .sidebar .nav-malla a {
+      display: block;
+      padding: 0.5rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .sidebar .nav-malla a:hover {
+      background: rgba(30, 77, 123, 0.06);
+      color: var(--accent);
+    }
+    .sidebar .note {
+      margin: 1.25rem 0 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    @media (max-width: 720px) {
+      .app { flex-direction: column; }
+      .sidebar {
+        width: 100%;
+        min-height: 0;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+    }
+    .content { flex: 1; min-width: 0; }
+    .page {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem;
+    }
+    header {
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      margin: 0 0 0.35rem;
+      font-size: 1.55rem;
+      font-weight: 650;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .meta { margin: 0; font-size: 0.92rem; color: var(--muted); }
+    .intro {
+      margin: 0 0 1.75rem;
+      padding: 1rem 1.15rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.98rem;
+    }
+    .bloque-perfil > h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 650;
+    }
+    .bloque-perfil {
+      margin-bottom: 2.25rem;
+    }
+    .bloque-perfil .bloque-intro {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .tabla-dimension {
+      margin-bottom: 1.5rem;
+    }
+    .tabla-dimension h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .tabla-wrap {
+      overflow-x: auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+    table.perfil {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    table.perfil th,
+    table.perfil td {
+      padding: 0.65rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    table.perfil thead th {
+      background: var(--header-bg);
+      color: #fff;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    table.perfil tbody tr:last-child td { border-bottom: none; }
+    table.perfil tbody tr:hover {
+      background: rgba(0, 192, 243, 0.06);
+    }
+    table.perfil .codigo {
+      font-weight: 600;
+      white-space: nowrap;
+      color: var(--accent);
+      width: 4.5rem;
+    }
+    .load-error {
+      background: #fff3e0;
+      border: 1px solid #e0a040;
+      color: #5d3a0a;
+      padding: 1rem 1.1rem;
+      border-radius: 8px;
+    }
+    .load-error code { font-size: 0.88em; }
+  </style>
+  <link rel="stylesheet" href="assets/site-brand.css" />
+  <script src="assets/site-brand.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Navegación">
+      <h2>Perfil de egreso</h2>
+      <nav class="sidebar-nav">
+        <a href="perfil-egreso-propuesta.html" class="nav-main-link" aria-current="page">Perfil de egreso</a>
+        <a href="perfil-salida.html" class="nav-main-link">Perfil de egreso previamente aprobado</a>
+      </nav>
+      <h2>Malla</h2>
+      <nav class="nav-malla">
+        <a href="malla-curricular.html">Estructura curricular</a>
+      </nav>
+      <p class="note">
+        Capítulo <strong>Perfil de Egreso</strong> de <code>propuesta.tex</code>
+        (saberes por grado y énfasis).
+      </p>
+    </aside>
+    <div class="content">
+      <div class="page">
+        <header>
+          <h1 id="page-title">Perfil de egreso</h1>
+          <p class="meta" id="page-meta"></p>
+        </header>
+        <div id="err" class="load-error" hidden>
+          No se pudo cargar <code>perfil-egreso-propuesta.json</code>.
+          Ejecute
+          <code>python scripts/extract_perfil_egreso_propuesta.py</code>
+          y sirva la carpeta con
+          <code>python -m http.server 8080</code>.
+        </div>
+        <p id="intro-perfil" class="intro" hidden></p>
+        <main id="main" aria-live="polite"></main>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var errBox = document.getElementById("err");
+      var main = document.getElementById("main");
+      var introEl = document.getElementById("intro-perfil");
+      var metaEl = document.getElementById("page-meta");
+
+      function renderTabla(items) {
+        var wrap = document.createElement("div");
+        wrap.className = "tabla-wrap";
+        var table = document.createElement("table");
+        table.className = "perfil";
+        var thead = document.createElement("thead");
+        var hr = document.createElement("tr");
+        ["Código", "Enunciado"].forEach(function (col) {
+          var th = document.createElement("th");
+          th.textContent = col;
+          hr.appendChild(th);
+        });
+        thead.appendChild(hr);
+        table.appendChild(thead);
+        var tbody = document.createElement("tbody");
+        items.forEach(function (it) {
+          var tr = document.createElement("tr");
+          tr.id = it.codigo;
+          var tdCod = document.createElement("td");
+          tdCod.className = "codigo";
+          tdCod.textContent = it.codigo;
+          var tdDesc = document.createElement("td");
+          tdDesc.textContent = it.descripcion;
+          tr.appendChild(tdCod);
+          tr.appendChild(tdDesc);
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        wrap.appendChild(table);
+        return wrap;
+      }
+
+      function init(data) {
+        document.title = (data.titulo || "Perfil de egreso") + " — Propuesta curricular";
+        metaEl.textContent = data.capitulo || "Perfil de Egreso";
+
+        if (data.introduccion) {
+          introEl.textContent = data.introduccion;
+          introEl.hidden = false;
+        }
+
+        main.textContent = "";
+        (data.bloques || []).forEach(function (bloque) {
+          var sec = document.createElement("section");
+          sec.className = "bloque-perfil";
+          sec.id = bloque.id || "";
+          var h2 = document.createElement("h2");
+          h2.textContent = bloque.titulo;
+          sec.appendChild(h2);
+          if (bloque.introduccion) {
+            var p = document.createElement("p");
+            p.className = "bloque-intro";
+            p.textContent = bloque.introduccion;
+            sec.appendChild(p);
+          }
+          (bloque.tablas || []).forEach(function (tab) {
+            var dimSec = document.createElement("div");
+            dimSec.className = "tabla-dimension";
+            var h3 = document.createElement("h3");
+            h3.textContent = tab.dimension || tab.caption;
+            dimSec.appendChild(h3);
+            dimSec.appendChild(renderTabla(tab.items || []));
+            sec.appendChild(dimSec);
+          });
+          main.appendChild(sec);
+        });
+
+        if (location.hash) {
+          var target = document.getElementById(location.hash.slice(1));
+          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      fetch("perfil-egreso-propuesta.json")
+        .then(function (r) {
+          if (!r.ok) throw new Error("perfil-egreso-propuesta.json");
+          return r.json();
+        })
+        .then(init)
+        .catch(function () {
+          errBox.hidden = false;
+        });
+    })();
+  </script>
+</body>
+</html>
