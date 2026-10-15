@@ -1,0 +1,15 @@
+MA-0783 Integración
+MA-0858 Teoría de Conjuntos
+MA-0719 Geometría Algebraica
+MA-0781 Lógica
+MA-0827 Estadística Matemática
+MA-0824 Teoría de Modelos
+MA-0841 Probabilidad
+MA-0849 Teoría de Módulos
+MA-0928 Procesos Estocásticos
+MA-0451 Principios de Análisis I
+MA-0571 Álgebra Abstracta I
+MA-0732 Análisis Complejo
+MA-0717 Geometría Diferencial
+MA-0876 Teoría Algebraica de Números
+MA-0734 Optimización
