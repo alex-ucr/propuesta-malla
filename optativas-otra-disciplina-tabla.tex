@@ -1,0 +1,79 @@
+% =============================================================================
+% Cursos optativos de otra disciplina.
+% Fuente: Documentos/optativas_otras_carreras.xlsx
+% Regenerar: python scripts/generate_optativas_otra_disciplina_tex.py
+% =============================================================================
+
+\ifdefined\MallaSidewayBegin\else\input{malla-curricular-tablas-macros}\fi
+\MallaSidewayBegin
+\rowcolors{3}{white}{Celeste-UCR!12}%
+\begin{longtable}{@{}%
+  |l|>{\raggedright\arraybackslash}p{4.4cm}|c|%
+  >{\raggedright\scriptsize\arraybackslash}p{2.4cm}|%
+  >{\raggedright\scriptsize\arraybackslash}p{3.6cm}|%
+  >{\raggedright\scriptsize\arraybackslash}p{3.0cm}|%
+  >{\raggedright\scriptsize\arraybackslash}p{5.4cm}|@{}}
+\caption{Cursos optativos de otra disciplina}\label{tab:optativas-otra-disciplina}\\
+\hline
+\rowcolor{Azul-UCR}\color{white}\bfseries
+Curso & \color{white}\bfseries Nombre del curso & \color{white}\bfseries Cred. & \color{white}\bfseries Horas semanales & \color{white}\bfseries Requisitos & \color{white}\bfseries Correquisitos & \color{white}\bfseries Requisito o correquisito alternativo solicitado \\ \hline
+\endfirsthead
+\hline
+\rowcolor{Azul-UCR}\color{white}\bfseries
+Curso & \color{white}\bfseries Nombre del curso & \color{white}\bfseries Cred. & \color{white}\bfseries Horas semanales & \color{white}\bfseries Requisitos & \color{white}\bfseries Correquisitos & \color{white}\bfseries Requisito o correquisito alternativo solicitado \\ \hline
+\endhead
+\hline
+\endfoot
+\rowcolor{Verde-UCR!28}\multicolumn{7}{|l|}{\textit{Escuela de Biología}} \\ \hline
+B-0106 & Biología General & 3 & 4 (teoría) & Ninguno & B-0107 & --- \\ \hline
+B-0107 & Laboratorio de Biología General & 1 & 3 (laboratorio) & Ninguno & B-0106 & --- \\ \hline
+\rowcolor{Verde-UCR!28}\multicolumn{7}{|l|}{\textit{Escuela de Ciencias de la Computación e Informática}} \\ \hline
+CI-0111 & Estructuras Discretas & 4 & 5 (teoría) & MA-0291 Introducción a la Matemática para Computación & Ninguno & Agregar MA-0252 Introducción a las Demostraciones como alternativa a MA-0291 \\ \hline
+CI-0112 & Programación I & 4 & 5 (teoría) & CI-0110 Introducción a la Computación & Ninguno & Agregar MA-0252 Introducción a las Demostraciones como alternativa a CI-0110 \\ \hline
+CI-0113 & Programación II & 4 & 5 (teoría) & CI-0112 & Ninguno & --- \\ \hline
+CI-0116 & Análisis de Algoritmos y Estructuras de Datos & 4 & 5 (teoría) & CI-0111, CI-0113 & Ninguno & --- \\ \hline
+CI-0202 & Principios de Informática & 4 & 4 (teoría) & Ninguno & Ninguno & Agregar MA-0251 Cálculo en una Variable como requisito alternativo a MA-1001 \\ \hline
+\rowcolor{Verde-UCR!28}\multicolumn{7}{|l|}{\textit{Escuela de Economía}} \\ \hline
+EC-1100 & Introducción a la Economía & 4 & 6 (4 teoría + 2 laboratorio) & Ninguno & Ninguno & --- \\ \hline
+EC-2100 & Teoría Microeconómica I & 4 & 6 (4 teoría + 2 laboratorio) & EC-1100 & Ninguno & --- \\ \hline
+EC-3200 & Teoría Macroeconómica I & 4 & 6 (4 teoría + 2 laboratorio) & EC-2100, MA-1023 Cálculo con Optimización & Ninguno & Agregar MA-0351 Cálculo en Varias Variables como requisito alternativo a MA-1023 \\ \hline
+\rowcolor{Verde-UCR!28}\multicolumn{7}{|l|}{\textit{Escuela de Filosofía}} \\ \hline
+F-0047 & Filosofía de la Física & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2001 & Seminario: Filosofía de la Física & 3 & 3 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2002 & Filosofía de la Matemática & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2012 & Seminario de Epistemología & 3 & 3 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2014 & Teoría del Método & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2019 & Seminario: Teorías y Revoluciones Científicas & 3 & 3 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2022 & Filosofía de la Mente & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2334 & Filosofía de la Ciencia & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2454 & Introducción a la Epistemología & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-2604 & Historia de la Ciencia & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-4754 & Filosofía del Lenguaje & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+F-5504 & Introducción a la Ética & 3 & 4 (teoría) & Ninguno & Ninguno & --- \\ \hline
+\rowcolor{Verde-UCR!28}\multicolumn{7}{|l|}{\textit{Escuela de Física}} \\ \hline
+FS-0210 & Física General I & 3 & 4 (teoría) & MA-1001 Cálculo I & FS-0211 & Agregar MA-0251 Cálculo en una Variable como requisito alternativo a MA-1001 \\ \hline
+FS-0211 & Laboratorio de Física General I & 1 & 3 (laboratorio) & MA-1001 Cálculo I & FS-0210 & Agregar MA-0251 Cálculo en una Variable como requisito alternativo a MA-1001 \\ \hline
+FS-0230 & Física I & 3 & 6 (4 teoría + 2 práctica) & MA-1001 & MA-1004 & Agregar MA-0251 Cálculo en una Variable como requisito alternativo a MA-1001 y agregar MA-0361 Álgebra Lineal I como correquisito alternativo a MA-1004 \\ \hline
+FS-0310 & Física General II & 3 & 4 (teoría) & FS-0210, FS-0211, MA-1002 (o MA-2210) & FS-0311 & Agregar MA-0351 Cálculo en Varias Variables como requisito alternativo a MA-1002 \\ \hline
+FS-0311 & Laboratorio de Física General II & 1 & 3 (laboratorio) & FS-0210, FS-0211 & FS-0310 & Agregar MA-0351 Cálculo en Varias Variables como requisito alternativo a MA-1002 \\ \hline
+FS-0330 & Física II & 3 & 6 (4 teoría + 2 práctica) & MA-1002; FS-0230 o FS-0227 & MA-1005 & Agregar MA-0351 Cálculo en Varias Variables como requisito alternativo a MA-1002 y agregar MA-0515 Ecuaciones Diferenciales como correquisito alternativo a MA-1005 \\ \hline
+FS-0331 & Laboratorio de Física Experimental I & 2 & 3 (laboratorio) & FS-0230 o FS-0227 & Ninguno & --- \\ \hline
+FS-0410 & Física General III & 3 & 4 (teoría) & FS-0310, FS-0311, MA-1003 Cálculo III & FS-0411 & Agregar MA-0351 Cálculo en Varias Variables como requisito alternativo a MA-1003 \\ \hline
+FS-0411 & Laboratorio de Física General III & 1 & 3 (laboratorio) & FS-0310, FS-0311 & FS-0410 & --- \\ \hline
+FS-4101 & Introducción a la Meteorología & 3 & 4 (teórico-prácticas) & Ninguno & Ninguno & --- \\ \hline
+\rowcolor{Verde-UCR!28}\multicolumn{7}{|l|}{\textit{Escuela Centroamericana de Geología}} \\ \hline
+G-0111 & Fundamentos de Geología & 4 & 5 (3 teoría + 2 práctica) & Ninguno & Ninguno & --- \\ \hline
+G-0214 & Geología General & 4 & 6 (3 teoría + 3 práctica) & QU-0100, QU-0101 & Ninguno & --- \\ \hline
+\rowcolor{Verde-UCR!28}\multicolumn{7}{|l|}{\textit{Escuela de Química}} \\ \hline
+QU-0100 & Química General I & 3 & 4 (teoría) & Ninguno & QU-0101 & --- \\ \hline
+QU-0101 & Laboratorio de Química General I & 1 & 3 (laboratorio) & Ninguno & QU-0100 & --- \\ \hline
+QU-0102 & Química General II & 3 & 4 (teoría) & QU-0100, QU-0101 & QU-0103 & --- \\ \hline
+QU-0103 & Laboratorio de Química General II & 1 & 3 (laboratorio) & QU-0100, QU-0101 & QU-0102 & --- \\ \hline
+QU-0200 & Química Analítica Cuantitativa I & 3 & 4 (teoría) & QU-0102 y QU-0103 (o QU-0114 y QU-0115) & QU-0201 & --- \\ \hline
+QU-0201 & Laboratorio de Química Analítica Cuantitativa I & 2 & 6 (2 teoría + 4 laboratorio) & QU-0102 y QU-0103 (o QU-0114 y QU-0115) & QU-0200 & --- \\ \hline
+QU-0210 & Fundamentos de Química Orgánica & 4 & 6 (teoría) & QU-0102 y QU-0103 (o QU-0114 y QU-0115) & QU-0211 & --- \\ \hline
+QU-0211 & Laboratorio de Fundamentos de Química Orgánica & 1 & 4 (1 teoría + 3 laboratorio) & QU-0102 y QU-0103 (o QU-0114 y QU-0115) & QU-0210 & --- \\ \hline
+\rowcolor{Verde-UCR!28}\multicolumn{7}{|l|}{\textit{Escuela de Estadística}} \\ \hline
+XS-3150 & Diseño de Experimentos & 4 & 4 (2 teoría + 2 práctica) & MA-1004 Álgebra Lineal, XS-1130 Principios de Inferencia Estadística & XS-0122 Modelos Probabilísticos I (equiv. XS-2310), XS-0129 Programación para Estadística I (equiv. XS-2210) & Agregar MA-0361 Álgebra Lineal I como requisito alternativo a MA-1004 y MA-0341 Matemática Computacional como alternativa a XS-1130 y agregar CA-0721 Probabilidad como correquisito alternativo a XS-0122 y CA-0203 Herramientas de Ciencia de Datos I como alternativa a XS-0129 \\ \hline
+\end{longtable}
+\MallaSidewayEnd
