@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate MA-0525 cuerpo from Documentos/Programa Combinatoria.tex (via maintained cuerpo)."""
+"""Regenerate MA-0526 cuerpo from Documentos/Programa Combinatoria.tex (via maintained cuerpo)."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CUERPO = ROOT / "Cursos" / "MA0525-combinatoria-cuerpo.tex"
+CUERPO = ROOT / "Cursos" / "MA0526-combinatoria-cuerpo.tex"
 SRC = Path(
     r"C:\Users\josea\OneDrive - Universidad de Costa Rica\Revisión curricular\Documentos\Programa Combinatoria.tex"
 )

@@ -16,7 +16,7 @@ COURSES = [
     ("MA-0796 Tópicos de Álgebra", "MA0796-topicos-algebra.pdf", "topicos-algebra"),
     ("MA-0797 Tópicos de Matemática discreta", "MA0797-topicos-matematica-discreta.pdf", "topicos-matematica-discreta"),
     ("MA-0798 Tópicos de Análisis de datos", "MA0798-topicos-analisis-datos.pdf", "topicos-analisis-datos"),
-    ("MA-0799 Tópicos de Aprendizaje automático", "MA0799-topicos-aprendizaje-automatico.pdf", "topicos-aprendizaje-automatico"),
+    ("MA-0836 Tópicos de Aprendizaje automático", "MA0836-topicos-aprendizaje-automatico.pdf", "topicos-aprendizaje-automatico"),
 ]
 
 
