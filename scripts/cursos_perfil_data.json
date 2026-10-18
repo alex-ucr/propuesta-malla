@@ -119,8 +119,8 @@
     "saberes": ["SC10", "SC16", "SH05", "SH10", "SH20", "SS02"]
   },
   {
-    "titulo": "MA-0515 Ecuaciones Diferenciales",
-    "sigla": "MA-0515",
+    "titulo": "MA-0556 Ecuaciones Diferenciales",
+    "sigla": "MA-0556",
     "nombre_corto": "Ecuaciones Diferenciales",
     "enfasis": "pura",
     "saberes": ["SC05", "SC06", "SH05", "SH22"]
@@ -133,8 +133,8 @@
     "saberes": ["SC02", "SC03", "SC05", "SC13", "SH05", "SH10", "SH13", "SH22", "SS04", "SS17"]
   },
   {
-    "titulo": "MA-0552 Principios de Análisis II",
-    "sigla": "MA-0552",
+    "titulo": "MA-0555 Principios de Análisis II",
+    "sigla": "MA-0555",
     "nombre_corto": "Principios de análisis en varias variables",
     "enfasis": "ambos",
     "saberes": ["SC04", "SC15", "SH05", "SH07", "SH19", "SH21", "SS02"]
@@ -182,15 +182,15 @@
     "saberes": ["SC10", "SH05", "SH06", "SH20"]
   },
   {
-    "titulo": "MA-0732 Análisis complejo",
-    "sigla": "MA-0732",
+    "titulo": "MA-0731 Análisis complejo",
+    "sigla": "MA-0731",
     "nombre_corto": "Análisis Complejo",
     "enfasis": "ambos",
     "saberes": ["SC09", "SC15", "SH05", "SH07", "SH19", "SS02", "SS17"]
   },
   {
-    "titulo": "MA-0705 Análisis Real I",
-    "sigla": "MA-0705",
+    "titulo": "MA-0730 Análisis Real I",
+    "sigla": "MA-0730",
     "nombre_corto": "Análisis Real I",
     "enfasis": "pura",
     "saberes": ["SC05", "SC14", "SH05", "SH08", "SS02", "SS17"]

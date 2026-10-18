@@ -395,8 +395,8 @@
     "horas_trabajo_independiente": "5"
   },
   {
-    "titulo": "MA-0515 Ecuaciones Diferenciales",
-    "sigla": "MA-0515",
+    "titulo": "MA-0556 Ecuaciones Diferenciales",
+    "sigla": "MA-0556",
     "nombre_corto": "Ecuaciones Diferenciales",
     "enfasis": "pura",
     "saberes": [
@@ -435,14 +435,14 @@
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias",
+    "requisitos": "MA-0341 Matemática Computacional y MA-0556 Ecuaciones Diferenciales Ordinarias",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
   },
   {
-    "titulo": "MA-0552 Principios de Análisis II",
-    "sigla": "MA-0552",
+    "titulo": "MA-0555 Principios de Análisis II",
+    "sigla": "MA-0555",
     "nombre_corto": "Principios de análisis en varias variables",
     "enfasis": "ambos",
     "saberes": [
@@ -545,7 +545,7 @@
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0552 Principios de Análisis II",
+    "requisitos": "MA-0555 Principios de Análisis II",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -571,7 +571,7 @@
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0341 Matemática Computacional y MA-0515 Ecuaciones Diferenciales Ordinarias",
+    "requisitos": "MA-0341 Matemática Computacional y MA-0556 Ecuaciones Diferenciales Ordinarias",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -597,8 +597,8 @@
     "horas_trabajo_independiente": "10"
   },
   {
-    "titulo": "MA-0732 Análisis complejo",
-    "sigla": "MA-0732",
+    "titulo": "MA-0731 Análisis complejo",
+    "sigla": "MA-0731",
     "nombre_corto": "Análisis Complejo",
     "enfasis": "ambos",
     "saberes": [
@@ -620,8 +620,8 @@
     "horas_trabajo_independiente": "7"
   },
   {
-    "titulo": "MA-0705 Análisis Real I",
-    "sigla": "MA-0705",
+    "titulo": "MA-0730 Análisis Real I",
+    "sigla": "MA-0730",
     "nombre_corto": "Análisis Real I",
     "enfasis": "pura",
     "saberes": [

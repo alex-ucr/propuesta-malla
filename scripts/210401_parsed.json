@@ -278,7 +278,7 @@
       {
         "cycle_label": "V CICLO",
         "cycle": 5,
-        "sigla": "MA-0552",
+        "sigla": "MA-0555",
         "nombre": "PRINCIPIOS DE ANÁLISIS II",
         "T": "5",
         "P": "",
@@ -291,7 +291,7 @@
       {
         "cycle_label": "V CICLO",
         "cycle": 5,
-        "sigla": "MA-0515",
+        "sigla": "MA-0556",
         "nombre": "ECUACIONES DIFERENCIALES ORDINARIAS",
         "T": "5",
         "P": "",
@@ -336,7 +336,7 @@
         "P": "",
         "L": "",
         "TP": "",
-        "req": "MA-0552",
+        "req": "MA-0555",
         "correq": "",
         "cred": "4"
       },
@@ -349,7 +349,7 @@
         "P": "",
         "L": "",
         "TP": "",
-        "req": "CI-0112 o MA-0341, CA-0821 o MA-0515",
+        "req": "CI-0112 o MA-0341, CA-0821 o MA-0556",
         "correq": "",
         "cred": "4"
       },
@@ -369,7 +369,7 @@
       {
         "cycle_label": "VII CICLO",
         "cycle": 7,
-        "sigla": "MA-0705",
+        "sigla": "MA-0730",
         "nombre": "ANÁLISIS REAL I",
         "T": "5",
         "P": "",
@@ -382,7 +382,7 @@
       {
         "cycle_label": "VII CICLO",
         "cycle": 7,
-        "sigla": "MA-0732",
+        "sigla": "MA-0731",
         "nombre": "ANÁLISIS COMPLEJO",
         "T": "5",
         "P": "",
@@ -793,7 +793,7 @@
       {
         "cycle_label": "V CICLO",
         "cycle": 5,
-        "sigla": "MA-0552",
+        "sigla": "MA-0555",
         "nombre": "PRINCIPIOS DE ANÁLISIS II",
         "T": "5",
         "P": "",
@@ -806,7 +806,7 @@
       {
         "cycle_label": "V CICLO",
         "cycle": 5,
-        "sigla": "MA-0515",
+        "sigla": "MA-0556",
         "nombre": "ECUACIONES DIFERENCIALES ORDINARIAS",
         "T": "5",
         "P": "",
@@ -851,7 +851,7 @@
         "P": "",
         "L": "",
         "TP": "",
-        "req": "CI-0112 o MA-0341, CA-0821 o MA-0515",
+        "req": "CI-0112 o MA-0341, CA-0821 o MA-0556",
         "correq": "",
         "cred": "4"
       },
@@ -864,7 +864,7 @@
         "P": "",
         "L": "",
         "TP": "",
-        "req": "MA-0552",
+        "req": "MA-0555",
         "correq": "",
         "cred": "4"
       },
@@ -877,7 +877,7 @@
         "P": "",
         "L": "",
         "TP": "",
-        "req": "MA-0515",
+        "req": "MA-0556",
         "correq": "",
         "cred": "4"
       },
@@ -897,7 +897,7 @@
       {
         "cycle_label": "VII CICLO",
         "cycle": 7,
-        "sigla": "MA-0705",
+        "sigla": "MA-0730",
         "nombre": "ANÁLISIS REAL I",
         "T": "5",
         "P": "",
@@ -910,7 +910,7 @@
       {
         "cycle_label": "VII CICLO",
         "cycle": 7,
-        "sigla": "MA-0732",
+        "sigla": "MA-0731",
         "nombre": "ANÁLISIS COMPLEJO",
         "T": "5",
         "P": "",
