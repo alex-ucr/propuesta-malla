@@ -1,0 +1,344 @@
+% !TeX program = pdflatex
+% Resumen ejecutivo de la propuesta curricular (formato OPES--CONARE).
+% Compilar desde esta carpeta: python scripts/generate_resumen_ejecutivo.py (regenera las tablas de los apartados 8 a 10)
+% y luego pdflatex resumen-ejecutivo (dos veces).
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage[left=1.9cm,right=1.9cm,top=2.2cm,bottom=2.2cm,headheight=14pt]{geometry}
+\usepackage[svgnames, dvipsnames, table]{xcolor}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{sectsty}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, allcolors=Azul-UCR]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Colores UCR y estilos %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{Celeste-UCR}{RGB}{0, 192, 243}
+\definecolor{Azul-UCR}{RGB}{0, 93, 164}
+\definecolor{Verde-UCR}{RGB}{109, 192, 103}
+\definecolor{Amarillo-UCR}{RGB}{255, 224, 106}
+
+\sectionfont{\color{Azul-UCR}}
+\subsectionfont{\color{Azul-UCR}}
+\subsubsectionfont{\color{Azul-UCR}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{itemsep=2pt, topsep=3pt}
+\setcounter{secnumdepth}{1}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\color{Azul-UCR} Resumen ejecutivo --- Bachillerato y Licenciatura en Matemática}
+\fancyhead[R]{\small\color{Azul-UCR} Universidad de Costa Rica}
+\fancyfoot[C]{\small\thepage}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\fr}[1]{\mathfrak{#1}}
+\newcommand{\legendre}[2]{\left( \dfrac{#1}{#2} \right)}
+\newcommand{\mcd}{\operatorname{mcd}}
+\newcommand{\MA}[1]{MA-#1}
+\newcommand{\rojo}[1]{{#1}}
+
+% Información que la propuesta no contiene y que debe completar la unidad académica.
+\newcommand{\pendiente}[1]{%
+  \par\smallskip\noindent\fcolorbox{Amarillo-UCR!90!black}{Amarillo-UCR!35}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\small\textbf{Por completar por la unidad académica:} #1}}\par\smallskip}
+
+\newcommand{\encabezadotabla}[1]{\rowcolor{Azul-UCR}\textcolor{white}{\textbf{#1}}}
+
+\title{Resumen ejecutivo de la propuesta curricular}
+\author{Escuela de Matemática}
+\date{\today}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Portada %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Azul-UCR] (current page.south west) rectangle (current page.north east);
+  \fill[Celeste-UCR] (current page.south west) rectangle ([xshift=0.85cm]current page.north west);
+  \fill[Amarillo-UCR] ([xshift=0.85cm]current page.south west) rectangle ([xshift=1.00cm]current page.north west);
+  \fill[Celeste-UCR, opacity=0.16] ([xshift=-1.6cm, yshift=-1.4cm]current page.north east) circle (5.4cm);
+  \fill[Verde-UCR, opacity=0.14] ([xshift=-0.4cm, yshift=-9.2cm]current page.north east) circle (3.6cm);
+  \fill[Amarillo-UCR, opacity=0.10] ([xshift=1.8cm, yshift=3.4cm]current page.south east) circle (4.2cm);
+
+  \begin{scope}[shift={([xshift=-7.55cm, yshift=-12.6cm]current page.north east)}]
+    \foreach \x in {0,1,2,3} {
+      \foreach \y in {0,1,2,3,4} {
+        \draw[white, opacity=0.18, line width=0.6pt] (\x*1.42, -\y*1.28) -- (\x*1.42, -\y*1.28-1.28);
+      }
+    }
+    \foreach \x in {0,1,2} {
+      \foreach \y in {0,1,2,3,4,5} {
+        \draw[white, opacity=0.18, line width=0.6pt] (\x*1.42, -\y*1.28) -- (\x*1.42+1.42, -\y*1.28);
+      }
+    }
+    \foreach \x in {0,1,2,3} {
+      \foreach \y in {0,1,2,3,4,5} {
+        \fill[white, opacity=0.22] (\x*1.42, -\y*1.28) circle (0.19);
+      }
+    }
+    \draw[Celeste-UCR, line width=1.55pt] (0,0) -- (1.42,-1.28) -- (2.84,-1.28) -- (2.84,-3.84) -- (4.26,-5.12);
+    \fill[Amarillo-UCR] (0,0) circle (0.30);
+    \fill[Celeste-UCR] (1.42,-1.28) circle (0.24);
+    \fill[Celeste-UCR] (2.84,-1.28) circle (0.24);
+    \fill[Celeste-UCR] (2.84,-3.84) circle (0.24);
+    \fill[Verde-UCR] (4.26,-5.12) circle (0.30);
+  \end{scope}
+
+  \node[anchor=north west] at ([xshift=2.15cm, yshift=-1.45cm]current page.north west) {
+    \includegraphics[height=1.45cm]{assets/logos/firma-ucr-blanco.png}
+  };
+
+  \node[anchor=north west, inner sep=0pt] at ([xshift=2.15cm, yshift=-4.15cm]current page.north west) {
+    \begin{minipage}{12.4cm}
+      \color{white}\raggedright
+      {\color{Celeste-UCR}\fontsize{12}{14}\selectfont\bfseries RESUMEN EJECUTIVO \textbullet{} OPES--CONARE\par}
+      \vspace{10pt}
+      {\fontsize{36}{40}\selectfont\bfseries
+      Resumen\\
+      ejecutivo de la\\
+      propuesta\\
+      curricular\par}
+      \vspace{12pt}
+      {\color{Amarillo-UCR}\rule{3.15cm}{3.2pt}\par}
+      \vspace{14pt}
+      {\fontsize{16}{20}\selectfont
+      Bachillerato y Licenciatura en Matemática con énfasis en Matemática Pura y Aplicada\par}
+    \end{minipage}
+  };
+
+  \node[anchor=south west, inner sep=0pt] at ([xshift=2.15cm, yshift=2.35cm]current page.south west) {
+    \begin{minipage}{10cm}
+      \color{white}\raggedright
+      \includegraphics[height=1.7cm]{assets/logos/logo-mate.png}\\[12pt]
+      {\fontsize{12}{15}\selectfont Escuela de Matemática, Universidad de Costa Rica\par}
+      {\fontsize{12}{15}\selectfont Comisión de Estructura Curricular\par}
+      {\color{Celeste-UCR}\fontsize{12}{15}\selectfont \the\year\par}
+    \end{minipage}
+  };
+\end{tikzpicture}
+\end{titlepage}
+
+\addtocounter{page}{1}
+
+Este documento resume la propuesta de modificación curricular de la carrera \textbf{Bachillerato y Licenciatura en Matemática con énfasis en Matemática Pura y Aplicada} de la Universidad de Costa Rica, y se organiza según los once apartados solicitados por la Oficina de Planificación de la Educación Superior (OPES) del CONARE. El detalle completo se encuentra en el documento \emph{Propuesta de modificación curricular}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Datos generales}
+
+\begingroup
+\renewcommand{\arraystretch}{1.35}
+\arrayrulecolor{Azul-UCR!80}
+\begin{longtable}{|>{\columncolor{Celeste-UCR!15}\raggedright\arraybackslash\bfseries}p{4.3cm}|>{\raggedright\arraybackslash}p{12.5cm}|}
+\hline
+Universidad & Universidad de Costa Rica (UCR). \\ \hline
+Unidad académica responsable & Escuela de Matemática, Facultad de Ciencias. La carrera se imparte desde el Departamento de Matemática, en la Sede Rodrigo Facio (Campus Universitario). \\ \hline
+Otras unidades académicas participantes & Departamento de Ciencias Actuariales de la Escuela de Matemática (cursos con sigla CA) y las escuelas que ofrecen los cursos optativos de otra disciplina: Biología, Centroamericana de Geología, Ciencias de la Computación e Informática, Economía, Estadística, Filosofía, Física y Química. \\ \hline
+Nombre de la carrera & Bachillerato y Licenciatura en Matemática con énfasis en Matemática Pura y Aplicada. \\ \hline
+Grados y títulos &
+\begin{minipage}[t]{12.2cm}
+\begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=2pt, parsep=0pt]
+  \item Bachillerato en Matemática, énfasis en Matemática Pura.
+  \item Bachillerato en Matemática, énfasis en Matemática Aplicada.
+  \item Licenciatura en Matemática, énfasis en Matemática Pura.
+  \item Licenciatura en Matemática, énfasis en Matemática Aplicada.
+\end{itemize}
+\end{minipage} \\ \hline
+Duración &
+\begin{minipage}[t]{12.2cm}
+\begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=2pt, parsep=0pt]
+  \item \textbf{Número de ciclos:} 8 ciclos para el bachillerato (4 años) y 2 ciclos adicionales para la licenciatura (1 año más); en total, 10 ciclos.
+  \item \textbf{Semanas por ciclo:} 16 semanas lectivas.
+  \item \textbf{Ciclos por año:} 2 (I y II ciclo lectivo).
+\end{itemize}
+\end{minipage} \\ \hline
+Créditos &
+Bachillerato: 130 créditos (énfasis en Matemática Pura) o 131 créditos (énfasis en Matemática Aplicada), de los cuales 50 corresponden al bloque común (ciclos I a III). Licenciatura: 30 créditos adicionales (ciclos IX y X). \\ \hline
+Modalidad & Presencial. Algunas clases prácticas, de estilo laboratorio computacional, pueden ofrecerse de forma virtual parcial o total. \\ \hline
+Plan que sustituye & Plan vigente 210401-2 (``plan 02''). El nuevo plan (``plan 2028'') rige para las personas que ingresen a partir de 2028. \\ \hline
+\end{longtable}
+\endgroup
+
+\pendiente{confirmar la cantidad de semanas por ciclo (16) según el calendario universitario, ya que este dato no figura en la propuesta, y verificar el nombre oficial de las unidades participantes.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Justificación}
+
+\subsection*{Pertinencia externa}
+
+La matemática ocupa un lugar central en el desarrollo científico, tecnológico y social contemporáneo. La digitalización de la información, el avance de la inteligencia artificial, el manejo de datos a gran escala y la modelación de fenómenos complejos han ampliado el objeto de estudio de la disciplina y los ámbitos en que el matemático puede incidir. La UNESCO proclamó en 2019 el 14 de marzo como Día Internacional de las Matemáticas y subraya su papel en el logro de los Objetivos de Desarrollo Sostenible y en la formación de capacidades para enfrentar desafíos como el cambio climático, la salud pública y la innovación tecnológica.
+
+La demanda laboral respalda esta pertinencia. En Costa Rica, la empleabilidad de las carreras STEM fue de 95,8\,\% frente a 92,3\,\% en las no STEM, y carreras afines como Estadística o Ciencias Actuariales presentan niveles de desempleo muy bajos. A nivel internacional, la Oficina de Trabajo Estadístico de Estados Unidos proyectó un aumento del 28\,\% en los empleos de ocupaciones matemáticas entre 2016 y 2026, impulsado por el \emph{big data} y la analítica de datos.
+
+Las personas profesionales en matemática encuentran oportunidades en instituciones de educación superior y de investigación (por ejemplo, el CIMM y el CIMPA), en organismos públicos y privados que requieren modelación y análisis cuantitativo, y en sectores como finanzas, banca, economía, tecnología y servicios basados en datos. La creación de la carrera de Educación Matemática (2017) y la separación de las funciones actuariales hacia Ciencias Actuariales redefinen el espacio ocupacional de la persona matemática, orientándola hacia la investigación, la docencia universitaria, la modelación, el análisis de datos y el trabajo interdisciplinario.
+
+\subsection*{Pertinencia interna}
+
+\begin{itemize}
+  \item \textbf{Trayectoria de la carrera.} La Escuela de Matemática ofrece el Bachillerato y la Licenciatura desde 1974 (con antecedentes desde 1940), y desarrolla investigación y docencia de posgrado mediante la Maestría en Matemáticas, el CIMM, el CIMPA y la \emph{Revista de Matemática: Teoría y Aplicaciones}. Cuenta con 128 docentes, 41 de ellos con grado de doctor.
+  \item \textbf{Actualización del plan.} El último rediseño integral del plan data de hace más de tres décadas. La propuesta se apoya en el perfil de egreso y los marcos referenciales elaborados entre 2018 y 2020 con apoyo del Centro de Evaluación Académica (CEA), mediante entrevistas, grupos focales, análisis estructurales de la actividad y consultas a la comunidad académica; el perfil fue aprobado en la Asamblea de Escuela en 2020.
+  \item \textbf{Situación de la población estudiantil.} Entre 2014 y 2026 se graduaron 72 personas del bachillerato, con una duración real media de 5,3 años frente a los 4 años del plan; solo el 22,2\,\% concluyó en 4 años o menos. De las 543 solicitudes aceptadas entre 2012 y 2018, apenas el 9,9\,\% se había graduado en 2026. La propuesta busca atender el rezago mediante cursos preliminares en el primer ciclo y una introducción más gradual de la abstracción.
+  \item \textbf{Admisión.} La oferta de cupos y la demanda han disminuido desde 2002; desde 2017 el cupo de primer ingreso es de 32 plazas, y la ocupación se recuperó a partir de 2024.
+\end{itemize}
+
+\subsection*{Demandas sociales}
+
+La propuesta responde a la necesidad de contar con personas profesionales en matemática con excelencia académica, ética y sentido crítico, capaces de aplicar, investigar y comunicar su conocimiento de forma colaborativa. Atiende las demandas de investigación y docencia universitaria, de modelación matemática para otras disciplinas, de análisis de datos y de consultoría cuantitativa en el sector productivo, y contribuye al proyecto humanista de la Universidad mediante la generación de capital humano avanzado, la innovación en sectores estratégicos y la cultura científica del país.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos de la carrera}
+
+\textbf{Objetivo general.} Formar profesionales en matemática con excelencia académica, ética y sentido crítico, capaces de aplicar, investigar y comunicar su conocimiento de forma colaborativa, para contribuir al desarrollo productivo y social del país desde una perspectiva de bien común.
+
+\textbf{Objetivos específicos.}
+\begin{enumerate}
+  \item Formar una persona profesional que impacte de manera positiva el entorno productivo, público y privado, mediante la aplicación del conocimiento matemático.
+  \item Formar una persona profesional capaz de transmitir sus ideas de manera clara y respetuosa, que interactúe con profesionales de otras disciplinas y muestre gusto por compartir su conocimiento.
+  \item Formar una persona profesional con un alto compromiso con la investigación, tanto teórica como aplicada.
+  \item Formar una persona profesional con convicciones éticas y pensamiento crítico y reflexivo sobre su práctica profesional.
+  \item Formar una persona profesional comprometida con el bien común y la justicia, que utilice su conocimiento para construir una sociedad más justa y solidaria.
+  \item Incentivar una actitud positiva hacia el trabajo colaborativo con otros especialistas, en la búsqueda de soluciones que mejoren la calidad de vida y el entorno social.
+  \item Formar una persona profesional dispuesta a aprender siempre, a buscar nuevas formas de hacer las cosas y a mantenerse actualizada en su área de especialidad.
+\end{enumerate}
+
+{\footnotesize Los objetivos corresponden a la Declaración de propósitos (propósito general y propósitos específicos) de la propuesta curricular.\par}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Perfil académico-profesional}
+
+El perfil de egreso se organiza en tres dimensiones: conocimientos declarativos (saber conocer), procedimentales (saber hacer) y actitudinales (saber ser). Se diferencia por grado y por énfasis.
+
+\subsection*{Bachillerato en Matemática (ambos énfasis)}
+
+La persona graduada del bachillerato:
+\begin{itemize}
+  \item \textbf{Conoce y comprende} los fundamentos matemáticos (lógica, teoría de números y geometría euclídea), los conceptos y métodos del cálculo y del álgebra lineal, las ecuaciones diferenciales, la teoría de la medida, la probabilidad y los procesos estocásticos, el análisis complejo y funcional, así como el uso de software especializado, la programación, la computación científica y el análisis numérico.
+  \item \textbf{Sabe hacer:} aplica pensamiento operacional, abstracto y formal para analizar y resolver problemas; formula conjeturas y se comunica en lenguaje matemático formal; utiliza tecnologías y software científico para explorar, validar y resolver problemas; y participa en discusiones científicas y divulga el conocimiento matemático a distintas audiencias.
+  \item \textbf{Actitudes:} respeto por la diversidad, comunicación clara y trabajo en equipos, conciencia social y participación ciudadana, pensamiento crítico e integridad ética, uso del conocimiento matemático para resolver problemas académicos y profesionales, e interés permanente por la actualización.
+\end{itemize}
+
+\textbf{Énfasis en Matemática Pura.} Además, conoce los fundamentos y resultados de la geometría y la topología, las estructuras fundamentales del álgebra abstracta y alguna área de especialización en matemática pura; formula y demuestra rigurosamente resultados, generalizando estructuras y construyendo argumentos lógicos dentro de un sistema axiomático; y muestra paciencia y perseverancia ante la abstracción sostenida, valorando el rigor y la elegancia argumentativa.
+
+\textbf{Énfasis en Matemática Aplicada.} Además, conoce los principios de la matemática aplicada (modelación, estadística y análisis de datos) y sus principales tecnologías para resolver problemas y tomar decisiones en la industria, la banca y otros sectores, así como alguna área de especialización en matemática aplicada; formula modelos matemáticos a partir de problemas del entorno, los resuelve mediante herramientas analíticas o computacionales y valida los resultados en el contexto original; y asume con responsabilidad ética las implicaciones de los modelos y datos que utiliza, con apertura al diálogo interdisciplinario.
+
+\subsection*{Licenciatura en Matemática (ambos énfasis)}
+
+En adición al perfil del bachillerato, la persona licenciada:
+\begin{itemize}
+  \item conoce estructuras y resultados de nivel intermedio de algunas áreas medulares de especialización, en matemática pura o en matemática aplicada según el énfasis;
+  \item aplica pensamiento operacional, abstracto y formal, con fuentes transversales de varias áreas, para formular, analizar y resolver problemas matemáticos; y
+  \item muestra iniciativa y autonomía para formular preguntas, explorar problemas matemáticos y profundizar en ellos más allá de los procedimientos conocidos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Campo de inserción profesional}
+
+Los principales campos de inserción identificados para las personas graduadas son:
+\begin{itemize}
+  \item \textbf{Investigación académica} (teórica y aplicada), en universidades, centros de investigación y redes científicas nacionales e internacionales.
+  \item \textbf{Docencia universitaria}, en programas de pregrado y posgrado en matemática y disciplinas afines.
+  \item \textbf{Modelación matemática}, en ingeniería, física, biología, epidemiología, ciencias ambientales y otras áreas.
+  \item \textbf{Análisis de datos y ciencia de datos}, en empresas, instituciones financieras, organismos públicos y proyectos de investigación interdisciplinaria.
+  \item \textbf{Sector productivo e industrial}, en consultoría cuantitativa, optimización, criptografía, simulación y apoyo a la innovación tecnológica.
+  \item \textbf{Trabajo interdisciplinario}, como puente entre equipos de distintas disciplinas en proyectos científicos, tecnológicos o de política pública.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Requisitos de ingreso}
+
+El ingreso a la carrera se realiza por las modalidades de admisión de la Universidad de Costa Rica:
+\begin{itemize}
+  \item \textbf{Primer ingreso}, mediante la nota de admisión que incorpora la Prueba de Aptitud Académica, con 32 cupos ordinarios y 3 cupos de primer ingreso diferido por año.
+  \item \textbf{Traslado}, en tres modalidades: por nota de admisión, por rendimiento académico y por excelencia académica.
+\end{itemize}
+
+A partir de 2028, toda persona de primer ingreso, traslado o segunda carrera se incorpora directamente al nuevo plan; no se ofrecen nuevas admisiones al plan vigente. Las cohortes que ya cursan el plan 02 pueden pasar al nuevo plan mediante el derecho de opción y la tabla de convalidaciones.
+
+\pendiente{la propuesta no define requisitos de ingreso propios de la carrera (perfil de ingreso, conocimientos previos deseables) ni los requisitos de admisión a la licenciatura. Se deben completar con la normativa vigente de la Oficina de Registro e Información y con la decisión de la Escuela.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Requisitos de graduación}
+
+\subsection*{Bachillerato en Matemática (ambos énfasis)}
+\begin{itemize}
+  \item Aprobar el plan de estudios de los ciclos I a VIII: 130 créditos en el énfasis en Matemática Pura o 131 créditos en el énfasis en Matemática Aplicada. Esto incluye la Práctica Profesional del último ciclo (modalidad académica o profesional).
+  \item Asistir, a lo largo de la carrera, a diez (10) actividades académicas válidas (charlas del Coloquio del Departamento de Matemática, seminarios, conferencias, ciclos especiales u otras actividades que disponga la Dirección del Departamento).
+  \item Cumplir los requisitos que establece la normativa universitaria, tales como el Trabajo Comunal Universitario (TCU) y el Trabajo Final de Graduación (TFG).
+\end{itemize}
+
+\subsection*{Licenciatura en Matemática (ambos énfasis)}
+\begin{itemize}
+  \item Aprobar los 30 créditos del plan de licenciatura (ciclos IX y X): dos seminarios de estudios dirigidos del énfasis y cursos optativos.
+  \item Asistir a cinco (5) actividades académicas válidas, distintas de las empleadas para el bachillerato.
+  \item Cumplir los requisitos de la normativa universitaria para la obtención del grado de licenciatura.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Listado de cursos}
+
+Las tablas siguientes presentan el nombre, los créditos y el ciclo de cada curso de la estructura curricular. Los cursos con sigla MA son propios de la Escuela de Matemática y los de sigla CA corresponden al Departamento de Ciencias Actuariales; los cursos optativos de otra disciplina (OPT-) los ofrecen otras unidades académicas de la Universidad.
+
+\setcounter{table}{0}
+\input{resumen-ejecutivo-cursos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Descripción de cursos}
+
+Para cada curso propio de la carrera se presenta su objetivo general y una síntesis de la temática. Los programas completos (objetivos específicos, contenidos, metodología, evaluación y bibliografía) se incluyen en la propuesta curricular. Los cursos de Ciencias Actuariales (CA) y los optativos de otra disciplina conservan los programas de las unidades que los administran.
+
+\input{resumen-ejecutivo-descripciones}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tabla de correspondencia del equipo docente}
+
+La tabla presenta, para cada curso, el personal docente del Departamento de Matemática disponible para impartirlo y su último grado académico. Se espera que la gran mayoría de los cursos sean impartidos por docentes con doctorado; se considerará la asignación de docentes con maestría para cursos de índole general o afines a su área de trabajo. Un mismo docente puede figurar en varios cursos.
+
+\input{resumen-ejecutivo-docentes}
+
+\pendiente{anexar los currículos vitae de las personas docentes y copia de los diplomas que respaldan el último grado académico indicado.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Otros aspectos}
+
+\subsection*{Estructura curricular}
+El plan se organiza en cinco áreas curriculares (habilidades operacionales, pensamiento abstracto, formalismo, pensamiento algorítmico y habilidades investigativas) y un bloque común de tres ciclos, seguido de dos énfasis (Matemática Pura y Matemática Aplicada) a partir del ciclo IV. Incorpora espacios formativos nuevos: modelación matemática, matemática computacional, comunicación en las ciencias, prácticas profesionales y seminarios de estudios dirigidos. El estudiantado completa su formación con cursos optativos de núcleo (OPT-001 y OPT-002), generales de Matemática (OPT-003) y de otra disciplina (OPT-).
+
+\subsection*{Enfoque pedagógico y virtualidad}
+El modelo se basa mayoritariamente en clases presenciales. La virtualidad (parcial o total) se reserva para algunas clases prácticas de estilo laboratorio computacional, donde puede ofrecer ventajas.
+
+\subsection*{Plan de transición}
+El nuevo plan entra en vigencia en 2028. El plan 02 se mantiene activo hasta 2030 y se inactiva posteriormente; quienes no lo hayan concluido al año 2031 inclusive pasan de oficio al plan 2028, con las convalidaciones de la tabla correspondiente. La estrategia se define por cohorte (C5 y anteriores, C6, C7, y C8 en adelante, que ingresa directamente al nuevo plan), de acuerdo con la Circular VD-18-2015. La proyección de carga docente en transición es de entre 10 y 12 tiempos completos por año (2028--2031).
+
+\subsection*{Recursos y factibilidad}
+La Escuela cuenta con aulas y oficinas en el edificio de Física-Matemática y en el edificio del CIMPA, dos laboratorios de cómputo, una licencia de software por estudiante y acceso bajo demanda a recursos bibliográficos (SIBDI). El personal administrativo es el que ya atiende la carrera vigente. Las prácticas profesionales se ofrecen en modalidad académica o profesional, con apoyo de la Vicerrectoría de Vida Estudiantil para pasantías e intercambio estudiantil.
+
+\subsection*{Seguimiento y evaluación}
+El Departamento de Matemática estará a cargo de la implementación. Se propone una comisión de evaluación curricular que dé seguimiento desde el primer ciclo de vigencia (revisión anual de guías metodológicas, valoración de cursos al final de cada ciclo, análisis de la evaluación docente, consulta bianual sobre la carga académica, actualización anual de indicadores de admisión, permanencia, rezago y graduación, y autoevaluación). Se prevé un diagnóstico del perfil de egreso a más tardar cinco años después de la implementación completa, y una evaluación integral con asesoría del CEA seis años después de la implementación, con consulta a personas graduadas y empleadoras. Se incluyen además un plan de desarrollo docente y un plan de comunicación.
+
+\end{document}
