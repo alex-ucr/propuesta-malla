@@ -1,0 +1,230 @@
+{
+  "titulo": "Perfil de egreso",
+  "capitulo": "Perfil de Egreso",
+  "fuente": [
+    "perfil-salida.tex"
+  ],
+  "introduccion": "En la presente sección se presenta una síntesis del perfil de egreso elaborado en el periodo 2018–2020 por la Comisión de Estructura Curricular de la carrera Bach. y Lic. en Matemática, como parte del proceso de transformación curricular que impulsa la Escuela de Matemática. La versión original del perfil fue aprobada en Asamblea de Escuela en 2020. El contenido completo del perfil aprobado se incluye en los anexos de este documento. El perfil se ha adaptado para reflejar los cuatro grados incluidos en esta nueva propuesta.",
+  "bloques": [
+    {
+      "id": "bachillerato-en-matem-tica-nfasis-en-mat-1",
+      "titulo": "Bachillerato en matemática, énfasis en matemática pura",
+      "introduccion": "",
+      "tablas": [
+        {
+          "dimension": "Saber Conocer",
+          "caption": "Conocimientos declarativos o saber conocer.",
+          "items": [
+            {
+              "codigo": "CDP01",
+              "descripcion": "Conoce y comprende los fundamentos matemáticos —incluyendo la lógica, la teoría de números y la geometría euclídea— y los principios formales que sustentan el razonamiento y la argumentación rigurosa."
+            },
+            {
+              "codigo": "CDP02",
+              "descripcion": "Conoce el uso de software especializado, los fundamentos de la programación y la computación científica, así como las técnicas básicas de análisis numérico para formular, explorar y resolver problemas matemáticos mediante enfoques computacionales."
+            },
+            {
+              "codigo": "CDP03",
+              "descripcion": "Conoce los conceptos, métodos y aplicaciones básicos del cálculo y del álgebra lineal como fundamentos de la formación matemática."
+            },
+            {
+              "codigo": "CDP04",
+              "descripcion": "Conoce los conceptos y técnicas de las ecuaciones diferenciales, la teoría de la medida, la probabilidad y los procesos estocásticos, así como del análisis complejo y funcional."
+            },
+            {
+              "codigo": "CDP05",
+              "descripcion": "Conoce los fundamentos y resultados básicos de la geometría y la topología."
+            }
+          ]
+        },
+        {
+          "dimension": "Saber Hacer",
+          "caption": "Conocimientos procedimentales o saber hacer.",
+          "items": [
+            {
+              "codigo": "CP01",
+              "descripcion": "Aplica pensamiento operacional, abstracto y formal para analizar, resolver y sintetizar problemas matemáticos."
+            },
+            {
+              "codigo": "CP02",
+              "descripcion": "Formula conjeturas, resuelve problemas, interpreta resultados y se comunica de manera coherente en lenguaje matemático formal."
+            },
+            {
+              "codigo": "CP03",
+              "descripcion": "Utiliza tecnologías y software científico para explorar, validar y resolver problemas matemáticos."
+            },
+            {
+              "codigo": "CP04",
+              "descripcion": "Participa activamente en discusiones científicas y divulga el conocimiento matemático de forma accesible a diferentes audiencias."
+            }
+          ]
+        },
+        {
+          "dimension": "Saber Ser",
+          "caption": "Conocimientos actitudinales, o saber ser.",
+          "items": [
+            {
+              "codigo": "CA01",
+              "descripcion": "Manifiesta respeto por la diversidad humana, matemática, científica y cultural, fomentando un ambiente inclusivo y de valoración mutua."
+            },
+            {
+              "codigo": "CA02",
+              "descripcion": "Se comunica con claridad, colabora en equipos académicos y profesionales, y mantiene una disposición al autoaprendizaje y al liderazgo."
+            },
+            {
+              "codigo": "CA03",
+              "descripcion": "Demuestra conciencia social y participación ciudadana, con una visión sociocultural e integral de la sociedad en la que la ciencia y la matemática ocupan un lugar relevante."
+            },
+            {
+              "codigo": "CA04",
+              "descripcion": "Ejerce pensamiento crítico, actúa con integridad ética y evalúa con rigor las prácticas científicas y académicas."
+            },
+            {
+              "codigo": "CA05",
+              "descripcion": "Utiliza su conocimiento matemático para resolver problemas académicos y profesionales, adaptándolo a distintos contextos y necesidades."
+            },
+            {
+              "codigo": "CA06",
+              "descripcion": "Mantiene un interés permanente por los desarrollos de la investigación científica y matemática, valorando la actualización como parte de su formación profesional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bachillerato-en-matem-tica-nfasis-en-mat-2",
+      "titulo": "Bachillerato en matemática, énfasis en matemática aplicada",
+      "introduccion": "",
+      "tablas": [
+        {
+          "dimension": "Saber Conocer",
+          "caption": "Conocimientos declarativos o saber conocer.",
+          "items": [
+            {
+              "codigo": "CDA01",
+              "descripcion": "Conoce y comprende los fundamentos matemáticos —incluyendo la lógica, la teoría de números y la geometría euclídea— y los principios formales que sustentan el razonamiento y la argumentación rigurosa."
+            },
+            {
+              "codigo": "CDA02",
+              "descripcion": "Conoce el uso de software especializado, los fundamentos de la programación y la computación científica, así como las técnicas básicas de análisis numérico para formular, explorar y resolver problemas matemáticos mediante enfoques computacionales."
+            },
+            {
+              "codigo": "CDA03",
+              "descripcion": "Conoce los conceptos, métodos y aplicaciones básicos del cálculo y del álgebra lineal como fundamentos de la formación matemática."
+            },
+            {
+              "codigo": "CDA04",
+              "descripcion": "Conoce los conceptos y técnicas de las ecuaciones diferenciales, la teoría de la medida, la probabilidad y los procesos estocásticos, así como del análisis complejo y funcional."
+            }
+          ]
+        },
+        {
+          "dimension": "Saber Hacer",
+          "caption": "Conocimientos procedimentales o saber hacer.",
+          "items": [
+            {
+              "codigo": "CP01",
+              "descripcion": "Aplica pensamiento operacional, abstracto y formal para analizar, resolver y sintetizar problemas matemáticos."
+            },
+            {
+              "codigo": "CP02",
+              "descripcion": "Formula conjeturas, resuelve problemas, interpreta resultados y se comunica de manera coherente en lenguaje matemático formal."
+            },
+            {
+              "codigo": "CP03",
+              "descripcion": "Utiliza tecnologías y software científico para explorar, validar y resolver problemas matemáticos."
+            },
+            {
+              "codigo": "CP04",
+              "descripcion": "Participa activamente en discusiones científicas y divulga el conocimiento matemático de forma accesible a diferentes audiencias."
+            }
+          ]
+        },
+        {
+          "dimension": "Saber Ser",
+          "caption": "Conocimientos actitudinales o saber ser.",
+          "items": [
+            {
+              "codigo": "CA01",
+              "descripcion": "Manifiesta respeto por la diversidad humana, matemática, científica y cultural, fomentando un ambiente inclusivo y de valoración mutua."
+            },
+            {
+              "codigo": "CA02",
+              "descripcion": "Se comunica con claridad, colabora en equipos académicos y profesionales, y mantiene una disposición al autoaprendizaje y al liderazgo."
+            },
+            {
+              "codigo": "CA03",
+              "descripcion": "Demuestra conciencia social y participación ciudadana, con una visión sociocultural e integral de la sociedad en la que la ciencia y la matemática ocupan un lugar relevante."
+            },
+            {
+              "codigo": "CA04",
+              "descripcion": "Ejerce pensamiento crítico, actúa con integridad ética y evalúa con rigor las prácticas científicas y académicas."
+            },
+            {
+              "codigo": "CA05",
+              "descripcion": "Utiliza su conocimiento matemático para resolver problemas académicos y profesionales, adaptándolo a distintos contextos y necesidades."
+            },
+            {
+              "codigo": "CA06",
+              "descripcion": "Mantiene un interés permanente por los desarrollos de la investigación científica y matemática, valorando la actualización como parte de su formación profesional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "licenciatura-en-matem-tica-nfasis-en-mat-3",
+      "titulo": "Licenciatura en matemática, énfasis en matemática pura",
+      "introduccion": "En adición a los conocimientos enunciados para el bachillerato, con la licenciatura se tendrían los siguientes.",
+      "tablas": [
+        {
+          "dimension": "Saber Hacer",
+          "caption": "Conocimientos procedimentales o saber hacer.",
+          "items": [
+            {
+              "codigo": "CP05",
+              "descripcion": "Aplica pensamiento operacional, abstracto y formal, con fuentes transversales de varias áreas, para formular, analizar y resolver problemas matemáticos."
+            }
+          ]
+        },
+        {
+          "dimension": "Saber Ser",
+          "caption": "Conocimientos actitudinales o saber ser.",
+          "items": [
+            {
+              "codigo": "CA06",
+              "descripcion": "Muestra iniciativa y autonomía para formular preguntas, explorar problemas matemáticos y profundizar en ellos más allá de los procedimientos conocidos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "licenciatura-en-matem-tica-nfasis-en-mat-4",
+      "titulo": "Licenciatura en matemática, énfasis en matemática aplicada",
+      "introduccion": "En adición a los conocimientos enunciados para el bachillerato, con la licenciatura se tendrían los siguientes.",
+      "tablas": [
+        {
+          "dimension": "Saber Hacer",
+          "caption": "Conocimientos procedimentales o saber hacer.",
+          "items": [
+            {
+              "codigo": "CP05",
+              "descripcion": "Aplica pensamiento operacional, abstracto y formal, con fuentes transversales de varias áreas, para formular, analizar y resolver problemas matemáticos."
+            }
+          ]
+        },
+        {
+          "dimension": "Saber Ser",
+          "caption": "Conocimientos actitudinales o saber ser.",
+          "items": [
+            {
+              "codigo": "CA06",
+              "descripcion": "Muestra iniciativa y autonomía para formular preguntas, explorar problemas matemáticos y profundizar en ellos más allá de los procedimientos conocidos."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
