@@ -17,6 +17,7 @@
 \usetikzlibrary{calc}
 \usepackage{sectsty}
 \usepackage{longtable}
+\usepackage{pdflscape}
 \usepackage{array}
 \usepackage{float}
 \usepackage{fancyhdr}
@@ -67,6 +68,17 @@
     \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\small\textbf{Por completar por la unidad académica:} #1}}\par\smallskip}
 
 \newcommand{\encabezadotabla}[1]{\rowcolor{Azul-UCR}\textcolor{white}{\textbf{#1}}}
+
+% Anexo de currículos: bloque uniforme por persona (debe ocupar menos de media página).
+\newsavebox{\cvbox}
+\newcommand{\cvsec}[1]{\par\vspace{2pt}{\bfseries\color{Azul-UCR}#1}\par\nopagebreak}
+\newenvironment{cvlist}{\begin{itemize}[leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt]}{\end{itemize}}
+\newenvironment{cvblock}[2]
+  {\par\medskip\noindent\begin{lrbox}{\cvbox}\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}\small
+   {\large\bfseries\color{Azul-UCR} #1}\par\nopagebreak{\itshape #2}\par\nopagebreak\vspace{1pt}\hrule\vspace{1pt}}
+  {\end{minipage}\end{lrbox}%
+   \ifdim\dimexpr\ht\cvbox+\dp\cvbox\relax>0.5\textheight\PackageWarning{cvblock}{Bloque mayor a media pagina}\fi
+   \noindent\fcolorbox{Celeste-UCR}{white}{\usebox{\cvbox}}\par}
 
 \title{Resumen ejecutivo de la propuesta curricular}
 \author{Escuela de Matemática}
@@ -557,9 +569,85 @@ Para cada curso propio de la carrera se presenta su objetivo general y una sínt
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tabla de correspondencia del equipo docente}
 
-La tabla presenta, para cada curso, el personal docente del Departamento de Matemática disponible para impartirlo y su último grado académico. Se espera que la gran mayoría de los cursos sean impartidos por docentes con doctorado; se considerará la asignación de docentes con maestría para cursos de índole general o afines a su área de trabajo. Un mismo docente puede figurar en varios cursos.
+La Tabla~\ref{res:docentes} presenta, para cada curso, el personal docente del Departamento de Matemática disponible para impartirlo, y la Tabla~\ref{res:docentes-datos} los datos personales y profesionales de dicho personal. Se espera que la gran mayoría de los cursos sean impartidos por docentes con doctorado; se considerará la asignación de docentes con maestría para cursos de índole general o afines a su área de trabajo. Un mismo docente puede figurar en varios cursos.
 
 \input{resumen-ejecutivo-docentes}
+
+{\footnotesize\noindent\textit{Fuente:} Tabla de correspondencia de profesores por curso de la propuesta de plan de estudios (octubre de 2026). Los cursos ya existentes los imparte el personal docente que actualmente los tiene a cargo.\par}
+
+% Tabla 4 (formato CONARE): datos personales y profesionales del personal docente.
+\begin{landscape}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}%
+\arrayrulecolor{Azul-UCR!80}%
+\renewcommand{\arraystretch}{1.15}%
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2.3cm}|>{\raggedright\arraybackslash}p{1.6cm}|>{\raggedright\arraybackslash}p{3.0cm}|>{\raggedright\arraybackslash}p{1.7cm}|>{\raggedright\arraybackslash}p{3.4cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.6cm}|>{\raggedright\arraybackslash}p{2.3cm}|}
+\caption{Datos personales y profesionales del personal docente de la carrera}\label{res:docentes-datos}\\
+\hline
+\rowcolor{Azul-UCR}
+\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Datos personales}}} & \multicolumn{5}{c|}{\textcolor{white}{\textbf{Datos profesionales}}} \\ \hline
+\rowcolor{Azul-UCR}
+\textcolor{white}{\textbf{Nombre completo}} & \textcolor{white}{\textbf{Cédula}} & \textcolor{white}{\textbf{Correo electrónico}} & \textcolor{white}{\textbf{Años de experiencia docente universitaria}} & \textcolor{white}{\textbf{Grados y títulos universitarios}} & \textcolor{white}{\textbf{Publicaciones (últimos 5 años)\textsuperscript{a}}} & \textcolor{white}{\textbf{Investigaciones o proyectos (últimos 5 años)\textsuperscript{b}}} & \textcolor{white}{\textbf{Dominio de otro idioma}} \\ \hline
+\endfirsthead
+\hline
+\rowcolor{Azul-UCR}
+\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Datos personales}}} & \multicolumn{5}{c|}{\textcolor{white}{\textbf{Datos profesionales}}} \\ \hline
+\rowcolor{Azul-UCR}
+\textcolor{white}{\textbf{Nombre completo}} & \textcolor{white}{\textbf{Cédula}} & \textcolor{white}{\textbf{Correo electrónico}} & \textcolor{white}{\textbf{Años de experiencia docente universitaria}} & \textcolor{white}{\textbf{Grados y títulos universitarios}} & \textcolor{white}{\textbf{Publicaciones (últimos 5 años)\textsuperscript{a}}} & \textcolor{white}{\textbf{Investigaciones o proyectos (últimos 5 años)\textsuperscript{b}}} & \textcolor{white}{\textbf{Dominio de otro idioma}} \\ \hline
+\endhead
+\hline
+\endfoot
+1. Acuña Larios, Jennifer & \textit{Pendiente} & jennifer.\allowbreak{}acunalarios@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 12 & Bachillerato en Matemática;\newline Bachiller en Ciencias Actuariales;\newline Maestría Académica en Matemática Pura & \textit{Ninguna en 2022--2026 según el CV} & \textbullet~Investigación: Estudio actuarial para el Colegio de Enfermeros y Enfermeras de Costa Rica, dos etapas, CIMPA (2022)\newline \textbullet~Investigación: Estudio actuarial para el Archivo Nacional, cálculo de cesantía, CIMPA (2022)\newline \textbullet~Consultoría: Validación de modelos del Banco Nacional de Costa Rica, equipo ACAVAMA, Escuela de Matemática UCR (2021-2023) & Inglés (avanzado); Portugués (avanzado) \\ \hline
+2. Acuña Valverde, Luis & \textit{Pendiente} & luis.\allowbreak{}acunavalverde@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 21 & Bachillerato en Matemática;\newline Doctor of Philosophy & \textbullet~Estimates concerning the heat content for the Schrödinger operator related to a subordinate Brownian motion (2025). Journal of Mathematical Analysis and Applications, 543(2)\newline \textbullet~On the Asymptotic Expansion of the Heat Content for Isotropic alpha-Stable Processes Over Convex Bodies (2023). Journal of Geometric Analysis, 33, 25\newline \textbullet~Spectral bounds for the heat flow related to subordinate Brownian motions over bounded regular domains (2022). Preprint (2022) & \textit{No declarado en el CV} & Inglés (avanzado); Francés (intermedio); Italiano (intermedio) \\ \hline
+3. Alfaro Murillo, Jorge & \textit{Pendiente} & jorge.\allowbreak{}alfaro@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 10 & Bach. Matemática;\newline Bach. Economía;\newline Maestría en Estadística;\newline Doctor en Filosofía con esp. en Matemáticas & \textbullet~Cancer evolution in its native host: oncogenic selection and epistasis revealed by human tumor genomes (2026). Journal of Evolutionary Biology (publicación anticipada)\newline \textbullet~Age reshapes selection on melanoma driver mutations (2026). Science Advances (en prensa)\newline \textbullet~Narrative shielding and prebunking: a synergistic strategy against vaccine hesitancy in pediatrics (2026). Expert Review of Vaccines, 25(1):2694390\newline \textit{(6 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textbullet~Investigación: Development of Computational Tools for Mutation Rate Estimation and Selection Inference in Cancer Genomics, investigador principal, proyecto 821-C6-198, Vicerrectoría de Investigación UCR (2026-2028)\newline \textbullet~Consultoría: Coordinador de ED-3480 Servicios de Asesoría y Capacitación en Matemática, CIMPA UCR (2026-actualidad)\newline \textbullet~Consultoría: Estimación conjunta de tasas de mutación somática y coeficientes de selección en cáncer, Townsend Lab, Yale University (2025)\newline \textit{(5 en total; se listan las 3 principales; el detalle completo está en el CV)} & Inglés (fluido); Alemán (avanzado) \\ \hline
+4. Ávila Artavia, Josué David & \textit{Pendiente} & josue.\allowbreak{}avila@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 12 & Bachillerato en Matemática;\newline Doctorado académico en Matemática Pura & \textbullet~On the Iwasawa lambda-invariant of the cyclotomic Z2-extension of a family of real quadratic fields in which 2 splits (2026). Preprint (2026), aceptado para publicación en International Journal of Number Theory, arXiv:2605.09111\newline \textbullet~Iwasawa module of the cyclotomic Z2-extension of certain real quadratic fields (2025). The Ramanujan Journal, 67(1), artículo 6 & \textit{No declarado en el CV} & Inglés (avanzado) \\ \hline
+5. Barboza Chinchilla, Luis Alberto & \textit{Pendiente} & luisalberto.\allowbreak{}barboza@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 23 & Bach. Ciencias Actuariales;\newline Maestría en Mat. Aplicada;\newline M.Sc. Statistics Computational Finance;\newline Doctor of Philosophy (Statistics) & \textbullet~Amortized Bayesian inference for spatio-temporal extremes: A copula factor model with autoregression (2026). Spatial Statistics, 76(101052)\newline \textbullet~Hurricane Impact Index: Capturing direct and indirect cyclone effects in Central America (2026). Earth Systems and Environment\newline \textbullet~Bayesian spatio-temporal model with INLA for dengue fever risk prediction in Costa Rica (2023). Environmental and Ecological Statistics\newline \textit{(7 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} & \textit{No declarado en el CV} \\ \hline
+6. Barquero Sánchez, Adrián & \textit{Pendiente} & adrian.\allowbreak{}barquero\_s@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 16 & Bachillerato en Matemática;\newline Ph.D. in Mathematics & \textbullet~The distribution of k-free ideals in ray class groups (2026). Preprint (2026), en revisión, arXiv:2608.13509\newline \textbullet~Counting elliptic curves over Q with bounded naive height (2025). Preprint (2025), en revisión, arXiv:2506.18874\newline \textbullet~On the efficient computation of Fourier coefficients of eta-quotients (2025). Preprint (2025), en revisión, arXiv:2504.01384\newline \textit{(7 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textbullet~Docencia: Instructor de los tutoriales de SageMath, CIMPA School on Combinatorial Structures in Geometry, Graphs and Symmetry, San José (27 de julio a 7 de agosto de 2026)\newline \textbullet~Investigación: Pasantía de investigación y charla en el coloquio, Bucknell University Distinguished Visiting Professor Program (18-26 de abril de 2026)\newline \textbullet~Investigación: Taller de investigación Rethinking Number Theory 6, virtual (16-27 de junio de 2025)\newline \textit{(4 en total; se listan las 3 principales; el detalle completo está en el CV)} & Inglés (avanzado); Alemán (principiante-intermedio); Francés (principiante); Japonés (principiante) \\ \hline
+7. Bermúdez Aguilar, Esteban & 1-1121-0325 & esteban.\allowbreak{}bermudez@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 10 & Bachillerato en Ciencias Actuariales;\newline Maestría en Administración de Negocios & \textit{Ninguna en 2022--2026 según el CV} & \textbullet~Consultoría: Asesoría actuarial a varias empresas (2008-actualidad)\newline \textbullet~Docencia: Curso Financiamiento en la seguridad social, CISS-CIESS (2026)\newline \textbullet~Docencia: Curso Lenguaje Actuarial en la Seguridad Social, CISS-CIESS (2024) & \textit{No declarado en el CV} \\ \hline
+8. Bolaños Guerrero, Raúl Esteban & 603660757 & raulesteban.\allowbreak{}bolanos@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 17 & Bach. Ciencias Actuariales;\newline Bach. Matemática;\newline Master of Arts Mathematics;\newline Doctor of Philosophy Mathematics & \textit{Ninguna en 2022--2026 según el CV} & \textbullet~Investigación: C1257 Fluctuaciones gaussianas para la ecuación de calor estocástica con condición inicial aleatoria, participación principal, terminado (11/12/2023-31/12/2023) & Inglés (conversación 100\%, lectura 100\%, escritura 100\%); Portugués (conversación 25\%, lectura 50\%, escritura 25\%) \\ \hline
+9. Bustamante Medina, Ronald & \textit{Pendiente} & \textit{Pendiente} & 27 & Bachillerato en Matemática;\newline Doctorado en Lógica Matemática y Fundamentos de la Informática & \textbullet~Groups Definable in Partial Differential Fields with an Automorphism (2026). Israel Journal of Mathematics\newline \textbullet~Zilber's Dichotomy for Differentially Closed Fields with an Automorphism (2024). Preprint & \textbullet~Investigación: Grupos definibles en teorías con operadores (en curso, sin fecha de inicio en el CV)\newline \textbullet~Docencia: Curso de lógica en la Maestría en Bioética, Facultad de Filosofía, Universidad Nacional (mayo-agosto 2022) & \textit{No declarado en el CV} \\ \hline
+10. Calvo Alpízar, Juan Gabriel & \textit{Pendiente} & juan.\allowbreak{}calvo@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 18 & Bach. Matemática;\newline Bach. Enseñanza Mat.;\newline Bach. Ing. Eléctrica;\newline Doctor en Filosofía & \textbullet~Coarse spaces for virtual element methods on irregular 3D subdomain decompositions (2026). Actas de congreso de descomposición de dominio, por aparecer (arXiv)\newline \textbullet~Stochastic dynamics in epidemiological models with interconnected populations (2026). Journal of Biological Systems\newline \textbullet~A Schwarz preconditioner for the smoothed lowest-order virtual element method (2025). Computers and Mathematics with Applications, 197\newline \textit{(17 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textbullet~Investigación (investigador principal): C5054 Iterative substructuring methods for elliptic PDEs (enero 2025-en curso)\newline \textbullet~Investigación (investigador principal): B8290 Machine learning methods for the design of preconditioners (julio 2021-diciembre 2024)\newline \textbullet~Investigación (investigador asociado): C3190 The effect of social determinants on the spread of infectious diseases (abril 2023-en curso)\newline \textit{(5 en total; se listan las 3 principales; el detalle completo está en el CV)} & Inglés (fluido) \\ \hline
+11. Cambronero Villalobos, Santiago & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bach. Matemática;\newline Lic. Matemática;\newline Maestría en Matemática;\newline Doctorado en Matemática & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+12. Campos Fernández, José David & 602830226 & josedavid.\allowbreak{}campos@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 21 & Bach. Enseñanza Mat.;\newline Lic. Enseñanza Mat.;\newline Doctorado en Matemática & \textbullet~The martingale representation theorem for cylindrical martingale valued measures (2026). Preprint (arXiv)\newline \textbullet~Itô's Formula for Itô processes defined with respect to a cylindrical-martingale valued measure (2026). Stochastic Analysis and Applications\newline \textbullet~Markov property and path regularity for the solutions to SPDEs driven by cylindrical-martingale valued measures (2026). Preprint (arXiv)\newline \textit{(5 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} & Inglés (intermedio-avanzado) \\ \hline
+13. Campos Salas, Daniel & \textit{Pendiente} & daniel.\allowbreak{}campossalas@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 12 & Bachillerato en Matemática;\newline Master of Science;\newline Doctor of Philosophy & \textit{Ninguna en 2022--2026 según el CV} & \textbullet~Acción social: Proyecto ED-3493 Olimpiadas Universitarias de Matemática, instructor desde 2019 y coordinador general desde 2024 (2019-actualidad)\newline \textbullet~Acción social: Comisión Organizadora de las Olimpiadas Costarricenses de Matemáticas, OLCOMA (desde 2019)\newline \textbullet~Acción social: Cibercoloquio Latinoamericano de Matemáticas, organización (2020-2023)\newline \textit{(5 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} \\ \hline
+14. Chaves Aguilar, Santiago & \textit{Pendiente} & anthony.\allowbreak{}chavesaguilar@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 11 & Bachillerato en Matemática;\newline Master in Science;\newline Doctor of Philosophy in Pure Mathematics & \textit{Ninguna en 2022--2026 según el CV} & \textbullet~Investigación: La conjetura de Schmid-Vilonen: un estudio de formas invariantes en G-módulos irreducibles de dimensión infinita, Universidad de Costa Rica (2022-2024)\newline \textbullet~Investigación: Avances en la teoría de factorización de vectores suaves y analíticos de representaciones de grupos de Lie, Proyecto Semilla, Universidad de Costa Rica (2024-2026) & Inglés; Portugués \\ \hline
+15. Coto Mora, Edward & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bachillerato en Matemática;\newline Matemáticas y Aplicaciones;\newline Doctorado en Matemáticas & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+16. Fonseca Mora, Christian & 1-1320-0538 & christianandres.\allowbreak{}fonseca@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 12 & Bach. Matemática;\newline Bach. Economía;\newline Bach. Ciencias Actuariales;\newline Lic. Economía;\newline Doctorado en Matemática & \textbullet~Itô's Formula for Itô processes defined with respect to a cylindrical-martingale valued measure (2026, en prensa). Stochastic Analysis and Applications\newline \textbullet~Itô's formula for Lévy-Itô processes taking values in the dual of nuclear space (2026). Preprint (ArXiv:2608.05514)\newline \textbullet~Markov property and path regularity for the solution to SPDEs driven by a cylindrical martingale-valued measure (2026). Preprint (ArXiv:2606.12381)\newline \textit{(12 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} & \textit{No declarado en el CV} \\ \hline
+17. Guevara Villalobos, Álvaro & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bachillerato en Matemática;\newline Maestría en Matemáticas;\newline PhD en Matemáticas & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+18. Guier Acosta, Jorge & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bachillerato en Matemática;\newline DEA de Lógica Matemática;\newline Doctorat ès Sciences Mathématiques & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+19. Gutiérrez Pavón, Jonathan & 1-1142-0747 & jonathan.\allowbreak{}gutierrez@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 22 & Bach. Enseñanza Mat.;\newline Lic. Enseñanza Mat.;\newline Maestría en Probabilidad;\newline Doctorado en Probabilidad & \textbullet~A formula for the density of local time of the Brox diffusion in a time-window (2025). Random Operators and Stochastic Equations\newline \textbullet~A Schrodinger random operator with semimartingale potential (2023). Random Operators and Stochastic Equations\newline \textbullet~The Killed Brox diffusion (2022). Stochastic Models\newline \textit{(4 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} & \textit{No declarado en el CV} \\ \hline
+20. Hernández Alvarado, Alberto & \textit{Pendiente} & albertojose.\allowbreak{}hernandez@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 10 & Bachillerato en Matemática;\newline Doctorado en Matemática & \textbullet~UMAP projections and the survival of empty space: A geometric approach to high dimensional data (2025). Data Science, Classification and Artificial Intelligence for Modeling Decision Making, Springer\newline \textbullet~Isomorphisms of relative holomorphs and matrix similarity (2024). Bulletin of the Australian Mathematical Society\newline \textbullet~Minimum depth of factorization algebra extensions (2023). Revista Colombiana de Matemáticas 57(1)\newline \textit{(4 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textbullet~Investigación: Advances in factorization theory for smooth and analytic vectors of Lie group representations (2024-2026)\newline \textbullet~Investigación: Indecomposable algebraic modules of a finite dimensional Hopf algebra (2021-2023)\newline \textbullet~Proyecto (coordinador): ACAVAMA, Validación de modelos computacionales para finanzas de la Escuela de Costa Rica, UCR (2021-2024)\newline \textit{(4 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} \\ \hline
+21. Jiménez López, David & \textit{Pendiente} & david.\allowbreak{}jimenezlopez@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 22 & Bachillerato en Matemática;\newline ABD Lingüística & \textit{Ninguna en 2022--2026 según el CV} & \textit{No declarado en el CV} & Inglés (fluido) \\ \hline
+22. Lacy Mora, Allan & \textit{Pendiente} & allan.\allowbreak{}lacy@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 20 & Bachillerato en Matemática;\newline Doctor of Philosophy & \textbullet~Dynatomic Galois groups for a family of quadratic rational maps (2024). International Journal of Number Theory 20(7) & \textit{No declarado en el CV} & \textit{No declarado en el CV} \\ \hline
+23. Loría Sorio, Jennifer de los Ángeles & \textit{Pendiente} & jenniferdelosange.\allowbreak{}loria@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 4 & Bachillerato en Matemática;\newline Maestría en Matemática;\newline Doctorado en Ciencias & \textbullet~On the estimation of the time-dependent transmission rate in epidemiological models (2025). Inverse Problems, vol. 41, no. 6\newline \textbullet~Time-dependent vaccine efficacy estimation quantified by a mathematical model (2023). Plos One, vol. 18, no. 5\newline \textbullet~A specific prediction model for deep sternal wound infection after coronary artery bypass surgery: Prediction model for DSWI after CABG (2022). Scientific Reports, vol. 12, no. 1 & \textit{No declarado en el CV} & Portugués (lectura y conversación avanzadas); Inglés (comprensión lectora intermedia y conversación básica) \\ \hline
+24. Mena Arias, Darío Alberto & \textit{Pendiente} & dario.\allowbreak{}menaarias@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 16 & Bach. Matemática;\newline Bach. Enseñanza Mat.;\newline Maestría en Matemática;\newline Doctorado en Matemática & \textbullet~Itô's formula for Itô processes defined with respect to a cylindrical-martingale valued measure (2026). Stochastic Analysis and Applications (Stoch. Anal. Appl.)\newline \textbullet~The martingale representation theorem for cylindrical martingale valued measures (2026). Preprint (arXiv:2607.22441)\newline \textbullet~Markov property and path regularity for the solutions to SPDEs driven by cylindrical-martingale valued measures (2026). Preprint (arXiv:2606.12381)\newline \textit{(8 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} & Inglés (dominio del 100 \%) \\ \hline
+25. Méndez Hernández, Pedro & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bach. Matemática;\newline Lic. Matemática;\newline Ph.D. en Matemática & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+26. Montalto Cruz, Carlos & \textit{Pendiente} & \textit{Pendiente} & 22 & Bachillerato en Matemática;\newline Ph.D en Matemáticas & \textbullet~A SharpView With Enhanced Out-of-Focus Text Legibility for Augmented Reality Systems (2024). IEEE VR & \textbullet~Acción social: Olimpiadas Costarricenses de Matemáticas (OLCOMA), Vicerrectoría de Acción Social, UCR, coordinador (vigente; el CV no indica fechas de vigencia)\newline \textbullet~Investigación: desarrollo de algoritmos de imagen fotoacústica, Laboratorio de Investigación en Biomedicina, UCR (en curso desde setiembre 2017) & Inglés (nivel profesional) \\ \hline
+27. Montenegro Guzmán, Samaria & \textit{Pendiente} & samaria.\allowbreak{}montenegroguzman@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 9 & Bach. Matemática;\newline Maestría en Lógica Mat.;\newline Doctorado en Lógica Matemática y Fundamentos de la Informática & \textbullet~Dividing lines among fields (2026). Women in Mathematics in Latin America, Trends in Mathematics, Research Perspectives, Ghent Analysis and PDE Center vol. 14, Birkhäuser/Springer, pp. 111-118\newline \textbullet~Pseudo T-closed fields (2025). Model Theory, 4(1), 1-35\newline \textbullet~Groups definable in partial differential fields with an automorphism (2023). Israel Journal of Mathematics (aceptado para publicación) & \textbullet~Investigación (Fondo UCREA, Vicerrectoría de Investigación, UCR): Generizar para transformar el conocimiento: Construcción de una metodología feminista para el análisis de género de la producción académica en la Universidad de Costa Rica (2022-2024)\newline \textbullet~Investigación (Fondo semilla): Nuevas perspectivas en el estudio de grupos dentro del universo de Shelah, investigadora asociada (2020-2022) & \textit{No declarado en el CV} \\ \hline
+28. Mora Sáenz, Germán José & \textit{Pendiente} & german.\allowbreak{}morasaenz@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & \textit{Pendiente} & Bachillerato en Matemática;\newline Master of Science Matemática;\newline Doctor of Philosophy Matemática & \textit{Ninguna en 2022--2026 según el CV} & \textit{No declarado en el CV} & Inglés \\ \hline
+29. Ramírez González, José Alexander & \textit{Pendiente} & alexander.\allowbreak{}ramirez\_g@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 27 & Bach. Matemática;\newline Bach. Ing. Eléctrica;\newline Doctor en Filosofía & \textit{Ninguna en 2022--2026 según el CV} & \textbullet~Consultoría/desarrollo: Quanto Soluciones Analíticas y Cuantitativas, presidente y desarrollador de software para análisis de riesgo (diciembre 2014-presente)\newline \textbullet~Extensión: Inteligencia Artificial y riesgo de crédito: el uso de datos y modelos para la toma de decisiones a lo largo del ciclo de vida, Risk Day, Santo Domingo, República Dominicana (2026)\newline \textbullet~Extensión: Riesgo de liquidez en cooperativas, Congreso sobre Riesgo Integral en Cooperativas, Panamá (2026)\newline \textit{(4 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} \\ \hline
+30. Rodríguez Rojas, Oldemar & \textit{Pendiente} & oldemar.\allowbreak{}rodriguez@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & \textit{Pendiente} & Bach. Matemática;\newline Lic. Matemática;\newline Lic. Matemáticas de la Decisión;\newline Doctorado en Matemática & \textit{Ninguna en 2022--2026 según el CV} & \textit{No declarado en el CV} & Inglés (lee, escribe y habla); Francés (lee, escribe y habla) \\ \hline
+31. Rosales Ortega, José & \textit{Pendiente} & jose.\allowbreak{}rosales@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 17 & Bachillerato en Matemática;\newline Maestría en Matemática Pura;\newline Doctorado en Matemática Pura & \textbullet~Toeplitz operators with invariant symbols under the action of some subgroups of Sn semidirect Tn on the Fock Space on Cn (aceptado, sin año en el CV). Tales and Trends in Operator Theory, Evolution Equations and Complex Variables: IWOTA 2024, Birkhäuser/Springer\newline \textbullet~Toeplitz operators with symmetric, alternating and anti-symmetric separately radial symbols on the unit ball (2024). Boletín de la Sociedad Matemática Mexicana & \textbullet~Investigación: Operadores Integrales en Espacios de Funciones Analíticas, proyecto CIMPA-UCR C6165, investigador principal (2026-2029)\newline \textbullet~Investigación: Interacciones del análisis y la geometría, proyecto CIMPA-UCR, investigador principal (2023-2024) & \textit{No declarado en el CV} \\ \hline
+32. Sánchez Chavarría, Adriana & \textit{Pendiente} & adriana.\allowbreak{}sanchez\_c@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 9 & Bachillerato en Matemática;\newline Doctorado en Matemática & \textbullet~Analyticity of the Lyapunov exponents of random products of quasi-periodic cocycles (2023). Nonlinearity 36(6)\newline \textbullet~The Continuity Problem of Lyapunov Exponents (2022). International Workshop New Trends in Lyapunov Exponents, Springer International Publishing & \textbullet~Investigación: Proyecto de Educación Continua del CIMPA, investigadora principal (2024-2026)\newline \textbullet~Investigación: Uso de modelos de aprendizaje automático para el pronóstico de caudales extremos (mínimos y máximos), investigadora principal (2023-2025)\newline \textbullet~Investigación: Estudio de sistemas de producción en contexto de industria 4.0 con enfoque al estudio del trabajo apoyado por herramientas de aprendizaje profundo, investigadora asociada (2022-2025)\newline \textit{(5 en total; se listan las 3 principales; el detalle completo está en el CV)} & Inglés (avanzado); Portugués (avanzado); Francés (iniciante) \\ \hline
+33. Sánchez Guevara, Jesús & 603340326 & jesus.\allowbreak{}sanchez\_g@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 12 & Bach. Matemática;\newline Maestría con Esp. Lógica Mat.;\newline En Mat. Pura: Topología Algebraica y Teoría de Categorías & \textbullet~Extensión de una estructura de óperad definida sobre un sub-S-módulo (2025). Revista de Matemática: Teoría y Aplicaciones 32(2)\newline \textbullet~Introducción a la teoría de categorías, lógica y topos elementales para una mente curiosa (2024). Revista de Filosofía de la Universidad de Costa Rica 63(125)\newline \textbullet~On the relationship between expansion angle of Earth-directed CMEs and soft X-ray emission from their related flare (2023). Revista de Matemática: Teoría y Aplicaciones 30(2)\newline \textit{(4 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textbullet~Investigación: Herramientas científicas para optimizar el estudio del clima espacial, código C0072, participación asociado (2020-2022) & Francés (conversación 100\%, lectura 100\%, escritura 100\%); Inglés (conversación 80\%, lectura 100\%, escritura 100\%); Italiano (conversación 20\%, lectura 70\%, escritura 50\%) \\ \hline
+34. Sánchez Peña, Fabio & \textit{Pendiente} & fabio.\allowbreak{}sanchez@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 16 & PhD in Computer Science;\newline Biological Statistics and Computational Biology & \textbullet~High-resolution climate-dengue modeling and mid-century projections under SSP5-8.5 in Costa Rica (2026). Science in One Health 5, 100157\newline \textbullet~Stochastic Dynamics in Epidemiological Models with Interconnected Populations (2026). Journal of Biological Systems 34\newline \textbullet~Managing populations after a disease outbreak: exploration of epidemiological consequences of managed host reintroduction following disease-driven host decline (2026). Philosophical Transactions of the Royal Society B 381(1945)\newline \textit{(27 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textbullet~Investigación: El costo de una vida digna en Costa Rica: Ingreso vital y la construcción de metodologías para el cálculo de variaciones territoriales, UCREA, Universidad de Costa Rica (2023)\newline \textbullet~Investigación: Mathematical Models for Dengue Surveillance: Challenges and Opportunities, Seed Grant, University of California, Davis (2022)\newline \textbullet~Consultoría: PREDICDATA, firma de análisis de datos y consultoría, fundador y socio (2026-presente)\newline \textit{(5 en total; se listan las 3 principales; el detalle completo está en el CV)} & Inglés (fluido) \\ \hline
+35. Segura Ugalde, Esteban & \textit{Pendiente} & esteban.\allowbreak{}seguraugalde@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 12 & Bach. Matemática;\newline Maestría en Optimización Matemática;\newline Doctorado en Matemática & \textbullet~Construcción de diseños de bloques balanceados e incompletos (2026, aceptado). Matemática, Educación e Internet, TEC\newline \textbullet~Computation of Matrix p-th Root Using Moments (2024). Journal of Computational and Applied Mathematics\newline \textbullet~A Subspace Method for Time Series Anomaly Detection in Cyber-Physical Systems (2023). IFAC-PapersOnLine 55(41), 58-63\newline \textit{(5 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textbullet~Consultoría: ACAVAMA, CIMPA, Universidad de Costa Rica (2021-presente) & Inglés (fluente, TOEIC 845/990); Francés (medio, DELF A2) \\ \hline
+36. Solís Chacón, Maikol & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bach. Ciencias Actuariales;\newline Maestría Mat. Aplicada;\newline Master 2 Recherche;\newline Doctorat Statistique et Mathematiques Apliquées & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+37. Tall, El Hadji Yaya & \textit{Pendiente} & el.\allowbreak{}tall@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 2 & Bach. Matemática;\newline Lic. Matemática;\newline Maestría Matemática;\newline Doctorado en Matemática;\newline Diploma ICTP & \textbullet~Hölder regularity of the top Lyapunov exponent for random matrix products with low-dimensional equator (2026). Preprint (arXiv:2610.17153)\newline \textbullet~Log-Hölder continuity at zero Lyapunov gap for finite state Markov GL(2)-cocycles (2026). Preprint (arXiv:2608.22157)\newline \textbullet~Analyticity of Lyapunov Exponents for Mixed Markov Quasi-Periodic Cocycles (2026). Preprint (arXiv:2608.01569)\newline \textit{(4 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} & Peul (lengua materna); Francés (nativo); Wolof (nativo); Inglés (fluido); Portugués (fluido); Italiano (intermedio) \\ \hline
+38. Ugalde Gómez, William Javier & \textit{Pendiente} & william.\allowbreak{}ugalde@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 33 & Bach. Matemática;\newline Lic. Matemática;\newline Master en Ciencias;\newline Diploma ICTP;\newline Doctor en Filosofía (PhD) & \textbullet~Symmetry of some noncommutative sphere algebras (2026). Preprint (arXiv:2602.06946), por aparecer en Journal of Algebra\newline \textbullet~Characterization of principal bundles: the noncommutative algebraic case (2024). Preprint (arXiv:2402.16852)\newline \textbullet~Characterization of principal bundles: the commutative case (2023). Preprint (arXiv:2310.03824) & \textbullet~Investigación (investigador principal, CIMPA, Vicerrectoría de Investigación UCR): Simetrías de campos cuánticos libres (enero 2021--diciembre 2023)\newline \textbullet~Investigación (investigador principal, CIMPA, Vicerrectoría de Investigación UCR): Aspectos de simetría en sistemas cuánticos (enero 2024--diciembre 2026) & \textit{No declarado en el CV} \\ \hline
+39. Ulloa Esquivel, Roberto & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bachillerato en Matemática;\newline Doctor of Philosophy in Mathematics & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+40. Vargas Ulate, Eny & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bach. Ciencias Actuariales;\newline Lic. Ciencias Actuariales;\newline MBA con énfasis en Finanzas & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+41. Villalobos Alvarado, Jorge & \textit{Pendiente} & jorge.\allowbreak{}villalobosalvarado@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 9 & Bach. Matemática;\newline Bach. Física;\newline Maestría en Matemática;\newline Doctorado en Matemática & \textbullet~Stable defect states in the continuous spectrum of bilayer graphene with magnetic field (2023). Physica D: Nonlinear Phenomena 455, 133891 & \textit{No declarado en el CV} & \textit{No declarado en el CV} \\ \hline
+42. Villalobos Arias, Mario & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} & Bachillerato en Matemática;\newline Doctorado en Matemática & \textit{Pendiente} & \textit{Pendiente} & \textit{Pendiente} \\ \hline
+43. Zamora Calero, Rafael & \textit{Pendiente} & rafael.\allowbreak{}zamora\_c@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 11 & Bach. Matemática;\newline Maestría en Lógica Matemática;\newline Doctorado en Matemática & \textbullet~Strong Factorization Theorem for Smooth Vectors of Exponential Solvable Lie Group Representations (2026). Preprint (arXiv:2604.20998), enviado a Journal of Functional Analysis & \textbullet~Investigación (investigador principal, Fondo Semilla, Vicerrectoría de Investigación UCR): Nuevas perspectivas en el estudio de grupos dentro del universo de Shelah (2020--2023)\newline \textbullet~Investigación (colaborador, Fondo Semilla, Vicerrectoría de Investigación UCR): Avances en la Teoría de Factorización de Vectores Suaves y Analíticos de Representaciones de Grupos de Lie (2024) & \textit{No declarado en el CV} \\ \hline
+44. Zamora Luna, Oscar & \textit{Pendiente} & oscar.\allowbreak{}zamoraluna@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 6 & Bachillerato en Matemática;\newline Doctor of Philosophy in Mathematics and its Applications & \textbullet~The Maximum Number of Pentagons in a Planar Graph (2025). Journal of Graph Theory 108(2), 229-256\newline \textbullet~Planar Turán Number of the theta6 (2024). Studia Scientiarum Mathematicarum Hungarica 61(2), 89-115\newline \textbullet~Packing independent cliques into planar graphs (2024). Preprint (arXiv:2408.03298)\newline \textit{(10 en total; se listan las 3 principales; el detalle completo está en el CV)} & \textit{No declarado en el CV} & \textit{No declarado en el CV} \\ \hline
+45. Zúñiga Rojas, Ronald Alberto & \textit{Pendiente} & ronald.\allowbreak{}zunigarojas@\allowbreak{}ucr.\allowbreak{}ac.\allowbreak{}cr & 18 & Bachillerato en Matemática;\newline Doctor en Matemática & \textbullet~Introducción a la teoría de categorías, lógica y topos elementales para una mente curiosa (2024). Revista de Filosofía de la Universidad de Costa Rica 63(165), 71-85\newline \textbullet~Stratifications on the Nilpotent Cone of the Hitchin Map (2022). Revista Matemática Complutense 35, 311-321 & \textbullet~Investigación: Costarican-German Collaboration in Research: Character varieties and Higgs bundles (Colaboración en Investigación Costa Rica-Alemania: Variedades de caracter y fibrados de Higgs), proyecto 821-C4-650, iniciativa DFG-CONARE (vigente) & Portugués (alto, competencia bilingüe); Inglés (alto, competencia bilingüe); Italiano (alto, competencia bilingüe) \\ \hline
+\end{longtable}
+\endgroup
+{\footnotesize\noindent\textit{Fuente:} currículos vitae aportados por el personal docente y Tabla de docentes del Departamento de Matemática (octubre de 2026). ``Pendiente'' indica que el dato no consta en el currículo aportado o que el currículo aún no se ha recibido.\par}
+{\footnotesize\noindent\textsuperscript{a} Nombre, año y medio de publicación; se consideran 2022 a 2026. \textsuperscript{b} Tipo, nombre y vigencia; se consideran 2022 a 2026. Se omite la columna de años de aprendizaje en entornos virtuales porque la carrera se ofrece en modalidad presencial. Los años de experiencia docente universitaria se calcularon a 2026 a partir de los periodos que declara cada currículo.\par}
+\end{landscape}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -577,5 +665,773 @@ El Departamento de Matemática estará a cargo de la implementación. Se propone
 \section{Currículos vitae de personas docentes}
 
 \textcolor{red}{Pendiente}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\appendix
+\renewcommand{\thesection}{Anexo \Alph{section}}
+\section{Resumen de los currículos del personal docente}
+
+Este anexo resume, en un formato uniforme, los currículos vitae aportados por 36 de las personas docentes del Departamento de Matemática incluidas en la tabla de profesorado de la propuesta. Las personas se ordenan alfabéticamente por apellido. Cada resumen consigna la formación académica, la experiencia profesional y docente, las áreas de especialidad e investigación, la producción académica y otros méritos, según la información que contiene el currículo respectivo; los datos personales (cédula, fecha de nacimiento, teléfono, dirección y correo) no se reproducen. Los currículos completos corresponden a los documentos originales aportados por cada persona.
+
+\pendiente{faltan los currículos de las siguientes 9 personas docentes: Cambronero Villalobos Santiago, Coto Mora Edward, Guevara Villalobos Álvaro, Guier Acosta Jorge, Méndez Hernández Pedro, Solís Chacón Maikol, Ulloa Esquivel Roberto, Vargas Ulate Eny y Villalobos Arias Mario.}
+
+\begin{cvblock}{Acuña Larios, Jennifer}{Coordinadora del Área de Riesgos Financieros y No Financieros, SUGEF}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Maestría Académica en Matemática Pura, Universidad de Costa Rica, 2021.
+  \item Bachillerato en Ciencias Actuariales, Universidad de Costa Rica, 2023.
+  \item Bachillerato en Matemática, Universidad de Costa Rica, 2011.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Coordinadora del Área de Riesgos Financieros y No Financieros, SUGEF, 2025--actualidad. Supervisión de modelos, metodologías y calidad de datos; antes, modelación de riesgo de crédito, liquidez y mercado y coordinación del ejercicio BUST.
+  \item Docente y coordinadora de cátedra, Universidad de Costa Rica, 2010--2015 y 2020--2024. Matemática, probabilidad y estadística, teoría del interés, instrumentos de inversión, estadística actuarial.
+  \item Docente, Instituto Tecnológico de Costa Rica, 2018. Estadística y matemática para Administración de Empresas e Ingenierías.
+  \item Practicante, Banco Central de Costa Rica (2022) y Banco Nacional de Costa Rica, Dirección de Modelos Matemáticos (2016).
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Matemática y ciencias actuariales, modelación matemática, probabilidad y estadística, gestión de riesgos financieros, ciencia de datos.
+\cvsec{Producción académica}
+El CV no lista publicaciones. Como investigadora del CIMPA (2020--2022) participó en estudios actuariales y de ciencia de datos para varias instituciones (por ejemplo, Dos Pinos y Archivo Nacional).
+\cvsec{Otros méritos}
+Equipo de validación de modelos del Banco Nacional (ACAVAMA, 2021--2023); taller sobre pensiones para la Embajada de Canadá. Inglés y portugués de nivel avanzado.
+\end{cvblock}
+
+\begin{cvblock}{Acuña Valverde, Luis}{Profesor, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctor of Philosophy in Mathematics, Purdue University, Estados Unidos, estudios 2009--2015 (tutor: Rodrigo Bañuelos). Tesis: asintóticas de la traza y del contenido de calor para operadores de Schrödinger de procesos estables y laplacianos fraccionarios.
+  \item Bachillerato en Matemática, Universidad de Costa Rica, estudios 2002--2007.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor, Universidad de Costa Rica, 2015--actualidad. Cursos de servicio (cálculo, álgebra lineal, ecuaciones ordinarias, probabilidad) y de carrera (cálculo, ecuaciones diferenciales); nivelatorio para la Maestría en Ciencias Actuariales.
+  \item Asistente de docencia e investigación, Purdue University, 2009--2015.
+  \item Profesor de cursos de servicio, Universidad de Costa Rica, 2005--2009.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Probabilidad y análisis: procesos estables y de Lévy, operadores de Schrödinger fraccionarios, contenido de calor y asintóticas de la traza.
+\cvsec{Producción académica}
+14 entradas listadas, equivalentes a 13 trabajos distintos (12 artículos y 1 preprint). Por ejemplo: Journal of Functional Analysis (2014); Bulletin of the London Mathematical Society (2020); Journal of Mathematical Analysis and Applications (2025).
+\cvsec{Otros méritos}
+Siete conferencias y seminarios como ponente (Purdue, CIMAT, CLAPEM, Texas A\&M). Inglés avanzado; francés e italiano intermedios.
+\end{cvblock}
+
+\begin{cvblock}{Alfaro Murillo, Jorge}{Profesor, Escuela de Matemática, e investigador, CIMPA, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado (PhD) en Matemáticas, Purdue University, Estados Unidos, 2013. Tesis: modelo epidémico estructurado por el tiempo desde la última infección (director: Zhilan Feng).
+  \item Maestría (MSc) en Estadística, Purdue University, 2013.
+  \item Bachillerato en Matemática, Universidad de Costa Rica, 2008; Bachillerato en Economía, Universidad de Costa Rica, 2006.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor, Escuela de Matemática (2025--actualidad), e investigador del CIMPA (2026--actualidad), Universidad de Costa Rica. Investigador principal de un proyecto sobre genómica del cáncer (2026--2028); coordinador de cátedra de Cálculo para Ciencias Económicas II.
+  \item Científico de Investigación Asociado, Yale University, 2015--2019 (modelado de enfermedades infecciosas) y 2020--2024 (modelado del cáncer); investigador posdoctoral, Yale, 2014.
+  \item Asistente de investigación y docente, Purdue University, 2008--2013; profesor en UCR, 2005--2008.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Evolución somática del cáncer (mutación, selección, epistasis), inferencia bayesiana, enfermedades infecciosas y costo-efectividad de intervenciones de salud pública, modelado ecológico.
+\cvsec{Producción académica}
+15 publicaciones numeradas (2012--2026). Por ejemplo: The Lancet (2020); Proceedings of the National Academy of Sciences (2019); Mathematical Biosciences (2023). Autor de paquetes de Python como sigmutsel.
+\cvsec{Otros méritos}
+Consultorías para Merck, Sanofi y ministerios de salud y economía; coordinador de un proyecto de asesoría del CIMPA; Consejo Editorial de la Revista de Matemática: Teoría y Aplicaciones (2026--actualidad). Inglés fluido y alemán avanzado.
+\end{cvblock}
+
+\begin{cvblock}{Ávila Artavia, Josué David}{Profesor invitado, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado académico en Matemática Pura, University of Maryland, Estados Unidos, 2018--2024.
+  \item Bachillerato en Matemática Pura con honores (promedio 9.73/10), Universidad de Costa Rica, 2013--2017.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor invitado, Universidad de Costa Rica, agosto de 2024--actualidad.
+  \item Asistente de docencia, University of Maryland, 2018--2024. Cálculo II, álgebra lineal, estadística elemental y criptografía; calificación de cursos avanzados y tutorías.
+  \item Profesor temporal, Universidad de Costa Rica, 2016--2018. Álgebra lineal, cálculo y matemática para ciencias de la computación.
+  \item Asistente de docencia, Universidad de Costa Rica, 2014--2016. Principios de Matemática y Álgebra Lineal I y II.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Teoría de números: invariantes de Iwasawa en extensiones ciclotómicas de cuerpos cuadráticos reales (según sus publicaciones).
+\cvsec{Producción académica}
+Un artículo publicado: The Ramanujan Journal (2025). Un preprint aceptado en International Journal of Number Theory (arXiv, 2026), en coautoría.
+\cvsec{Otros méritos}
+Seymour Goldberg Memorial Award (2021) y Hauptman Summer Research Award (2023) en Maryland; mejor promedio de la Facultad de Ciencias y del Bachillerato en Matemática en UCR (2015 y 2016). Inglés avanzado.
+\end{cvblock}
+
+\begin{cvblock}{Barboza Chinchilla, Luis Alberto}{Profesor Catedrático, Escuela de Matemática y CIMPA, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item PhD Statistics, Purdue University, Estados Unidos, 2012. Tesis: nuevos métodos de estimación de modelos de memoria larga con aplicación en climatología (asesores: Frederi G. Viens, Bo Li).
+  \item MS Statistics with Specialization in Computational Finance, Purdue University, 2011.
+  \item MSc Applied Mathematics, Universidad de Costa Rica, 2007. Tesis: modelo de estimación de pérdidas en swaps de tasas de interés.
+  \item Bachelor degree, Actuarial Science, Universidad de Costa Rica, 2003.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor Catedrático, Escuela de Matemática, Universidad de Costa Rica, 2013--actualidad; docente de posgrado en la Maestría Académica en Estadística, 2014--actualidad.
+  \item Director del CIMPA, Universidad de Costa Rica, 2021--2024.
+  \item Teaching Assistant, Purdue University, 2007--2012; Profesor Instructor, Universidad de Costa Rica, 2003--2007.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Estadística ambiental, estimación bayesiana de modelos espacio-temporales y de sistemas dinámicos (modelos epidemiológicos), aprendizaje estadístico aplicado a epidemiología y clima.
+\cvsec{Producción académica}
+13 publicaciones seleccionadas (2014--2026). Por ejemplo: Annals of Applied Statistics (2014); Nature Geoscience (2019); PLoS Neglected Tropical Diseases (2023); Spatial Statistics (2026).
+\cvsec{Otros méritos}
+Programación en R, MATLAB, Python y C++.
+\end{cvblock}
+
+\begin{cvblock}{Barquero Sánchez, Adrián}{Profesor Catedrático, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Equiparación de grado: Doctorado Académico, Universidad de Costa Rica, diciembre de 2018.
+  \item Ph.D. in Mathematics, Texas A\&M University, Estados Unidos, agosto de 2016.
+  \item Bachillerato en Matemática, Universidad de Costa Rica, agosto de 2011.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor Catedrático (febrero de 2025--actualidad), Asociado (2019--2025) e Invitado (2016--2019), Escuela de Matemática, Universidad de Costa Rica.
+  \item Subdirector de la Escuela de Matemática, Universidad de Costa Rica, 2019--2023.
+  \item Graduate Teaching Assistant, Texas A\&M University, 2011--2016; profesor interino, Universidad de Costa Rica, 2010.
+  \item Coordinador del curso de Cálculo I (MA-1001/MA-1101), 2018 y 2019; cursos de cálculo, álgebra, teoría de Galois y teoría de números.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Teoría de números: fórmula de Chowla--Selberg, alturas de Faltings y conjetura de Colmez, curvas elípticas con multiplicación compleja, funciones de partición.
+\cvsec{Producción académica}
+14 trabajos listados (10 publicados, 3 en revisión y 1 preprint). Por ejemplo: Compositio Mathematica (2016); Research in the Mathematical Sciences (2023); Journal of Mathematical Analysis and Applications (2025).
+\cvsec{Otros méritos}
+Outstanding Teaching Assistant Award (Texas A\&M, 2016); mentor de la REU en Teoría de Números (2014--2016); árbitro de revistas como Research in Number Theory y Acta Arithmetica. Inglés avanzado.
+\end{cvblock}
+
+\begin{cvblock}{Bermúdez Aguilar, Esteban}{Director del Departamento de Ciencias Actuariales, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Máster en Administración de Negocios con énfasis en Gerencia, Universidad Hispanoamericana, Costa Rica, 2012.
+  \item Bachillerato en Ciencias Actuariales, Universidad de Costa Rica, Costa Rica, 2005.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Director del Departamento de Ciencias Actuariales y docente, Universidad de Costa Rica, 2005--2010 y 2022--actualidad. Cursos: Regímenes de Pensiones, Estadística Actuarial II, Modelos Lineales y de Sobrevivencia.
+  \item Jefe del Departamento Actuarial, Junta de Pensiones y Jubilaciones del Magisterio Nacional (JUPEMA), 2014--marzo 2023. Estudios actuariales de dos regímenes de pensiones; equipo de 10 personas.
+  \item Encargado de Servicios Actuariales, Ernst \& Young Centroamérica, 2011--2014. Beneficios a empleados y reservas de aseguradoras.
+  \item Asesor actuarial, varias empresas, 2008--actualidad; docente en la Universidad Nacional (Costa Rica), 2009, 2010 y 2017.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Ciencias actuariales, pensiones y seguridad social, estadística y gestión de riesgos; sostenibilidad financiera y actuarial de sistemas de pensiones.
+\cvsec{Producción académica}
+Dos artículos: una metodología de escala salarial dinámica para el régimen de capitalización colectiva de los educadores, Revista de Matemática, 2018; y una comparación de los modelos Nelson-Siegel y Svensson para curvas de rendimiento, Revista Ciencia y Tecnología, 2014.
+\cvsec{Otros méritos}
+Revisor científico de Applied Stochastic Models in Business and Industry (Wiley), 2024; profesor de cursos del CISS-CIESS en seguridad social (2019--2026); miembro de la sección PBSS de la Asociación Internacional de Actuarios desde 2012.
+\end{cvblock}
+
+\begin{cvblock}{Bolaños Guerrero, Raúl Esteban}{Profesor, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctor of Philosophy in Mathematics, University of Kansas, Estados Unidos de América, 2021.
+  \item Master of Arts in Mathematics, University of Kansas, Estados Unidos de América, 2017.
+  \item Bachillerato en Ciencias Actuariales, Universidad de Costa Rica, Costa Rica, 2024.
+  \item Bachillerato en Matemática Pura, Universidad de Costa Rica, Costa Rica, 2010.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor, Universidad de Costa Rica, 2021--actualidad. Cursos de Matemática. Antes, profesor en la misma universidad en 2007 y 2009--2015.
+  \item Graduate Teaching Assistant, University of Kansas, 2015--2020. Cálculo I, II y III.
+  \item Profesor, Colegio Científico de San Pedro, 2013--2015. Matemática de décimo y undécimo año.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Probabilidad y procesos estocásticos: integral de Skorohod, cálculo de Malliavin, ecuaciones de onda y de calor estocásticas.
+\cvsec{Producción académica}
+Dos artículos en revistas internacionales: Theory of Probability and Mathematical Statistics, vol. 102 (2020/2021), y Electronic Journal of Probability, vol. 26 (2021).
+\cvsec{Otros méritos}
+Finalista del Florence Black Award for Excellence in Teaching (2021) y becas o premios de University of Kansas (2018--2020); investigador principal de un proyecto sobre fluctuaciones gaussianas para la ecuación de calor estocástica (2023). Inglés 100\%.
+\end{cvblock}
+
+\begin{cvblock}{Bustamante Medina, Ronald}{Profesor catedrático, Escuela de Matemática, e investigador del CIMPA, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. en Lógica Matemática y Fundamentos de la Informática, Paris Diderot University, Francia, 2001--2005. Tesis: teoría de modelos de cuerpos diferencialmente cerrados con un automorfismo genérico.
+  \item M.Sc. en Lógica y Fundamentos de la Informática, Paris Diderot University, Francia, 2001--2005.
+  \item Bachillerato en Matemática Pura, Universidad de Costa Rica, Costa Rica, 1999.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor catedrático, Escuela de Matemática, Universidad de Costa Rica, 1999--presente. Cursos de grado y posgrado.
+  \item Investigador, Centro de Investigación en Matemática Pura y Aplicada (CIMPA), Universidad de Costa Rica, 2005--presente. Proyectos en teoría de modelos de cuerpos.
+  \item Profesor a tiempo parcial, Facultad de Filosofía, Universidad Nacional (Costa Rica), 2022. Curso de lógica en la Maestría en Bioética.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Lógica matemática, teoría de modelos de cuerpos y su relación con geometría algebraica y teoría de números; grupos definibles en teorías con operadores. Machine Learning aplicado a clasificación de audio, procesamiento de lenguaje natural y ética.
+\cvsec{Producción académica}
+Seis trabajos: cinco artículos y un preprint (2024). Representativos: Israel Journal of Mathematics (2026); Notre Dame Journal of Formal Logic, 52(4), 2011; Revista de Matemática: Teoría y Aplicaciones, 26(2), 2019.
+\cvsec{Otros méritos}
+Compositor de música electrónica (13 obras individuales entre 2012 y 2019, además de colaboraciones y presentaciones). Complemento de beca de la Universidad de Costa Rica y del Consejo Nacional de Ciencia y Tecnología para estudios en París, 2000--2005.
+\end{cvblock}
+
+\begin{cvblock}{Calvo Alpízar, Juan Gabriel}{Full professor, CIMPA y Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Mathematics, Ph.D., Courant Institute, New York University, Estados Unidos, 2015. Tesis: métodos de descomposición de dominio para problemas con el operador rotacional.
+  \item Mathematics, B.S., Universidad de Costa Rica, Costa Rica, 2010.
+  \item Electrical Engineering, B.S., Universidad de Costa Rica, Costa Rica, 2021.
+  \item Business Administration, Diploma, Universidad Estatal a Distancia, Costa Rica, 2020.
+  \item Mathematics Education, B.S., Universidad Estatal a Distancia, Costa Rica, 2004.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Full professor, Universidad de Costa Rica, dic. 2018--presente (antes invitado 2015--2018 e interino 2005--2010). Director del departamento de Matemática y Ciencias Actuariales, 2021--2024; subdirector del Posgrado en Matemática, 2019--2024.
+  \item Director de la División de Gestión y Analítica de Datos, Banco Nacional de Costa Rica, ago. 2019--jul. 2020.
+  \item Postdoc, Institute of Mathematics, Czech Academy of Sciences, Praga, oct. 2016--ago. 2017.
+  \item Teacher, Costa Rican Scientific High School (2007--2010, 2016, 2018--2019); asistente en New York University, 2011--2015.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Análisis numérico, descomposición de dominio (BDDC, Schwarz) y elementos virtuales; modelación de COVID-19 y dengue; aprendizaje automático para precondicionadores.
+\cvsec{Producción académica}
+31 entradas numeradas: 30 artículos (cuatro de ellos en actas de congresos de descomposición de dominio) y un preprint. Representativos: Mathematics of Computation, 2016; Mathematical Models and Methods in Applied Sciences, 2018; Scientific Reports, 2022.
+\cvsec{Otros méritos}
+Charla en el International Congress of Mathematicians 2026; conferencista plenario en SIMMAC 2018; investigador principal de proyectos (C5054 desde 2025); dirección de tesis de maestría (dos concluidas y una en curso); líder en la Olimpiada Internacional de Matemática 2016; MacCraken Fellowship, 2010--2015.
+\end{cvblock}
+
+\begin{cvblock}{Campos Fernández, José David}{Profesor e investigador, Escuela de Matemática y CIMPA, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctor en Matemática (distinción máxima), Pontificia Universidad Católica de Chile, Chile, 2012. Tesis: Random Walks in static and Markovian time-dependent random environment (director: Alejandro Ramírez); área de Probabilidad.
+  \item Doctorado Académico en Ciencias, equiparación de grado y título, Universidad de Costa Rica, Costa Rica, 2014.
+  \item Licenciatura en la Enseñanza de la Matemática (graduación de honor), Universidad de Costa Rica, Costa Rica, 2001.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor e investigador, Escuela de Matemática-CIMPA, Universidad de Costa Rica, 2023--actualidad; antes en la Escuela de Matemática-CIMM, 2013--2022.
+  \item Profesor, Sede de Occidente, Universidad de Costa Rica, 1999--2007 (cursos de matemática); asistente, 1995--1998.
+  \item Pasantías de investigación en la Pontificia Universidad Católica de Chile (2015, 2017) y en el Instituto Camille Jordan, Lyon (2013).
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Caminatas aleatorias en medios aleatorios, procesos estocásticos y cálculo estocástico con respecto a procesos de tipo cilíndrico en espacios de Banach.
+\cvsec{Producción académica}
+Ocho trabajos: cinco artículos y tres preprints (2024--2026). Representativos: Annals of Probability, 45(6B), 2017; Probability Theory and Related Fields, 160, 2014; Stochastics and Partial Differential Equations: Analysis and Computations, 13, 2024.
+\cvsec{Otros méritos}
+Director de la tesis de maestría de Jennifer Acuña Larios (2020); premio de excelencia en tesis doctoral 2013 (Pontificia Universidad Católica de Chile); beca Conicyt para el doctorado, 2008--2012; expositor en los simposios SIMMAC 2020--2026.
+\end{cvblock}
+
+\begin{cvblock}{Campos Salas, Daniel}{Docente, Universidad de Costa Rica (oficina en CIMPA-OLCOMA)}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado en Matemática, University of Chicago, EE.UU., 2019. Tesis sobre la reconstrucción del campo magnético para un operador de Schrödinger en un cilindro (supervisor: Carlos Kenig).
+  \item Maestría en Matemática, University of Chicago, EE.UU., 2015.
+  \item Bachillerato en Matemática (graduación de honor), Universidad de Costa Rica, Costa Rica, 2013.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Docente, Universidad de Costa Rica, 2013 y 2019--2026. Cálculo, Álgebra Lineal, Variable Compleja y Teoría de Números en Matemática Pura, Educación Matemática, Matemática Aplicada, Ciencias Actuariales y el Posgrado en Matemática.
+  \item College Fellow (2014--2015) e instructor de Calculus I--III (2015--2019) y Linear Algebra (2018), University of Chicago.
+  \item Miembro de la Comisión Organizadora de OLCOMA desde 2019; coordinador general del proyecto ED-3493 Olimpiadas Universitarias de Matemática desde 2024.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Ecuaciones en derivadas parciales y problemas inversos para operadores de Schrödinger magnéticos; estimaciones de Carleman; análogos discretos de problemas de ecuaciones en derivadas parciales.
+\cvsec{Producción académica}
+Un artículo (The Mathematical Gazette, 97(539), sobre la aproximación factorial de Ramanujan) y un preprint en arXiv sobre la reconstrucción del campo magnético. Charlas en el Mathematical Congress of the Americas (2025) y en la University of Ghent (2022).
+\cvsec{Otros méritos}
+Organizó una Escuela CIMPA en 2026 (más de 70 participantes internacionales), una competencia iberoamericana interuniversitaria en 2025 y el Cibercoloquio Latinoamericano de Matemáticas (2020--2023); más de 30 problemas propuestos en competencias.
+\end{cvblock}
+
+\begin{cvblock}{Chaves Aguilar, Santiago}{Profesor invitado, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. en Matemática, University of Chicago, 2018--2022. Álgebra, geometría algebraica y teoría de representaciones; tesis sobre la conjetura de Schmid-Vilonen para módulos de Verma irreducibles y series discretas.
+  \item Msc. en Matemática, University of Chicago, 2016--2017.
+  \item B.A. en Matemática, Universidad de Costa Rica, 2012--2015.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor, Universidad de Costa Rica, 2022--2026. Geometría diferencial, geometría algebraica, álgebra lineal, cálculo en varias variables, ecuaciones diferenciales y variable compleja; crea y conduce el seminario de teoría de representaciones y geometría algebraica (2025--2026).
+  \item Instructor de cálculo, University of Chicago, 2017--2022; asistente de cursos (EDO, teoría de Galois, álgebra lineal), 2016--2017.
+  \item Profesor e instructor de seminario, Universidad de Costa Rica, 2015.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Álgebra, geometría algebraica y teoría (geométrica) de representaciones; factorización de vectores suaves y analíticos de representaciones de grupos de Lie.
+\cvsec{Producción académica}
+El CV no lista artículos; registra el trabajo ``A Survey on Representation Theory'' (REU, University of Chicago, 2015) y 13 charlas (2014--2026), entre ellas sobre factorización fuerte para vectores suaves (CIMPA, 2026) y teoría geométrica de representaciones (2019, 2023).
+\cvsec{Otros méritos}
+Lawrence and Josephine Prize for Excellence in Undergraduate Teaching (Chicago, 2019); medalla de oro OIMU 2014; bronce en la IMO 2010; proyectos de investigación 2022--2024 y 2024--2026 (UCR); entrenador del equipo costarricense en la IMO 2013--2015; idiomas: español, inglés, portugués.
+\end{cvblock}
+
+\begin{cvblock}{Fonseca Mora, Christian}{Profesor catedrático, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado en Matemática, énfasis en Probabilidad y Estadística, The University of Sheffield, Inglaterra, 2015. Tesis: Stochastic Analysis with Lévy Noise in the Dual of a Nuclear Space.
+  \item Bachillerato en Matemática, Universidad de Costa Rica, 2012; Bachillerato en Ciencias Actuariales, Universidad de Costa Rica, 2019.
+  \item Licenciatura en Economía (Summa Cum Laude), 2010, y Bachillerato en Economía, 2008, Universidad de Costa Rica.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor Catedrático, Universidad de Costa Rica, desde 05/2023; Profesor Asociado, 12/2019--05/2023.
+  \item Profesor Adjunto, Universidad de Costa Rica, 08/2019--12/2023 (fechas tal como constan en el CV).
+  \item Profesor Invitado, Universidad de Costa Rica, 01/2016--08/2019; Profesor Interino Licenciado, 03/2011--07/2012.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Análisis estocástico, procesos de Lévy, semimartingalas y EDP estocásticas en el dual de espacios nucleares.
+\cvsec{Producción académica}
+15 artículos publicados (2018--2026) y 5 preprints. Representativos: Stoch PDE: Anal Comp 13 (2025); Electron. J. Probab. 26 (2021); Studia Math. 254 (2020).
+\cvsec{Otros méritos}
+Dirección de una tesis de maestría (Universidad de Costa Rica, finalizada en 2019).
+\end{cvblock}
+
+\begin{cvblock}{Gutiérrez Pavón, Jonathan}{Profesor, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado en ciencias en la especialidad de matemáticas, CINVESTAV, México, 2018. Tesis: Spectral decompositions for diffusions.
+  \item Maestría en ciencias en la especialidad de matemáticas, CINVESTAV, México, 2015. Tesis: One dimensional diffusion processes and orthogonal polynomials.
+  \item Licenciatura en la enseñanza de la matemática, Universidad de Costa Rica, 2009; Bachillerato en la enseñanza de la matemática, Universidad de Costa Rica, 2004.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor, Universidad de Costa Rica, desde 2004. Cursos de cálculo, álgebra lineal, funciones derivables, principios de análisis, probabilidades y procesos estocásticos.
+  \item Coordinador durante dos años de la cátedra MA1210 y coordinador del curso de matemática para economía y estadística 2 (MA313).
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Difusiones, operadores aleatorios y procesos estocásticos (según sus tesis y publicaciones).
+\cvsec{Producción académica}
+8 artículos (2018--2025), todos con C.G. Pacheco. Representativos: ``The Killed Brox diffusion'', Stochastic Models (2022); ``A Schrodinger random operator with semimartingale potential'', Random Operators and Stochastic Equations (2023).
+\cvsec{Otros méritos}
+Elaboración de exámenes para el proyecto ExMa.
+\end{cvblock}
+
+\begin{cvblock}{Hernández Alvarado, Alberto}{Director del CIMPA y profesor catedrático, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. en matemática, Universidad de Porto, Portugal, 2016. Disertación: The quotient module, coring depth and factorisation algebras (supervisor: Lars Kadison).
+  \item Bachillerato en matemática, Universidad de Costa Rica, 2010.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Académico visitante: Universidad de Évora, Portugal (2025) y Universidad de Gent, Bélgica (2023).
+  \item Subdirector del CIMPA, UCR, 2021--2023; profesor e investigador invitado, Universidad de Costa Rica, 2017--2020.
+  \item Miembro del grupo de álgebra, combinatoria y teoría de grupos de CMUP, Universidad de Porto, 2011--2016; profesor asistente, Universidad de Costa Rica, 2010--2011.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Álgebra: profundidad de subgrupos y de extensiones, álgebras de factorización, módulos de álgebras de Hopf; también modelos epidémicos y geometría de datos (según publicaciones y proyectos).
+\cvsec{Producción académica}
+7 publicaciones (2014--2025). Representativas: Bull. Aust. Math. Soc. (2024); Revista Colombiana de Matemáticas 57 (2023); J. Computational Stat. (2022); Acta Math. Hungar. 152 (2017).
+\cvsec{Otros méritos}
+Organizador de la I y II Conferencia de Algebra y sus Aplicaciones (2023, 2025) y de Research Days III (2025--2026); miembro del Consejo Editorial de la Revista de Matemática: Teoría y Aplicaciones (2023); proyectos de investigación 2017--2026; coordinador de los proyectos ACAVAMA y SACM (2021--2024).
+\end{cvblock}
+
+\begin{cvblock}{Jiménez López, David}{Profesor, Escuela de Matemática, y Director del CIMM, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. en Matemáticas, Instituto Tecnológico de Georgia, EEUU, 2008. Tesis: Analysis of two problems in signal quantization for A/D conversion (asesor: Yang Wang).
+  \item B.Sc. en Matemáticas, Universidad de Costa Rica, 2001.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor, Escuela de Matemática, Universidad de Costa Rica, desde 03/2013; Director del CIMM desde 12/2018.
+  \item Investigador postdoctoral, Universidad de Houston, 2011--2013; Visiting Assistant Professor, Universidad de Texas A\&M, 2008--2011.
+  \item Asistente graduado de enseñanza e investigación, Instituto Tecnológico de Georgia, 2003--2008; instructor, Universidad de Costa Rica, 2001--2003.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Procesamiento de señales e imágenes digitales, imágenes médicas y neuronales, detección compresiva, análisis armónico aplicado, wavelets y frames, lingüística matemática y computacional, modelado de dinámica social.
+\cvsec{Producción académica}
+1 capítulo de libro, 7 artículos de investigación (2 enviados) y 4 artículos de conferencia. Representativos: Applied Computational Harmonic Analysis (2016); Acta Applicandae Mathematicae (2009); SIAM Journal on Mathematical Analysis 38 (2007).
+\cvsec{Otros méritos}
+Festa Fellowship Award, Georgia Institute of Technology (2007); miembro de la comisión organizadora de OLCOMA desde 2013; jefe de delegación costarricense a la IMO 2014; idiomas fluidos: español e inglés.
+\end{cvblock}
+
+\begin{cvblock}{Lacy Mora, Allan}{Instructor e investigador, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Licenciatura en Docencia, Universidad Estatal a Distancia, Costa Rica, 2021--2026. Tesis: percepción del profesorado sobre el uso de Sistemas de Álgebra Computacional en el curso MA1004 Álgebra Lineal (Universidad de Costa Rica, 2025).
+  \item Ph.D. en Matemáticas, University of Georgia, Athens, EEUU, 2009--2015. Tesis: On the index of genus one curves (tutor: Pete L. Clark).
+  \item B.S. en Matemáticas, Universidad de Costa Rica, 2002--2005.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Instructor e investigador, Universidad de Costa Rica, desde 2009. Teoría de Galois, topología, variable compleja, grupos y anillos, álgebra lineal (coordinador 2020--2023), ecuaciones diferenciales.
+  \item Instructor y teaching assistant, University of Georgia, 2011--2015: precálculo, geometría analítica y cálculo.
+  \item Instructor, Universidad de Costa Rica, 2006--2009: ecuaciones diferenciales, cálculo y matemática para computación y economía.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Teoría de números, geometría aritmética, dinámica aritmética y docencia de las matemáticas.
+\cvsec{Producción académica}
+2 artículos: Journal für die reine und angewandte Mathematik 2019 (749); International Journal of Number Theory 20 (2024).
+\end{cvblock}
+
+\begin{cvblock}{Loría Sorio, Jennifer de los Ángeles}{Profesora, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item PH.D., Instituto de Matemática Pura e Aplicada (IMPA), Rio de Janeiro, Brasil, 2023.
+  \item M. Sc., Instituto de Matemática Pura e Aplicada (IMPA), Rio de Janeiro, Brasil, 2017.
+  \item B. Sc., Universidad de Costa Rica, San José, Costa Rica, 2014.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesora, Universidad de Costa Rica, 2014 y 2023--actualidad.
+  \item Asistente (álgebra y finanzas), IMPA, 2018--2021.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Matemáticas aplicadas: regularización de problemas inversos, análisis de datos, epidemiología y modelización computacional.
+\cvsec{Producción académica}
+Cinco artículos científicos listados (2021--2025), por ejemplo en Vaccine (2021), Plos One (2023) e Inverse Problems (2025), sobre estimación de parámetros y vacunación en modelos epidemiológicos.
+\cvsec{Otros méritos}
+Participación en el comité organizador de encuentros de mujeres matemáticas del IMPA (2021); charlas en Costa Rica (2021, 2024); portugués avanzado en lectura y conversación; Python y Matlab.
+\end{cvblock}
+
+\begin{cvblock}{Mena Arias, Darío Alberto}{Profesor de la Escuela de Matemática e investigador del CIMPA, Universidad de Costa Rica; Director del Programa de Posgrado en Matemática}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. en Matemática, Georgia Institute of Technology, Atlanta, Estados Unidos, 2018.
+  \item M.Sc. en Matemática, Georgia Institute of Technology, Atlanta, Estados Unidos, 2015.
+  \item B.S. en Matemática, Universidad de Costa Rica, 2013.
+  \item B.S. en Enseñanza de la Matemática, Universidad de Costa Rica, 2010.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Director, Programa de Posgrado en Matemática, Universidad de Costa Rica, 2022--actualidad.
+  \item Profesor, Escuela de Matemática, e investigador adscrito al CIMPA, Universidad de Costa Rica, 2018--actualidad.
+  \item Instructor y asistente de investigación, Georgia Institute of Technology, 2013--2018.
+  \item Profesor a tiempo completo (cálculo) en la Universidad de Costa Rica, 2010--2013, y en la UNED (Enseñanza de la Matemática), 2010.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Análisis armónico (integrales singulares, operadores maximales y dispersos); probabilidad y análisis estocástico.
+\cvsec{Producción académica}
+Nueve artículos publicados (2017--2026) y cinco preprints (2025--2026). Por ejemplo: Stoch. Partial Differ. Equ. Anal. Comput. (2025); Pure Appl. Anal. (2020); New York J. Math. (2019).
+\cvsec{Otros méritos}
+Comité organizador de SIMMAC 2024 y 2026; coorganizador de sesión en el Mathematical Congress of the Americas (2025); español e inglés.
+\end{cvblock}
+
+\begin{cvblock}{Montalto Cruz, Carlos}{Profesor Catedrático, Departamento de Matemáticas, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. en Matemáticas, Purdue University, EEUU, agosto 2008--agosto 2024 (periodo tal como figura en el CV); asesor: Plamen Stefanov. Tesis: problemas inversos para ecuaciones elípticas e hiperbólicas.
+  \item Bachillerato en Matemáticas, Universidad de Costa Rica, marzo 2003--marzo 2008.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor Catedrático, Universidad de Costa Rica, desde setiembre 2017. Docencia de grado y posgrado; desarrolla algoritmos de imagen fotoacústica; coordina el proyecto OLCOMA.
+  \item Profesor Asistente (investigador postdoctoral con Gunther Uhlmann), University of Washington, 2014--2017.
+  \item Asistente de investigación y docencia, Purdue University, 2008--2014.
+  \item Profesor visitante (2006--2008) y asistente de docencia (2004--2006), Universidad de Costa Rica.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Problemas inversos, modelación matemática e imagenología.
+\cvsec{Producción académica}
+Siete artículos publicados (2013--2024) y cinco preprints. Por ejemplo: Inverse Problems (2013, 2015, 2016); ACM Transactions on Graphics (2015); IEEE VR (2024).
+\cvsec{Otros méritos}
+AMS-Simons Travel Award (2016); dirección de estudiantes de doctorado y maestría; inglés a nivel profesional.
+\end{cvblock}
+
+\begin{cvblock}{Montenegro Guzmán, Samaria}{Directora del Departamento de Matemática y Profesora Asociada, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado en Lógica Matemática, Université Paris Diderot, París, Francia, 2011--2015. Tesis: ``Théorie des modèles des corps pseudo-réels clos et pseudo-p-adiquement clos'' (directora: Zoé Chatzidakis).
+  \item Maestría en Lógica Matemática y Fundamentos de la Informática, Université Paris Diderot, París, Francia, 2011.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Directora del Departamento de Matemática, Universidad de Costa Rica, 2025--presente.
+  \item Profesora Asociada, Universidad de Costa Rica, 2017--presente.
+  \item Postdoctorado, Universidad de los Andes, Bogotá, Colombia, hasta 2017.
+  \item Program Associate, MSRI, Berkeley, Estados Unidos, enero--mayo 2014.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Lógica matemática y teoría de modelos de cuerpos (cuerpos pseudo real cerrados, pseudo p-ádicamente cerrados, NTP2, imaginarios y grupos definibles).
+\cvsec{Producción académica}
+Siete artículos (2017--2026). Por ejemplo: Transactions of the AMS (2021); Journal of the Institute of Mathematics of Jussieu (2020); Model Theory (2025).
+\cvsec{Otros méritos}
+Miembro del comité ejecutivo y del consejo de la Association for Symbolic Logic (2026--presente); embajadora de la IMU para el comité de mujeres en matemáticas (2021--presente); miembro del comité científico del CIMPA (2020--2024); fondos de investigación UCR (2020--2024).
+\end{cvblock}
+
+\begin{cvblock}{Mora Sáenz, Germán José}{Universidad de Costa Rica (2025--presente)}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado en Matemática, The Ohio State University, Columbus, Estados Unidos, 2022--2025. Área: Mecánica de Fluidos.
+  \item Maestría en Matemática Aplicada, The Ohio State University, Columbus, Estados Unidos, 2019--2022.
+  \item Bachillerato en Matemática, Universidad de Costa Rica, 2013--2017, graduación con honores.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Universidad de Costa Rica, 2025--presente.
+  \item The Ohio State University, 2019--2025.
+  \item Universidad de Costa Rica, 2017--2019.
+\end{cvlist}
+\cvsec{Otros méritos}
+Idiomas: español e inglés.
+\end{cvblock}
+
+\begin{cvblock}{Ramírez González, José Alexander}{Profesor catedrático, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D., Courant Institute of Mathematical Sciences, New York University, Estados Unidos, 1996--2000; tutor: S.R.S. Varadhan.
+  \item Bachiller en matemáticas, Universidad de Costa Rica, 1991--1995.
+  \item Bachiller en ingeniería eléctrica, Universidad de Costa Rica, 1990--1995.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor, Escuela de Matemática, Universidad de Costa Rica, 1995--1996 y julio 2003--presente (catedrático). Director del CIMPA (2018--2021) y del posgrado de matemáticas (2005--2006); miembro de la Comisión de Doctorado en Ciencias (2013--2025).
+  \item Presidente y desarrollador, Quanto Soluciones Analíticas y Cuantitativas (software de análisis de riesgo), diciembre 2014--presente.
+  \item Director de modelación matemática, Banco Nacional de Costa Rica, 2004--2010; profesor en la Universidad Nacional (2010--2013) y en Ingeniería Eléctrica de la UCR (2014--2016).
+  \item H.C. Wang Assistant Professor, Cornell University, 2000--2003; profesor visitante en Harvard (2008--2009) y University of Colorado, Boulder (2006).
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Probabilidad, procesos estocásticos, ecuaciones en derivadas parciales y física matemática (núcleos del calor, gases reticulados, matrices aleatorias); modelos de riesgo financiero.
+\cvsec{Producción académica}
+Trece artículos (2001--2016). Por ejemplo: Journal of the AMS (aceptado, 2010); Comm. Pure Appl. Math. (2006, 2010); Probab. Theory Relat. Fields (2016).
+\cvsec{Otros méritos}
+Premio TWAS-Conicit (2012); Premio Wilhelm T. Magnus (2001); presidente de la Sociedad Latinoamericana de Probabilidad y Estadística Matemática (2026); siete tesis dirigidas (maestría y licenciatura; una en proceso).
+\end{cvblock}
+
+\begin{cvblock}{Rodríguez Rojas, Oldemar}{Profesor e investigador, Instituto Tecnológico de Monterrey (México); Profesor Catedrático de la Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Postdoctorado en ``Data Mining and Applications'', Escuela de Estadística, Stanford University, EE.\ UU., 2009--2011.
+  \item Doctor, U.F.R. Mathématique de la Décision, Université de Paris IX -- Dauphine, Francia, 2000 (mención Très Honorable). Tutor: Edwin Diday. Clasificación y modelos lineales en análisis de datos simbólicos.
+  \item Diploma de Estudios a Profundidad en Informática (D.E.A.), Université de Paris IX -- Dauphine, Francia, 1998.
+  \item Magister Scientae en Computación, Instituto Tecnológico de Costa Rica, 1994 (magna cum laude).
+  \item Licenciado (1991) y Bachiller (1988) en Matemática Pura, Universidad de Costa Rica.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor e investigador, Instituto Tecnológico de Monterrey, México, desde 2019.
+  \item Vicerrector de Administración, Universidad de Costa Rica, enero--junio 2021.
+  \item Subdirector (2016--2019) y director a.i. (2016--2018) del CIMPA, UCR.
+  \item UCR: Consejo Universitario (2008--2011, director 2009--2010); decano (2004--2008) y vicedecano (2002--2004) de Ciencias; director de la Maestría en Matemática (2001--2003).
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Ciencias de la Computación y Matemática Aplicada: análisis de datos simbólicos, minería de datos, ciencia de datos y aprendizaje automático.
+\cvsec{Producción académica}
+41 entradas numeradas de publicaciones (artículos, actas, libros y tesis), más 5 paquetes de R en CRAN (RSDA, discoveR, predictoR, regressoR, traineR). Ejemplos: ``Regression Models for Symbolic Interval-Valued Variables'', Entropy, 2021; ``Optimized dimensionality reduction methods for interval-valued variables and its application to face recognition'', Entropy, 2019.
+\cvsec{Otros méritos}
+Medalla de Oro al Inventor Destacado 2004 (OMPI); Premio Nacional de Tecnología Clodomiro Picado Twight 2001. Inglés y francés.
+\end{cvblock}
+
+\begin{cvblock}{Rosales Ortega, José}{Profesor catedrático, Universidad de Costa Rica y Tecnológico de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado en Matemáticas, CINVESTAV-IPN, México, 2006. Acciones de grupos de Lie sobre variedades pseudo-riemannianas; tesis ``The Gromov's Centralizer Theorem for Semisimple Lie Group Actions''.
+  \item Maestría en Matemática Pura, Universidad de Costa Rica, 1996.
+  \item Bachillerato en Matemática Pura, Universidad de Costa Rica, 1989.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor catedrático, Universidad de Costa Rica y Tecnológico de Costa Rica. Cursos: Cálculo III, Cálculo y Geometría Analítica, Ecuaciones Diferenciales para Ingeniería, Introducción a las Variables Complejas.
+  \item Subdirector, Escuela de Matemática, UCR, noviembre 2023--noviembre 2025; director de la Comisión de Trabajos Finales de Graduación e Investigación, 2022--2025.
+  \item Director interino del Posgrado en Matemática, UCR, II semestre de 2012.
+  \item Coordinador de Ecuaciones Diferenciales para Ingeniería (2009--2016) y de Cálculo III (desde 2010), UCR.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Geometría diferencial; acciones de grupos de Lie y estructuras geométricas; operadores de Toeplitz en espacios de Bergman y Fock; teoría de operadores y espacios analíticos.
+\cvsec{Producción académica}
+El CV lista referencias seleccionadas (7 artículos de investigación, 1 capítulo aceptado y otras publicaciones arbitradas). Ejemplos: ``A geometric splitting theorem for actions of semisimple Lie groups'', Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg, 2021; Boletín de la Sociedad Matemática Mexicana, 2024 y 2017.
+\cvsec{Otros méritos}
+Investigador principal de los proyectos CIMPA-UCR ``Operadores Integrales en Espacios de Funciones Analíticas'' (2026--2029) e ``Interacciones del análisis y la geometría'' (2023--2024).
+\end{cvblock}
+
+\begin{cvblock}{Sánchez Chavarría, Adriana}{Profesora Adjunta, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item MSc. Estadística, Universidad de Costa Rica, 2024--actualidad (en curso).
+  \item PhD. Matemáticas (Sistemas Dinámicos), Instituto de Matemática Pura e Aplicada (IMPA), 2014--2018. Orientador: Marcelo Viana; tesis sobre el problema de continuidad de los exponentes de Lyapunov.
+  \item MSc. Matemáticas, Instituto de Matemática Pura e Aplicada (IMPA), 2012--2014. Orientador: Robert Morris.
+  \item BSc. Ciencias Actuariales (2004--2011) y BSc. Matemáticas (2004--2008), Universidad de Costa Rica.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesora Adjunta, Escuela de Matemática, UCR, 2023--presente; profesora invitada exbecaria doctora, 2020--2023; profesora interina, 2009--2012.
+  \item Posdoctorado, Instituto de Ciências Matemáticas e de Computação, Universidade de São Paulo, 2018--2020.
+  \item Cursos: ecuaciones diferenciales (ordinarias, parciales, aplicadas), análisis I, introducción a los sistemas dinámicos, herramientas para el cálculo actuarial.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Sistemas dinámicos, exponentes de Lyapunov, estados de equilibrio y teoría ergódica; aprendizaje automático aplicado a caudales extremos.
+\cvsec{Producción académica}
+4 artículos o capítulos y 1 preprint, además de la tesis doctoral. Ejemplos: ``Analyticity of the Lyapunov exponents of random products of quasi-periodic cocycles'', Nonlinearity, 2023; ``Equilibrium states for maps isotopic to Anosov'', Nonlinearity, 2021.
+\cvsec{Otros méritos}
+Investigadora principal de proyectos de investigación y de Educación Continua del CIMPA (2020--2026); consejo editorial de la Revista de Matemática: Teoría y Aplicaciones (desde 2021); comités organizadores del SIMMAC y de la conferencia IFCS. Español, inglés y portugués.
+\end{cvblock}
+
+\begin{cvblock}{Sánchez Guevara, Jesús}{Profesor Asociado, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado Académico, Universidad de Costa Rica (el CV no indica año de finalización).
+  \item Doctorado en Matemáticas, Université Paris 7, Francia, 2016. Topología Algebraica y Teoría de Categorías; tesis ``Estructuras E-infinito en L-álgebras''.
+  \item Maestría con Especialidad Lógica Matemática y Fundamentos de la Informática, Université Paris 7, Francia, 2011.
+  \item Licenciatura en Docencia, Universidad en Ciencias Administrativas San Marcos, Costa Rica, 2023.
+  \item Bachillerato en Matemática Pura, Universidad de Costa Rica, 2007.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor Asociado, Escuela de Matemática, UCR, desde marzo de 2024 (asociado desde septiembre de 2023; adjunto 2022--2023).
+  \item Profesor interino (2007--2010, 2016, 2022) y profesor invitado exbecario doctor (2016--2021), Escuela de Matemática, UCR.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Topología algebraica, teoría de categorías, óperadas y L-álgebras; lógica; clima espacial.
+\cvsec{Producción académica}
+6 artículos y 1 libro. Ejemplos: ``Operads libres sobre módulos diferenciales graduados'', Revista de Matemática: Teoría y Aplicaciones, 2022; ``A geometrical description for interplanetary propagation of Earth-directed CMEs based on radiative proxies'', Monthly Notices of the Royal Astronomical Society, 2020; libro ``Álgebra lineal fundamental'', Editorial UCR, 2020.
+\cvsec{Otros méritos}
+Investigador asociado del proyecto ``Herramientas científicas para optimizar el estudio del clima espacial'' (2020--2022). Francés, inglés e italiano.
+\end{cvblock}
+
+\begin{cvblock}{Sánchez Peña, Fabio}{Profesor, Escuela de Matemática, Universidad de Costa Rica (desde septiembre de 2025)}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D., Biological Statistics and Computational Biology, Cornell University, EE.\ UU., enero de 2007 (Sloan Scholar). Tesis: ``Theoretical Studies in Epidemiology and Social Dynamics''; director: Carlos Castillo-Chavez.
+  \item B.S. in Computer Science, Minor in Mathematics, Universidad Metropolitana, Puerto Rico, junio de 2001.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Universidad de Costa Rica: profesor visitante desde 2014, asociado 2019--2025, profesor desde 2025; director del Departamento de Matemática Aplicada, marzo 2019--febrero 2023. Fundador de PREDICDATA (analítica de datos), 2026--presente.
+  \item Arizona State University: profesor investigador asistente (2010--2012) y profesor adjunto (2007--2015). Gerente de Credit Strategy, American Express, 2006--2009.
+  \item Profesor en el Colegio Científico Costarricense, 2016 y 2023--presente.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Biología matemática, modelos epidemiológicos, comportamiento humano adaptativo, salud pública, arbovirus (dengue, chikungunya, Zika) y dinámica social.
+\cvsec{Producción académica}
+35 publicaciones (artículos y capítulos), 17 preprints y 22 informes técnicos. Ejemplos: ``Assessing dengue fever risk in Costa Rica by using climate variables and machine learning techniques'', PLOS Neglected Tropical Diseases, 2023; ``A multilayer network model of Covid-19'', Epidemics, 2022.
+\cvsec{Otros méritos}
+Editor jefe fundador de Epi-SCIENCE (desde 2021); editor académico de Scientific Reports, PLOS One y Frontiers in Epidemiology. Dirigió 5 tesis de maestría concluidas (5 en curso) y 1 posdoctorado; proyectos UCREA 2018, 2020 y 2023.
+\end{cvblock}
+
+\begin{cvblock}{Segura Ugalde, Esteban}{Director del Departamento de Matemática Aplicada (2023--2027) e investigador del CIMPA, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item PhD. en Matemática, especialización en Álgebra Lineal Numérica / Análisis Numérico, XLIM -- DMI, Université de Limoges, Francia, 2011--2015 (Très Honorable). Tesis: ``Computation of Invariant Pairs and Matrix Solvents''.
+  \item Master 2 ACSYON: Algorithmic, Symbolic Computation and Numerical Optimization, Université de Limoges, 2010--2011. Tesis: ``Polynomial Root-finding via Structured Matrices''.
+  \item Bachillerato en Matemática, Universidad de Costa Rica, 2002--2008.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor y coordinador de cursos, Facultad de Matemática, Universidad de Costa Rica, 2009--2010 y 2015--presente; Maestría Profesional, UCR, 2017 y 2019.
+  \item Profesor y coordinador de cursos, Universidad Nacional de Costa Rica, 2018--presente.
+  \item Investigador, CIMPA, UCR, 2015--presente; consultor en proyectos del CIMPA (2017; ACAVAMA, 2021--presente).
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Cálculo simbólico-numérico, álgebra lineal numérica, matrices estructuradas y optimización numérica.
+\cvsec{Producción académica}
+12 publicaciones (incluye la tesis doctoral y 2 libros), 1 aceptada y 5 en preparación. Ejemplos: ``A contour integral approach to the computation of invariant pairs'', Theoretical Computer Science, 2017; ``Computation of Matrix p-th Root Using Moments'', Journal of Computational and Applied Mathematics, 2024.
+\cvsec{Otros méritos}
+Comisión editorial de la Revista de Matemática: Teoría y Aplicaciones (desde 2015); coorganizador de Structured Matrix Days (2014, 2015) y del SIMMAC (2016--2022). Inglés (TOEIC 845/990) y francés (DELF A2).
+\end{cvblock}
+
+\begin{cvblock}{Tall, El Hadji Yaya}{Lecturer in Mathematics, Department of Mathematics, Universidad de Costa Rica (2024--presente)}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. in Mathematics, IMPA, Rio de Janeiro, Brasil, 2018. Tesis: Moduli of continuity of Lyapunov exponents for random GL(2)-cocycles (asesor: Marcelo Viana).
+  \item Postgraduate Diploma, ICTP, Trieste, Italia, 2014. Tesis: Hyperbolic dynamical systems and the Horseshoes for the Hénon map (asesor: Stefano Luzzatto).
+  \item M.Sc. in Mathematics, UCAD, Dakar, Senegal, 2012; B.Sc. in Mathematics, UCAD, Dakar, Senegal, 2010.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Lecturer in Mathematics, Universidad de Costa Rica, 2024--presente. Cursos de Topología General, Introducción a la Teoría Ergódica y cursos de servicio (MA1004, MA1005, MA0293, MA0294, MA0321, MA0421, MA0551, CA0151).
+  \item Postdoctoral Researcher, Centro de Estudos em Analytics e Políticas de Segurança, FGV EAESP, Brasil, 2022--2024.
+  \item Postdoctoral Researcher, Instituto de Matemática e Estatística, Universidade de São Paulo, Brasil, 2018--2022; cursos en IME-USP (2020) e IMPA (2018).
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Sistemas dinámicos y teoría ergódica; exponentes de Lyapunov de cociclos aleatorios.
+\cvsec{Producción académica}
+Dos artículos en revistas arbitradas y tres preprints. Representativos: Transactions of the American Mathematical Society 373 (2020), con M. Viana; Nonlinearity 36 (2023), sobre analiticidad de exponentes de Lyapunov.
+\cvsec{Otros méritos}
+Miembro del comité científico de EMALCA (2024) y del comité organizador y científico de SIMMAC (2028). Idiomas: peul, francés, wolof, inglés, portugués y español (fluidos), italiano (intermedio).
+\end{cvblock}
+
+\begin{cvblock}{Ugalde Gómez, William Javier}{Catedrático, Escuela de Matemáticas, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D., Department of Mathematics, The University of Iowa, Estados Unidos, 2003. Tesis: ``Conformal invariants and the Wodzicki residue'' (director: Thomas P. Branson).
+  \item Diploma in Mathematics, The Abdus Salam International Centre for Theoretical Physics, Trieste, Italia, 1997--1998.
+  \item Magister Scientiae, Universidad de Costa Rica, 1996. Tesis: ``Operadores de Dirac en fibrados de base esférica'' (director: Joseph C. Várilly).
+  \item Licenciatura (1992) y Bachiller (1991) en la Escuela de Matemáticas, Universidad de Costa Rica.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Catedrático, Escuela de Matemáticas, UCR, diciembre 2008--presente (Profesor Asociado 2006--2008); Catedrático Interino, Escuela de Matemáticas, Universidad Nacional, Costa Rica, 2011--presente.
+  \item Director de la Escuela de Matemáticas, UCR, 2015--2021; subdirector, 2009--2010.
+  \item Research Assistant Professor, Purdue University, Estados Unidos, 2003--2006; instructor en The University of Iowa (1999--2003), Kirkwood College (2001) y UCR (1992--1997).
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Geometría no conmutativa, residuo de Wodzicki, invariantes conformes, simetrías de sistemas cuánticos; también enseñanza del análisis.
+\cvsec{Producción académica}
+Diez publicaciones (nueve artículos o capítulos y el libro ``Fundamentos de Análisis Real'', UNED, 2014) y cuatro preprints en arXiv. Representativos: Communications in Mathematical Physics 261 (2006); Journal of Geometry and Physics 58 (2008); SIGMA 3 (2007).
+\cvsec{Otros méritos}
+Siete proyectos de investigación (principal o asociado) en CIMM y CIMPA, 2007--2026, el último vigente; cinco tesis dirigidas (licenciatura y maestría); árbitro de revistas de física matemática.
+\end{cvblock}
+
+\begin{cvblock}{Villalobos Alvarado, Jorge}{Docente e investigador, Escuela de Matemática y CIMPA, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado en Matemática (PhD), Universidad Estatal de Louisiana, 2024; equiparado por la UCR al grado de Doctorado Académico en diciembre de 2025. Tesis: Reducibility of Schrödinger Operators on Multilayer Graphs.
+  \item Maestría en Matemática (MS), Universidad Estatal de Louisiana, 2022.
+  \item Bachillerato en Física, Universidad de Costa Rica, 2018; Bachillerato en Matemática, Universidad de Costa Rica, 2017.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Docente e investigador, Universidad de Costa Rica, julio 2024--actualidad. Cálculo, Principios de Geometría y Geometría Diferencial; investigación en física matemática en el CIMPA.
+  \item Asistente y docente, Universidad Estatal de Louisiana, 2018--2024. Cursos de cálculo y precálculo; asistente de investigación de enero de 2020 a julio de 2021.
+  \item Docente (2017--2018) y asistente (2016), Universidad de Costa Rica. Cálculo II, Álgebra Lineal y Cálculo I.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Física matemática, teoría espectral, operadores de Schrödinger en grafos (redes cristalinas y grafeno en campos magnéticos), análisis funcional, análisis de Fourier y ecuaciones diferenciales.
+\cvsec{Producción académica}
+Un artículo publicado: Shipman y Villalobos, ``Stable defect states in the continuous spectrum of bilayer graphene with magnetic field'', Physica D: Nonlinear Phenomena 455 (2023); un trabajo en curso; tesis doctoral (2024); seis presentaciones seleccionadas (charlas y un póster) en congresos y seminarios (2021--2023).
+\cvsec{Otros méritos}
+Evaluación docente en la UCR de 9.72 (II-2024) y 9.90 (I-2026); Graduate School Enrichment Award (Universidad Estatal de Louisiana); mención honorífica en la CIIM (2014); mejor resultado en el examen de admisión de la UCR en 2011.
+\end{cvblock}
+
+\begin{cvblock}{Zamora Calero, Rafael}{Profesor Asociado, Escuela de Matemática, y Subdirector del CIMPA, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Doctorado en Matemáticas, Université Pierre et Marie Curie, 2011--2015. Tesis: Problèmes de séparation de relations analytiques (director: Dominique Lecomte).
+  \item Máster (M2) en Lógica Matemática e Informática Fundamental, Université Paris Diderot, 2011.
+  \item Licenciatura en Matemática, Universidad de Costa Rica, 2009.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Profesor Asociado, Escuela de Matemática, UCR, 2022--presente; subdirector del CIMPA, UCR, 2023--presente; editor en jefe, Revista de Matemática: Teoría y Aplicaciones, 2022--presente.
+  \item Profesor Adjunto, Escuela de Matemática, UCR, 2020--2022; profesor interino, instructor y adjunto, 2017--2022.
+  \item Académico invitado, Departamento de Matemática, Universidad de los Andes, Colombia, 2015--2017; profesor interino, UCR, 2008--2010.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Según sus publicaciones y charlas: lógica matemática, teoría descriptiva de conjuntos y relaciones de equivalencia de Borel, teoría de modelos y grupos, y factorización de vectores suaves en representaciones de grupos de Lie.
+\cvsec{Producción académica}
+Cuatro artículos publicados (2015--2021) y dos preimpresiones (2021, 2026). Representativos: Topology and its Applications 182 (2015); Notre Dame Journal of Formal Logic 61 (2020); Archive for Mathematical Logic 60 (2021).
+\cvsec{Otros méritos}
+Investigador principal, Fondo Semilla, UCR (2020--2023); organizador principal de EMALCA 2024, del XIX SLALM (2021--2022) y del XXVI SIMMAC (2028); comité científico del XX SLALM (2026); charlas en Turín, Lima, Bogotá y TU Wien.
+\end{cvblock}
+
+\begin{cvblock}{Zamora Luna, Oscar}{Assistant Professor, Department of Mathematics, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. in Mathematics and its Applications, Central European University, 2016--2020. Tesis: Quantitative and Extremal Problems in Graphs and Hypergraphs (supervisor: Ervin Győri).
+  \item B.Sc. in Mathematics, Universidad de Costa Rica, 2011--2014.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Assistant Professor, Department of Mathematics, Universidad de Costa Rica, 2020--presente.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Combinatoria extremal, teoría de grafos, combinatoria probabilística, teoría de Ramsey y métodos algebraicos en combinatoria.
+\cvsec{Producción académica}
+Veinte artículos y dos preprints en arXiv (2019, 2024), la mayoría en coautoría con E. Győri. Representativos: ``The Maximum Number of Pentagons in a Planar Graph'', Journal of Graph Theory 108 (2025); ``Turán numbers of Berge trees'', Discrete Mathematics 346 (2023); ``The Structure of Hypergraphs without long Berge cycles'', Journal of Combinatorial Theory, Series B (2020).
+\cvsec{Otros méritos}
+Charlas en el Instituto Rényi (Budapest), Eurocomb 2019 (Bratislava), la British Combinatorial Conference 2019 y seminarios en Karlsruhe, Oxford y Lyon, entre otros.
+\end{cvblock}
+
+\begin{cvblock}{Zúñiga Rojas, Ronald Alberto}{Investigador y Profesor Asociado, Escuela de Matemática, Universidad de Costa Rica}
+\cvsec{Formación académica}
+\begin{cvlist}
+  \item Ph.D. en Matemáticas (con distinción), Universidade de Coimbra y Universidade do Porto, Portugal, 2015. Tesis: Homotopy Groups of Moduli of Higgs Bundles (supervisor: Peter B. Gothen).
+  \item Doctor en Matemática, equiparado a Doctorado Académico, Universidad de Costa Rica, 2017 (reconocimiento y validación del grado).
+  \item Bachillerato en Matemática, Universidad de Costa Rica, 2009.
+\end{cvlist}
+\cvsec{Experiencia profesional y docente}
+\begin{cvlist}
+  \item Investigador y Profesor Asociado, Escuela de Matemática, UCR, 2019--presente. Coordinador del curso MA-1023 Cálculo y Optimización (2017) y de la Comisión de Docencia de la Escuela (2021--2022).
+  \item Investigador y profesor invitado, Escuela de Matemática, UCR, 2015--2019.
+  \item Instructor (2009--2010) y asistente profesor de matemáticas (2003--2008), Escuela de Matemática, UCR.
+\end{cvlist}
+\cvsec{Áreas de especialidad e investigación}
+Geometría y topología; también álgebra, geometría algebraica, geometría y topología diferencial. Fibrados de Higgs, variedades de caracteres y espacios móduli.
+\cvsec{Producción académica}
+Seis artículos en revistas con referees, un libro (Springer Briefs in Mathematics, 2021, con A. Zamora) y cinco preprints en progreso. Representativos: Geometriae Dedicata 213 (2021); Revista Matemática Complutense 35 (2022); Portugaliae Mathematica 74 (2017).
+\cvsec{Otros méritos}
+Responsable del proyecto 821-C4-650 de colaboración Costa Rica--Alemania (DFG-CONARE) sobre variedades de caracteres y fibrados de Higgs; organizador del XXIII SIMMAC (2022) y de un taller sobre ese tema (2025); numerosas charlas y participaciones en congresos y escuelas (2012--2025). Idiomas: español, portugués, inglés e italiano.
+\end{cvblock}
 
 \end{document}
