@@ -3,9 +3,9 @@
 Generar las tablas del resumen ejecutivo (OPES-CONARE) a partir de las fuentes del proyecto.
 
 Salidas (se incluyen desde resumen-ejecutivo.tex):
-  resumen-ejecutivo-cursos.tex         apartado 8: listado de cursos (nombre, créditos, ciclo)
-  resumen-ejecutivo-descripciones.tex  apartado 9: nombre, objetivo general y temática resumida
-  resumen-ejecutivo-docentes.tex       apartado 10: correspondencia curso-docente
+  resumen-ejecutivo-cursos.tex         apartado 10: listado de cursos (nombre, créditos, ciclo)
+  resumen-ejecutivo-descripciones.tex  apartado 11: nombre, objetivo general y temática resumida
+  resumen-ejecutivo-docentes.tex       apartado 12: correspondencia curso-docente
 
 Fuentes: malla-curricular-tablas.tex, propuesta-lista-cursos.tex, Cursos/*-cuerpo.tex,
 propuesta-gestion-plan.tex (tabla de profesores por curso) y Documentos/optativas_otras_carreras.xlsx.
@@ -127,7 +127,7 @@ def name_of(code: str, fallback: str = "") -> str:
     return NAMES.get(code) or fallback
 
 
-# ----------------------------------------------------------------------------- apartado 8
+# ----------------------------------------------------------------------------- apartado 10
 BLOCKS = [
     ("Bloque común (ciclos I a III)", "Total créditos bloque común"),
     ("Énfasis en matemática pura (ciclos IV a VIII)", "Total créditos bachillerato pura"),
@@ -246,7 +246,7 @@ def build_cursos() -> str:
     return "\n".join(out)
 
 
-# ----------------------------------------------------------------------------- apartado 9
+# ----------------------------------------------------------------------------- apartado 11
 def top_items(cont: str) -> list[str]:
     toks = list(re.finditer(r"\\begin\{(?:enumerate|itemize)\}|\\end\{(?:enumerate|itemize)\}|\\item\b", cont))
     depth, items = 0, []
@@ -328,7 +328,7 @@ def build_descripciones() -> str:
     return "\n".join(out)
 
 
-# ----------------------------------------------------------------------------- apartado 10
+# ----------------------------------------------------------------------------- apartado 12
 def parse_docentes() -> list[dict]:
     """Cursos de la tabla de profesores por curso de propuesta-gestion-plan.tex, en orden de aparición."""
     t = read(ROOT / "propuesta-gestion-plan.tex")
