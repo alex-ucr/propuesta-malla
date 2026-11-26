@@ -238,7 +238,18 @@ def build_cursos() -> str:
     out += longtable_open(r"|l|>{\raggedright\arraybackslash}p{6cm}|c|>{\raggedright\arraybackslash}p{4.2cm}|",
                           "Cursos optativos de otra disciplina", "res:opt-otra",
                           hdr("Sigla", "Nombre del curso", "Créditos", "Unidad académica"), 4)
+    # Cursos CA del plan (malla + optativas): los imparte la Escuela de Matemática.
+    ca_rows: dict[str, tuple[str, str]] = {}
+    for line in out:
+        m = re.match(r"(?:\d+ & )?(CA-\d{4}) & (.*?) & (\d+|---)(?: & .*)? \\\\ \\hline", line)
+        if m:
+            ca_rows[m.group(1)] = (m.group(2), m.group(3))
+    ca_lines = [rf"{c} & {nm} & {cr} & Escuela de Matemática \\ \hline" for c, (nm, cr) in sorted(ca_rows.items())]
+    ca_done = False
     for r in rows:
+        if not ca_done and sigla(str(r["Sigla"]).strip()) >= "CI":
+            out += ca_lines
+            ca_done = True
         out.append(rf"{sigla(str(r['Sigla']).strip())} & {esc(str(r['Nombre']).strip())} & {r['Créditos']} & "
                    rf"{esc(str(r['Escuela que ofrece el curso']).replace('Escuela de ', '').replace('Escuela ', '').strip())} \\ \hline")
     out += [r"\end{longtable}", r"\endgroup", ""]
