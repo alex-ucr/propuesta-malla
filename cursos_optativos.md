@@ -49,11 +49,11 @@ Fuente de verdad: `scripts/optativas_catalog.json`, `propuesta-elementos-program
 | MA-0928 | Procesos Estocásticos |
 | MA-0917 | Estadística II |
 | CA-0512 | Modelos lineales |
-| CA-0612 | Series de Tiempo |
+| CA-0415 | Series de Tiempo |
 | MA-0406 | Introducción a la Optimización |
 | MA-0477 | Ecuaciones Diferenciales Parciales Aplicadas |
 | CA-0203 | Herramientas de Ciencia de Datos I |
-| CA-0304 | Herramientas de Ciencia de Datos II |
+| CA-0305 | Herramientas de Ciencia de Datos II |
 | MA-0759 | Tópicos de Matemática Financiera |
 | MA-0790 | Tópicos de Análisis |
 | MA-0791 | Tópicos de Probabilidad |
