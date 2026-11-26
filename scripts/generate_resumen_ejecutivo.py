@@ -20,6 +20,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from generate_optativas_otra_disciplina_tex import load_rows  # noqa: E402
+from descripciones_resumidas import RESUMEN  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 CURSOS = ROOT / "Cursos"
@@ -333,7 +334,7 @@ def build_descripciones() -> str:
            "% Lista: por curso, créditos, descripción, objetivo general y temática resumida.", "",
            r"\begingroup", r"\small",
            r"\begin{itemize}[leftmargin=1.3em, itemsep=10pt, topsep=4pt, label={\color{Azul-UCR}$\blacksquare$}]"]
-    n, skipped = 0, []
+    n, skipped, nuevos = 0, [], []
     for c in codes:
         f = cuerpo_for(c)
         d = describe(f) if f else None
@@ -341,7 +342,11 @@ def build_descripciones() -> str:
             skipped.append(c)
             continue
         n += 1
-        desc = "\n\n".join(d["desc"]) if d["desc"] else r"\textit{Pendiente de elaboración.}"
+        if d["code"] in RESUMEN:  # párrafo único, redactado en descripciones_resumidas.py
+            desc = RESUMEN[d["code"]]
+        else:
+            nuevos.append(d["code"])
+            desc = " ".join(d["desc"]) if d["desc"] else r"\textit{Pendiente de elaboración.}"
         out += [
             rf"\item {{\color{{Azul-UCR}}\textbf{{{d['code']} {d['name']}}}}}\par\nopagebreak\smallskip",
             r"\begin{itemize}[leftmargin=1.1em, itemsep=3pt, topsep=2pt, parsep=2pt, label={\textendash}]",
@@ -353,7 +358,7 @@ def build_descripciones() -> str:
             "",
         ]
     out += [r"\end{itemize}", r"\endgroup", ""]
-    print("descripciones:", n, "| sin programa:", skipped)
+    print("descripciones:", n, "| sin programa:", skipped, "| sin resumen redactado:", nuevos)
     return "\n".join(out)
 
 
