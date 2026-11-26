@@ -27,7 +27,7 @@ CUROS = ROOT / "Cursos"
 SIGLA_ALIASES: dict[str, str] = {
     "MA-0261": "MA-0361",
     "MA-0615": "MA-0556",
-    "MA-0625": "MA-0730",
+    "MA-0625": "MA-0716",
 }
 
 

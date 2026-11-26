@@ -271,7 +271,7 @@ Los párrafos sin listas (p. ej. CA-0721) no generan entradas aquí.
 - En la evaluación, se sugiere utilizar estrategias que promuevan el trabajo constante de parte de las personas estudiantes a lo largo del ciclo lectivo. Por ejemplo, esto se puede hacer por medio de listas de ejercicios recomendados o proyectos.
 - Dado que hoy en día la mayoría del trabajo en matemática, tanto a nivel académico como profesional, es de naturaleza colaborativa, se sugiere a la persona docente implementar estrategias que promuevan el trabajo en equipo.
 
-### `MA0625-analisis-real-i-cuerpo.tex`
+### `MA0716-analisis-real-i-cuerpo.tex`
 
 - Fomentar el desarrollo de intuición sobre los conceptos estudiados en el curso.
 - Promover la comunicación clara y rigurosa de argumentos e ideas matemáticas de manera oral y escrita.

@@ -15,15 +15,7 @@
       "SH11",
       "SS04",
       "SS14"
-    ],
-    "año": "II",
-    "ciclo": "IV",
-    "tipo_curso": "Teórico-práctico",
-    "creditos": 4,
-    "requisitos": "MA-0341 Matemática Computacional",
-    "correquisitos": "Ninguno",
-    "horas_presenciales_semana": "5",
-    "horas_trabajo_independiente": "7"
+    ]
   },
   {
     "titulo": "CA-0303 Estadística I",
@@ -42,7 +34,7 @@
     "ciclo": "I",
     "tipo_curso": "Teórico-práctico",
     "creditos": 4,
-    "requisitos": "CA-0203 Herramientas de Ciencia de Datos y CA-0721 Introducción a la Probabilidad",
+    "requisitos": "CA-0204 Herramientas de Ciencia de Datos y CA-0721 Introducción a la Probabilidad",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -183,7 +175,7 @@
     "requisitos": "MA-0152 Matemática Exploratoria",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
-    "horas_trabajo_independiente": "7"
+    "horas_trabajo_independiente": "4"
   },
   {
     "titulo": "MA-0261 Algebra Lineal I",
@@ -203,11 +195,11 @@
     "año": "II",
     "ciclo": "III",
     "tipo_curso": "Teórico",
-    "creditos": 3,
-    "requisitos": "MA-0151 Fundamentos de álgebra, trinonometría y geometría analítica y MA-0252 Introducción a las Demostraciones",
+    "creditos": 4,
+    "requisitos": "MA-0151 Fundamentos de Álgebra, Trigonometría y Geometría Analítica y MA-0252 Introducción a las Demostraciones",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
-    "horas_trabajo_independiente": "4"
+    "horas_trabajo_independiente": "6"
   },
   {
     "titulo": "MA-0341 Matemática Computacional",
@@ -227,9 +219,9 @@
     ],
     "año": "II",
     "ciclo": "III",
-    "tipo_curso": "Teórico",
+    "tipo_curso": "Teórico-Práctico",
     "creditos": 4,
-    "requisitos": "MA-0251 Cálculo en Una Variable",
+    "requisitos": "MA-0251 Cálculo en una Variable",
     "correquisitos": "MA-0361 Álgebra Lineal I",
     "horas_presenciales_semana": "4",
     "horas_trabajo_independiente": null
@@ -251,8 +243,8 @@
     "ciclo": "III",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0251 Cálculo en una variable y MA-0252 Introducción a las demostraciones",
-    "correquisitos": "MA-0361 Algebra Lineal I",
+    "requisitos": "MA-0251 Cálculo en una Variable y MA-0252 Introducción a las Demostraciones",
+    "correquisitos": "MA-0361 Álgebra Lineal I",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
   },
@@ -275,11 +267,11 @@
     "año": "II",
     "ciclo": "III",
     "tipo_curso": "Teórico",
-    "creditos": 3,
-    "requisitos": "MA-0151 Fundamentos de álgebra, trinonometría y geometría analítica y MA-0252 Introducción a las Demostraciones",
+    "creditos": 4,
+    "requisitos": "MA-0151 Fundamentos de Álgebra, Trigonometría y Geometría Analítica y MA-0252 Introducción a las Demostraciones",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
-    "horas_trabajo_independiente": "4"
+    "horas_trabajo_independiente": "6"
   },
   {
     "titulo": "MA-0361 Algebra Lineal II",
@@ -298,11 +290,11 @@
     "año": "II",
     "ciclo": "III",
     "tipo_curso": "Teórico",
-    "creditos": 3,
-    "requisitos": "MA-0151 Fundamentos de álgebra, trinonometría y geometría analítica y MA-0252 Introducción a las Demostraciones",
+    "creditos": 4,
+    "requisitos": "MA-0151 Fundamentos de Álgebra, Trigonometría y Geometría Analítica y MA-0252 Introducción a las Demostraciones",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
-    "horas_trabajo_independiente": "4"
+    "horas_trabajo_independiente": "6"
   },
   {
     "titulo": "MA-0451 Principios de análisis en una variable",
@@ -345,7 +337,7 @@
     "ciclo": "IV",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA0361 Álgebra Lineal I",
+    "requisitos": "MA-0361 Álgebra Lineal I",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -435,7 +427,7 @@
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0341 Matemática Computacional y MA-0556 Ecuaciones Diferenciales Ordinarias",
+    "requisitos": "(MA-0341 Matemática Computacional o CI-0112 Programación I); y (MA-0556 Ecuaciones Diferenciales y CA-0821 Procesos estocásticos)",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -481,7 +473,7 @@
     "ciclo": "V",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0461 Algebra Lineal II y MA-0496 Teoría de Números",
+    "requisitos": "MA-0461 Álgebra Lineal II y MA-0496 Teoría de Números",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -508,10 +500,10 @@
     "horas_trabajo_independiente": "7"
   },
   {
-    "titulo": "MA-0625 Análisis Real I",
-    "sigla": "MA-0625",
+    "titulo": "MA-0716 Análisis Real I",
+    "sigla": "MA-0716",
     "nombre_corto": "Análisis Real I",
-    "enfasis": "aplicada",
+    "enfasis": "ambos",
     "saberes": [
       "SC05",
       "SC14",
@@ -524,7 +516,7 @@
     "ciclo": "VII",
     "tipo_curso": "Teórico",
     "creditos": 5,
-    "requisitos": "MA-0635 Topología general",
+    "requisitos": "MA-0635 Topología General",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "10"
@@ -541,7 +533,7 @@
       "SH07",
       "SH19"
     ],
-    "año": "IV",
+    "año": "III",
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 4,
@@ -571,7 +563,7 @@
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0341 Matemática Computacional y MA-0556 Ecuaciones Diferenciales Ordinarias",
+    "requisitos": "(MA-0341 Matemática Computacional o CI-0112 Programación I); y (MA-0556 Ecuaciones Diferenciales y CA-0821 Procesos estocásticos)",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
@@ -591,7 +583,7 @@
     "ciclo": "VI",
     "tipo_curso": "Teórico",
     "creditos": 5,
-    "requisitos": "MA-0571 Algebra Abstracta I",
+    "requisitos": "MA-0571 Álgebra Abstracta I",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "10"
@@ -614,31 +606,9 @@
     "ciclo": "VII",
     "tipo_curso": "Teórico",
     "creditos": 4,
-    "requisitos": "MA-0635 Topología general",
+    "requisitos": "MA-0635 Topología General",
     "correquisitos": "Ninguno",
     "horas_presenciales_semana": "5",
     "horas_trabajo_independiente": "7"
-  },
-  {
-    "titulo": "MA-0730 Análisis Real I",
-    "sigla": "MA-0730",
-    "nombre_corto": "Análisis Real I",
-    "enfasis": "pura",
-    "saberes": [
-      "SC05",
-      "SC14",
-      "SH05",
-      "SH08",
-      "SS02",
-      "SS17"
-    ],
-    "año": "IV",
-    "ciclo": "VII",
-    "tipo_curso": "Teórico",
-    "creditos": 5,
-    "requisitos": "MA-0635 Topología general",
-    "correquisitos": "Ninguno",
-    "horas_presenciales_semana": "5",
-    "horas_trabajo_independiente": "10"
   }
 ]

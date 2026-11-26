@@ -1,0 +1,98 @@
+% Portada OPES--CONARE (dos páginas). Referencia: Documentos/pagina2-resumen.docx
+\definecolor{PortadaCeleste}{HTML}{00C0F3}
+\definecolor{PortadaAzulTitulo}{HTML}{002060}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Página 1 %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\thispagestyle{empty}
+\pagecolor{white}
+\begin{tikzpicture}[remember picture, overlay]
+  % Marco central (~88\% × ~91\% de la página; plantilla OPES)
+  \coordinate (frameBL) at ([xshift=0.059\paperwidth, yshift=0.045\paperheight]current page.south west);
+  \coordinate (frameTR) at ([xshift=0.941\paperwidth, yshift=0.955\paperheight]current page.south west);
+  \coordinate (frameTL) at (frameTR |- frameBL);
+  \coordinate (frameBR) at (frameBL |- frameTR);
+  \coordinate (splitTop) at ($(frameBL)!0.85!(frameTL)$);
+  \coordinate (splitMid) at ($(frameBL)!0.55!(frameTL)$);
+
+  \fill[PortadaCeleste] (frameTL) rectangle (splitTop -| frameBR);
+  \fill[white] (splitTop) rectangle (splitMid -| frameBR);
+  \fill[PortadaCeleste] (splitMid) rectangle (frameBR);
+
+  \node[anchor=center, inner sep=0pt] at ($(splitTop)!0.5!(splitMid)$) {
+    \begin{minipage}{0.72\paperwidth}
+      \centering
+      \color{PortadaAzulTitulo}
+      {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{19}{23}\selectfont
+      RESUMEN EJECUTIVO PARA EL REDISEÑO DE LA CARRERA de Bachillerato y Licenciatura en Matemática con énfasis en Matemática Pura o Matemática Aplicada\par}
+    \end{minipage}
+  };
+
+  % Franja inferior con logos institucionales
+  \fill[white] ([yshift=1.85cm]current page.south west) rectangle ([yshift=3.35cm]current page.south east);
+  \node[anchor=south] at ([yshift=2.05cm]current page.south) {
+    \raisebox{-0.6ex}{\includegraphics[height=1.05cm]{assets/logos/logo-ucr-nombre.png}}\hspace{1.4cm}
+    \includegraphics[height=1.65cm]{assets/logos/logo-cea.png}\hspace{1.1cm}
+    \includegraphics[height=1.55cm]{assets/logos/logo-vicerrectoria-docencia.png}
+  };
+\end{tikzpicture}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Página 2 %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\thispagestyle{empty}
+\pagecolor{white}
+\vspace*{2.6cm}
+\begin{center}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Universidad de Costa Rica\par}
+  \vspace{2.8cm}
+
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Sede Rodrigo Facio\par}
+  \vspace{0.35cm}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Facultad de Ciencias\par}
+  \vspace{0.35cm}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Escuela de Matemática\par}
+  \vspace{1.6cm}
+
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  BACHILLERATO Y LICENCIATURA EN MATEMÁTICA CON ÉNFASIS EN\\
+  MATEMÁTICA PURA O MATEMÁTICA APLICADA\par}
+  \vspace{1.4cm}
+
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Aprobado por Asamblea de Escuela n.º EMat-526-2026\par}
+  \vspace{0.25cm}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Acuerdo n.\textsuperscript{o}~2\par}
+  \vspace{0.5cm}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Trámite Facultad de Ciencias n.\textsuperscript{o} de oficio EMat-2180-2026\par}
+  \vspace{1.2cm}
+
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Comisión que rediseñó el plan de estudios:\par}
+  \vspace{0.35cm}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Adrián Barquero Sánchez\par}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Juan Calvo Alpízar\par}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Samaria Montenegro Guzmán\par}
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  José Alexander Ramírez González\par}
+  \vspace{1.4cm}
+
+  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
+  Noviembre 2026\par}
+\end{center}
+\end{titlepage}
+
+\pagecolor{white}

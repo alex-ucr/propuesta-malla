@@ -154,10 +154,10 @@
     "saberes": ["SC05", "SC06", "SH05", "SH22", "SS14"]
   },
   {
-    "titulo": "MA-0625 Análisis Real I",
-    "sigla": "MA-0625",
+    "titulo": "MA-0716 Análisis Real I",
+    "sigla": "MA-0716",
     "nombre_corto": "Análisis Real I",
-    "enfasis": "aplicada",
+    "enfasis": "ambos",
     "saberes": ["SC05", "SC14", "SH05", "SH08", "SS02", "SS17"]
   },
   {
@@ -187,12 +187,5 @@
     "nombre_corto": "Análisis Complejo",
     "enfasis": "ambos",
     "saberes": ["SC09", "SC15", "SH05", "SH07", "SH19", "SS02", "SS17"]
-  },
-  {
-    "titulo": "MA-0730 Análisis Real I",
-    "sigla": "MA-0730",
-    "nombre_corto": "Análisis Real I",
-    "enfasis": "pura",
-    "saberes": ["SC05", "SC14", "SH05", "SH08", "SS02", "SS17"]
   }
 ]
