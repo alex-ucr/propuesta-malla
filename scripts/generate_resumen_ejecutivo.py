@@ -4,7 +4,7 @@ Generar las tablas del resumen ejecutivo (OPES-CONARE) a partir de las fuentes d
 
 Salidas (se incluyen desde resumen-ejecutivo.tex):
   resumen-ejecutivo-cursos.tex         apartado 10: listado de cursos (nombre, créditos, ciclo)
-  resumen-ejecutivo-descripciones.tex  apartado 11: nombre, objetivo general y temática resumida
+  resumen-ejecutivo-descripciones.tex  apartado 11: lista con créditos, descripción, objetivo general y temática resumida
   resumen-ejecutivo-docentes.tex       apartado 12: correspondencia curso-docente
 
 Fuentes: malla-curricular-tablas.tex, propuesta-lista-cursos.tex, Cursos/*-cuerpo.tex,
@@ -88,6 +88,7 @@ def clean(s: str) -> str:
     s = re.sub(r"\s*\(\s*\d+(?:[.,]\d+)?\s*(?:a\s*\d+\s*)?semanas?[^)]*\)", "", s)
     s = re.sub(r"\s+", " ", s).strip()
     s = re.sub(r"\s+([,.;:])", r"\1", s)
+    s = re.sub(r"(?:\s*\\)+$", "", s)  # barras sueltas al final (p. ej. "\ " de fin de línea)
     return s.strip(" :;,")
 
 
@@ -309,8 +310,16 @@ def describe(f: Path) -> dict | None:
         tit = [item_title(i) for i in top_items(cont)]
         tit = [x for x in tit if x]
         tema = "; ".join(tit) + "." if tit else ""
+    dm = re.search(r"\\subsubsection\*\{Descripci[óo]n del curso\}(.*?)(?=\\subsubsection\*\{|\\printcursosbibliography|\Z)", t, re.S)
+    paras: list[str] = []
+    if dm:
+        body = re.sub(r"\\nocite\{[^}]*\}", "", dm.group(1))
+        for p in re.split(r"\n\s*\n", body.strip()):
+            p = clean(re.sub(r"\\item\b", "; ", re.sub(r"\\(?:begin|end)\{(?:itemize|enumerate)\}", " ", p)))
+            if p and "pendiente de elaboración" not in p.lower():
+                paras.append(p)
     return {"code": code, "name": name_of(code.replace("-", ""), m.group(2).strip()), "cred": credits_of(code.replace("-", "")) or "---",
-            "obj": obj, "tema": tema}
+            "obj": obj, "tema": tema, "desc": paras}
 
 
 def build_descripciones() -> str:
@@ -320,11 +329,10 @@ def build_descripciones() -> str:
         c = m.group(1).replace("-", "")
         if c not in codes:
             codes.append(c)
-    out = ["% Generado por scripts/generate_resumen_ejecutivo.py. No editar a mano.", ""]
-    out += longtable_open(
-        r"|>{\raggedright\arraybackslash}p{3.3cm}|>{\raggedright\arraybackslash}p{5.5cm}|>{\raggedright\arraybackslash}p{6.9cm}|",
-        "Descripción de los cursos propios de la carrera", "res:descripciones",
-        hdr("Curso (créditos)", "Objetivo general", "Temática resumida"), 3)
+    out = ["% Generado por scripts/generate_resumen_ejecutivo.py. No editar a mano.",
+           "% Lista: por curso, créditos, descripción, objetivo general y temática resumida.", "",
+           r"\begingroup", r"\small",
+           r"\begin{itemize}[leftmargin=1.3em, itemsep=10pt, topsep=4pt, label={\color{Azul-UCR}$\blacksquare$}]"]
     n, skipped = 0, []
     for c in codes:
         f = cuerpo_for(c)
@@ -333,8 +341,18 @@ def build_descripciones() -> str:
             skipped.append(c)
             continue
         n += 1
-        out.append(rf"\textbf{{{d['code']}}}\newline {d['name']} ({d['cred']}) & {d['obj']} & {d['tema']} \\ \hline")
-    out += [r"\end{longtable}", r"\endgroup", ""]
+        desc = "\n\n".join(d["desc"]) if d["desc"] else r"\textit{Pendiente de elaboración.}"
+        out += [
+            rf"\item {{\color{{Azul-UCR}}\textbf{{{d['code']} {d['name']}}}}}\par\nopagebreak\smallskip",
+            r"\begin{itemize}[leftmargin=1.1em, itemsep=3pt, topsep=2pt, parsep=2pt, label={\textendash}]",
+            rf"\item \textbf{{Créditos:}} {d['cred']}.",
+            rf"\item \textbf{{Descripción:}} {desc}",
+            rf"\item \textbf{{Objetivo general:}} {d['obj']}",
+            rf"\item \textbf{{Temática resumida:}} {d['tema']}",
+            r"\end{itemize}",
+            "",
+        ]
+    out += [r"\end{itemize}", r"\endgroup", ""]
     print("descripciones:", n, "| sin programa:", skipped)
     return "\n".join(out)
 
