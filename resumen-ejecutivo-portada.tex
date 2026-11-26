@@ -1,98 +1,96 @@
-% Portada OPES--CONARE (dos páginas). Referencia: Documentos/pagina2-resumen.docx
+% Portada OPES--CONARE (dos páginas). Réplica de Documentos/pagina2-resumen.docx
+% Medidas tomadas del Word (A4): marco de 88.2% x 90.9% de la página, centrado.
 \definecolor{PortadaCeleste}{HTML}{00C0F3}
 \definecolor{PortadaAzulTitulo}{HTML}{002060}
+
+\newcommand{\portadaFuente}[2]{\fontfamily{phv}\fontseries{b}\selectfont\fontsize{#1}{#2}\selectfont}
+
+% Numeración como en el Word: portada = 0, segunda página = 1, cuerpo desde 2.
+\setcounter{page}{0}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% Página 1 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{titlepage}
 \thispagestyle{empty}
-\pagecolor{white}
+\null
 \begin{tikzpicture}[remember picture, overlay]
-  % Marco central (~88\% × ~91\% de la página; plantilla OPES)
-  \coordinate (frameBL) at ([xshift=0.059\paperwidth, yshift=0.045\paperheight]current page.south west);
-  \coordinate (frameTR) at ([xshift=0.941\paperwidth, yshift=0.955\paperheight]current page.south west);
-  \coordinate (frameTL) at (frameTR |- frameBL);
-  \coordinate (frameBR) at (frameBL |- frameTR);
-  \coordinate (splitTop) at ($(frameBL)!0.85!(frameTL)$);
-  \coordinate (splitMid) at ($(frameBL)!0.55!(frameTL)$);
+  % Marco: x de 1.24 a 19.76 cm; y de 1.35 a 28.35 cm (desde el borde superior)
+  \def\mL{1.24cm}\def\mR{19.76cm}
+  % Banda celeste superior
+  \fill[PortadaCeleste]
+    ([xshift=\mL, yshift=-1.35cm]current page.north west) rectangle
+    ([xshift=\mR, yshift=-5.41cm]current page.north west);
+  % Banda celeste central
+  \fill[PortadaCeleste]
+    ([xshift=\mL, yshift=-13.47cm]current page.north west) rectangle
+    ([xshift=\mR, yshift=-23.66cm]current page.north west);
+  % Franja celeste inferior (bajo los logos)
+  \fill[PortadaCeleste]
+    ([xshift=\mL, yshift=-27.76cm]current page.north west) rectangle
+    ([xshift=\mR, yshift=-28.35cm]current page.north west);
 
-  \fill[PortadaCeleste] (frameTL) rectangle (splitTop -| frameBR);
-  \fill[white] (splitTop) rectangle (splitMid -| frameBR);
-  \fill[PortadaCeleste] (splitMid) rectangle (frameBR);
+  % Título (Arial negrita 26 pt, azul 002060, centrado en la banda blanca)
+  \node[anchor=center, inner sep=0pt, text width=16.0cm, align=center]
+    at ([xshift=10.5cm, yshift=-9.44cm]current page.north west)
+    {\color{PortadaAzulTitulo}\portadaFuente{27}{30}%
+     RESUMEN EJECUTIVO PARA EL\\
+     REDISEÑO DE LA CARRERA DE\\
+     BACHILLERATO Y LICENCIATURA\\
+     EN MATEMÁTICA CON ÉNFASIS EN\\
+     MATEMÁTICA PURA O\\
+     MATEMÁTICA APLICADA};
 
-  \node[anchor=center, inner sep=0pt] at ($(splitTop)!0.5!(splitMid)$) {
-    \begin{minipage}{0.72\paperwidth}
-      \centering
-      \color{PortadaAzulTitulo}
-      {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{19}{23}\selectfont
-      RESUMEN EJECUTIVO PARA EL REDISEÑO DE LA CARRERA de Bachillerato y Licenciatura en Matemática con énfasis en Matemática Pura o Matemática Aplicada\par}
-    \end{minipage}
-  };
-
-  % Franja inferior con logos institucionales
-  \fill[white] ([yshift=1.85cm]current page.south west) rectangle ([yshift=3.35cm]current page.south east);
-  \node[anchor=south] at ([yshift=2.05cm]current page.south) {
-    \raisebox{-0.6ex}{\includegraphics[height=1.05cm]{assets/logos/logo-ucr-nombre.png}}\hspace{1.4cm}
-    \includegraphics[height=1.65cm]{assets/logos/logo-cea.png}\hspace{1.1cm}
-    \includegraphics[height=1.55cm]{assets/logos/logo-vicerrectoria-docencia.png}
-  };
+  % Logos institucionales: UCR, Vicerrectoría de Docencia y CEA
+  \node[anchor=north west, inner sep=0pt]
+    at ([xshift=2.54cm, yshift=-24.75cm]current page.north west)
+    {\includegraphics[width=5.04cm, height=1.907cm]{assets/logos/logo-ucr-nombre.png}};
+  \node[anchor=north west, inner sep=0pt]
+    at ([xshift=9.25cm, yshift=-24.73cm]current page.north west)
+    {\includegraphics[width=2.5cm, height=1.889cm]{assets/logos/logo-vicerrectoria-docencia.png}};
+  \node[anchor=north west, inner sep=0pt]
+    at ([xshift=14.06cm, yshift=-24.10cm]current page.north west)
+    {\includegraphics[width=4.403cm, height=2.983cm]{assets/logos/logo-cea.png}};
 \end{tikzpicture}
-\end{titlepage}
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% Página 2 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{titlepage}
 \thispagestyle{empty}
-\pagecolor{white}
-\vspace*{2.6cm}
-\begin{center}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Universidad de Costa Rica\par}
-  \vspace{2.8cm}
+\null
+\begin{tikzpicture}[remember picture, overlay]
+  % Número de página en el encabezado (derecha)
+  \node[anchor=north east, inner sep=0pt]
+    at ([xshift=-2.54cm, yshift=-1.32cm]current page.north east)
+    {\fontfamily{phv}\selectfont\fontsize{10}{12}\selectfont\thepage};
 
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Sede Rodrigo Facio\par}
-  \vspace{0.35cm}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Facultad de Ciencias\par}
-  \vspace{0.35cm}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Escuela de Matemática\par}
-  \vspace{1.6cm}
-
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  BACHILLERATO Y LICENCIATURA EN MATEMÁTICA CON ÉNFASIS EN\\
-  MATEMÁTICA PURA O MATEMÁTICA APLICADA\par}
-  \vspace{1.4cm}
-
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Aprobado por Asamblea de Escuela n.º EMat-526-2026\par}
-  \vspace{0.25cm}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Acuerdo n.\textsuperscript{o}~2\par}
-  \vspace{0.5cm}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Trámite Facultad de Ciencias n.\textsuperscript{o} de oficio EMat-2180-2026\par}
-  \vspace{1.2cm}
-
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Comisión que rediseñó el plan de estudios:\par}
-  \vspace{0.35cm}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Adrián Barquero Sánchez\par}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Juan Calvo Alpízar\par}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Samaria Montenegro Guzmán\par}
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  José Alexander Ramírez González\par}
-  \vspace{1.4cm}
-
-  {\fontfamily{phv}\fontseries{b}\selectfont\fontsize{12}{14}\selectfont
-  Noviembre 2026\par}
-\end{center}
-\end{titlepage}
-
-\pagecolor{white}
+  \node[anchor=north, inner sep=0pt]
+    at ([yshift=-2.65cm]current page.north)
+    {\begin{minipage}{15.92cm}
+      \centering
+      \portadaFuente{12}{16.45}%
+      \setlength{\parindent}{0pt}\setlength{\parskip}{9.4pt}%
+      Universidad de Costa Rica\par
+      \mbox{}\par\mbox{}\par\mbox{}\par
+      Sede Rodrigo Facio\par
+      \mbox{}\par\mbox{}\par
+      Facultad de Ciencias\par
+      Escuela de Matemática\par
+      \mbox{}\par\mbox{}\par
+      BACHILLERATO Y LICENCIATURA EN MATEMÁTICA CON ÉNFASIS EN MATEMÁTICA PURA O MATEMÁTICA APLICADA\par
+      \mbox{}\par
+      Aprobado por Asamblea de Asamblea de Escuela n.º EMat-526-2026\par
+      Acuerdo n° 2\par
+      \mbox{}\par
+      Trámite Facultad de Ciencias n° de oficio EMat-2180-2026\par
+      \mbox{}\par
+      Comisión que rediseñó el plan de estudios:\par
+      Adrián Barquero Sánchez\par
+      Juan Calvo Alpízar\par
+      Samaria Montenegro Guzmán\par
+      José Alexander Ramírez González\par
+      \mbox{}\par\mbox{}\par
+      Noviembre 2026\par
+    \end{minipage}};
+\end{tikzpicture}
+\clearpage
